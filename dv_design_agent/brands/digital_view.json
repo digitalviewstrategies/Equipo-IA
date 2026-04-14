@@ -1,0 +1,265 @@
+{
+  "brand_id": "digital_view",
+  "brand_name": "Digital View",
+  "brand_tagline": "Marketing Agency",
+  "version": "1.0",
+  "last_updated": "2026-04-13",
+
+  "positioning": "Consultora de marketing inmobiliario. Disruptiva, juvenil, sin clichés. Directa y con framing de high-ticket. La única agencia que conoce el mercado inmobiliario como debería conocerse: grupo humano + disciplina y constancia = resultados.",
+
+  "colors": {
+    "primary": {
+      "hex": "#0033CC",
+      "name": "DV Blue",
+      "usage": "Color corporativo del logo. Fondos de slides de apertura (hook) y prueba (números). CTAs primarios. Elementos de marca."
+    },
+    "dark": {
+      "hex": "#0A0A0A",
+      "name": "Near Black",
+      "usage": "Fondos de slides de narrativa pesada: dolor, consecuencia, CTA final. Da gravedad y seriedad."
+    },
+    "accent_primary": {
+      "hex": "#C8FF00",
+      "name": "Acid Lime",
+      "usage": "Color de acento principal. Aparece en slides azules y negros para destacar palabras clave, números, highlights, tachaduras y CTAs. Es el color 'default' cuando hay que destacar algo."
+    },
+    "accent_secondary": {
+      "hex": "#FF0080",
+      "name": "Hot Pink",
+      "usage": "Color de acento especial. Aparece en MÁXIMO 2 de cada 6 slides para generar ruptura dentro de la ruptura. Se usa para scribbles (anotaciones a mano cursivas), círculos a mano alzada, tachaduras especiales. Nunca usar más de 2 veces en un carrusel."
+    },
+    "light": {
+      "hex": "#F5F5F5",
+      "name": "Off White",
+      "usage": "Fondos de slides de respiro (solución). Rompe el ritmo del negro y del azul. Textos principales en negro sobre este fondo."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, números de slide (02/06), metadata."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros (azul, negro)."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Cómo distribuir los colores de fondo en un carrusel de 6 slides.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (azul)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con scribble rosa",
+      "slide_4_solucion": "light (off-white) con círculo rosa",
+      "slide_5_prueba": "primary (azul)",
+      "slide_6_cta": "dark (negro) con acentos verdes y rosa"
+    },
+    "pink_appearances_max": 2,
+    "lime_appearances": "todas las slides donde haya un acento que destacar"
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografía principal. Headlines y cuerpo de texto."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": {
+        "number": 700
+      },
+      "usage": "Solo para números grandes (73%, 100M, 45d). Aporta contraste editorial."
+    },
+    "handwritten": {
+      "family": "Caveat",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap",
+      "weights": {
+        "scribble": 700
+      },
+      "usage": "SOLO para anotaciones a mano alzada rotadas (scribbles). Ejemplo: 'tu guita ↓' en rosa rotado -8 grados."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 80,
+    "headline_max_size_px": 140,
+    "headline_occupies": "mínimo 60% del slide en altura",
+    "letter_spacing_headlines": "-3px a -5px (tight)",
+    "line_height_headlines": 0.9,
+    "body_min_size_px": 24,
+    "body_max_size_px": 42,
+    "never_use_italic": true,
+    "never_use_underline": true,
+    "never_use_more_than_2_fonts_per_piece": true
+  },
+
+  "visual_style": {
+    "keywords": [
+      "disruptivo",
+      "juvenil",
+      "directo",
+      "sin clichés",
+      "high-ticket",
+      "editorial moderno"
+    ],
+    "do": [
+      "Tipografía enorme que ocupe más del 60% del slide",
+      "Contraste máximo: 1 fondo + 1 color de texto + 1 color de acento",
+      "Palabras clave destacadas con highlight block rotado -1.5°",
+      "Tachaduras imperfectas rotadas (no líneas rectas)",
+      "Círculos a mano alzada con border-radius irregular",
+      "Scribbles cursivos en Caveat rotados -8° como anotaciones",
+      "Números gigantes como protagonistas cuando hay datos",
+      "Grillas asimétricas con rotaciones sutiles (0.5° a -1.5°)",
+      "Un solo mensaje por slide",
+      "Espacio negativo generoso",
+      "Top tag con línea horizontal + label en mayúsculas (ej: '——— EL DOLOR POSTA')"
+    ],
+    "dont": [
+      "Gradientes de colores múltiples",
+      "Iconos cute o emojis",
+      "Tipografías tipo Playfair, Montserrat Light, serifas elegantes",
+      "Drop shadows exagerados o efectos 3D",
+      "Más de 2 tipografías en una sola pieza",
+      "Paletas pasteles, tierra o dorado (cliché inmobiliario)",
+      "Fotos de propiedades con música épica",
+      "Textos largos que llenen el slide",
+      "Perfecta simetría (hay que romperla siempre aunque sea 1°)",
+      "Ciertas frases prohibidas: 'soñá con', 'concretá tu hogar', 'profesionales que te acompañan', 'vení a conocernos'"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80,
+      "description": "Carrusel para feed de Instagram."
+    },
+    "carousel_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 80,
+      "description": "Carrusel vertical para feed (ocupa más pantalla en mobile)."
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80,
+      "description": "Creativo para Meta Ads feed."
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100,
+      "description": "Creativo para Meta Ads stories y reels. Dejar 20% libre en top y bottom para no ser tapado por UI de IG/FB.",
+      "safe_top_percent": 20,
+      "safe_bottom_percent": 20
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60,
+      "description": "Placa de propiedad cuadrada."
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60,
+      "description": "Placa de propiedad vertical."
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300,
+      "description": "Flyer A4 a 300dpi para imprimir o mandar por WhatsApp."
+    }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Directo sin rodeos",
+      "Voseo argentino siempre",
+      "Sin emojis jamás",
+      "Frases cortas y punzantes",
+      "Verdad incómoda mejor que frase linda",
+      "High ticket framing: nunca pedir disculpas por el precio",
+      "Usar muletillas argentinas reales: che, posta, dale, movida, carajo",
+      "Admitir humor oscuro e ironía",
+      "Preguntas directas al lector mejor que afirmaciones",
+      "Palabras del rubro sin explicarlas (captación, operación, comisión, pauta)"
+    ],
+    "forbidden_words": [
+      "soñá",
+      "hogar de tus sueños",
+      "profesionales",
+      "acompañamos",
+      "vení a conocernos",
+      "estamos para vos",
+      "sabor familiar",
+      "calidez",
+      "exclusivo"
+    ],
+    "preferred_words": [
+      "posta",
+      "movida",
+      "dale",
+      "che",
+      "guita",
+      "laburo",
+      "rompe",
+      "te estás regalando",
+      "quemados en pauta",
+      "no te va a escribir nadie"
+    ],
+    "hook_frameworks": {
+      "negation": {
+        "description": "Romper una creencia instalada del cliente.",
+        "example": "Che, tus fotos lindas del depto no venden un carajo."
+      },
+      "empathy": {
+        "description": "Nombrar el dolor del cliente mejor que él mismo.",
+        "example": "Llevás 3 meses esperando que Zonaprop te traiga algo y sigue sin pasar."
+      },
+      "uncomfortable_truth": {
+        "description": "Decir en voz alta lo que nadie del rubro dice.",
+        "example": "Las inmobiliarias que cobran el 4% están condenadas. Y nadie te lo dice."
+      }
+    },
+    "narrative_structure": {
+      "name": "Método DV",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCIÓN", "PRUEBA"],
+      "description": "Toda pieza narrativa (carrusel de captación, creativo Meta de alta complejidad) sigue esta estructura. Cada slide cubre una fase."
+    }
+  },
+
+  "logo": {
+    "main_file": "assets/logo_dv_color.png",
+    "variants": {
+      "color_on_white": "assets/logo_dv_color.png",
+      "white_on_blue": "assets/logo_dv_white.png",
+      "white_on_black": "assets/logo_dv_white.png"
+    },
+    "signature_html": "<div class='signature'>DIGITAL VIEW<span class='tag'>Marketing Agency</span></div>",
+    "signature_css": ".signature { font-size: 22px; font-weight: 900; color: #fff; letter-spacing: 1px; } .signature .tag { background: #0033CC; color: #fff; padding: 4px 12px; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-left: 8px; vertical-align: middle; }",
+    "min_size_px": 120,
+    "clearspace_rule": "Igual a la altura de la 'D' del logo en todos los lados",
+    "placement_in_carousel": "Solo en el último slide (CTA), nunca en slides intermedios"
+  },
+
+  "references": {
+    "approved_examples_dir": "examples/dv_carrusel_referencia/",
+    "description": "En esta carpeta hay 6 slides de referencia aprobados por el cliente. Cuando dudes de una decisión visual, mirá estos ejemplos."
+  }
+}

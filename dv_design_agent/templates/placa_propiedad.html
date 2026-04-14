@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+TEMPLATE: Placa de Propiedad (1 pieza vertical 1080x1350)
+
+Estructura:
+- Foto hero de la propiedad (70% del espacio)
+- Overlay oscuro sutil en la parte inferior para contrastar texto
+- Título de la propiedad
+- Precio gigante (PROTAGONISTA)
+- 4 datos clave con iconos: dormitorios, baños, m², cochera
+- Dirección
+- Logo del cliente
+
+Placeholders:
+- {{PROPERTY_IMAGE_URL}}: URL o path a la foto de la propiedad
+- {{PROPERTY_TITLE}}: ej "Dpto 3 amb en Belgrano"
+- {{PROPERTY_PRICE}}: ej "USD 185.000"
+- {{PROPERTY_DORM}}: ej "2"
+- {{PROPERTY_BATH}}: ej "1"
+- {{PROPERTY_M2}}: ej "85"
+- {{PROPERTY_COCHERA}}: ej "SÍ" o "NO"
+- {{PROPERTY_ADDRESS}}: ej "Ciudad de la Paz al 2400"
+- {{BRAND_NAME}}, {{BRAND_TAGLINE}}: firma del cliente
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Placa de Propiedad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0033CC;
+    --dark: #0A0A0A;
+    --accent-primary: #C8FF00;
+    --light: #F5F5F5;
+    --gray: #9CA3AF;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .slide {
+    width: 1080px;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+    color: var(--white);
+  }
+
+  /* Foto hero */
+  .hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 820px;
+    background-image: url('{{PROPERTY_IMAGE_URL}}');
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 300px;
+    background: linear-gradient(to top, rgba(10,10,10,1), rgba(10,10,10,0));
+  }
+
+  /* Etiqueta de tipo de operación */
+  .tag-operation {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    background: var(--accent-primary);
+    color: var(--dark);
+    padding: 14px 30px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+  }
+
+  /* Panel inferior con info */
+  .info-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    padding: 50px 60px 60px;
+  }
+
+  .title {
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+  }
+
+  .address {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--gray);
+    margin-bottom: 28px;
+  }
+
+  .price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 110px;
+    font-weight: 700;
+    line-height: 0.85;
+    color: var(--accent-primary);
+    letter-spacing: -4px;
+    margin-bottom: 38px;
+  }
+
+  .features {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-top: 28px;
+    border-top: 3px solid var(--accent-primary);
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .feature .num {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--white);
+  }
+  .feature .label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signature {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+  .signature .tag {
+    background: var(--primary);
+    color: var(--white);
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .contact {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--gray);
+    text-align: right;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="hero"></div>
+  <div class="tag-operation">{{OPERATION_TAG}}</div>
+
+  <div class="info-panel">
+    <div class="title">{{PROPERTY_TITLE}}</div>
+    <div class="address">{{PROPERTY_ADDRESS}}</div>
+
+    <div class="price">{{PROPERTY_PRICE}}</div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="num">{{PROPERTY_DORM}}</div>
+        <div class="label">Dorm</div>
+      </div>
+      <div class="feature">
+        <div class="num">{{PROPERTY_BATH}}</div>
+        <div class="label">Baños</div>
+      </div>
+      <div class="feature">
+        <div class="num">{{PROPERTY_M2}}</div>
+        <div class="label">m²</div>
+      </div>
+      <div class="feature">
+        <div class="num">{{PROPERTY_COCHERA}}</div>
+        <div class="label">Cochera</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="signature">{{BRAND_NAME}}<span class="tag">{{BRAND_TAGLINE}}</span></div>
+      <div class="contact">{{CONTACT_INFO}}</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

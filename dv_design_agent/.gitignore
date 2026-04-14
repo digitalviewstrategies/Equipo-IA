@@ -1,0 +1,28 @@
+# Variables sensibles
+.env
+
+# Outputs generados
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Archivos temporales
+*.tmp
+/tmp/

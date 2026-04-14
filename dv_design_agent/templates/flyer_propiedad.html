@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!--
+TEMPLATE: Flyer A4 de Propiedad (2480x3508 @ 300dpi)
+
+Formato A4 vertical para imprimir o mandar por WhatsApp.
+Jerarquía:
+- Foto hero arriba (50% del espacio)
+- Precio gigante como protagonista
+- Título y dirección
+- 4 features con iconos
+- Descripción opcional
+- Contacto y logo
+
+Placeholders:
+- {{PROPERTY_IMAGE_URL}}, {{OPERATION_TAG}}
+- {{PROPERTY_TITLE}}, {{PROPERTY_ADDRESS}}, {{PROPERTY_PRICE}}
+- {{PROPERTY_DORM}}, {{PROPERTY_BATH}}, {{PROPERTY_M2}}, {{PROPERTY_COCHERA}}
+- {{PROPERTY_DESCRIPTION}}: 2-3 líneas describiendo destacados
+- {{CONTACT_INFO}}, {{BRAND_NAME}}, {{BRAND_TAGLINE}}
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Flyer de Propiedad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0033CC;
+    --dark: #0A0A0A;
+    --accent-primary: #C8FF00;
+    --accent-secondary: #FF0080;
+    --light: #F5F5F5;
+    --gray: #9CA3AF;
+    --white: #FFFFFF;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .slide {
+    width: 2480px;
+    height: 3508px;
+    position: relative;
+    overflow: hidden;
+    background: var(--light);
+    color: var(--dark);
+  }
+
+  .hero {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1700px;
+    background-image: url('{{PROPERTY_IMAGE_URL}}');
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 400px;
+    background: linear-gradient(to top, rgba(10,10,10,0.7), rgba(10,10,10,0));
+  }
+
+  .tag-operation {
+    position: absolute;
+    top: 160px;
+    left: 160px;
+    background: var(--accent-primary);
+    color: var(--dark);
+    padding: 32px 70px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+  }
+
+  .content {
+    position: absolute;
+    top: 1780px;
+    left: 200px;
+    right: 200px;
+    bottom: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 110px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+  }
+
+  .address {
+    font-size: 50px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 60px;
+  }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 8px solid var(--accent-primary);
+    border-bottom: 8px solid var(--accent-primary);
+    padding: 40px 0;
+    margin-bottom: 70px;
+  }
+  .price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 260px;
+    font-weight: 700;
+    line-height: 0.85;
+    color: var(--primary);
+    letter-spacing: -10px;
+  }
+  .price-label {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 80px;
+  }
+  .feature {
+    padding: 45px 30px;
+    background: var(--white);
+    border: 4px solid var(--dark);
+    text-align: center;
+  }
+  .feature .num {
+    font-size: 110px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--dark);
+  }
+  .feature .label {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--gray);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  .description {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #333;
+    margin-bottom: 80px;
+    max-width: 1800px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .signature {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  .signature .tag {
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 26px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-left: 16px;
+    vertical-align: middle;
+  }
+  .contact {
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: right;
+    line-height: 1.3;
+  }
+</style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="hero"></div>
+  <div class="tag-operation">{{OPERATION_TAG}}</div>
+
+  <div class="content">
+    <div class="title">{{PROPERTY_TITLE}}</div>
+    <div class="address">{{PROPERTY_ADDRESS}}</div>
+
+    <div class="price-row">
+      <div class="price">{{PROPERTY_PRICE}}</div>
+      <div class="price-label">Precio</div>
+    </div>
+
+    <div class="features">
+      <div class="feature"><div class="num">{{PROPERTY_DORM}}</div><div class="label">Dorm</div></div>
+      <div class="feature"><div class="num">{{PROPERTY_BATH}}</div><div class="label">Baños</div></div>
+      <div class="feature"><div class="num">{{PROPERTY_M2}}</div><div class="label">m²</div></div>
+      <div class="feature"><div class="num">{{PROPERTY_COCHERA}}</div><div class="label">Cochera</div></div>
+    </div>
+
+    <div class="description">{{PROPERTY_DESCRIPTION}}</div>
+  </div>
+
+  <div class="footer" style="padding: 0 200px 200px;">
+    <div class="signature">{{BRAND_NAME}}<span class="tag">{{BRAND_TAGLINE}}</span></div>
+    <div class="contact">{{CONTACT_INFO}}</div>
+  </div>
+</div>
+
+</body>
+</html>

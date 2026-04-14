@@ -1,0 +1,122 @@
+{
+  "brand_id": "CLIENTE_ID_AQUI",
+  "brand_name": "Nombre del Cliente",
+  "brand_tagline": "Tagline si tiene",
+  "version": "1.0",
+  "last_updated": "YYYY-MM-DD",
+
+  "positioning": "Descripción en 1-2 frases de cómo se posiciona la marca. Qué hace, para quién, qué la diferencia.",
+
+  "colors": {
+    "primary": {
+      "hex": "#XXXXXX",
+      "name": "Nombre del color",
+      "usage": "Color principal de marca. Dónde se usa."
+    },
+    "dark": {
+      "hex": "#0A0A0A",
+      "name": "Dark",
+      "usage": "Fondos oscuros si la marca los usa."
+    },
+    "accent_primary": {
+      "hex": "#XXXXXX",
+      "name": "Nombre del acento",
+      "usage": "Color de acento principal. Highlights, CTAs."
+    },
+    "accent_secondary": {
+      "hex": "#XXXXXX",
+      "name": "Nombre del acento secundario",
+      "usage": "Color de acento especial. Opcional, puede ser null si la marca usa solo 1 acento."
+    },
+    "light": {
+      "hex": "#F5F5F5",
+      "name": "Light",
+      "usage": "Fondos claros."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Cómo distribuir los colores en un carrusel típico de esta marca.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary",
+      "slide_2_dolor": "dark",
+      "slide_3_consecuencia": "dark",
+      "slide_4_solucion": "light",
+      "slide_5_prueba": "primary",
+      "slide_6_cta": "dark"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografía principal."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": {
+        "number": 700
+      },
+      "usage": "Números grandes."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 80,
+    "headline_max_size_px": 140,
+    "letter_spacing_headlines": "-3px a -5px",
+    "line_height_headlines": 0.9
+  },
+
+  "visual_style": {
+    "keywords": ["palabra 1", "palabra 2", "palabra 3"],
+    "do": [
+      "Qué hacer siempre en esta marca"
+    ],
+    "dont": [
+      "Qué no hacer nunca en esta marca"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Lista de principios de tono"
+    ],
+    "forbidden_words": [],
+    "preferred_words": []
+  },
+
+  "logo": {
+    "main_file": "assets/CLIENTE_logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el último slide"
+  }
+}

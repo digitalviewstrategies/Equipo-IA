@@ -1,0 +1,257 @@
+{
+  "brand_id": "toribio_achaval",
+  "brand_name": "Toribio Achaval",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-13",
+
+  "positioning": "Inmobiliaria premium con 70 anos de trayectoria en CABA y Zona Norte. Referente del mercado de propiedades de alto valor. Se posiciona desde la confianza institucional, la seriedad profesional y el conocimiento profundo del mercado, combinando tradicion con innovacion digital.",
+
+  "colors": {
+    "primary": {
+      "hex": "#D42027",
+      "name": "Achaval Red",
+      "usage": "Color insignia de la marca. Extraido del logo. Se usa en slides de apertura (hook), CTAs principales, highlights de datos clave y elementos que necesiten impacto visual. Es el unico color de personalidad de la marca."
+    },
+    "dark": {
+      "hex": "#0D0D0D",
+      "name": "Near Black",
+      "usage": "Fondos de slides de narrativa pesada: dolor, consecuencia, CTA final. Transmite peso institucional y seriedad. Tambien para texto principal sobre fondos claros."
+    },
+    "accent_primary": {
+      "hex": "#2C2C2C",
+      "name": "Graphite",
+      "usage": "Color de acento estructural. Fondos alternativos a negro puro para dar profundidad sin monotonia. Subtitulos, separadores, elementos secundarios sobre fondos claros. No es un color de 'destaque' sino de jerarquia intermedia."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F5F5",
+      "name": "Light Gray",
+      "usage": "Fondos de slides de respiro (solucion, datos informativos). Rompe el ritmo de los fondos oscuros. Texto principal en dark sobre este fondo."
+    },
+    "gray": {
+      "hex": "#6B7280",
+      "name": "Gray",
+      "usage": "Texto secundario, numeracion de slides (02/06), metadata, subtitulos menores, datos complementarios."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros (negro, grafito, rojo). Tambien para fondos limpios cuando se necesita maxima limpieza."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Distribucion de colores de fondo en un carrusel de 6 slides para Toribio Achaval. El rojo aparece con autoridad pero sin saturar. Los fondos oscuros dominan la narrativa. El gris claro da respiro.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (rojo Achaval)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "accent_primary (grafito)",
+      "slide_4_solucion": "light (gris claro)",
+      "slide_5_prueba": "dark (negro) con dato destacado en rojo",
+      "slide_6_cta": "primary (rojo Achaval)"
+    },
+    "red_appearances_max": 2,
+    "graphite_vs_black": "Alternar entre negro y grafito para evitar monotonia en slides consecutivos oscuros"
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Plus Jakarta Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 600,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal para todo: headlines, cuerpo, subtitulos. ExtraBold (800) para titulares, Medium (500) para cuerpo. Sans-serif geometrica que combina presencia institucional con limpieza contemporanea."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": {
+        "number": 700
+      },
+      "usage": "Solo para numeros grandes destacados (USD 350.000, 70 anos, 15.000 m2). Aporta contraste tipografico editorial sin romper la sobriedad."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "headline_occupies": "minimo 50% del slide en altura",
+    "letter_spacing_headlines": "-2px a -4px (tight pero no extremo)",
+    "line_height_headlines": 0.92,
+    "body_min_size_px": 24,
+    "body_max_size_px": 40,
+    "never_use_italic": true,
+    "never_use_underline": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Permitido y recomendado para hooks y CTAs. Usar con moderacion en slides intermedios."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "corporate premium",
+      "sobrio",
+      "institucional contemporaneo",
+      "contrastes duros",
+      "editorial limpio",
+      "autoridad visual"
+    ],
+    "do": [
+      "Tipografia grande y bold que domine el slide, minimo 50% de la altura",
+      "Contraste maximo: fondo solido + 1 color de texto + rojo como unico acento",
+      "Espacio negativo generoso, dejar que la pieza respire",
+      "Un solo mensaje por slide, claro y directo",
+      "Usar uppercase en headlines de hook y CTA para transmitir autoridad",
+      "Numeros gigantes cuando hay datos duros (anos, metros, precio)",
+      "Composiciones centradas o con alineacion fuerte a la izquierda",
+      "Lineas separadoras finas y limpias cuando se necesite estructura",
+      "Fotografias de propiedades de alta calidad, sin filtros excesivos",
+      "Logo solo en el ultimo slide, limpio y con espacio alrededor"
+    ],
+    "dont": [
+      "Gradientes de colores multiples",
+      "Emojis o iconos cute",
+      "Tipografias decorativas, script o handwritten",
+      "Drop shadows exagerados o efectos 3D",
+      "Mas de 2 tipografias en una sola pieza",
+      "Paletas pasteles, dorado cliche, tierra",
+      "Rotaciones agresivas o layouts desordenados (eso es para marcas disruptivas, no para Achaval)",
+      "Scribbles, anotaciones a mano alzada o elementos que parezcan informales",
+      "Fotos con filtros saturados o HDR exagerado",
+      "Textos largos que llenen el slide",
+      "Frases como 'sona con tu hogar', 'te acompanamos', 'hacemos realidad tus suenos'",
+      "Usar el rojo en mas de 2 slides por carrusel",
+      "Marcos o bordes decorativos"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80,
+      "description": "Carrusel para feed de Instagram."
+    },
+    "carousel_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 80,
+      "description": "Carrusel vertical para feed (ocupa mas pantalla en mobile)."
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80,
+      "description": "Creativo para Meta Ads feed."
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100,
+      "description": "Creativo para Meta Ads stories y reels. Dejar 20% libre en top y bottom.",
+      "safe_top_percent": 20,
+      "safe_bottom_percent": 20
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60,
+      "description": "Placa de propiedad cuadrada."
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60,
+      "description": "Placa de propiedad vertical."
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300,
+      "description": "Flyer A4 a 300dpi para imprimir o mandar por WhatsApp."
+    }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Formal pero cercano, nunca distante ni frio",
+      "Voseo argentino siempre, pero con registro profesional (no juvenil)",
+      "Sin emojis jamas",
+      "Frases concisas y con peso, cada palabra cuenta",
+      "Hablar desde la autoridad de 70 anos de mercado, no desde la necesidad de probar nada",
+      "High ticket framing: las propiedades que manejan son premium y el tono lo refleja",
+      "Datos concretos mejor que adjetivos vacios (en vez de 'excelente ubicacion', decir 'a 2 cuadras de Av. Libertador')",
+      "Usar terminos del rubro con naturalidad (captacion, operacion, tasacion, comision, exclusiva)",
+      "Confianza silenciosa: no gritar que sos el mejor, demostrarlo con datos y trayectoria",
+      "Cuando se habla al inversor, usar lenguaje de rendimiento y oportunidad (rentabilidad, m2, ticket, plusvalia)"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "hacemos realidad",
+      "te acompanamos en cada paso",
+      "veni a conocernos",
+      "calidad humana",
+      "calidez",
+      "sabor familiar",
+      "unico e irrepetible",
+      "oportunidad unica"
+    ],
+    "preferred_words": [
+      "trayectoria",
+      "mercado",
+      "operacion",
+      "tasacion",
+      "rentabilidad",
+      "m2 cubiertos",
+      "ticket",
+      "exclusiva",
+      "captacion",
+      "valuacion",
+      "zona premium",
+      "inversor",
+      "plusvalia"
+    ],
+    "hook_frameworks": {
+      "authority": {
+        "description": "Hablar desde la posicion de quien lleva 70 anos en el mercado.",
+        "example": "En 70 anos vimos caer a inmobiliarias que no se adaptaron. Estas son las 3 razones."
+      },
+      "data_driven": {
+        "description": "Abrir con un dato duro que genere interes.",
+        "example": "El m2 en Belgrano subio 12% en 6 meses. Y la mayoria de los propietarios no se entero."
+      },
+      "market_truth": {
+        "description": "Decir algo que el mercado sabe pero nadie dice en voz alta.",
+        "example": "Publicar tu propiedad en 5 portales no es una estrategia. Es tirar plata."
+      }
+    },
+    "narrative_structure": {
+      "name": "Estructura Achaval",
+      "steps": ["DATO/AUTORIDAD", "PROBLEMA DE MERCADO", "VISION EXPERTA", "PRUEBA/CTA"],
+      "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
+    }
+  },
+
+  "logo": {
+    "main_file": "assets/toribio_achaval/logo.png",
+    "variants": {
+      "white_on_dark": "assets/toribio_achaval/logo.png",
+      "dark_on_light": null
+    },
+    "min_size_px": 140,
+    "clearspace_rule": "Igual a la altura de la 'A' de Achaval en todos los lados",
+    "placement_in_carousel": "Solo en el ultimo slide (CTA), nunca en slides intermedios"
+  },
+
+  "references": {
+    "web": "https://toribioachaval.com/",
+    "description": "La web del cliente es la referencia visual principal. Estilo limpio, corporate, uso del rojo como color insignia sobre fondos blancos y negros."
+  }
+}
