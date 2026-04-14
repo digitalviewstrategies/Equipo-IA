@@ -1,6 +1,6 @@
 # Digital View — Contexto para Agentes de IA
 
-## Identidad de flan
+## Identidad
 
 Digital View (DV) es una consultora de marketing y contenido especializada en el mercado inmobiliario argentino. Ayudamos a inmobiliarias y top producers a dejar de depender del boca en boca y a generar prospectos propios todos los dias, combinando contenido hecho a medida, campanas de Meta Ads y tecnologia que acelera la operacion comercial.
 
