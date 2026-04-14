@@ -1,0 +1,236 @@
+{
+  "brand_id": "juan_caillet_bois",
+  "brand_name": "Juan Caillet Bois",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Lider de opinion del mercado inmobiliario argentino. Socio de Fidez Group y referente de Soldati Vista. Se posiciona como formador y lider que atrae talento, no como vendedor directo. Impronta alpha, segura y directa.",
+
+  "colors": {
+    "primary": {
+      "hex": "#1C2340",
+      "name": "Deep Navy",
+      "usage": "Color principal derivado del azul profundo de su perfil y del branding de Fidez/Soldati Vista. Fondos de slides principales, hooks y CTAs."
+    },
+    "dark": {
+      "hex": "#0A0A0A",
+      "name": "Near Black",
+      "usage": "Fondos de slides de narrativa pesada. Negro solido para maximo impacto."
+    },
+    "accent_primary": {
+      "hex": "#4169E1",
+      "name": "Royal Blue",
+      "usage": "Azul real como acento. Derivado de los links y acentos azules de su Instagram. Para highlights, datos clave y elementos de destaque."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F5F5",
+      "name": "Light Gray",
+      "usage": "Fondos claros para slides de respiro y solucion."
+    },
+    "gray": {
+      "hex": "#6B7280",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta sobria y ejecutiva. El navy domina, el azul real aparece como acento de autoridad. Transmite liderazgo y solidez sin ser aburrido.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (deep navy)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "primary (deep navy)",
+      "slide_4_solucion": "light (gris claro)",
+      "slide_5_prueba": "dark (negro) con dato en accent blue",
+      "slide_6_cta": "primary (deep navy) con CTA en white"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Plus Jakarta Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 600,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Transmite presencia ejecutiva sin perder contemporaneidad."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados (cantidad de agentes formados, anos de experiencia, metricas)."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -4px",
+    "line_height_headlines": 0.92,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Recomendado en hooks y CTAs para transmitir autoridad."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "ejecutivo",
+      "liderazgo",
+      "autoridad",
+      "formacion",
+      "sobrio",
+      "alpha",
+      "institucional personal"
+    ],
+    "do": [
+      "Tipografia grande y bold con peso visual fuerte",
+      "Fondos oscuros que transmitan autoridad",
+      "Fotos reales de Juan en conferencias, capacitaciones, con equipo",
+      "Datos duros de resultados: agentes formados, operaciones, anos",
+      "Un solo mensaje por slide con peso",
+      "Composiciones limpias con espacio negativo",
+      "Wordmark tipografico solo en el ultimo slide"
+    ],
+    "dont": [
+      "Estetica juvenil o de influencer",
+      "Colores brillantes o neon",
+      "Tipografias decorativas o scripts",
+      "Emojis o iconos informales",
+      "Contenido que se pise con Fidez Group o Soldati Vista como marcas",
+      "Tono de vendedor de propiedades (Juan no vende, lidera)",
+      "Frases como 'sona con tu hogar', 'te acompanamos'",
+      "Layouts desordenados o agresivos"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Habla desde la posicion de lider que ya demostro, no necesita convencer",
+      "Voseo argentino con registro ejecutivo, no juvenil",
+      "Sin emojis",
+      "Frases cortas con peso, cada palabra esta medida",
+      "Autoridad natural: no dice 'soy el mejor', lo demuestra con trayectoria",
+      "Contenido de formacion y vision, no de venta directa de propiedades",
+      "Referencia a su equipo y a los agentes que formo como prueba social",
+      "Tono seguro, directo, impronta alpha sin ser arrogante",
+      "Usa terminos del real estate con naturalidad"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "calidad humana",
+      "emprendedor",
+      "lider nato",
+      "exito asegurado",
+      "gana dinero facil"
+    ],
+    "preferred_words": [
+      "liderazgo",
+      "formacion",
+      "equipo",
+      "mercado",
+      "operacion",
+      "resultado",
+      "agente",
+      "vision",
+      "estrategia",
+      "inversion",
+      "desarrollo"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia instalada sobre como funciona el real estate.",
+        "example": "No faltan propiedades para vender. Faltan agentes que sepan captarlas."
+      },
+      "empatia": {
+        "description": "Nombrar la frustracion del agente que no escala.",
+        "example": "Trabajas 12 horas por dia, cerras 2 operaciones al ano y sentis que no avanzas."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo que la industria inmobiliaria no se anima a decir.",
+        "example": "El 90% de los agentes inmobiliarios en Argentina no sobrevive el primer ano. Y nadie habla de por que."
+      }
+    },
+    "disruption_scale": 3,
+    "narrative_structure": {
+      "name": "Metodo Caillet Bois",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante de liderazgo del metodo DV. El dolor es del agente que no escala o del mercado que esta estancado. La consecuencia es la perdida de oportunidades. La solucion es la vision y el metodo de Juan. La prueba son los resultados de los agentes que formo."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Reclutamiento y formacion de agentes",
+      "percentage": 40,
+      "description": "Contenido para atraer agentes inmobiliarios a Soldati Vista y al ecosistema Fidez. Formacion, vision de carrera, oportunidades de crecimiento.",
+      "formats": ["video corto", "carrusel educativo"]
+    },
+    {
+      "name": "Vision de mercado",
+      "percentage": 25,
+      "description": "Analisis y opiniones sobre el mercado inmobiliario argentino. Posiciona a Juan como referente y lider de pensamiento.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Atraccion de inversores",
+      "percentage": 20,
+      "description": "Contenido dirigido a inversores inmobiliarios: oportunidades de desarrollo, rentabilidad, tendencias del mercado de Zona Norte.",
+      "formats": ["carrusel", "video corto"]
+    },
+    {
+      "name": "Liderazgo y cultura",
+      "percentage": 15,
+      "description": "Contenido de marca personal: dia a dia como lider, momentos con el equipo, valores y filosofia de trabajo.",
+      "formats": ["video corto", "stories"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Agentes inmobiliarios que buscan una estructura profesional para crecer: quieren formacion, liderazgo y un equipo serio detras.",
+    "secondary": "Inversores inmobiliarios de Zona Norte que buscan oportunidades de desarrollo y un referente confiable para orientarse.",
+    "pain_points": [
+      "Son agentes que trabajan solos y no logran escalar sus resultados",
+      "No tienen formacion profesional en el rubro, aprendieron sobre la marcha",
+      "Buscan un lider o mentor pero la mayoria de los referentes del rubro venden humo",
+      "Los inversores no saben en quien confiar para meter plata en un desarrollo",
+      "Agentes frustrados con inmobiliarias que no les dan herramientas ni estructura"
+    ],
+    "desires": [
+      "Pertenecer a un equipo profesional con vision clara y liderazgo fuerte",
+      "Formarse de verdad en real estate con alguien que tenga track record",
+      "Escalar su carrera como agente y ganar comisiones reales",
+      "Inversores: encontrar oportunidades solidas con respaldo profesional"
+    ]
+  },
+
+  "logo": {
+    "main_file": null,
+    "wordmark": true,
+    "wordmark_style": "Juan Caillet Bois en tipografia primaria, bold/black, uppercase",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el último slide como wordmark tipografico"
+  }
+}

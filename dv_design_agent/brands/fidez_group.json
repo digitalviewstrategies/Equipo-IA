@@ -1,0 +1,237 @@
+{
+  "brand_id": "fidez_group",
+  "brand_name": "Fidez Group",
+  "brand_tagline": "Real Estate 360",
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Grupo inmobiliario 360 en Zona Norte que engloba Soldati Vista y desarrollos propios. Modelo B2B e inversor: vende oportunidad de inversion en desarrollos propios, no propiedades sueltas a consumidor final. Institucional pero actualizado.",
+
+  "colors": {
+    "primary": {
+      "hex": "#2B2D42",
+      "name": "Corporate Navy",
+      "usage": "Color principal derivado del azul oscuro/navy del fondo de su perfil de Instagram y de la estetica corporativa. Fondos principales de slides."
+    },
+    "dark": {
+      "hex": "#0D0D12",
+      "name": "Near Black",
+      "usage": "Fondos de slides de narrativa pesada."
+    },
+    "accent_primary": {
+      "hex": "#5C6BC0",
+      "name": "Indigo",
+      "usage": "Indigo/violeta azulado derivado de los botones Follow y acentos del perfil. Acento para datos clave, highlights y CTAs."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F5F7",
+      "name": "Cool Light",
+      "usage": "Fondos claros para slides de respiro."
+    },
+    "gray": {
+      "hex": "#6B7280",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta corporativa y seria. El navy domina, el indigo aporta modernidad sin perder institucionalidad. Nada de colores que se sientan de marca personal.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (corporate navy)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "primary (corporate navy) con dato en indigo",
+      "slide_4_solucion": "light (cool light) con texto dark",
+      "slide_5_prueba": "dark (negro) con numero grande en indigo",
+      "slide_6_cta": "primary (corporate navy) con CTA en white"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Plus Jakarta Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 600,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Corporativa contemporanea."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes: ROI, superficies de desarrollos, montos de inversion, rendimientos."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -4px",
+    "line_height_headlines": 0.92,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Recomendado en hooks y CTAs. Refuerza el tono corporativo."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "corporativo",
+      "grupo",
+      "holding",
+      "inversion",
+      "desarrollo",
+      "institucional moderno",
+      "B2B"
+    ],
+    "do": [
+      "Tipografia pesada y corporativa",
+      "Fondos oscuros que transmitan solidez de grupo",
+      "Renders y fotos de desarrollos propios como protagonistas",
+      "Datos financieros: ROI, rentabilidad, superficies, avance de obra",
+      "Infografias limpias cuando hay datos complejos",
+      "Logo en el ultimo slide",
+      "Mostrar el ecosistema de empresas del grupo",
+      "Composiciones centradas o con grilla editorial"
+    ],
+    "dont": [
+      "Estetica de marca personal (no pisarse con Juan Caillet Bois)",
+      "Estetica operativa de inmobiliaria (no pisarse con Soldati Vista)",
+      "Colores vibrantes o juveniles",
+      "Tipografias informales",
+      "Emojis o iconos",
+      "Frases de captacion de propiedades individuales",
+      "Tono de vendedor directo",
+      "Frases cliche (sona con, te acompanamos)",
+      "Layouts desordenados"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Corporativo pero no aburrido: institucional actualizado",
+      "Voseo argentino con registro ejecutivo",
+      "Sin emojis",
+      "Habla a inversores y a decision-makers, no a compradores finales",
+      "Datos financieros y de mercado como lenguaje principal",
+      "Presenta oportunidades de inversion, no propiedades en venta",
+      "El grupo y sus empresas son el protagonista, no una persona",
+      "Autoridad de holding: respaldo, escala, vision de largo plazo",
+      "No pisarse con Juan Caillet Bois (personal) ni Soldati Vista (operativo)"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "calidad humana",
+      "oportunidad unica",
+      "imperdible",
+      "compra tu depto",
+      "vivienda propia"
+    ],
+    "preferred_words": [
+      "inversion",
+      "desarrollo",
+      "rentabilidad",
+      "ROI",
+      "grupo",
+      "holding",
+      "proyecto",
+      "avance de obra",
+      "Zona Norte",
+      "real estate 360",
+      "ecosistema",
+      "plusvalia"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre la inversion inmobiliaria.",
+        "example": "No necesitas USD 500k para invertir en real estate. Necesitas el desarrollo correcto."
+      },
+      "empatia": {
+        "description": "Conectar con la frustracion del inversor que no encuentra oportunidades solidas.",
+        "example": "Tenes capital parado y cada dia que pasa perdes contra la inflacion. Pero invertir a ciegas no es opcion."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo que los desarrolladores no dicen.",
+        "example": "La mayoria de los desarrollos inmobiliarios no te muestran el numero real de rentabilidad. Nosotros si."
+      }
+    },
+    "disruption_scale": 3,
+    "narrative_structure": {
+      "name": "Estructura Fidez",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante B2B/inversor del metodo DV. El dolor es el capital sin rendir o la falta de oportunidades solidas. La consecuencia es la perdida de poder adquisitivo o market share. La solucion es el ecosistema 360 de Fidez. La prueba son numeros de desarrollos, avance de obra y rentabilidad real."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Desarrollos e inversiones",
+      "percentage": 40,
+      "description": "Presentacion de proyectos en desarrollo, oportunidades de inversion, avance de obra, rentabilidad proyectada. El core del contenido.",
+      "formats": ["carrusel", "video corto"]
+    },
+    {
+      "name": "Vision de mercado y real estate 360",
+      "percentage": 25,
+      "description": "Analisis del mercado inmobiliario desde la perspectiva de un grupo con vision integral: tendencias, oportunidades, movimientos del sector.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Ecosistema Fidez",
+      "percentage": 20,
+      "description": "Mostrar las empresas del grupo, como se complementan, la vision 360. Construye marca corporativa y confianza de grupo.",
+      "formats": ["carrusel", "video corto"]
+    },
+    {
+      "name": "Autoridad corporativa",
+      "percentage": 15,
+      "description": "Hitos del grupo, eventos, alianzas, presencia en expo. Prueba social corporativa.",
+      "formats": ["video corto", "carrusel"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Inversores inmobiliarios de Zona Norte y CABA que buscan oportunidades de desarrollo con respaldo de grupo. Ticket medio-alto.",
+    "secondary": "Decision-makers de empresas relacionadas al real estate que buscan alianzas o participacion en desarrollos.",
+    "pain_points": [
+      "Tienen capital y no encuentran oportunidades de inversion inmobiliaria con numeros claros",
+      "Desconfian de desarrolladores que prometen rendimientos sin respaldo",
+      "Quieren invertir en real estate pero no quieren hacerlo con un desarrollador chico sin estructura",
+      "Buscan transparencia en el proceso: avance de obra, numeros reales, plazos",
+      "Les preocupa la solidez del grupo detras del proyecto"
+    ],
+    "desires": [
+      "Invertir con un grupo solido que tenga track record verificable",
+      "Acceso a oportunidades de desarrollo antes de que lleguen al mercado general",
+      "Numeros claros y transparentes: ROI, plazos, costos",
+      "Un ecosistema 360 que cubra todo el ciclo inmobiliario"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/fidez_group/logo.png",
+    "min_size_px": 140,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

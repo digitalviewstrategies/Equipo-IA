@@ -1,0 +1,235 @@
+{
+  "brand_id": "rubica_inmobiliaria",
+  "brand_name": "Rubica Inmobiliaria",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Inmobiliaria de Don Torcuato con 60 anos de trayectoria. Especialista en propiedades industriales en Zona Norte (nicho con pocos competidores de volumen), con apertura reciente al mercado residencial. La autoridad industrial es el diferencial.",
+
+  "colors": {
+    "primary": {
+      "hex": "#CC2D2D",
+      "name": "Rubica Red",
+      "usage": "Color principal extraido del logo (rojo prominente en el nombre RUBICA y en los circulos del 60 aniversario). Fondos de slides de hook y CTA."
+    },
+    "dark": {
+      "hex": "#1A1A1A",
+      "name": "Dark",
+      "usage": "Fondos de slides de narrativa pesada."
+    },
+    "accent_primary": {
+      "hex": "#D4A82F",
+      "name": "Gold",
+      "usage": "Dorado derivado del circulo dorado del logo 60 aniversario. Acento para datos clave, numeros grandes y elementos de autoridad/trayectoria."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F2EFE8",
+      "name": "Warm Cream",
+      "usage": "Fondos claros con tinte calido, derivado del fondo beige del logo aniversario."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros y rojos."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Rojo institucional como firma, dorado como acento de autoridad y trayectoria. La paleta comunica solidez y anos de mercado.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (Rubica red) con texto white",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con dato en gold",
+      "slide_4_solucion": "light (warm cream) con texto dark",
+      "slide_5_prueba": "dark (negro) con numero en gold",
+      "slide_6_cta": "primary (Rubica red) con CTA en white"
+    },
+    "red_max_appearances": 2
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Plus Jakarta Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 600,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Combina presencia institucional con contemporaneidad."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes: anos de trayectoria, m2 de galpones, precios, superficies industriales."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -4px",
+    "line_height_headlines": 0.92,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Recomendado en hooks y CTAs. Transmite peso industrial."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "industrial",
+      "institucional",
+      "trayectoria",
+      "solido",
+      "Zona Norte",
+      "autoridad",
+      "dual: industrial + residencial"
+    ],
+    "do": [
+      "Tipografia pesada y bold que transmita solidez",
+      "Fotos de propiedades industriales (galpones, depositos, naves) como diferencial",
+      "Datos duros: m2, anos, operaciones, superficies",
+      "Diferenciar visualmente contenido industrial vs residencial",
+      "Logo en el ultimo slide",
+      "Usar los 60 anos de trayectoria como argumento constante",
+      "Composiciones limpias y profesionales"
+    ],
+    "dont": [
+      "Estetica juvenil o de influencer",
+      "Colores pasteles o de lifestyle",
+      "Tipografias decorativas",
+      "Emojis o iconos informales",
+      "Mezclar industrial y residencial en la misma pieza sin diferenciacion clara",
+      "Frases cliche (sona con tu hogar)",
+      "Layouts desordenados o recargados",
+      "Fotos de baja calidad de galpones (industriales tienen que verse bien tambien)"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Institucional y solido, habla desde 60 anos de mercado",
+      "Voseo argentino con registro profesional adulto",
+      "Sin emojis",
+      "La trayectoria habla por si sola, no necesita ser agresivo",
+      "Especialista industrial: usa el vocabulario del nicho (galpon, nave, deposito, playa de maniobras, zona industrial)",
+      "Datos duros como piedra angular de la comunicacion",
+      "Para residencial: tono similar pero sin la terminologia industrial",
+      "Confianza de empresa con anos en la zona, no de startup"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "innovador",
+      "disruptivo",
+      "startup",
+      "oportunidad unica",
+      "imperdible"
+    ],
+    "preferred_words": [
+      "trayectoria",
+      "industrial",
+      "galpon",
+      "nave",
+      "deposito",
+      "superficie",
+      "m2 cubiertos",
+      "operacion",
+      "Zona Norte",
+      "Don Torcuato",
+      "valuacion",
+      "60 anos"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre el mercado industrial de Zona Norte.",
+        "example": "No todos los galpones de Zona Norte valen lo mismo. La ubicacion es solo el 30% de la ecuacion."
+      },
+      "empatia": {
+        "description": "Conectar con la necesidad del empresario que busca espacio industrial.",
+        "example": "Necesitas mas espacio para tu operacion pero cada galpon que ves tiene un problema distinto."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo sobre el mercado industrial que nadie dice.",
+        "example": "El 70% de las propiedades industriales de Zona Norte no estan publicadas en ningun portal. Las maneja quien conoce la zona."
+      }
+    },
+    "disruption_scale": 2,
+    "narrative_structure": {
+      "name": "Estructura Rubica",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante industrial/institucional del metodo DV. El dolor puede ser del empresario que busca espacio o del propietario industrial que quiere vender. La consecuencia es concreta (costos, tiempos). La solucion es la experiencia de 60 anos en la zona. La prueba son operaciones cerradas y conocimiento de mercado."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Propiedades industriales",
+      "percentage": 40,
+      "description": "Showcase y captacion de propiedades industriales: galpones, naves, depositos, terrenos. El pilar diferencial de Rubica.",
+      "formats": ["placa de propiedad", "carrusel", "video corto"]
+    },
+    {
+      "name": "Propiedades residenciales",
+      "percentage": 25,
+      "description": "Venta y captacion residencial en Don Torcuato y alrededores. Linea secundaria que se apoya en la marca institucional.",
+      "formats": ["placa de propiedad", "carrusel", "video corto"]
+    },
+    {
+      "name": "Mercado industrial Zona Norte",
+      "percentage": 20,
+      "description": "Informacion y tendencias del mercado industrial: valores, zonas, regulaciones, oportunidades. Posiciona como referente del nicho.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Trayectoria y autoridad",
+      "percentage": 15,
+      "description": "60 anos de historia, equipo, operaciones emblematicas, hitos. Construye confianza institucional.",
+      "formats": ["carrusel", "video corto"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Empresarios y pymes de Zona Norte que buscan propiedades industriales (galpones, depositos, naves) o quieren vender las suyas. Tickets USD 200k-400k.",
+    "secondary": "Propietarios y compradores residenciales de Don Torcuato y alrededores.",
+    "pain_points": [
+      "Buscan un galpon o nave y no encuentran opciones publicadas",
+      "No confian en inmobiliarias que no entienden el mercado industrial",
+      "Tienen una propiedad industrial y no saben como valuarla correctamente",
+      "Necesitan alguien que conozca regulaciones, zonificacion y usos permitidos",
+      "Les preocupa la seguridad de la operacion en transacciones grandes"
+    ],
+    "desires": [
+      "Una inmobiliaria que entienda sus necesidades industriales especificas",
+      "Acceso a propiedades que no estan en portales",
+      "Valuacion precisa basada en conocimiento real del mercado industrial",
+      "Seguridad y respaldo institucional en la operacion"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/rubica_inmobiliaria/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

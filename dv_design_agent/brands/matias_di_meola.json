@@ -1,0 +1,238 @@
+{
+  "brand_id": "matias_di_meola",
+  "brand_name": "Matias Di Meola",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Agente inmobiliario independiente y flipping specialist en CABA y Zona Norte. Marca personal fuerte como influencer inmobiliario con contenido disruptivo y directo. Se posiciona como el tipo que te dice lo que otros agentes no se animan.",
+
+  "colors": {
+    "primary": {
+      "hex": "#2D3A2E",
+      "name": "Forest Dark",
+      "usage": "Color principal derivado del verde oliva oscuro predominante en su feed de Instagram. Se usa en fondos de slides de narrativa, hooks y CTA."
+    },
+    "dark": {
+      "hex": "#0F0F0F",
+      "name": "Near Black",
+      "usage": "Fondos de slides de dolor y consecuencia. El negro dominante de su feed."
+    },
+    "accent_primary": {
+      "hex": "#C4A35A",
+      "name": "Gold Muted",
+      "usage": "Acento dorado terroso, derivado de los tonos calidos de su feed. Para highlights, datos destacados y CTAs."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F2F0EB",
+      "name": "Warm Light",
+      "usage": "Fondos claros de respiro. Tono calido que combina con la paleta terrosa."
+    },
+    "gray": {
+      "hex": "#8A8A80",
+      "name": "Warm Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta oscura y terrosa que refleja el estilo callejero y urbano de Mati. Los fondos oscuros dominan, el dorado aparece como acento de impacto.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (verde oscuro) con texto en white y acento gold",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con acento gold en dato clave",
+      "slide_4_solucion": "light (calido claro)",
+      "slide_5_prueba": "primary (verde oscuro) con numero grande en gold",
+      "slide_6_cta": "dark (negro) con CTA en gold"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal para todo. Black (900) para titulares agresivos, Medium (500) para cuerpo. Sans-serif limpia y moderna que combina con el tono directo de Mati."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados (USD, m2, porcentajes)."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 80,
+    "headline_max_size_px": 130,
+    "letter_spacing_headlines": "-3px a -5px (bien tight, agresivo)",
+    "line_height_headlines": 0.90,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Siempre en hooks y CTAs. Opcional en slides intermedios."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "urbano",
+      "callejero",
+      "oscuro",
+      "directo",
+      "marca personal",
+      "influencer inmobiliario",
+      "raw"
+    ],
+    "do": [
+      "Tipografia gigante y bold que ocupe minimo 60% del slide",
+      "Fondos oscuros dominantes, la pieza tiene que sentirse de noche",
+      "Contraste alto: blanco o dorado sobre negro/verde oscuro",
+      "Layouts asimetricos, texto alineado a la izquierda",
+      "Fotos reales de Mati en campo cuando se pueda",
+      "Un solo mensaje por slide, contundente",
+      "Uppercase agresivo en hooks",
+      "Sin logo formal, usar nombre MATIAS DI MEOLA como wordmark en el ultimo slide"
+    ],
+    "dont": [
+      "Colores pasteles o paletas claras",
+      "Tipografias decorativas o serif",
+      "Emojis o iconos cute",
+      "Gradientes de colores",
+      "Estetica corporate o institucional",
+      "Frases como 'tu hogar sonado', 'te acompanamos'",
+      "Layouts centrados y simetricos (demasiado formal)",
+      "Fondos blancos puros como color dominante"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Habla como en la calle, no como en una oficina",
+      "Voseo argentino puro, muletillas naturales (che, posta, flasheas)",
+      "Sin emojis",
+      "Directo y confrontativo, sin miedo a incomodar",
+      "Habla desde la experiencia de hacer flipping real, no desde teoria",
+      "High energy: cada frase tiene que sentirse como una bofetada de realidad",
+      "Usa terminos del rubro con naturalidad pero tambien jerga de la calle",
+      "El contenido tiene que sentirse como un amigo que sabe del tema y te dice la posta",
+      "Nunca suenes corporativo ni vendedor clasico"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "profesionales comprometidos",
+      "calidez",
+      "excelencia",
+      "oportunidad unica",
+      "no te lo pierdas"
+    ],
+    "preferred_words": [
+      "flipping",
+      "off-market",
+      "operacion",
+      "captacion",
+      "sucesion",
+      "urgencia",
+      "margen",
+      "negocio",
+      "calle",
+      "terreno",
+      "demolicion",
+      "obra"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia instalada sobre el mercado inmobiliario o el flipping.",
+        "example": "No necesitas plata para hacer tu primer flipping. Necesitas saber negociar."
+      },
+      "empatia": {
+        "description": "Nombrar el dolor del dueno que quiere vender rapido mejor que el mismo.",
+        "example": "Heredaste una propiedad, no tenes tiempo, y el abogado te apura. Te suena?"
+      },
+      "verdad_incomoda": {
+        "description": "Decir en voz alta lo que el mercado inmobiliario calla.",
+        "example": "El 80% de las propiedades publicadas estan sobrevaloradas. Y los duenos lo saben."
+      }
+    },
+    "disruption_scale": 5,
+    "narrative_structure": {
+      "name": "Metodo Di Meola",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Funnel narrativo DV en version Mati: arranca con un dolor crudo del dueno que necesita vender rapido, muestra la consecuencia de no actuar (propiedad parada, gastos acumulandose), presenta la solucion con la experiencia de Mati en flipping, y cierra con prueba concreta (operacion real, numeros)."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Captacion off-market",
+      "percentage": 40,
+      "description": "Contenido dirigido a duenos con urgencia de venta: sucesiones, divorcios, propiedades paradas. El objetivo es que contacten a Mati directamente.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Flipping real",
+      "percentage": 25,
+      "description": "Mostrar operaciones de flipping reales: antes y despues, numeros, proceso. Construye autoridad y genera interes de inversores.",
+      "formats": ["video corto", "carrusel educativo"]
+    },
+    {
+      "name": "Verdades del mercado",
+      "percentage": 20,
+      "description": "Contenido de opinion fuerte sobre el mercado inmobiliario argentino. Posiciona a Mati como voz disruptiva del rubro.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Marca personal",
+      "percentage": 15,
+      "description": "Dia a dia de Mati, recorridos por propiedades, lifestyle del agente inmobiliario. Humaniza la marca.",
+      "formats": ["video corto", "stories"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Duenos de propiedades con urgencia de venta en CABA y Zona Norte: sucesiones, divorcios, propiedades heredadas sin uso, duenos cansados de lidiar con inmobiliarias.",
+    "secondary": "Inversores chicos que quieren entrar al flipping inmobiliario con operaciones de USD 100k-300k.",
+    "pain_points": [
+      "Heredaron una propiedad y no saben que hacer, el abogado los apura",
+      "Tienen una propiedad parada hace meses y los gastos se acumulan",
+      "Probaron con inmobiliarias tradicionales y nadie les consigue comprador",
+      "Quieren vender rapido pero no quieren regalar la propiedad",
+      "No confian en los agentes inmobiliarios porque tuvieron malas experiencias"
+    ],
+    "desires": [
+      "Sacarse de encima una propiedad problematica lo antes posible",
+      "Cobrar un precio justo sin tener que esperar meses",
+      "Tratar con alguien que entienda su urgencia y no les haga perder tiempo",
+      "Resolver la venta sin burocracia innecesaria"
+    ]
+  },
+
+  "logo": {
+    "main_file": null,
+    "note": "Matias no tiene logo formal. Se usa su nombre como wordmark: MATIAS DI MEOLA en tipografia Inter Black, uppercase. En el ultimo slide del carrusel, se coloca el nombre como firma tipografica.",
+    "wordmark_style": "Inter 900, uppercase, letter-spacing -2px, color white o gold segun fondo",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide como wordmark tipografico"
+  }
+}

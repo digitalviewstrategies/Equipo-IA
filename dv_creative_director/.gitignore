@@ -1,5 +1,21 @@
-.env
+# Outputs locales (no se versionan, son por cliente y por fecha)
 outputs/
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+.venv/
+venv/
+
+# Sistema
 .DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Env (por si en el futuro se agregan API keys)
+.env

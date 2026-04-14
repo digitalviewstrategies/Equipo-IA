@@ -1,108 +1,112 @@
-# DV Creative Director
+# DV Creative Director (v2)
 
-Agente de IA para ideación, estrategia y desarrollo de contenido de los clientes de Digital View.
+Agente de IA que funciona como Director Creativo de Digital View. Investiga, piensa y desarrolla ideas y guiones de contenido para los clientes de DV usando el **Sistema de Producción de Video Ads** (13 formatos ganadores basados en Hormozi $100M Leads + Meta Best Practices 2025 + Facu Winer).
 
-## Qué hace
+Produce tres tipos de output:
 
-- Desarrolla guiones completos para producciones audiovisuales (video selfie, entrevista, b-roll, reels).
-- Crea briefs de carrusel listos para pasarle al `dv_design_agent`.
-- Genera estrategias de contenido mensual con calendario y ideas desarrolladas.
-- Investiga el mercado y tendencias antes de proponer ideas.
-- Comparte el contexto de clientes con el agente de diseño vía la carpeta `brands/` compartida.
+1. **Guiones de video** para producciones audiovisuales (Bauti CB + editores).
+2. **Briefs de carrusel** listos para el `dv_design_agent`.
+3. **Estrategias de contenido mensuales** con pilares, mix y calendario.
+
+Comparte el contexto de clientes con `dv_design_agent` leyendo los brand systems desde `../dv_design_agent/brands/`.
+
+## Qué cambió respecto a v1
+
+- **Sistema de video ads completo**: el framework anterior (DCSP/HPTC/HTRM) fue reemplazado por los 13 formatos ganadores del documento de Nico, con estructuras, guiones fórmula, banco de hooks y métricas por formato.
+- **Paso obligatorio nuevo**: antes de proponer ideas, el agente genera mínimo 5 ángulos de dolor distintos desde el buyer persona del cliente, usando las 6 familias de ángulos (económico, oportunidad perdida, social/vergüenza, miedo/pérdida futura, ira/traición, cansancio/proceso). Ver `context/angulos_de_dolor.md`.
+- **Research de tendencias en TikTok e Instagram**: nuevo bloque en el research previo a la ideación, con declaración explícita de las limitaciones de WebSearch (no entra a TikTok Creative Center ni al feed en vivo, sí lee blogs de Later/Hootsuite/Social Insider/Tom Orbach/etc. con 1-3 semanas de rezago).
+- **Decisión manufacturado vs documentado**, **What-Who-When** y **paleta de emociones** son ahora pasos explícitos del proceso, no background.
+- **Template de guion** alineado al Brief de Producción del sistema, con validación de ratio valor:tiempo y checklist de set.
 
 ## Instalación
 
-### Requisitos
-
-- Claude Code instalado y configurado.
-- Python 3.10+.
-- Acceso a internet (usa web search para research de mercado).
-- `dv_design_agent` instalado en el mismo directorio padre (para compartir brand systems).
-
-### Setup
-
-```bash
-# Clonar o copiar el directorio dv_creative_director
-cd dv_creative_director
-
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Configurar variables de entorno
-cp .env.example .env
-# Editar .env con tus claves si usás APIs externas
-```
-
-### Estructura de directorios recomendada
+Cloná o descomprimí este repo al mismo nivel que `dv_design_agent/`:
 
 ```
-digital_view_agents/
-├── dv_design_agent/        # Agente de diseño (ya instalado)
-│   └── brands/             # Brand systems compartidos
-└── dv_creative_director/   # Este agente
-    └── CLAUDE.md
+proyectos/
+├── dv_design_agent/
+│   └── brands/
+│       ├── digital_view.json
+│       ├── matias_di_meola.json
+│       └── ...
+└── dv_creative_director/      ← acá
 ```
 
-Si los agentes están en directorios separados, el director creativo busca los brand systems en `../dv_design_agent/brands/`. Si tu estructura es distinta, actualizá la ruta en `CLAUDE.md`.
+Abrí Claude Code en `dv_creative_director/`. El agente lee `CLAUDE.md` automáticamente al arrancar.
 
-## Uso básico
+No necesita dependencias externas: el research lo hace con la herramienta WebSearch nativa de Claude Code.
 
-Abrís Claude Code en el directorio `dv_creative_director/` y le hablás al agente directamente.
+## Uso
 
-### Pedido mínimo
-
-```
-Cliente: [nombre]
-Objetivo: [qué quiere lograr]
-Formato: [video / carrusel / estrategia mensual / lo que veas mejor]
-Cantidad: [cuántas piezas o ideas]
-```
-
-### Ejemplos reales
+Pedido mínimo para ideación completa:
 
 ```
-Cliente: Soldati Vista
-Objetivo: captar mandatos en Palermo y Villa Crespo
-Formato: guion para video selfie + carrusel
-Cantidad: 1 de cada uno
+Cliente: matias_di_meola
+Objetivo: posicionar marca personal en Vicente López
+Formato: a definir
+Cantidad: 3 ideas para reels este mes
 ```
 
-```
-Cliente: Matias Di Meola
-Objetivo: construir marca personal como house flipper
-Formato: estrategia mensual completa
-Cantidad: 1 mes
-```
+El agente:
+1. Carga el brand system del cliente.
+2. Construye el Core (objetivo, buyer persona, servicio, dolor, What-Who-When).
+3. **Genera 5+ ángulos de dolor** desde el buyer persona.
+4. Hace research de mercado + research de tendencias TikTok/IG.
+5. Propone 3 ideas en ángulos distintos, con formato del sistema, estilo, emoción y hook tentativo.
+6. Vos elegís una.
+7. Desarrolla el output completo y lo guarda en `outputs/[cliente]/[fecha]/`.
+
+Si el pedido viene cerrado y no necesita ideación, decilo y va directo al desarrollo:
 
 ```
-Cliente: nuevo cliente sin brand system
-Contexto: inmobiliaria familiar en Martínez, dos socias, ticket promedio USD 250k, quieren captar propietarios
-Objetivo: arrancar con contenido de captación
-Formato: lo que veas mejor
+Cliente: soldati_vista
+Hacé el guion del video del depto de 2 amb en Núñez.
+Formato: Antes/Después tipo 2 (métricas).
+Datos: USD 145.000, 48m2, balcón, cochera, vendido en 22 días.
 ```
 
-## Outputs
-
-Todos los outputs se guardan en `outputs/[cliente]/[fecha]/`:
-
-- `guion_[titulo].md` — guion completo con notas de producción.
-- `brief_carrusel_[titulo].md` — brief listo para el agente de diseño.
-- `estrategia_[mes].md` — estrategia mensual con calendario.
-- `ideas_[objetivo].md` — las 3 ideas iniciales antes de desarrollar.
-
-## Flujo con el agente de diseño
-
-Cuando el director creativo produce un brief de carrusel, podés pasárselo directamente al agente de diseño:
+## Estructura
 
 ```
-# En dv_design_agent/
-# Le pasás el brief generado por el director creativo
-# El agente de diseño lee el brand system del mismo cliente y produce las piezas
+dv_creative_director/
+├── CLAUDE.md                              # Cerebro del agente (proceso de 8 pasos)
+├── README.md                              # Esto
+├── .gitignore / .env.example
+├── context/
+│   ├── sistema_video_ads.md               # Índice
+│   ├── sistema_video_ads_parte1.md        # Core del cliente
+│   ├── sistema_video_ads_parte2.md        # Formatos 1-7
+│   ├── sistema_video_ads_parte3.md        # Formatos 8-13
+│   ├── sistema_video_ads_parte4.md        # Hooks, títulos, brief, testing, producción
+│   ├── angulos_de_dolor.md                # Cómo generar 5+ ángulos (NUEVO)
+│   ├── inmobiliario_mercado.md            # Tipos de cliente, vocabulario, dolores del rubro
+│   └── ejemplos_output.md                 # Casos reales de referencia
+├── scripts/
+│   ├── template_guion.md                  # Brief de producción v2
+│   ├── output_manager.py                  # Cargar brands + guardar outputs
+│   └── market_research.py                 # Research de mercado + tendencias sociales
+├── examples/
+└── outputs/                               # Auto-creado por cliente y fecha
 ```
 
-## Notas
+## El proceso de 8 pasos del agente
 
-- El agente hace research de mercado antes de proponer ideas. Esto puede tomar 1-2 minutos extra pero mejora mucho la calidad de las ideas.
-- Siempre propone 3 ideas antes de desarrollar. Elegís una y ahí profundiza.
-- Los guiones incluyen siempre al menos dos variantes del hook para testear.
-- El tono se calibra automáticamente según el brand system del cliente.
+1. Entender el pedido (preguntar solo si falta info crítica).
+2. Cargar brand system del cliente.
+3. Construir el Core (5 elementos).
+4. **Generar 5+ ángulos de dolor** (paso obligatorio).
+5. Research (mercado + tendencias sociales).
+6. Proponer 3 ideas en ángulos distintos.
+7. Desarrollar el output completo (guion / brief / estrategia).
+8. Guardar y cerrar indicando a quién va dentro del equipo.
+
+## Integración con el resto del equipo
+
+- **Guiones de video** → Bauti CB (producción) y editores (Gian Luca, Fran, Eze).
+- **Briefs de carrusel** → `dv_design_agent` directamente.
+- **Estrategias mensuales** → Elias o Bauti R (PMs).
+- **Brainstorm libre** → Nico (COO, Director de Contenido).
+
+## Modelo
+
+Sonnet 4.6 por default. Opus 4.6 para estrategia mensual completa, cliente nuevo sin norte creativo, o ideación de campaña grande con múltiples formatos combinados.

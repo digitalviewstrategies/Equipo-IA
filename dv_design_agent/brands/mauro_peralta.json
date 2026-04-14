@@ -1,0 +1,236 @@
+{
+  "brand_id": "mauro_peralta",
+  "brand_name": "Mauro Peralta",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Asesor inmobiliario independiente en CABA y Zona Norte. Perfil closer clasico adaptado a redes: mezcla venta directa con educacion y autoridad. Profesional y confiable, cero humo. Foco en performance y resultados concretos.",
+
+  "colors": {
+    "primary": {
+      "hex": "#1A1A2E",
+      "name": "Navy Dark",
+      "usage": "Color principal derivado del fondo oscuro azulado de su perfil de Instagram. Fondos de slides principales, hooks y CTAs."
+    },
+    "dark": {
+      "hex": "#0D0D14",
+      "name": "Deep Dark",
+      "usage": "Fondos de slides de dolor y consecuencia. Negro con tinte azulado."
+    },
+    "accent_primary": {
+      "hex": "#4A6CF7",
+      "name": "Electric Blue",
+      "usage": "Acento azul electrico derivado de los acentos azules del perfil. Highlights, datos clave, CTAs y elementos de destaque."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F0F1F5",
+      "name": "Cool Light",
+      "usage": "Fondos claros para slides de respiro. Tono frio que combina con la paleta azulada."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta oscura y profesional. Los fondos dark navy dominan, el azul electrico aparece como acento estrategico en datos y CTAs.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (navy dark) con acento blue en dato clave",
+      "slide_2_dolor": "dark (deep dark)",
+      "slide_3_consecuencia": "primary (navy dark)",
+      "slide_4_solucion": "light (cool light) con texto dark",
+      "slide_5_prueba": "dark (deep dark) con numero en accent blue",
+      "slide_6_cta": "primary (navy dark) con CTA en accent blue"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "DM Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Sans-serif limpia, profesional y moderna."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados (precios, porcentajes, datos duros)."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -4px",
+    "line_height_headlines": 0.92,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Recomendado en hooks y CTAs. Opcional en slides intermedios."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "profesional",
+      "confiable",
+      "limpio",
+      "performance",
+      "datos duros",
+      "autoridad",
+      "closer"
+    ],
+    "do": [
+      "Tipografia grande y bold que domine el slide",
+      "Contrastes claros: texto blanco o azul sobre fondos oscuros",
+      "Datos duros y numeros grandes como protagonistas",
+      "Fotos reales de Mauro y de propiedades",
+      "Un solo mensaje por slide",
+      "Layouts limpios con espacio negativo generoso",
+      "Wordmark tipografico en el ultimo slide",
+      "Usar numeros y estadisticas para generar credibilidad"
+    ],
+    "dont": [
+      "Colores pasteles o paletas calidas",
+      "Tipografias decorativas",
+      "Emojis o iconos cute",
+      "Gradientes multicolor",
+      "Estetica juvenil o de influencer",
+      "Frases como 'tu hogar sonado', 'te acompanamos'",
+      "Exceso de elementos visuales en un mismo slide",
+      "Aspecto de marca generica de Canva"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Profesional y confiable, sin ser frio ni distante",
+      "Voseo argentino natural pero con registro adulto",
+      "Sin emojis",
+      "Habla desde la experiencia de campo, no desde la teoria",
+      "Mezcla educacion con venta directa: te ensena algo y te cierra",
+      "Datos concretos siempre: numeros, porcentajes, plazos reales",
+      "No promete lo que no puede cumplir",
+      "Tono de closer: seguro, directo, sin rodeos",
+      "Poco humo, mucha sustancia"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "calidad humana",
+      "oportunidad unica",
+      "no te lo pierdas",
+      "increible",
+      "espectacular"
+    ],
+    "preferred_words": [
+      "operacion",
+      "captacion",
+      "tasacion",
+      "mercado",
+      "comision",
+      "cierre",
+      "resultado",
+      "valuacion",
+      "rendimiento",
+      "consulta"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia comun sobre vender o comprar propiedades.",
+        "example": "Publicar en 5 portales no te va a conseguir comprador. Te explico por que."
+      },
+      "empatia": {
+        "description": "Nombrar la frustracion del dueno que no logra vender.",
+        "example": "Llevas 6 meses con la propiedad publicada y las consultas que te llegan no son serias."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo que el mercado sabe pero nadie dice.",
+        "example": "Si tu agente inmobiliario no te llama cada semana, no esta trabajando tu propiedad."
+      }
+    },
+    "disruption_scale": 3,
+    "narrative_structure": {
+      "name": "Metodo Peralta",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Funnel narrativo DV en version profesional: arranca con un dolor real del propietario o comprador, muestra que pasa si no actua, presenta la solucion con datos concretos de la experiencia de Mauro, y cierra con prueba verificable (operacion cerrada, testimonio, numero)."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Captacion de propiedades",
+      "percentage": 35,
+      "description": "Contenido dirigido a propietarios que quieren vender: por que elegir a Mauro, como funciona el proceso, que resultados esperar.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Venta de cartera",
+      "percentage": 30,
+      "description": "Showcase de propiedades actuales con datos duros, fotos profesionales y argumentos de venta claros.",
+      "formats": ["video corto", "placa de propiedad", "carrusel"]
+    },
+    {
+      "name": "Educacion inmobiliaria",
+      "percentage": 20,
+      "description": "Tips y datos del mercado que posicionan a Mauro como experto: tendencias de precios, errores comunes, guias de proceso.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Autoridad y casos de exito",
+      "percentage": 15,
+      "description": "Operaciones cerradas, testimonios de clientes, resultados concretos que demuestran track record.",
+      "formats": ["video corto", "carrusel"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Propietarios en CABA y Zona Norte que quieren vender su propiedad con un agente serio y efectivo. Tickets hasta USD 300k.",
+    "secondary": "Compradores que buscan propiedades con asesoramiento profesional real, no con un vendedor que les muestra 50 propiedades sin criterio.",
+    "pain_points": [
+      "Publicaron la propiedad y no consiguen consultas serias",
+      "El agente anterior no les daba feedback ni seguimiento",
+      "No saben si el precio que les dijeron esta bien",
+      "Les da miedo equivocarse en la tasacion y perder plata",
+      "Sienten que los agentes solo quieren la exclusiva pero despues no hacen nada"
+    ],
+    "desires": [
+      "Un profesional que les de claridad sobre el valor real de su propiedad",
+      "Vender en un plazo razonable sin regalar",
+      "Alguien que los mantenga informados semana a semana",
+      "Cerrar la operacion con seguridad juridica y sin sorpresas"
+    ]
+  },
+
+  "logo": {
+    "main_file": null,
+    "wordmark": true,
+    "wordmark_style": "Mauro Peralta en tipografia primaria, bold/black, uppercase",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el último slide como wordmark tipografico"
+  }
+}

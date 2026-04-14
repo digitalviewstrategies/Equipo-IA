@@ -1,0 +1,234 @@
+{
+  "brand_id": "abitat",
+  "brand_name": "Abitat",
+  "brand_tagline": "Bienes Raices",
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Inmobiliaria con servicio de home staging en Puertos del Lago, Nordelta y Zona Norte. Branding fuerte, estetica cuidada, vende lifestyle y diseno. Se diferencia por el home staging como herramienta de venta real, no como decoracion.",
+
+  "colors": {
+    "primary": {
+      "hex": "#4A5A3C",
+      "name": "Olive Green",
+      "usage": "Color principal extraido del logo (fondo verde oliva del logo Abitat). Fondos de slides principales, hooks y CTA."
+    },
+    "dark": {
+      "hex": "#1A2418",
+      "name": "Forest Dark",
+      "usage": "Fondos de slides de narrativa oscura. Verde muy oscuro casi negro, derivado del fondo del perfil de Instagram."
+    },
+    "accent_primary": {
+      "hex": "#D4C5A9",
+      "name": "Sand",
+      "usage": "Arena/beige calido que complementa el verde oliva. Derivado de los tonos calidos del feed. Para datos destacados, lineas y acentos."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F3EE",
+      "name": "Warm Cream",
+      "usage": "Fondos claros con tinte crema calido. Refleja la estetica de interiorismo y home staging."
+    },
+    "gray": {
+      "hex": "#8A8A7A",
+      "name": "Warm Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros. Tipografia del logo es blanca/crema sobre verde."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta organica y aspiracional. El verde oliva es la firma de marca, los tonos arena y crema dan calidez de interiorismo. La estetica tiene que sentirse como un showroom, no como un aviso clasificado.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (olive green) con texto white",
+      "slide_2_dolor": "dark (forest dark)",
+      "slide_3_consecuencia": "dark (forest dark) con acento sand",
+      "slide_4_solucion": "light (warm cream) con texto dark",
+      "slide_5_prueba": "primary (olive green) con dato en sand o white",
+      "slide_6_cta": "dark (forest dark) con CTA en sand"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "DM Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal para cuerpo y subtitulos. ExtraBold (800) para titulares, Medium (500) para cuerpo."
+    },
+    "display": {
+      "family": "Playfair Display",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Serif elegante para titulares hero y numeros destacados. Refleja el estilo editorial del logo serif de Abitat. Usar con moderacion: solo en slides de alto impacto."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-1px a -3px",
+    "line_height_headlines": 0.94,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Solo en CTAs. Los headlines van en sentence case o title case para mantener la elegancia."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "aspiracional",
+      "lifestyle",
+      "home staging",
+      "editorial",
+      "organico",
+      "diseno de interiores",
+      "premium calido"
+    ],
+    "do": [
+      "Fotos de alta calidad de propiedades con home staging (antes y despues son oro)",
+      "Tipografia con mezcla sutil de serif (display) y sans-serif (cuerpo)",
+      "Fondos que respiren, mucho espacio negativo",
+      "Estetica de revista de arquitectura/diseno",
+      "Tonos calidos y organicos en toda la paleta",
+      "Logo en el ultimo slide",
+      "Mostrar el valor del home staging con evidencia visual",
+      "Layouts limpios, asimetria elegante"
+    ],
+    "dont": [
+      "Estetica agresiva de performance o de urgencia",
+      "Colores frios, neon o tech",
+      "Tipografias blocky o ultra heavy",
+      "Emojis o iconos",
+      "Frases cliche inmobiliarias",
+      "Fotos de propiedades sin staging (va contra la marca)",
+      "Layouts recargados o con demasiados elementos",
+      "Perder la estetica aspiracional en el camino a la conversion",
+      "Drop shadows, gradientes, efectos 3D"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Aspiracional pero tangible: no vende fantasia, vende diseno con proposito",
+      "Voseo argentino suave, registro sofisticado",
+      "Sin emojis",
+      "El home staging es la estrella, no solo la propiedad",
+      "Habla de estilo de vida sin caer en cliches de lifestyle",
+      "Datos de mercado cuando suman, no por default",
+      "La estetica comunica tanto como las palabras",
+      "Nunca sonar como inmobiliaria generica ni como agente individual"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "imperdible",
+      "oportunidad unica",
+      "calidad humana",
+      "llave en mano"
+    ],
+    "preferred_words": [
+      "home staging",
+      "diseno",
+      "presentacion",
+      "lifestyle",
+      "propiedad",
+      "espacios",
+      "valor percibido",
+      "conversion",
+      "primera impresion",
+      "Puertos",
+      "Nordelta"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper la creencia de que una propiedad se vende sola.",
+        "example": "Tu propiedad no se vende por las fotos. Se vende por como la presentas."
+      },
+      "empatia": {
+        "description": "Conectar con el dueno que no entiende por que su propiedad no genera interes.",
+        "example": "Publicaste tu propiedad hace 4 meses, las fotos estan buenas, pero nadie llama. Te suena?"
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo sobre la presentacion de propiedades que nadie dice.",
+        "example": "El comprador decide en los primeros 8 segundos. Y tu propiedad esta perdiendo esa carrera."
+      }
+    },
+    "disruption_scale": 3,
+    "narrative_structure": {
+      "name": "Metodo Abitat",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante visual del metodo DV. El dolor es la propiedad que no convierte pese a estar bien ubicada. La consecuencia es perder tiempo y bajar precio. La solucion es el home staging profesional. La prueba es el antes/despues con datos de conversion."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Home staging como diferencial",
+      "percentage": 35,
+      "description": "Antes y despues, proceso de staging, impacto en la venta. El pilar central de la marca.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Propiedades en cartera",
+      "percentage": 30,
+      "description": "Showcase de propiedades con staging en Puertos, Nordelta y Zona Norte. Estetica premium, datos claros.",
+      "formats": ["placa de propiedad", "video corto", "carrusel"]
+    },
+    {
+      "name": "Educacion sobre venta y presentacion",
+      "percentage": 20,
+      "description": "Tips para propietarios: como preparar tu propiedad, errores de presentacion, que buscan los compradores premium.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Lifestyle Zona Norte premium",
+      "percentage": 15,
+      "description": "Contenido de estilo de vida en Puertos, Nordelta: la zona, las amenities, la vida cotidiana. Vende el barrio, no solo la casa.",
+      "formats": ["video corto", "stories"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Propietarios de Puertos del Lago, Nordelta y Zona Norte con propiedades de USD 300k promedio que quieren vender rapido y al mejor precio.",
+    "secondary": "Compradores de segmento premium que buscan propiedades con presentacion impecable en countries y barrios cerrados de Zona Norte.",
+    "pain_points": [
+      "Tienen una propiedad linda pero las fotos no le hacen justicia",
+      "Llevan meses publicados y las visitas no convierten",
+      "No saben como presentar la propiedad para maximizar el valor percibido",
+      "La competencia en Puertos/Nordelta es feroz y su propiedad se pierde entre las demas",
+      "Les da miedo bajar el precio pero no saben que mas hacer"
+    ],
+    "desires": [
+      "Que su propiedad se destaque entre la competencia de la zona",
+      "Vender al precio que la propiedad merece, no por debajo",
+      "Una presentacion profesional que genere impacto desde la primera foto",
+      "Un equipo que entienda la estetica y el mercado de Puertos/Nordelta"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/abitat/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

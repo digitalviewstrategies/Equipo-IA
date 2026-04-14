@@ -1,0 +1,233 @@
+{
+  "brand_id": "jose_maria_chaher",
+  "brand_name": "Jose Maria Chaher",
+  "brand_tagline": "Team Noia — Coaching y Real Estate",
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Agente inmobiliario y coach en CABA y Zona Norte. Doble perfil: pata real estate (vender y captar) como eje principal, con consultoria/coaching como linea secundaria que refuerza autoridad. Se diferencia por humanizar la profesion con un tono cercano y relajado.",
+
+  "colors": {
+    "primary": {
+      "hex": "#1A8A7A",
+      "name": "Teal",
+      "usage": "Color principal derivado del teal/turquesa predominante en el branding de Team Noia (highlights, iconos de Instagram). Fondos de slides principales y hooks."
+    },
+    "dark": {
+      "hex": "#0D1117",
+      "name": "Near Black",
+      "usage": "Fondos de slides de dolor y consecuencia. Negro profundo."
+    },
+    "accent_primary": {
+      "hex": "#D4A843",
+      "name": "Gold",
+      "usage": "Dorado derivado de los iconos dorados/amarillos del branding Team Noia en Instagram. Acento para datos clave, highlights y CTAs."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F0F7F6",
+      "name": "Teal Light",
+      "usage": "Fondos claros con tinte teal sutil para slides de respiro."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta Team Noia: teal como base que transmite crecimiento y equilibrio, dorado como acento de autoridad y calidez. Fondo oscuro para impacto.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (teal)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con dato en accent gold",
+      "slide_4_solucion": "light (mint light) con texto dark",
+      "slide_5_prueba": "primary (teal) con numero grande en white",
+      "slide_6_cta": "dark (negro) con CTA en accent gold"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Nunito Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. Black (900) para titulares, Medium (500) para cuerpo. Sans-serif redondeada que transmite cercanía y calidez humana sin perder profesionalismo."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -3px",
+    "line_height_headlines": 0.94,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Solo en hooks. Slides intermedios en sentence case para mantener tono cercano."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "humano",
+      "cercano",
+      "coaching",
+      "Team Noia",
+      "desarrollo personal",
+      "crecimiento",
+      "profesional calido",
+      "teal y dorado"
+    ],
+    "do": [
+      "Tipografia grande y bold pero con redondeado suave",
+      "Fondos que combinen oscuridad con toques teal y dorado (identidad Team Noia)",
+      "Fotos reales de Jose Maria en contexto real (charlas, con clientes, en propiedades)",
+      "Un solo mensaje claro por slide",
+      "Espacio negativo generoso, la pieza tiene que respirar",
+      "Mezclar contenido inmobiliario con pinceladas de coaching (sin que el coaching domine)",
+      "Logo Team Noia en el ultimo slide"
+    ],
+    "dont": [
+      "Estetica agresiva o confrontativa",
+      "Colores neon o paletas frias de tech",
+      "Tipografias rigidas o corporate pesadas",
+      "Emojis o iconos cute",
+      "Frases de coaching generico (mentalidad ganadora, el exito es una decision)",
+      "Frases inmobiliarias cliche (sona con tu hogar, te acompanamos)",
+      "Que el coaching le gane al real estate en volumen de contenido",
+      "Layouts abigarrados o con demasiados elementos"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Cercano y humano, como hablar con un amigo que sabe mucho del tema",
+      "Voseo argentino natural, relajado",
+      "Sin emojis",
+      "Humaniza la profesion inmobiliaria: detras de cada operacion hay personas",
+      "Mezcla experiencia inmobiliaria con reflexion, pero sin ser filosofico ni cringe",
+      "Datos reales cuando corresponde, pero la narrativa no vive de numeros",
+      "Nunca sonar a vendedor clasico ni a coach de Instagram",
+      "El real estate es el eje, el coaching es la profundidad"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "mentalidad ganadora",
+      "exito asegurado",
+      "sos tu mejor version",
+      "fuera de tu zona de confort",
+      "abundancia"
+    ],
+    "preferred_words": [
+      "proceso",
+      "confianza",
+      "operacion",
+      "captacion",
+      "tasacion",
+      "acompanamiento",
+      "mercado",
+      "personas",
+      "crecimiento",
+      "carrera"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre la compraventa inmobiliaria desde lo humano.",
+        "example": "No perdes plata por vender barato. Perdes plata por no vender nunca."
+      },
+      "empatia": {
+        "description": "Conectar con la emocion detras de una operacion inmobiliaria.",
+        "example": "Vender la casa donde creciste no es solo una operacion. Es cerrar un capitulo. Y esta bien que cueste."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo que el rubro inmobiliario necesita escuchar.",
+        "example": "La mayoria de los agentes inmobiliarios no te escuchan. Te quieren cerrar."
+      }
+    },
+    "disruption_scale": 4,
+    "narrative_structure": {
+      "name": "Metodo Chaher",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Funnel narrativo DV en version humana: el dolor arranca desde la emocion (no solo el bolsillo), la consecuencia es lo que se pierde por no actuar con consciencia, la solucion humaniza el proceso inmobiliario, la prueba es un caso real con nombre y contexto."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Captacion y venta de propiedades",
+      "percentage": 40,
+      "description": "Contenido dirigido a propietarios: por que vender con Jose Maria, como funciona el proceso humanizado, resultados reales.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Educacion inmobiliaria humana",
+      "percentage": 25,
+      "description": "Tips y guias sobre compraventa inmobiliaria con enfoque en las personas: que esperar, como prepararse, errores comunes.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Autoridad de coaching (secundario)",
+      "percentage": 20,
+      "description": "Contenido que muestra la vision de Jose Maria como coach sin hacer del coaching el eje: reflexiones breves sobre la profesion, el mercado, el crecimiento.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Casos de exito y testimonios",
+      "percentage": 15,
+      "description": "Historias de clientes reales, operaciones cerradas con contexto humano, no solo numeros.",
+      "formats": ["video corto", "carrusel"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Propietarios en CABA y Zona Norte que buscan un agente que los escuche, no que les venda. Tickets hasta USD 300k.",
+    "secondary": "Agentes inmobiliarios que sienten que su carrera esta estancada y buscan una perspectiva mas humana de la profesion.",
+    "pain_points": [
+      "Sienten que los agentes inmobiliarios solo les hablan de plata y no los escuchan",
+      "Tuvieron malas experiencias vendiendo: promesas incumplidas, falta de comunicacion",
+      "Les cuesta tomar la decision de vender porque hay carga emocional",
+      "No confian en las tasaciones porque cada agente les dice un numero distinto",
+      "Agentes: sienten burnout y desconexion con lo que hacen"
+    ],
+    "desires": [
+      "Un profesional que entienda que vender una propiedad es un proceso emocional ademas de financiero",
+      "Claridad y honestidad sobre el valor real y los plazos",
+      "Sentir que el agente trabaja para ellos, no solo por la comision",
+      "Agentes: reconectar con el proposito de su profesion y mejorar resultados"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/jose_maria_chaher/logo_team_noia.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

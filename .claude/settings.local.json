@@ -58,7 +58,27 @@
       "Bash(du -sh \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/toribio_achaval/2026-04-14/\"*/*.png)",
       "Bash(python3 -)",
       "Bash(curl -s -X PUT 'https://temp.4d4f16c61d89ec64e760039c4ec50717.r2.cloudflarestorage.com/project/pr_9-10oaAIzVoG/tool_router_session/trs___xVhg_PS_w6/iblTWuj1huqw?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=601a6779e90fe0efe8105ef9073789f3%2F20260414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260414T144328Z&X-Amz-Expires=3600&X-Amz-Signature=452ce1fc6552ed8d06e970bc0b054c3b4ce62d23a795ecb7c45b635e5c77e3d8&X-Amz-SignedHeaders=host' -H 'Content-Type: application/zip' --data-binary @/tmp/toribio_achaval_disenos_2026-04-14.zip -w '\\\\nHTTP_STATUS: %{http_code}')",
-      "Bash(zip -r \"/tmp/Toribio_Achaval_2026-04-13.zip\" 2026-04-13/ -i \"*.png\")"
+      "Bash(zip -r \"/tmp/Toribio_Achaval_2026-04-13.zip\" 2026-04-13/ -i \"*.png\")",
+      "mcp__googledrive-composio__COMPOSIO_GET_TOOL_SCHEMAS",
+      "mcp__googledrive-composio__COMPOSIO_REMOTE_BASH_TOOL",
+      "Bash(python scripts/render.py --html \"output/toribio_achaval/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/toribio_achaval/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python -c \"from playwright.async_api import async_playwright; print\\('OK'\\)\")",
+      "Bash(python3 -c \"from playwright.async_api import async_playwright; print\\('playwright OK'\\)\")",
+      "Bash(python3 -c \"from playwright.async_api import async_playwright; print\\('OK'\\)\")",
+      "Bash(python3 scripts/render.py --html \"output/toribio_achaval/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/toribio_achaval/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/matias_di_meola/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/matias_di_meola/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/zipcode/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/zipcode/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/mauro_peralta/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/mauro_peralta/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html output/viviana_sasia/2026-04-14/carrusel_captacion/carrusel.html --out output/viviana_sasia/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/fidez_group/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/fidez_group/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/juan_caillet_bois/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/juan_caillet_bois/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html output/abitat/2026-04-14/carrusel_captacion/carrusel.html --out output/abitat/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html \"output/jose_maria_chaher/2026-04-14/carrusel_captacion/carrusel.html\" --out \"output/jose_maria_chaher/2026-04-14/carrusel_captacion/\" --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html output/ini_propiedades/2026-04-14/carrusel_captacion/carrusel.html --out output/ini_propiedades/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
+      "Bash(python3 scripts/render.py --html output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/carrusel.html --out output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
+      "Bash(ls -la \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/viviana_sasia/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/abitat/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/ini_propiedades/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/\"*.png)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(python3 upload_to_drive.py)"
     ]
   }
 }

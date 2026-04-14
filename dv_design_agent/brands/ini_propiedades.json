@@ -1,0 +1,236 @@
+{
+  "brand_id": "ini_propiedades",
+  "brand_name": "INI Propiedades",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Inmobiliaria tradicional de barrio en Zona Norte. Negocio hiper local que gana por presencia constante y confianza de zona. La inmobiliaria que conoce cada cuadra del barrio.",
+
+  "colors": {
+    "primary": {
+      "hex": "#E67315",
+      "name": "INI Orange",
+      "usage": "Color principal extraido del logo (circulo naranja prominente). Color insignia de marca. Se usa en slides de apertura (hook), CTAs y elementos de impacto."
+    },
+    "dark": {
+      "hex": "#1B2A4A",
+      "name": "Navy Blue",
+      "usage": "Azul oscuro extraido del fondo circular del logo. Fondos de slides de narrativa, alternativa al negro puro."
+    },
+    "accent_primary": {
+      "hex": "#F59E3F",
+      "name": "Light Orange",
+      "usage": "Naranja claro como variante del primario para degradar jerarquia sin perder identidad. Datos secundarios y highlights."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F5F5",
+      "name": "Light Gray",
+      "usage": "Fondos claros para slides de respiro."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros y sobre naranja."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "El naranja es la firma visual fuerte de INI. El azul navy le da cuerpo institucional. La combinacion tiene que sentirse de barrio pero no barata.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (orange) con texto white",
+      "slide_2_dolor": "dark (navy blue)",
+      "slide_3_consecuencia": "dark (navy blue) con dato en orange",
+      "slide_4_solucion": "light (gris claro) con texto dark",
+      "slide_5_prueba": "dark (navy blue) con numero grande en orange",
+      "slide_6_cta": "primary (orange) con texto white"
+    },
+    "orange_max_appearances": 2
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Rubik",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800;900&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Sans-serif redondeada que se siente accesible y de barrio sin perder presencia."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados (precios, m2)."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-1px a -3px",
+    "line_height_headlines": 0.94,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Recomendado en hooks y placas de propiedad. Sentence case en slides educativos."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "barrial",
+      "accesible",
+      "local",
+      "confiable",
+      "presente",
+      "naranja",
+      "familiar sin ser generico"
+    ],
+    "do": [
+      "Tipografia grande y clara que se lea rapido",
+      "Naranja como color de impacto y reconocimiento",
+      "Navy como contrapeso serio",
+      "Fotos reales del barrio, de la zona, de propiedades reales",
+      "Datos de zona: ubicacion, cercanía a puntos de referencia",
+      "Un solo mensaje por slide",
+      "Logo en el ultimo slide",
+      "Resaltar la localía: nombrar calles, barrios, referencias del vecino"
+    ],
+    "dont": [
+      "Estetica aspiracional o de lujo",
+      "Paletas frias o tech",
+      "Tono disruptivo o confrontativo",
+      "Jerga moderna o anglicismos",
+      "Emojis o iconos cute",
+      "Frases cliche (sona con tu hogar)",
+      "Layouts complicados o de revista",
+      "Estetica que aleje al vecino comun"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "De barrio pero profesional: como tu vecino inmobiliario de confianza",
+      "Voseo argentino suave, sin muletillas juveniles",
+      "Sin emojis",
+      "Cercano y accesible, nunca distante ni formal",
+      "Habla de la zona con conocimiento: nombra calles, barrios, referencias",
+      "Frases simples y directas, nada rebuscado",
+      "No compite por ser moderno ni disruptivo, compite por ser confiable y presente",
+      "Precios claros, datos de zona claros, sin vueltas"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "exclusivo",
+      "premium",
+      "luxury",
+      "oportunidad unica",
+      "disruption"
+    ],
+    "preferred_words": [
+      "barrio",
+      "zona",
+      "tasacion",
+      "venta",
+      "alquiler",
+      "propiedad",
+      "Martinez",
+      "Olivos",
+      "cerca de",
+      "a cuadras de",
+      "consulta",
+      "vecino"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia simple sobre vender o comprar en la zona.",
+        "example": "No necesitas ir a 10 inmobiliarias para vender tu casa en Martinez. Necesitas ir a la correcta."
+      },
+      "empatia": {
+        "description": "Conectar con la realidad cotidiana del vecino que quiere vender.",
+        "example": "Queres vender tu casa pero no sabes por donde arrancar. Tranqui, eso nos lo dicen todos."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo sencillo pero cierto sobre el mercado local.",
+        "example": "Si tu propiedad lleva 6 meses publicada y no la vendiste, el precio esta mal. Asi de simple."
+      }
+    },
+    "disruption_scale": 2,
+    "narrative_structure": {
+      "name": "Estructura INI",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Version barrial del metodo DV. El dolor es cotidiano (propiedad parada, no saber el precio real, desconfianza). La consecuencia es concreta (perder plata, perder tiempo). La solucion es simple: una inmobiliaria que conoce la zona. La prueba es local: una operacion en la misma calle, un vecino que vendio."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Propiedades en venta y alquiler",
+      "percentage": 40,
+      "description": "Showcase de propiedades de la zona con datos claros, precios, ubicaciones exactas. El pan de cada dia de INI.",
+      "formats": ["placa de propiedad", "carrusel", "video corto"]
+    },
+    {
+      "name": "Captacion local",
+      "percentage": 25,
+      "description": "Contenido dirigido a vecinos que quieren vender: por que elegir una inmobiliaria del barrio, tasaciones gratuitas, conocimiento de zona.",
+      "formats": ["carrusel", "video corto"]
+    },
+    {
+      "name": "Info de barrio",
+      "percentage": 20,
+      "description": "Contenido sobre la zona: que pasa en el barrio, tendencias de precios locales, nuevos comercios, mejoras. Posiciona como experto hiper local.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Confianza y trayectoria",
+      "percentage": 15,
+      "description": "Operaciones cerradas, testimonios de vecinos, presencia en el barrio. Prueba social local.",
+      "formats": ["video corto", "carrusel"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Vecinos de Martinez y alrededores en Zona Norte que quieren vender o alquilar su propiedad con alguien que conoce la zona. Ticket promedio USD 200k.",
+    "secondary": "Compradores que buscan mudarse a la zona y quieren un referente local que les muestre opciones reales.",
+    "pain_points": [
+      "No saben cuanto vale realmente su propiedad en el barrio",
+      "Probaron con inmobiliarias grandes que no conocen la zona y no les prestan atencion",
+      "Quieren vender pero les da pereza arrancar el proceso",
+      "Les preocupa que les cobren una comision alta y no hagan nada",
+      "Necesitan vender y no tienen claro cuanto tardan las cosas"
+    ],
+    "desires": [
+      "Una inmobiliaria que conozca la zona como la palma de su mano",
+      "Saber el precio real de su propiedad sin vueltas",
+      "Un proceso simple y claro de venta o alquiler",
+      "Trato cercano y accesible, no una corporacion fria"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/ini_propiedades/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

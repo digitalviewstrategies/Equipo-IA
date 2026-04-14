@@ -1,0 +1,243 @@
+{
+  "brand_id": "zipcode",
+  "brand_name": "Zipcode",
+  "brand_tagline": "Transformando la experiencia inmobiliaria",
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Proptech de Zona Norte que compite como empresa tecnologica, no como inmobiliaria. Equipo de 50. Tono innovador, tech, business. Foco en data, producto y cultura de equipo. El contenido tiene que parecer startup, no broker tradicional.",
+
+  "colors": {
+    "primary": {
+      "hex": "#00D4AA",
+      "name": "Zipcode Cyan",
+      "usage": "Color principal extraido del logo (letras multicolor con predominancia de cyan/verde en el perfil de Instagram). Elementos de destaque, CTAs, acentos principales."
+    },
+    "dark": {
+      "hex": "#0F1117",
+      "name": "Tech Dark",
+      "usage": "Fondo oscuro tech, derivado del fondo negro del perfil. Fondo dominante de la marca."
+    },
+    "accent_primary": {
+      "hex": "#FFD639",
+      "name": "Zipcode Yellow",
+      "usage": "Amarillo vibrante derivado del logo multicolor y de los fondos amarillos del feed. Acento energetico para datos y numeros destacados."
+    },
+    "accent_secondary": {
+      "hex": "#FF6B35",
+      "name": "Zipcode Orange",
+      "usage": "Naranja derivado del circulo del perfil (gradiente multicolor). Acento secundario para variedad visual sin perder identidad."
+    },
+    "light": {
+      "hex": "#F0F4F3",
+      "name": "Tech Light",
+      "usage": "Fondos claros con tinte verde sutil para slides de respiro."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta tech multicolor sobre fondo oscuro. El cyan es el color principal, el amarillo y naranja son acentos que dan energia. Nunca mas de 2 acentos por slide. El fondo dark domina.",
+    "carousel_6_slides": {
+      "slide_1_hook": "dark (tech dark) con titulo en cyan",
+      "slide_2_dolor": "dark (tech dark) con acento yellow",
+      "slide_3_consecuencia": "dark (tech dark)",
+      "slide_4_solucion": "light (tech light) con texto dark y acentos cyan",
+      "slide_5_prueba": "dark (tech dark) con numero grande en yellow",
+      "slide_6_cta": "dark (tech dark) con CTA en cyan"
+    },
+    "max_accent_colors_per_slide": 2
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. Black (900) para titulares, Medium (500) para cuerpo. La tipografia tech por excelencia: limpia, moderna, versatil."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados. Su caracter geometrico refuerza el aspecto tech."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 80,
+    "headline_max_size_px": 130,
+    "letter_spacing_headlines": "-3px a -5px (tight, moderno)",
+    "line_height_headlines": 0.90,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Siempre en hooks y CTAs. Estilo tech/startup."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "tech",
+      "startup",
+      "innovador",
+      "data-driven",
+      "equipo",
+      "cultura",
+      "producto",
+      "multicolor vibrante"
+    ],
+    "do": [
+      "Fondos oscuros con acentos de color vibrantes (estilo dashboard/app)",
+      "Tipografia gigante y tight",
+      "Datos y metricas como protagonistas",
+      "Mostrar equipo y cultura interna (son 50 personas, eso es diferencial)",
+      "Estetica de producto tech, no de inmobiliaria",
+      "Layouts modernos con geometrias limpias",
+      "Logo en el ultimo slide",
+      "Fotos de equipo en accion, eventos, oficina"
+    ],
+    "dont": [
+      "Estetica de inmobiliaria tradicional",
+      "Paletas apagadas o conservadoras",
+      "Tipografias serif o decorativas",
+      "Emojis",
+      "Tono de vendedor inmobiliario clasico",
+      "Frases cliche (sona con tu hogar)",
+      "Fondos blancos como dominante (la marca es oscura)",
+      "Layouts estaticos y aburridos",
+      "Mas de 2 acentos de color en un mismo slide"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Tech y moderno: suena a startup, no a inmobiliaria",
+      "Voseo argentino natural con vocabulario business/tech",
+      "Sin emojis",
+      "Data-driven: cada afirmacion tiene un numero detras",
+      "Cultura de equipo como argumento de marca",
+      "Habla de producto e innovacion, no de comision y exclusiva",
+      "Employer branding como segundo eje: atraer talento ademas de clientes",
+      "Frases cortas, modernas, con ritmo",
+      "Nunca sonar a broker de los 90"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos",
+      "calidad humana",
+      "tradicional",
+      "trayectoria de anos",
+      "oportunidad unica",
+      "llave en mano"
+    ],
+    "preferred_words": [
+      "data",
+      "producto",
+      "equipo",
+      "tecnologia",
+      "experiencia inmobiliaria",
+      "plataforma",
+      "cultura",
+      "innovacion",
+      "metricas",
+      "conversion",
+      "Zona Norte",
+      "talento"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre como deberia funcionar una inmobiliaria.",
+        "example": "No somos una inmobiliaria. Somos una empresa de tecnologia que vende propiedades."
+      },
+      "empatia": {
+        "description": "Conectar con la frustracion de quien compra o vende de forma anticuada.",
+        "example": "Buscas propiedad hace 3 meses y todavia te mandan PDFs por mail. Es 2026."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo disruptivo sobre la industria inmobiliaria.",
+        "example": "El 90% de las inmobiliarias opera igual que hace 20 anos. Y se preguntan por que pierden market share."
+      }
+    },
+    "disruption_scale": 5,
+    "narrative_structure": {
+      "name": "Estructura Zipcode",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante tech del metodo DV. El dolor es la experiencia inmobiliaria anticuada. La consecuencia es lo que se pierde por no innovar. La solucion es el producto/plataforma de Zipcode. La prueba son metricas, datos y escala del equipo."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Propiedades y conversion",
+      "percentage": 30,
+      "description": "Showcase de propiedades con estetica tech: datos, metricas, presentacion moderna. El producto inmobiliario de Zipcode.",
+      "formats": ["placa de propiedad", "carrusel", "video corto"]
+    },
+    {
+      "name": "Innovacion y producto",
+      "percentage": 25,
+      "description": "Como Zipcode esta transformando la experiencia inmobiliaria: tecnologia, procesos, data. Diferencial de marca.",
+      "formats": ["carrusel", "video corto"]
+    },
+    {
+      "name": "Cultura y equipo",
+      "percentage": 25,
+      "description": "Employer branding: mostrar la cultura interna, el equipo, los valores. Atraer talento y construir marca empleadora.",
+      "formats": ["video corto", "carrusel", "stories"]
+    },
+    {
+      "name": "Mercado y data",
+      "percentage": 20,
+      "description": "Analisis de mercado con enfoque data: tendencias, precios, estadisticas de Zona Norte. Posiciona como referente tech del rubro.",
+      "formats": ["carrusel educativo", "video corto"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Compradores y vendedores de Zona Norte que buscan una experiencia inmobiliaria moderna y transparente. Ticket promedio USD 300k.",
+    "secondary": "Talento joven que busca trabajar en una empresa de tecnologia aplicada al real estate (employer branding).",
+    "pain_points": [
+      "La experiencia de comprar o vender una propiedad sigue siendo arcaica",
+      "No confian en los agentes porque la informacion no es transparente",
+      "Quieren data real del mercado, no opiniones de un vendedor",
+      "Sienten que las inmobiliarias no invierten en tecnologia",
+      "Talentos: buscan empresas innovadoras pero el real estate les parece viejo"
+    ],
+    "desires": [
+      "Una experiencia de compra/venta moderna, transparente y digital",
+      "Acceso a data real del mercado para tomar decisiones informadas",
+      "Un equipo grande y profesional detras de la operacion",
+      "Talentos: trabajar en una empresa que combina tech con real estate"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/zipcode/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}

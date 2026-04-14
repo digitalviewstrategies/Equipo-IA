@@ -1,0 +1,234 @@
+{
+  "brand_id": "viviana_sasia",
+  "brand_name": "Viviana Sasia",
+  "brand_tagline": null,
+  "version": "1.0",
+  "last_updated": "2026-04-14",
+
+  "positioning": "Agente inmobiliaria consolidada en Zona Norte con equipo propio. Construye marca desde confianza, trayectoria y cultura de equipo. Profesional, calida e institucional cercana. No es show personal, es autoridad de equipo.",
+
+  "colors": {
+    "primary": {
+      "hex": "#3D3580",
+      "name": "Deep Purple",
+      "usage": "Color principal derivado del violeta/purpura de los acentos de su perfil de Instagram (botones Follow Back, highlights). Fondos de slides principales y hooks."
+    },
+    "dark": {
+      "hex": "#0F0F12",
+      "name": "Near Black",
+      "usage": "Fondos de slides de dolor y consecuencia."
+    },
+    "accent_primary": {
+      "hex": "#B8956A",
+      "name": "Warm Sand",
+      "usage": "Dorado arena calido derivado de la estetica calida y sofisticada de su feed (tonos beige, arena, terrosos). Para highlights y datos clave."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F5F3EF",
+      "name": "Warm White",
+      "usage": "Fondos claros con tinte calido para slides de respiro. Refleja la estetica luminosa de su feed."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+
+  "color_distribution_rules": {
+    "description": "Paleta sofisticada y calida. El purpura aporta distincion sin ser agresivo, los tonos arena dan calidez profesional. Equilibrio entre autoridad y cercanía.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (deep purple)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con dato en accent sand",
+      "slide_4_solucion": "light (warm white) con texto dark",
+      "slide_5_prueba": "primary (deep purple) con numero en white",
+      "slide_6_cta": "dark (negro) con CTA en accent sand"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Outfit",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap",
+      "weights": {
+        "headline": 800,
+        "subheadline": 700,
+        "body_bold": 600,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografia principal. ExtraBold (800) para titulares, Medium (500) para cuerpo. Geometrica moderna y elegante que combina solidez con suavidad."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Solo para numeros grandes destacados (precios, m2, estadisticas)."
+    }
+  },
+
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -3px",
+    "line_height_headlines": 0.93,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Solo en hooks y CTAs. Slides intermedios en sentence case para mantener cercanía."
+  },
+
+  "visual_style": {
+    "keywords": [
+      "sofisticada",
+      "calida",
+      "profesional",
+      "equipo",
+      "trayectoria",
+      "confianza",
+      "Zona Norte"
+    ],
+    "do": [
+      "Tipografia grande y elegante, no agresiva",
+      "Fondos que combinen sobriedad con calidez",
+      "Fotos de alta calidad de propiedades (su segmento es USD 200k-700k)",
+      "Mostrar equipo cuando sea posible, no solo a Viviana",
+      "Datos de trayectoria y resultados como prueba social",
+      "Espacio negativo generoso",
+      "Logo en el ultimo slide",
+      "Estetica aspiracional pero accesible"
+    ],
+    "dont": [
+      "Estetica agresiva o de influencer",
+      "Colores neon o paletas frias de tech",
+      "Tipografias pesadas tipo blocky",
+      "Emojis o iconos informales",
+      "Tono de vendedora directa agresiva",
+      "Frases cliche inmobiliarias (sona con tu hogar, etc.)",
+      "Layouts desordenados o recargados",
+      "Fotos de baja calidad o genericas de stock"
+    ]
+  },
+
+  "layouts": {
+    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Profesional y calida, transmite confianza sin frialdad",
+      "Voseo argentino con registro adulto y sofisticado",
+      "Sin emojis",
+      "Habla desde la experiencia y la trayectoria, no desde la urgencia",
+      "Referencia al equipo como valor diferencial",
+      "Datos concretos pero sin parecer una planilla",
+      "High ticket framing: maneja propiedades de USD 200k-700k y el tono lo refleja",
+      "No es agresiva ni confrontativa, pero es firme y segura",
+      "Zona Norte como territorio: conocimiento profundo de la zona"
+    ],
+    "forbidden_words": [
+      "sona con",
+      "hogar de tus suenos",
+      "te acompanamos en cada paso",
+      "calidad humana",
+      "oportunidad unica",
+      "imperdible",
+      "unico e irrepetible"
+    ],
+    "preferred_words": [
+      "trayectoria",
+      "equipo",
+      "confianza",
+      "operacion",
+      "captacion",
+      "tasacion",
+      "mercado",
+      "Zona Norte",
+      "exclusiva",
+      "valuacion",
+      "resultado"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre vender propiedades premium en Zona Norte.",
+        "example": "Bajar el precio no es la forma de vender mas rapido. La forma es tener el equipo correcto."
+      },
+      "empatia": {
+        "description": "Conectar con la preocupacion del propietario de Zona Norte.",
+        "example": "Sabes que tu propiedad vale mas de lo que te estan ofreciendo. Pero no sabes como demostrarlo."
+      },
+      "verdad_incomoda": {
+        "description": "Decir algo que los propietarios de Zona Norte necesitan escuchar.",
+        "example": "Tu propiedad no se vende porque esta bien publicada. Se vende porque el agente correcto la trabaja."
+      }
+    },
+    "disruption_scale": 2,
+    "narrative_structure": {
+      "name": "Estructura Sasia",
+      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "description": "Variante calida del metodo DV. El dolor se presenta con empatia (no confrontacion), la consecuencia es el costo de oportunidad, la solucion destaca el equipo y la trayectoria, la prueba son operaciones cerradas y testimonios de clientes satisfechos."
+    }
+  },
+
+  "content_pillars": [
+    {
+      "name": "Captacion de propiedades",
+      "percentage": 35,
+      "description": "Contenido para atraer propietarios de Zona Norte que quieren vender con un equipo serio y confiable. Trayectoria y resultados como argumento central.",
+      "formats": ["video corto", "carrusel"]
+    },
+    {
+      "name": "Showcase de propiedades",
+      "percentage": 30,
+      "description": "Presentacion de propiedades de cartera con estetica premium, fotos profesionales, datos claros. Zona Norte como protagonista.",
+      "formats": ["placa de propiedad", "video corto", "carrusel"]
+    },
+    {
+      "name": "Mercado Zona Norte",
+      "percentage": 20,
+      "description": "Informacion y analisis del mercado inmobiliario de Zona Norte: tendencias, precios, barrios, oportunidades. Posiciona como experta de zona.",
+      "formats": ["carrusel educativo", "video corto"]
+    },
+    {
+      "name": "Equipo y cultura",
+      "percentage": 15,
+      "description": "Contenido que muestra al equipo de Viviana trabajando, eventos, dinamica grupal. Construye marca desde la estructura, no solo desde lo personal.",
+      "formats": ["video corto", "stories"]
+    }
+  ],
+
+  "target_audience": {
+    "primary": "Propietarios de Zona Norte con propiedades de USD 200k-700k que buscan un equipo profesional y confiable para vender.",
+    "secondary": "Compradores de Zona Norte que buscan asesoramiento serio en un segmento premium.",
+    "pain_points": [
+      "Tienen una propiedad premium y no quieren que cualquier agente la maneje",
+      "Les preocupa que les tasen mal y pierdan plata en una operacion grande",
+      "Quieren un seguimiento real, no que los llamen una vez al mes",
+      "Han visto agentes que prometen exclusivas y despues desaparecen",
+      "Les importa la discrecion y el profesionalismo en la venta"
+    ],
+    "desires": [
+      "Un equipo profesional que maneje la venta de punta a punta",
+      "Confianza de que el precio es el correcto basado en datos reales del mercado",
+      "Comunicacion fluida y seguimiento constante sin tener que perseguir al agente",
+      "Cerrar la operacion en un plazo razonable sin regalar la propiedad"
+    ]
+  },
+
+  "logo": {
+    "main_file": "assets/viviana_sasia/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  }
+}
