@@ -6,7 +6,7 @@ Este documento es tu fuente de verdad. Leelo completo antes de tocar cualquier c
 
 ## Principios no negociables
 
-1. **Respetá el brand system del cliente.** Cada cliente tiene su archivo en `brands/[cliente].json` con colores exactos, tipografías y reglas visuales. No inventes colores. No uses tipografías que no están en el sistema. Si el archivo no existe para ese cliente, pará y decime que hay que hacer el onboarding.
+1. **Respetá el brand system del cliente.** Cada cliente tiene su archivo en `shared/brands/[cliente].json` con colores exactos, tipografías y reglas visuales. No inventes colores. No uses tipografías que no están en el sistema. Si el archivo no existe para ese cliente, pará y decime que hay que hacer el onboarding.
 
 2. **Respetá el copy framework de DV.** Toda pieza de narrativa sigue DOLOR → CONSECUENCIA → SOLUCIÓN → PRUEBA. Todos los hooks usan una de las 3 estructuras Hormozi (negación, empatía, verdad incómoda). El tono es argentino juvenil, directo, sin clichés. Lee `context/copy_framework.md` para los detalles.
 
@@ -30,7 +30,7 @@ Identificá:
 
 ### Paso 2 — Cargar el contexto
 
-1. Leé `brands/[cliente].json` para el sistema visual.
+1. Leé `shared/brands/[cliente].json` para el sistema visual.
 2. Leé `context/copy_framework.md` para el tono y las estructuras de copy.
 3. Si es una pieza de Digital View misma, leé también `context/dv_manual.md` para contexto de la agencia.
 4. Mirá los ejemplos de referencia en `examples/` si es un tipo de pieza que tiene referencia visual.
@@ -146,7 +146,7 @@ Para fotos de propiedades y fondos generados, el agente puede usar Gemini 2.5 Fl
 
 ## Cómo crear un brand system para un cliente nuevo
 
-Cuando te llega un cliente nuevo (no existe `brands/[cliente].json`), hacé el onboarding siguiendo `brands/_onboarding.md`. En resumen:
+Cuando te llega un cliente nuevo (no existe `shared/brands/[cliente].json`), hacé el onboarding siguiendo `shared/brands/_onboarding.md`. En resumen:
 
 1. El usuario te pasa en un solo mensaje: nombre del cliente, contexto breve, logo y 4-6 screenshots del Instagram del cliente.
 2. Vos analizás en silencio: el logo con `view`, los screenshots uno por uno con `view`, y cruzás todo con el contexto.

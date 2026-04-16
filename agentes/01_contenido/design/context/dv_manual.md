@@ -104,7 +104,7 @@ Casos típicos:
 
 ## Cuándo el agente produce piezas para clientes de DV
 
-Acá hay que leer el brand system del cliente en `brands/[cliente].json` y respetarlo. El tono se adapta:
+Acá hay que leer el brand system del cliente en `shared/brands/[cliente].json` y respetarlo. El tono se adapta:
 
 - Si es una inmobiliaria tradicional, el tono es menos agresivo que el de DV pero mantiene la estructura.
 - Si es un top producer joven, el tono puede ser igual de agresivo que el de DV.

@@ -3,7 +3,7 @@ output_manager.py — Gestión de brands y outputs del DV Creative Director.
 
 Funciones principales:
 - list_brands(): lista los clientes disponibles leyendo brand systems desde
-  ../dv_design_agent/brands/.
+  shared/brands/ en la raíz del repo.
 - load_brand(cliente): carga el JSON del brand system de un cliente.
 - save_output(cliente, tipo, nombre, contenido): guarda un output en
   outputs/[cliente]/[fecha]/.
@@ -17,8 +17,9 @@ import os
 from datetime import date
 from pathlib import Path
 
-# Path al directorio de brands del agente de diseño (fuente única de verdad).
-BRANDS_DIR = Path(__file__).resolve().parent.parent.parent / "dv_design_agent" / "brands"
+# Path al directorio compartido de brands (fuente única de verdad).
+# scripts → creative_director → 01_contenido → agentes → ROOT
+BRANDS_DIR = Path(__file__).resolve().parents[4] / "shared" / "brands"
 
 # Path al directorio de outputs de este agente.
 OUTPUTS_DIR = Path(__file__).resolve().parent.parent / "outputs"

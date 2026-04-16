@@ -309,7 +309,7 @@ Tip de Facu: puede usarse solo una parte de una canción, incluso combinando dos
 
 ## Formato exacto del brief para el agente de diseño
 
-Cuando el output es un brief de carrusel para `dv_design_agent`, tiene que tener este formato. El agente de diseño lo consume tal cual sin reinterpretación.
+Cuando el output es un brief de carrusel para el agente de diseño, tiene que tener este formato. El agente de diseño lo consume tal cual sin reinterpretación.
 
 ```markdown
 # Brief de carrusel — [CLIENTE]

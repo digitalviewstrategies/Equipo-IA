@@ -198,7 +198,7 @@ Escribinos por DM o tocá el botón de la bio.
 - En el slide 5, si los números reales son menores a [X >10, Y <60, Z >50], reemplazar el grid por un único bloque con el dato más fuerte que tengamos. Más vale 1 número creíble que 4 inflados.
 ```
 
-**Va para**: dv_design_agent.
+**Va para**: agente de diseño.
 **Próximo paso**: pasar este brief al agente de diseño con el comando estándar. Validar con Pipe los números reales de Soldati Vista antes de aprobar el slide 5. Si los números no llegan, pasamos a la versión sin grid.
 
 ---

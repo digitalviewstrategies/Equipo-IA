@@ -5,10 +5,10 @@ Agente de IA que funciona como Director Creativo de Digital View. Investiga, pie
 Produce tres tipos de output:
 
 1. **Guiones de video** para producciones audiovisuales (Bauti CB + editores).
-2. **Briefs de carrusel** listos para el `dv_design_agent`.
+2. **Briefs de carrusel** listos para el agente de diseño (`agentes/01_contenido/design/`).
 3. **Estrategias de contenido mensuales** con pilares, mix y calendario.
 
-Comparte el contexto de clientes con `dv_design_agent` leyendo los brand systems desde `../dv_design_agent/brands/`.
+Comparte el contexto de clientes con el agente de diseño leyendo los brand systems desde `shared/brands/` (directorio compartido en la raíz del repo).
 
 ## Qué cambió respecto a v1
 
@@ -20,19 +20,22 @@ Comparte el contexto de clientes con `dv_design_agent` leyendo los brand systems
 
 ## Instalación
 
-Cloná o descomprimí este repo al mismo nivel que `dv_design_agent/`:
+Este agente vive dentro del monorepo `Equipo-IA` en `agentes/01_contenido/creative_director/`. Comparte `shared/brands/` con el agente de diseño:
 
 ```
-proyectos/
-├── dv_design_agent/
+Equipo-IA/
+├── shared/
 │   └── brands/
 │       ├── digital_view.json
 │       ├── matias_di_meola.json
 │       └── ...
-└── dv_creative_director/      ← acá
+└── agentes/
+    └── 01_contenido/
+        ├── creative_director/      ← este agente
+        └── design/
 ```
 
-Abrí Claude Code en `dv_creative_director/`. El agente lee `CLAUDE.md` automáticamente al arrancar.
+Abrí Claude Code en `agentes/01_contenido/creative_director/`. El agente lee `CLAUDE.md` automáticamente al arrancar.
 
 No necesita dependencias externas: el research lo hace con la herramienta WebSearch nativa de Claude Code.
 
@@ -68,7 +71,7 @@ Datos: USD 145.000, 48m2, balcón, cochera, vendido en 22 días.
 ## Estructura
 
 ```
-dv_creative_director/
+agentes/01_contenido/creative_director/
 ├── CLAUDE.md                              # Cerebro del agente (proceso de 8 pasos)
 ├── README.md                              # Esto
 ├── .gitignore / .env.example
@@ -103,7 +106,7 @@ dv_creative_director/
 ## Integración con el resto del equipo
 
 - **Guiones de video** → Bauti CB (producción) y editores (Gian Luca, Fran, Eze).
-- **Briefs de carrusel** → `dv_design_agent` directamente.
+- **Briefs de carrusel** → agente de diseño (`agentes/01_contenido/design/`) directamente.
 - **Estrategias mensuales** → Elias o Bauti R (PMs).
 - **Brainstorm libre** → Nico (COO, Director de Contenido).
 

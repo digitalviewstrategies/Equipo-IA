@@ -11,7 +11,8 @@ import json
 from pathlib import Path
 
 
-BRANDS_DIR = Path(__file__).parent.parent / "brands"
+# scripts → design → 01_contenido → agentes → ROOT
+BRANDS_DIR = Path(__file__).resolve().parents[4] / "shared" / "brands"
 
 
 def load_brand(brand_id: str) -> dict:
@@ -22,7 +23,7 @@ def load_brand(brand_id: str) -> dict:
         raise FileNotFoundError(
             f"No existe brand system para '{brand_id}'. "
             f"Marcas disponibles: {', '.join(available)}. "
-            f"Para crear una nueva, seguí brands/_onboarding.md"
+            f"Para crear una nueva, seguí shared/brands/_onboarding.md"
         )
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)

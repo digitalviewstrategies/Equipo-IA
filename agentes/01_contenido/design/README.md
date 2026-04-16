@@ -29,10 +29,10 @@ cd ~/Documents
 
 ### 2. Instalar dependencias de Python
 
-Desde dentro del directorio `dv_design_agent/`:
+Desde dentro del directorio `agentes/01_contenido/design/`:
 
 ```bash
-cd dv_design_agent
+cd agentes/01_contenido/design
 pip install playwright pillow google-genai python-dotenv
 playwright install chromium
 ```
@@ -63,7 +63,7 @@ Después editá `.env` con cualquier editor de texto y reemplazá `tu_key_aca` c
 Desde la terminal, estando dentro del directorio del agente:
 
 ```bash
-cd dv_design_agent
+cd agentes/01_contenido/design
 claude
 ```
 
@@ -111,7 +111,7 @@ Subilo al Drive.
 ## Estructura del proyecto
 
 ```
-dv_design_agent/
+agentes/01_contenido/design/
 ├── CLAUDE.md                    # Instrucciones maestras (el "cerebro" del agente)
 ├── README.md                    # Este archivo
 ├── .env.example                 # Template de variables de entorno
@@ -122,11 +122,6 @@ dv_design_agent/
 │   ├── copy_framework.md        # Tono, hooks, estructura narrativa
 │   ├── design_principles.md     # Reglas visuales inamovibles
 │   └── inmobiliario_glosario.md # Vocabulario del rubro
-│
-├── brands/                      # Un archivo por cliente
-│   ├── digital_view.json        # Brand system de DV
-│   ├── _template.json           # Para crear nuevos
-│   └── _onboarding.md           # Cómo onboardear clientes
 │
 ├── templates/                   # HTML base por tipo de pieza
 │   ├── carrusel_captacion.html
