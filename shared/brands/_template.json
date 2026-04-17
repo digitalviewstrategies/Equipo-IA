@@ -118,5 +118,17 @@
     "main_file": "assets/CLIENTE_logo.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el último slide"
+  },
+
+  "meta_ads": {
+    "ad_account_id": "act_XXXXXXXXX",
+    "pixel_id": "XXXXXXXXX",
+    "page_id": "XXXXXXXXX",
+    "cpl_target_usd": 5,
+    "monthly_budget_usd": 300,
+    "special_ad_category": "HOUSING",
+    "default_geo": ["Buenos Aires, Argentina"],
+    "default_age_min": 25,
+    "default_age_max": 55
   }
 }
