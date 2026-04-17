@@ -97,11 +97,14 @@ Lee el plan de campana aprobado desde outputs.
 
 ### 2. Ejecutar via API
 
-Usa `scripts/meta_api.py` en este orden:
+Usa `scripts/meta_api.py` en este orden. Ojo: el `ad_account_id` se toma del brand del cliente (no del `.env`).
 
 ```python
 from scripts.meta_api import MetaAdsAPI
-api = MetaAdsAPI()
+from scripts.output_manager import load_brand
+
+brand = load_brand(cliente)
+api = MetaAdsAPI(ad_account_id=brand["meta_ads"]["ad_account_id"])
 
 # 1. Crear campana
 campaign = api.create_campaign(name, objective, special_ad_categories=["HOUSING"])
@@ -132,7 +135,10 @@ Informa los IDs de campana, ad sets y ads creados, con status de cada uno.
 
 ```python
 from scripts.meta_api import MetaAdsAPI
-api = MetaAdsAPI()
+from scripts.output_manager import load_brand
+
+brand = load_brand(cliente)
+api = MetaAdsAPI(ad_account_id=brand["meta_ads"]["ad_account_id"])
 insights = api.get_insights(campaign_id, date_range, fields, breakdowns)
 ```
 
@@ -292,13 +298,30 @@ Todo se guarda en `outputs/[cliente]/[YYYY-MM-DD]/` con este naming:
 
 ## Configuracion necesaria
 
+### `.env` global (credenciales del System User del business portfolio DV)
+
 Archivo `.env` en la raiz de `04_pauta/`:
 
 ```
 META_ACCESS_TOKEN=tu_token_aqui
-META_AD_ACCOUNT_ID=act_XXXXXXXXX
 META_APP_ID=XXXXXXXXX
 META_APP_SECRET=XXXXXXXXX
+META_BUSINESS_ID=XXXXXXXXX
+```
+
+El token es de un System User del Business Portfolio DV con permisos `ads_management`, `ads_read`, `business_management`. Un solo token accede a todas las ad accounts del portfolio (owned + client).
+
+### `ad_account_id` por cliente (en el brand system)
+
+El `ad_account_id` de cada cliente va en `shared/brands/[cliente].json` bajo `meta_ads.ad_account_id` (con prefijo `act_`). El agente lo lee del brand cada vez que opera sobre ese cliente.
+
+Si el cliente no esta onboardeado en `shared/brands/`, para y avisa. Para listar las cuentas disponibles en el portfolio:
+
+```python
+from scripts.meta_api import MetaAdsAPI
+api = MetaAdsAPI()  # sin ad_account_id, opera a nivel business
+for acc in api.list_ad_accounts():
+    print(acc["id"], acc["name"], acc["kind"])
 ```
 
 Si el `.env` no existe o el token esta vencido, avisas a Felipe y trabajas en modo offline (planificacion y analisis con datos pegados manualmente).

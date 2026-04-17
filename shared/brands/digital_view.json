@@ -2,8 +2,8 @@
   "brand_id": "digital_view",
   "brand_name": "Digital View",
   "brand_tagline": "Marketing Agency",
-  "version": "1.0",
-  "last_updated": "2026-04-13",
+  "version": "1.1",
+  "last_updated": "2026-04-17",
 
   "positioning": "Consultora de marketing inmobiliario. Disruptiva, juvenil, sin clichés. Directa y con framing de high-ticket. La única agencia que conoce el mercado inmobiliario como debería conocerse: grupo humano + disciplina y constancia = resultados.",
 
@@ -261,5 +261,26 @@
   "references": {
     "approved_examples_dir": "examples/dv_carrusel_referencia/",
     "description": "En esta carpeta hay 6 slides de referencia aprobados por el cliente. Cuando dudes de una decisión visual, mirá estos ejemplos."
+  },
+
+  "meta_ads": {
+    "ad_account_id": "act_881977527791996",
+    "ad_account_name": "CP Digital View USD",
+    "business_id": "2439893376462923",
+    "currency": "USD",
+    "timezone": "America/Argentina/Buenos_Aires",
+    "page_id": "61557477811665",
+    "instagram_username": "@digitalviewagency",
+    "pixel_id": null,
+    "cpl_target_usd": 3,
+    "monthly_budget_usd": 180,
+    "monthly_budget_range_usd": [160, 200],
+    "special_ad_categories": [],
+    "special_ad_categories_note": "DV anuncia sus servicios de marketing: NO es HOUSING por default. Si se corre campaña del proyecto de housing propio (en armado al 2026-04-17), setear ['HOUSING'] a nivel campaña.",
+    "default_geo": ["CABA", "GBA Zona Norte"],
+    "default_age_min": 30,
+    "default_age_max": 60,
+    "default_objective": "OUTCOME_LEADS",
+    "notes": "Cuenta en grace period (account_status=9) al 2026-04-17: revisar billing antes de activar campañas nuevas. No hay pixel instalado — optimizar por leads on-platform (instant forms) hasta que se instale."
   }
 }

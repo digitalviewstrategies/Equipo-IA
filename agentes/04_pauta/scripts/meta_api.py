@@ -6,7 +6,11 @@ via la Graph API de Meta (v21.0).
 
 Requiere .env en la raiz de 04_pauta/ con:
     META_ACCESS_TOKEN=tu_token
-    META_AD_ACCOUNT_ID=act_XXXXXXXXX
+    META_BUSINESS_ID=1394099734579403
+
+El ad_account_id es por cliente y se lee del brand system
+(shared/brands/[cliente].json bajo meta_ads.ad_account_id).
+Se pasa al constructor al instanciar el cliente por cada operacion.
 """
 
 import json
@@ -34,26 +38,46 @@ class MetaAPIError(Exception):
 
 
 class MetaAdsAPI:
-    """Cliente para Meta Marketing API."""
+    """Cliente para Meta Marketing API.
+
+    Para operaciones a nivel de cuenta (crear campana, subir imagen, listar
+    ads, etc) hay que pasar ad_account_id al constructor. Para operaciones
+    a nivel business (listar cuentas accesibles, validar token) no hace falta.
+    """
 
     def __init__(
         self,
         access_token: str | None = None,
         ad_account_id: str | None = None,
+        business_id: str | None = None,
     ):
         self.access_token = access_token or os.getenv("META_ACCESS_TOKEN")
-        self.ad_account_id = ad_account_id or os.getenv("META_AD_ACCOUNT_ID")
+        self.ad_account_id = ad_account_id
+        self.business_id = business_id or os.getenv("META_BUSINESS_ID")
 
         if not self.access_token:
             raise MetaAPIError(
                 "META_ACCESS_TOKEN no configurado. "
                 "Crea un archivo .env en la raiz de 04_pauta/ con tu token."
             )
+
+    def _require_account(self) -> str:
+        """Valida que haya ad_account_id configurado para la operacion."""
         if not self.ad_account_id:
             raise MetaAPIError(
-                "META_AD_ACCOUNT_ID no configurado. "
-                "Crea un archivo .env en la raiz de 04_pauta/ con tu ad account ID."
+                "Esta operacion requiere ad_account_id. "
+                "Instancia MetaAdsAPI(ad_account_id=...) desde el brand del cliente."
             )
+        return self.ad_account_id
+
+    def _require_business(self) -> str:
+        """Valida que haya business_id configurado para la operacion."""
+        if not self.business_id:
+            raise MetaAPIError(
+                "Esta operacion requiere business_id. "
+                "Configura META_BUSINESS_ID en .env o pasalo al constructor."
+            )
+        return self.business_id
 
     def _request(
         self,
@@ -124,7 +148,7 @@ class MetaAdsAPI:
             "special_ad_categories": json.dumps(special_ad_categories),
         }
 
-        return self._request("POST", f"{self.ad_account_id}/campaigns", params=params)
+        return self._request("POST", f"{self._require_account()}/campaigns", params=params)
 
     def list_campaigns(self, status_filter: str | None = None) -> list[dict]:
         """Lista campanas de la cuenta."""
@@ -134,7 +158,7 @@ class MetaAdsAPI:
         if status_filter:
             params["effective_status"] = json.dumps([status_filter])
 
-        result = self._request("GET", f"{self.ad_account_id}/campaigns", params=params)
+        result = self._request("GET", f"{self._require_account()}/campaigns", params=params)
         return result.get("data", [])
 
     def update_campaign(self, campaign_id: str, **kwargs) -> dict:
@@ -188,7 +212,7 @@ class MetaAdsAPI:
             tgt.update(placements)
             params["targeting"] = json.dumps(tgt)
 
-        return self._request("POST", f"{self.ad_account_id}/adsets", params=params)
+        return self._request("POST", f"{self._require_account()}/adsets", params=params)
 
     def list_ad_sets(self, campaign_id: str) -> list[dict]:
         """Lista ad sets de una campana."""
@@ -227,7 +251,7 @@ class MetaAdsAPI:
             "status": status,
         }
 
-        return self._request("POST", f"{self.ad_account_id}/ads", params=params)
+        return self._request("POST", f"{self._require_account()}/ads", params=params)
 
     def create_ad_with_creative(
         self,
@@ -249,7 +273,7 @@ class MetaAdsAPI:
             "status": status,
         }
 
-        return self._request("POST", f"{self.ad_account_id}/ads", params=params)
+        return self._request("POST", f"{self._require_account()}/ads", params=params)
 
     def list_ads(self, ad_set_id: str) -> list[dict]:
         """Lista ads de un ad set."""
@@ -272,7 +296,7 @@ class MetaAdsAPI:
         Returns:
             Dict con 'hash' e 'url' de la imagen.
         """
-        url = f"{BASE_URL}/{self.ad_account_id}/adimages"
+        url = f"{BASE_URL}/{self._require_account()}/adimages"
 
         with open(image_path, "rb") as img:
             files = {"filename": img}
@@ -301,7 +325,7 @@ class MetaAdsAPI:
         Returns:
             Dict con 'id' del video.
         """
-        url = f"{BASE_URL}/{self.ad_account_id}/advideos"
+        url = f"{BASE_URL}/{self._require_account()}/advideos"
 
         with open(video_path, "rb") as vid:
             files = {"source": vid}
@@ -389,4 +413,45 @@ class MetaAdsAPI:
         """
         return self._request(
             "POST", ad_set_id, params={"daily_budget": daily_budget}
+        )
+
+    # --- Business level ---
+
+    def list_ad_accounts(self, include_client: bool = True) -> list[dict]:
+        """
+        Lista todas las ad accounts accesibles desde el business portfolio.
+
+        Args:
+            include_client: si True, incluye client_ad_accounts ademas de owned.
+
+        Returns:
+            Lista de dicts con id, name, account_status, currency, kind ("owned" | "client").
+        """
+        business_id = self._require_business()
+        fields = "id,name,account_status,currency"
+
+        owned = self._request(
+            "GET", f"{business_id}/owned_ad_accounts",
+            params={"fields": fields, "limit": 100},
+        ).get("data", [])
+        for acc in owned:
+            acc["kind"] = "owned"
+
+        if not include_client:
+            return owned
+
+        client = self._request(
+            "GET", f"{business_id}/client_ad_accounts",
+            params={"fields": fields, "limit": 100},
+        ).get("data", [])
+        for acc in client:
+            acc["kind"] = "client"
+
+        return owned + client
+
+    def get_account_info(self) -> dict:
+        """Info de la ad account actualmente configurada."""
+        return self._request(
+            "GET", self._require_account(),
+            params={"fields": "id,name,account_status,currency,timezone_name,business"},
         )
