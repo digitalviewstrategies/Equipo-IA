@@ -1,4 +1,10 @@
-.claude/
+# Claude Code: ignorar solo configuracion por-usuario, trackear skills y commands del equipo
+**/.claude/settings.local.json
+**/.claude/projects/
+**/.claude/shell-snapshots/
+**/.claude/statsig/
+**/.claude/todos/
+
 .env
 __pycache__/
 *.pyc
