@@ -78,7 +78,11 @@
       "Bash(python3 scripts/render.py --html output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/carrusel.html --out output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
       "Bash(ls -la \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/viviana_sasia/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/abitat/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/ini_propiedades/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/\"*.png)",
       "Bash(awk '{print $5, $9}')",
-      "Bash(python3 upload_to_drive.py)"
+      "Bash(python3 upload_to_drive.py)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('meta_ads',{}\\), indent=2\\)\\)\")",
+      "Read(//c/c/Users/proba/Documents/Felipe/Claude/Equipo-IA/shared/**)",
+      "Read(//c/c/Users/proba/Documents/Felipe/Claude/Equipo-IA/shared/brands/**)",
+      "Bash(python *)"
     ]
   }
 }
