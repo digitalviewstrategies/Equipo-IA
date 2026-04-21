@@ -82,7 +82,9 @@
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('meta_ads',{}\\), indent=2\\)\\)\")",
       "Read(//c/c/Users/proba/Documents/Felipe/Claude/Equipo-IA/shared/**)",
       "Read(//c/c/Users/proba/Documents/Felipe/Claude/Equipo-IA/shared/brands/**)",
-      "Bash(python *)"
+      "Bash(python *)",
+      "Skill(update-config)",
+      "Bash(REUSE_CAMPAIGN_ID=120243980957290690 python scripts/_create_dv_b2b_draft.py)"
     ]
   }
 }

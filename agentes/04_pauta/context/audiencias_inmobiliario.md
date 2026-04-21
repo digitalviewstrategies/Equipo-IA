@@ -1,5 +1,26 @@
 # Audiencias para Real Estate Argentino — DV
 
+## Regla de ubicacion geo
+
+Si la propiedad o el cliente opera en CABA **o** Zona Norte, la geo de targeting es siempre la misma: **todo el corredor norte + todo Capital Federal**. No se separan en dos ad sets por ubicacion; se unifican en una sola geo.
+
+**Siempre usar lat/lng + radio.** No usar nombres de ciudad porque Meta los interpreta de forma inconsistente y aumenta el error de cobertura.
+
+**Radio minimo obligatorio con categoria HOUSING: 17km.** Meta no permite radios menores en anuncios de vivienda (error #2909052). Con 17km, dos puntos cubren CABA + corredor norte completo.
+
+**Puntos de anclaje estandar CABA/ZN (radio 17km cada uno):**
+
+| Zona | Lat | Lng | Cubre |
+|---|---|---|---|
+| CABA centro | -34.6037 | -58.3816 | Capital Federal + Vicente Lopez + Olivos |
+| Corredor norte | -34.4706 | -58.5131 | San Isidro, Martinez, Acassuso, Beccar, San Fernando, Tigre |
+
+En Meta Ads, cada punto se carga como un circulo de radio personalizado. Los dos juntos cubren toda el area sin depender de nombres de ciudad.
+
+Esta regla aplica a todos los segmentos a continuacion cuando el cliente opera en cualquiera de esas dos zonas.
+
+---
+
 ## Segmentos pre-armados
 
 Estos son los segmentos base que DV usa para campanas inmobiliarias. Se personalizan por cliente usando el buyer persona de su brand system.
@@ -12,7 +33,7 @@ Estos son los segmentos base que DV usa para campanas inmobiliarias. Se personal
 
 | Campo | Valor |
 |---|---|
-| Geo | Buenos Aires, Argentina (radio 25km del centro) |
+| Geo | Ver regla de ubicacion geo arriba (CABA completa + corredor norte) |
 | Edad | 28-55 |
 | Genero | Todos |
 | Intereses | Real estate, Property investment, Apartment, Moving, Home buying, Inmobiliaria, Propiedad, ZonaProp, Argenprop, Mercado Libre Inmuebles |
@@ -31,7 +52,7 @@ Estos son los segmentos base que DV usa para campanas inmobiliarias. Se personal
 
 | Campo | Valor |
 |---|---|
-| Geo | Vicente Lopez, Olivos, San Isidro, Acassuso, Beccar, Martinez, San Fernando (radio por municipio) |
+| Geo | Ver regla de ubicacion geo arriba (CABA completa + corredor norte) |
 | Edad | 30-55 |
 | Genero | Todos |
 | Intereses | Real estate, Casa, Country, Barrio privado, Mudanza, Home improvement + los de CABA |

@@ -1,0 +1,28 @@
+{
+  "cliente": "toribio_achaval",
+  "nombre_display": "Toribio Achaval",
+  "meta_ads": {
+    "ad_account_id": "act_2390281541415930",
+    "page_id": null,
+    "pixel_id": null
+  },
+  "corredor": "Santiago Bourie Corneille CMCPSI 7174",
+  "zona": "CABA",
+  "geo": {
+    "descripcion": "CABA completa + corredor norte",
+    "puntos": [
+      {"lat": -34.6037, "lng": -58.3816, "radio_km": 17, "zona": "CABA centro"},
+      {"lat": -34.4706, "lng": -58.5131, "radio_km": 17, "zona": "Corredor norte"}
+    ]
+  },
+  "buyer_persona": {
+    "edad_min": 30,
+    "edad_max": 60,
+    "descripcion": "Compradores de propiedades premium en CABA. Perfil inversor o familiar de ticket alto."
+  },
+  "presupuesto_default": {
+    "moneda": "ARS",
+    "diario_ars": 14286,
+    "nota": "100k ARS por semana segun sheet"
+  }
+}

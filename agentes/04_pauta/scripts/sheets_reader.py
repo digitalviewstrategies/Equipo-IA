@@ -5,14 +5,18 @@ Requiere en .env:
     GOOGLE_SHEET_ID=...
     GOOGLE_CREDENTIALS_PATH=credentials/google_service_account.json
 
-La service account necesita acceso de lectura al sheet y a los archivos de Drive
-que esten referenciados en la columna Material.
-
-Columnas esperadas en el sheet (case-insensitive):
-    Cliente     -> cliente
-    Direccion   -> direccion
-    Material    -> material  (links de Drive separados por salto de linea o coma)
-    Presupuesto -> presupuesto_usd (float, se limpian $, puntos y comas)
+Columnas del sheet (case-insensitive):
+    Encargado             -> encargado
+    Fecha de inicio       -> fecha_inicio
+    Direccion             -> direccion        (nombre de campana)
+    Cliente               -> cliente
+    Material              -> material         (formatos: carrusel1x1 | video9x16 | ...)
+    Ficha                 -> ficha            (link de la propiedad)
+    Corredor inmobiliario -> corredor
+    Estado                -> estado
+    Presupuesto           -> presupuesto_raw  (ej: "40K x una semana")
+    Comentarios Correcciones -> comentarios
+    Prioridad             -> prioridad
 """
 
 import os
@@ -32,12 +36,25 @@ SCOPES = [
 ]
 
 _COLUMN_MAP = {
-    "cliente": "cliente",
+    "encargado": "encargado",
+    "fecha de inicio": "fecha_inicio",
     "dirección": "direccion",
     "direccion": "direccion",
+    "cliente": "cliente",
     "material": "material",
-    "presupuesto": "presupuesto_usd",
+    "ficha": "ficha",
+    "corredor inmobiliario": "corredor",
+    "estado": "estado",
+    "presupuesto": "presupuesto_raw",
+    "comentarios correcciones": "comentarios",
+    "prioridad": "prioridad",
 }
+
+# campana nueva con material listo
+ESTADOS_NUEVA = {"material cargado"}
+# campana existente a reactivar/repautar
+ESTADOS_REPAUTAR = {"repautar"}
+ESTADOS_ACTIVOS = ESTADOS_NUEVA | ESTADOS_REPAUTAR
 
 
 def _get_credentials(credentials_path: str | None = None) -> Credentials:
@@ -57,33 +74,58 @@ def _get_credentials(credentials_path: str | None = None) -> Credentials:
     return Credentials.from_service_account_file(str(full_path), scopes=SCOPES)
 
 
-def _clean_budget(raw: str) -> float:
-    """Convierte '$ 1.500' o '1500,00' o '1500' a float."""
-    cleaned = re.sub(r"[^\d,.]", "", raw)
-    # Si tiene coma como separador decimal (1500,00) la convierte
-    if "," in cleaned and "." not in cleaned:
-        cleaned = cleaned.replace(",", ".")
-    elif "," in cleaned:
-        cleaned = cleaned.replace(",", "")
-    try:
-        return float(cleaned)
-    except ValueError:
-        raise ValueError(f"No se pudo convertir '{raw}' a presupuesto numerico.")
+def _parse_presupuesto(raw: str) -> dict:
+    """
+    Parsea presupuesto en formato libre a valores utiles.
+
+    Ejemplos:
+        "40K x una semana"  -> {total_ars: 40000, periodo: "semana", diario_ars: 5714}
+        "80k x dos semanas" -> {total_ars: 80000, periodo: "dos semanas", diario_ars: 5714}
+        "20k x mes"         -> {total_ars: 20000, periodo: "mes", diario_ars: 667}
+
+    Devuelve dict con raw original si no puede parsear.
+    """
+    raw_lower = raw.lower().strip()
+
+    # Extraer monto (ej: 40k -> 40000, 40000)
+    match_monto = re.search(r"(\d+(?:[.,]\d+)?)\s*k?", raw_lower)
+    if not match_monto:
+        return {"presupuesto_raw": raw}
+
+    monto_str = match_monto.group(1).replace(",", ".")
+    monto = float(monto_str)
+    if "k" in raw_lower[match_monto.start():match_monto.end() + 1]:
+        monto *= 1000
+
+    # Determinar periodo en dias
+    if "mes" in raw_lower:
+        dias = 30
+        periodo = "mes"
+    elif "dos semanas" in raw_lower or "2 semanas" in raw_lower:
+        dias = 14
+        periodo = "dos semanas"
+    elif "semana" in raw_lower:
+        dias = 7
+        periodo = "semana"
+    else:
+        dias = 7
+        periodo = "semana"
+
+    return {
+        "presupuesto_raw": raw,
+        "presupuesto_total_ars": int(monto),
+        "presupuesto_periodo": periodo,
+        "presupuesto_diario_ars": round(monto / dias),
+    }
 
 
-def _parse_drive_links(raw: str) -> list[str]:
-    """Extrae links de Google Drive de una celda. Soporta separacion por coma o newline."""
-    separators = re.split(r"[\n,]+", raw)
-    links = []
-    for item in separators:
-        item = item.strip()
-        if "drive.google.com" in item or "docs.google.com" in item:
-            links.append(item)
-    return links
+def _parse_formatos(raw: str) -> list[str]:
+    """Extrae lista de formatos de Material. Separador: | o coma."""
+    parts = re.split(r"[|\n,]+", raw)
+    return [p.strip() for p in parts if p.strip()]
 
 
 def _normalize_headers(row: list[str]) -> dict[int, str]:
-    """Mapea indices de columna a nombres normalizados."""
     mapping = {}
     for i, header in enumerate(row):
         normalized = header.strip().lower()
@@ -96,19 +138,23 @@ def get_campaign_rows(
     sheet_id: str | None = None,
     credentials_path: str | None = None,
     worksheet_index: int = 0,
+    solo_activos: bool = True,
 ) -> list[dict]:
     """
-    Lee el sheet y devuelve lista de campanas a crear.
+    Lee el sheet y devuelve lista de campanas a procesar.
+
+    Args:
+        solo_activos: Si True, solo devuelve filas con estado en ESTADOS_ACTIVOS.
 
     Returns:
-        Lista de dicts con keys: cliente, direccion, material (list[str]), presupuesto_usd.
-        Salta filas vacias o sin cliente.
+        Lista de dicts con keys: encargado, fecha_inicio, direccion, cliente,
+        material (list[str]), ficha, corredor, estado, presupuesto_raw,
+        comentarios, prioridad.
+        Salta filas sin cliente o sin direccion.
     """
     sheet_id = sheet_id or os.getenv("GOOGLE_SHEET_ID")
     if not sheet_id:
-        raise ValueError(
-            "GOOGLE_SHEET_ID no configurado. Agrega la variable al .env."
-        )
+        raise ValueError("GOOGLE_SHEET_ID no configurado. Agrega la variable al .env.")
 
     creds = _get_credentials(credentials_path)
     gc = gspread.authorize(creds)
@@ -119,14 +165,6 @@ def get_campaign_rows(
         return []
 
     headers = _normalize_headers(all_rows[0])
-    required = {"cliente", "direccion", "material", "presupuesto_usd"}
-    found = set(headers.values())
-    missing = required - found
-    if missing:
-        raise ValueError(
-            f"Columnas faltantes en el sheet: {', '.join(sorted(missing))}. "
-            f"Columnas encontradas: {', '.join(all_rows[0])}"
-        )
 
     rows = []
     for row_num, row in enumerate(all_rows[1:], start=2):
@@ -141,24 +179,21 @@ def get_campaign_rows(
             print(f"  [SKIP] Fila {row_num}: sin direccion.")
             continue
 
-        if not record.get("material"):
-            print(f"  [SKIP] Fila {row_num} ({record['cliente']}): sin material.")
+        estado = record.get("estado", "").lower()
+        if solo_activos and estado not in ESTADOS_ACTIVOS:
+            print(f"  [SKIP] Fila {row_num} ({record['cliente']} - {record['direccion']}): estado '{record.get('estado', '')}'.")
             continue
 
-        try:
-            record["presupuesto_usd"] = _clean_budget(record["presupuesto_usd"])
-        except ValueError as e:
-            print(f"  [SKIP] Fila {row_num} ({record['cliente']}): {e}")
+        formatos = _parse_formatos(record.get("material", ""))
+        if not formatos:
+            print(f"  [SKIP] Fila {row_num} ({record['cliente']}): sin formatos en Material.")
             continue
+        record["material"] = formatos
 
-        links = _parse_drive_links(record["material"])
-        if not links:
-            print(
-                f"  [SKIP] Fila {row_num} ({record['cliente']}): "
-                "no se encontraron links de Drive en Material."
-            )
-            continue
-        record["material"] = links
+        record["accion"] = "repautar" if estado in ESTADOS_REPAUTAR else "nueva"
+
+        presupuesto = _parse_presupuesto(record.get("presupuesto_raw", ""))
+        record.update(presupuesto)
 
         rows.append(record)
 

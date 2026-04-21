@@ -1,0 +1,26 @@
+[
+  {
+    "direccion": "9 DE JULIO",
+    "campaign_name": "Pipe / Leads / ABO / 9 DE JULIO",
+    "campaign_id": "120244713965170313",
+    "adset_name": "Pipe / CABA+ZN",
+    "adset_id": "120244713965600313",
+    "status": "PAUSED"
+  },
+  {
+    "direccion": "NICOLAS AVELLANEDA",
+    "campaign_name": "Pipe / Leads / ABO / NICOLAS AVELLANEDA",
+    "campaign_id": "120244713966110313",
+    "adset_name": "Pipe / CABA+ZN",
+    "adset_id": "120244713966330313",
+    "status": "PAUSED"
+  },
+  {
+    "direccion": "PARANA",
+    "campaign_name": "Pipe / Leads / ABO / PARANA",
+    "campaign_id": "120244713966700313",
+    "adset_name": "Pipe / CABA+ZN",
+    "adset_id": "120244713967460313",
+    "status": "PAUSED"
+  }
+]

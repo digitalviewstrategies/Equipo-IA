@@ -128,6 +128,8 @@ class MetaAdsAPI:
         objective: str,
         status: str = "PAUSED",
         special_ad_categories: list[str] | None = None,
+        is_adset_budget_sharing_enabled: bool = True,
+        bid_strategy: str = "LOWEST_COST_WITHOUT_CAP",
     ) -> dict:
         """
         Crea una campana.
@@ -137,6 +139,8 @@ class MetaAdsAPI:
             objective: OUTCOME_LEADS, OUTCOME_TRAFFIC, OUTCOME_SALES.
             status: PAUSED (default, para revisar antes de activar) o ACTIVE.
             special_ad_categories: ["HOUSING"] obligatorio para real estate.
+            is_adset_budget_sharing_enabled: True = ABO (presupuesto por ad set).
+            bid_strategy: LOWEST_COST_WITHOUT_CAP por default.
         """
         if special_ad_categories is None:
             special_ad_categories = ["HOUSING"]
@@ -146,6 +150,8 @@ class MetaAdsAPI:
             "objective": objective,
             "status": status,
             "special_ad_categories": json.dumps(special_ad_categories),
+            "is_adset_budget_sharing_enabled": is_adset_budget_sharing_enabled,
+            "bid_strategy": bid_strategy,
         }
 
         return self._request("POST", f"{self._require_account()}/campaigns", params=params)
