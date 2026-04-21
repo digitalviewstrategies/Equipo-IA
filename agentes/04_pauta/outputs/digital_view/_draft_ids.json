@@ -1,7 +1,11 @@
 {
-  "campaign_id": "120243760174680690",
-  "adset_id": "120243760176390690",
+  "campaign_id": "120243980957290690",
+  "adset_id": "120243981077650690",
   "ad_account_id": "act_881977527791996",
+  "page_id": "266111623249327",
+  "lead_form_id": "2232879967536075",
+  "lead_form_name": "Cp Digital View Nuevo",
   "status": "PAUSED",
-  "created_at": "2026-04-18"
+  "created_at": "2026-04-21",
+  "notes": "B2B servicios DV a inmobiliarias/agentes ZN. Ads pendientes hasta tener creativos."
 }
