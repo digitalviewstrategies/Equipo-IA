@@ -78,7 +78,14 @@
       "Bash(python3 scripts/render.py --html output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/carrusel.html --out output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/ --width 1080 --height 1080 --prefix slide)",
       "Bash(ls -la \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/viviana_sasia/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/abitat/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/ini_propiedades/2026-04-14/carrusel_captacion/\"*.png \"/home/valentin/Documents/Equipo IA DV/dv_design_agent/output/rubica_inmobiliaria/2026-04-14/carrusel_captacion/\"*.png)",
       "Bash(awk '{print $5, $9}')",
-      "Bash(python3 upload_to_drive.py)"
+      "Bash(python3 upload_to_drive.py)",
+      "mcp__composio__COMPOSIO_SEARCH_TOOLS",
+      "mcp__composio__COMPOSIO_REMOTE_WORKBENCH",
+      "mcp__composio__COMPOSIO_GET_TOOL_SCHEMAS",
+      "mcp__claude_ai_Google_Drive__read_file_content",
+      "mcp__claude_ai_Google_Drive__download_file_content",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('/home/valentin/.claude/projects/-home-valentin-Digital-App-ClaudeTeam-Equipo-IA/ba053385-810b-4e84-ac63-3ca086c9075f/tool-results/mcp-claude_ai_Google_Drive-download_file_content-1776873043998.txt'\\)\\); print\\(type\\(d\\), list\\(d.keys\\(\\)\\) if isinstance\\(d,dict\\) else d[:2]\\)\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }

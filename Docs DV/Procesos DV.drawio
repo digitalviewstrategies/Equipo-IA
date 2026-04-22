@@ -1,0 +1,190 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="29.3.6">
+  <diagram name="Page-1" id="Qhht9Fr5_bUKz5zoTYgH">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="WQevSi59tPaS4Q5A-O26-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;spacingTop=0;" value="" vertex="1">
+          <mxGeometry height="1100" width="680" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-3" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Produccion" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-5" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-7" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Nico&lt;br&gt;COO" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-9" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Bauti&lt;div&gt;PM&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-10" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="WQevSi59tPaS4Q5A-O26-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Elias&lt;div&gt;PM&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-12" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-14" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-15" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-17" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-19" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-8" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Equipo de servicio" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-26" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-25" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Diseño" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-34" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-13" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Meta" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-28" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-27" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-16" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Edicion" vertex="1">
+          <mxGeometry height="60" width="120" x="240" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-30" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-18" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Producción audiovisual" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-25" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Fefi" vertex="1">
+          <mxGeometry height="60" width="120" x="100" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-27" parent="1" style="whiteSpace=wrap;html=1;rounded=0;align=left;" value="&lt;ul&gt;&lt;li&gt;Gian&lt;/li&gt;&lt;li&gt;Fran&lt;/li&gt;&lt;li&gt;Eze&lt;/li&gt;&lt;li&gt;Bauti&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="90" width="120" x="240" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-32" edge="1" parent="1" source="WQevSi59tPaS4Q5A-O26-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="WQevSi59tPaS4Q5A-O26-31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-29" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Nico" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-31" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Bauti" vertex="1">
+          <mxGeometry height="60" width="120" x="480" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-33" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="Pipe" vertex="1">
+          <mxGeometry height="60" width="120" x="620" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="WQevSi59tPaS4Q5A-O26-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;spacingLeft=15;spacingRight=15;" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;¿Cómo funciona la rueda operativa?&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Para poder explicar esto tenemos que tener en cuenta los distintos servicios que entregamos:&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Reel editados&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Carruseles&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Flyers&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Producción Audiovisual&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Ideas + Guiones&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;- Campañas en Meta&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;En base a esto vamos a armar una rueda para cada tipo de cliente:&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Growth Ads: &lt;/b&gt;A este cliente se le entrega un servicio de campañas a través de Meta con, edicion de videos, diseños, ideas/guiones.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;Cómo funciona?&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;Paso 1: Dia 0&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Se crea el grupo de WPP con el cliente.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;&lt;br&gt;Paso 2: Semana 1 | Trabajo del PM asignado&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Mandamos el documento de OB&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Le creamos un drive donde vamos a compartir todos los archivos/fotos/videos necesarios&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Le creamos una ficha interna al cliente.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Coordinamos meet de 1 hora para OB y configuración de Meta. (Máximo a los 3 días hábiles)&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Le pedimos exactamente qué propiedades va a publicitar y que suba ese material. Una vez hecho eso llenamos la info necesaria en la ficha interna.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;&lt;br&gt;Paso 3: Semana 1 y 2&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- El PM le carga las tareas en Trello a los editores con los videos e info necesaria para que arranquen a editar todo el material crudo.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- El editor que lo agarra no solo lo agarra en Trello sino que avisa por el grupo que agarro ese cliente/videos.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Se repite el mismo proceso con diseño.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Todo este contenido se va a editar en base a el material que tenga el cliente el cual va a estar cargado en la ficha. Caso ideal: Video de recorrido de prop, Video Impactante (IA, Impactante con frame y música, etc), Carrousel.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Una vez terminado el video/carrousel tanto el editor como Fefi van a chequear el producto con el docs de Checklist antes de enviarselo a su PM.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Una vez que el PM recibe el producto va a re chequearlo tanto con criterio propio como con el docs de Checklist.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;Paso 4: Semana 3&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Empezamos a pautar con el material ya terminado&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;Paso 5: Semana 4 en adelante&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Todos los lunes el PM va a contactar al cliente para ver que quiere pautar esa semana, y ahi se repite el proceso de producción de creativos.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Todos los miércoles y viernes el PM va a mandar un msj de status al cliente. Como vienen con los leads? Necesitan algo? &lt;b&gt;ES CLAVE QUE SE SIENTAN ATENDIDOS.&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Cada 2 semanas Pipe va a mandar un reporte de métricas a los PM&#39;s para que les manden a sus clientes.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b&gt;Corner Cases:&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;En el caso de que el cliente quiera grabarse para videos de captación vamos a hacer lo siguiente:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- El PM va a generar 4 ideas de video con guiones en base a: Su criterio, El docs de ideas, Objetivos y gustos del cliente.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Una vez generadas estas 4 ideas, se las va a pasar a Nico&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- En el caso de que Nico las apruebe, el PM envía las ideas al cliente, y una vez el cliente las graba y las sube al drive se repite el &lt;b&gt;Paso 2.&lt;/b&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- En el caso de que Nico no las apruebe, va a dejarle algunas breves correcciones al PM para que las rehaga.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Una vez re hechas, Nico las vuelve a ver, si están ok se envían, si no estan ok el PM es down y las hace Nico.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;En el caso de que el cliente plantee un servicio nuevo/distinto se encarga Nico de analizarlo y se ataca en base a lo que decida el.&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;div&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;Growth Ads + Producción:&amp;nbsp;&lt;/b&gt;A este cliente se le entrega un servicio de campañas a través de Meta con, edicion de videos, diseños, ideas/guiones.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Cómo funciona?&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;Este servicio es igual al de Growth Ads pero se le suma una producción audiovisual comercial, en la cual se suma este proceso:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Paso 1:&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Una vez se coordina la producción en la semana 1 se arranca con la Pre-Producción.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;- Acá se repite el proceso del Corner Case de captación en el servicio de Growth Ads, con la única diferencia de que nosotros vamos a filmar.&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="1100" width="850" x="760" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="1100" width="870" x="1610" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-4" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Entra cliente nuevo" vertex="1">
+          <mxGeometry height="60" width="120" x="1660" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-6" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-3" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1" value="PM &lt;span style=&quot;font-weight: normal;&quot;&gt;crea grupo/drive/accesos/OB/ficha interna/etc&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="1860" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-8" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-16" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-5" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Hay producción?&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2150" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-10" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-7" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="SI" vertex="1">
+          <mxGeometry height="60" width="120" x="2320" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-12" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-11" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-9" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;El &lt;/span&gt;PM&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;coordina la produccion&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2320" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-14" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-11" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;El &lt;/span&gt;PM &lt;span style=&quot;font-weight: normal;&quot;&gt;hace la pre prod&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2320" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-21" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="RNiMkzj5-1wqcpnOhJM3-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-13" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Se hace la prod y se carga el material al drive&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2320" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-18" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-17" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-15" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="NO" vertex="1">
+          <mxGeometry height="60" width="120" x="1985" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-20" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-17" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: 400;&quot;&gt;El cliente carga el material al drive&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1985" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-23" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-19" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;El &lt;/span&gt;PM &lt;span style=&quot;font-weight: normal;&quot;&gt;le carga las tareas a edicion y diseño&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1985" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-25" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-22" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Una vez el material se termina de editar/diseñar pasa a que los &lt;/span&gt;PM&lt;span style=&quot;font-weight: normal;&quot;&gt;&amp;nbsp;lo chequeen&lt;/span&gt;" vertex="1">
+          <mxGeometry height="70" width="165" x="1730" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-27" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-24" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Cuando el material ya esta aprobado, &lt;/span&gt;PIPE &lt;span style=&quot;font-weight: normal;&quot;&gt;arranca a pautar&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1752.5" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-29" edge="1" parent="1" source="RNiMkzj5-1wqcpnOhJM3-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="RNiMkzj5-1wqcpnOhJM3-28" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-26" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Una vez ya hay pautas corriendo arranca la última fase:&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;Seguimiento y métricas&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="197.5" x="1952.5" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="RNiMkzj5-1wqcpnOhJM3-28" parent="1" style="whiteSpace=wrap;html=1;rounded=0;fontStyle=1;" value="Lunes: PM&amp;nbsp;&lt;span style=&quot;font-weight: normal;&quot;&gt;Msj para q pautar&lt;/span&gt;&lt;br&gt;Miercoles y viernes: PM &lt;span style=&quot;font-weight: normal;&quot;&gt;Msj de status&lt;/span&gt;&lt;div&gt;Cada 15 dias: PIPE &lt;span style=&quot;font-weight: normal;&quot;&gt;Msj de metricas&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="230" x="2220" y="800" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
