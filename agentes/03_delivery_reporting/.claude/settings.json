@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Google_Drive__authenticate",
+      "mcp__claude_ai_Google_Drive__complete_authentication"
+    ]
+  }
+}

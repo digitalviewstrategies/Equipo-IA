@@ -20,7 +20,7 @@ Pedi tambien datos especificos si aplica: para venta (zona, tipologia, precio/me
 ## Pasos
 
 1. Carga el brand con `shared/brands/<cliente>.json`. Si no existe, pedi el nombre correcto. No produzcas copy sin brand.
-2. Lee en orden: `context/frameworks_copy.md`, `context/audiencias.md`, `context/banco_hooks.md`, `context/mercado_inmobiliario_arg.md`.
+2. Lee en orden: `context/frameworks_copy.md`, `context/audiencias.md`, `context/banco_hooks.md`, `shared/contexto_inmobiliario.md`.
 3. Chequea briefs del Media Buyer en `../../04_pauta/outputs/<cliente>/`. Si hay briefs recientes con angulos ganadores, usalos.
 4. Identifica el perfil de audiencia segun objetivo:
    - `venta_propiedad` -> Perfil 1 (comprador)

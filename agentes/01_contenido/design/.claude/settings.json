@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Canva__list-brand-kits",
+      "mcp__claude_ai_Canva__search-designs",
+      "mcp__claude_ai_Canva__get-design",
+      "mcp__claude_ai_Canva__get-design-content",
+      "mcp__claude_ai_Canva__get-design-thumbnail",
+      "mcp__claude_ai_Canva__generate-design",
+      "mcp__claude_ai_Canva__generate-design-structured",
+      "mcp__claude_ai_Canva__start-editing-transaction",
+      "mcp__claude_ai_Canva__perform-editing-operations",
+      "mcp__claude_ai_Canva__commit-editing-transaction",
+      "mcp__claude_ai_Canva__cancel-editing-transaction",
+      "mcp__claude_ai_Canva__export-design",
+      "mcp__claude_ai_Canva__get-export-formats",
+      "mcp__claude_ai_Canva__upload-asset-from-url",
+      "mcp__claude_ai_Canva__create-design-from-candidate",
+      "mcp__claude_ai_Google_Drive__authenticate",
+      "mcp__claude_ai_Google_Drive__complete_authentication"
+    ]
+  }
+}

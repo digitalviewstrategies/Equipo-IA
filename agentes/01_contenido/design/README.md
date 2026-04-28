@@ -121,7 +121,7 @@ agentes/01_contenido/design/
 │   ├── dv_manual.md             # Contexto de Digital View
 │   ├── copy_framework.md        # Tono, hooks, estructura narrativa
 │   ├── design_principles.md     # Reglas visuales inamovibles
-│   └── inmobiliario_glosario.md # Vocabulario del rubro
+│   └── inmobiliario_glosario.md # Vocabulario del rubro (ver también shared/contexto_inmobiliario.md)
 │
 ├── templates/                   # HTML base por tipo de pieza
 │   ├── carrusel_captacion.html

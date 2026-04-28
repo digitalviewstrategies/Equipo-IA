@@ -51,7 +51,20 @@ Antes de tocar HTML, escribí el copy completo de la pieza en un bloque de texto
 
 Revisá el copy contra los criterios de `context/copy_framework.md` antes de pasar a diseño. Si el copy no te convence, reescribilo.
 
-### Paso 5 — Elegir la plantilla base
+### Paso 5 — Elegir el pipeline de producción
+
+**Opción A — Canva MCP (preferida cuando el cliente tiene brand kit en Canva):**
+
+1. Listá brand kits: `mcp__claude_ai_Canva__list-brand-kits`. Si existe el del cliente, continuás.
+2. Generá el diseño: `mcp__claude_ai_Canva__generate-design-structured` con el copy del Paso 4 y el tipo de pieza.
+3. Revisá con el usuario: `mcp__claude_ai_Canva__get-design-thumbnail`.
+4. Si hay ajustes: `mcp__claude_ai_Canva__start-editing-transaction` → `perform-editing-operations` → `commit-editing-transaction`.
+5. Exportá: `mcp__claude_ai_Canva__export-design` en PNG.
+6. Cuando el usuario aprueba: subís a Drive con el MCP de Google Drive a `CLIENTE/03 Estaticos/`.
+
+**Opción B — HTML + Playwright (fallback):**
+
+Usá cuando el cliente no tiene brand kit en Canva, o el formato no está soportado por templates de Canva, o el usuario prefiere control HTML.
 
 Cada tipo de pieza tiene una plantilla HTML en `templates/`. No arranques de cero. Copiá la plantilla, reemplazá el contenido con el copy nuevo, ajustá los colores según el brand system, y acomodá layouts si hace falta.
 

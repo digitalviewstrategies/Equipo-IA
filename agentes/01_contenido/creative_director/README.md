@@ -82,8 +82,8 @@ agentes/01_contenido/creative_director/
 │   ├── sistema_video_ads_parte3.md        # Formatos 8-13
 │   ├── sistema_video_ads_parte4.md        # Hooks, títulos, brief, testing, producción
 │   ├── angulos_de_dolor.md                # Cómo generar 5+ ángulos (NUEVO)
-│   ├── inmobiliario_mercado.md            # Tipos de cliente, vocabulario, dolores del rubro
 │   └── ejemplos_output.md                 # Casos reales de referencia
+│   (mercado/vocabulario: ver shared/contexto_inmobiliario.md)
 ├── scripts/
 │   ├── template_guion.md                  # Brief de producción v2
 │   ├── output_manager.py                  # Cargar brands + guardar outputs

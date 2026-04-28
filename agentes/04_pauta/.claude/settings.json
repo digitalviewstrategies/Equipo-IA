@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "meta-ads-dv": {
+      "command": "python3",
+      "args": [
+        "agentes/04_pauta/mcp_server/meta_ads_mcp.py"
+      ]
+    }
+  },
+  "permissions": {
+    "allow": [
+      "mcp__meta-ads-dv__get_campaigns",
+      "mcp__meta-ads-dv__get_insights",
+      "mcp__meta-ads-dv__update_budget",
+      "mcp__meta-ads-dv__pause_ad",
+      "mcp__meta-ads-dv__create_campaign",
+      "mcp__claude_ai_Google_Drive__authenticate",
+      "mcp__claude_ai_Google_Drive__complete_authentication"
+    ]
+  }
+}

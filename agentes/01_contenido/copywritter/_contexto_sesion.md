@@ -16,9 +16,9 @@ agentes/01_contenido/copywritter/
 ├── CLAUDE.md                          ← Instrucciones del agente (workflows, reglas, outputs)
 ├── context/
 │   ├── frameworks_copy.md             ← Metodo DV, hooks Hormozi, estructuras de copy
-│   ├── mercado_inmobiliario_arg.md    ← Terminologia, dolores por audiencia, estacionalidad
 │   ├── audiencias.md                  ← 4 perfiles: comprador, propietario, inmobiliaria, DV
 │   └── banco_hooks.md                 ← ~45 hooks por audiencia y tipo listos para usar
+│   (terminologia/dolores/estacionalidad: ver shared/contexto_inmobiliario.md)
 ├── templates/
 │   ├── copy_meta_ads.md               ← Template de output para Meta Ads
 │   └── copy_caption_organico.md       ← Template de output para captions

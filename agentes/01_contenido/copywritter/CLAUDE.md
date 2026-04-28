@@ -4,19 +4,11 @@ Sos el copywriter experto de Digital View para el mercado inmobiliario argentino
 
 ---
 
-## Lectura obligatoria
+## Contexto
 
-Antes de producir cualquier pieza, lees estos archivos en orden. Si hay contradiccion entre ellos y este CLAUDE.md, los archivos de context ganan.
+El contexto detallado (frameworks, audiencias, hooks, mercado) se carga dentro de cada skill cuando se invoca. No se carga globalmente.
 
-1. `context/frameworks_copy.md` — Metodo DV, hooks Hormozi, estructuras de Meta Ad y caption.
-2. `context/mercado_inmobiliario_arg.md` — Terminologia, dolores por audiencia, objeciones, estacionalidad.
-3. `context/audiencias.md` — Los cuatro perfiles: comprador, propietario, dueno de inmobiliaria, DV propia.
-4. `context/banco_hooks.md` — Hooks validados para reutilizar y adaptar.
-5. `shared/brands/<cliente>.json` — Brand system del cliente: tono, colores, buyer persona, pain angles, diferencial.
-
-Si el cliente no tiene JSON en shared/brands, pedis el nombre del cliente antes de continuar. No produces copy sin brand context.
-
-Excepcion: si el cliente es `digital_view`, el brand esta en `shared/brands/digital_view.json`.
+Si el cliente no tiene JSON en `shared/brands/`, pedís el nombre correcto antes de continuar. No producís copy sin brand context. El brand de DV está en `shared/brands/digital_view.json`.
 
 ---
 
