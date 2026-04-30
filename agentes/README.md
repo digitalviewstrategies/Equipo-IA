@@ -8,6 +8,7 @@ Cada subcarpeta es una fase del flujo operativo de DV (ver `../CLAUDE.md`). La n
 | 02 | `02_comercial/` | — | Scaffold |
 | 03 | `03_delivery_reporting/` | — | Scaffold |
 | 04 | `04_pauta/` | Media Buyer Meta (próximo) | Scaffold |
+| 05 | `05_account_manager/` | Account Manager WhatsApp 1-1 | En desarrollo |
 
 ## Cómo agregar un agente nuevo
 
