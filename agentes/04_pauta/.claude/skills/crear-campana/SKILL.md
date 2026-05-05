@@ -56,12 +56,12 @@ api = MetaAdsAPI(ad_account_id=ad_account_id)
 campaign = api.create_campaign(
     name=plan["campaign"]["name"],
     objective=plan["campaign"]["objective"],
-    special_ad_categories=["HOUSING"]
+    special_ad_categories=[]
 )
 campaign_id = campaign["id"]
 ```
 
-HOUSING es obligatorio para todos los clientes DV. Nunca lo omitás.
+No declarar HOUSING salvo que Felipe lo pida explicitamente para una campana puntual.
 
 ### 3. Crear los ad sets
 

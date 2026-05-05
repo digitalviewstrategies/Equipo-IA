@@ -4,9 +4,7 @@
   "brand_tagline": "Marketing Agency",
   "version": "1.1",
   "last_updated": "2026-04-17",
-
   "positioning": "Consultora de marketing inmobiliario. Disruptiva, juvenil, sin clichés. Directa y con framing de high-ticket. La única agencia que conoce el mercado inmobiliario como debería conocerse: grupo humano + disciplina y constancia = resultados.",
-
   "colors": {
     "primary": {
       "hex": "#0033CC",
@@ -44,7 +42,6 @@
       "usage": "Texto sobre fondos oscuros (azul, negro)."
     }
   },
-
   "color_distribution_rules": {
     "description": "Cómo distribuir los colores de fondo en un carrusel de 6 slides.",
     "carousel_6_slides": {
@@ -58,7 +55,6 @@
     "pink_appearances_max": 2,
     "lime_appearances": "todas las slides donde haya un acento que destacar"
   },
-
   "typography": {
     "primary": {
       "family": "Inter",
@@ -89,7 +85,6 @@
       "usage": "SOLO para anotaciones a mano alzada rotadas (scribbles). Ejemplo: 'tu guita ↓' en rosa rotado -8 grados."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 80,
     "headline_max_size_px": 140,
@@ -102,7 +97,6 @@
     "never_use_underline": true,
     "never_use_more_than_2_fonts_per_piece": true
   },
-
   "visual_style": {
     "keywords": [
       "disruptivo",
@@ -138,7 +132,6 @@
       "Ciertas frases prohibidas: 'soñá con', 'concretá tu hogar', 'profesionales que te acompañan', 'vení a conocernos'"
     ]
   },
-
   "layouts": {
     "carousel_square": {
       "width_px": 1080,
@@ -186,7 +179,6 @@
       "description": "Flyer A4 a 300dpi para imprimir o mandar por WhatsApp."
     }
   },
-
   "tone_of_voice": {
     "principles": [
       "Directo sin rodeos",
@@ -239,11 +231,15 @@
     },
     "narrative_structure": {
       "name": "Método DV",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCIÓN", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCIÓN",
+        "PRUEBA"
+      ],
       "description": "Toda pieza narrativa (carrusel de captación, creativo Meta de alta complejidad) sigue esta estructura. Cada slide cubre una fase."
     }
   },
-
   "logo": {
     "main_file": "assets/logo_dv_color.png",
     "variants": {
@@ -257,12 +253,10 @@
     "clearspace_rule": "Igual a la altura de la 'D' del logo en todos los lados",
     "placement_in_carousel": "Solo en el último slide (CTA), nunca en slides intermedios"
   },
-
   "references": {
     "approved_examples_dir": "examples/dv_carrusel_referencia/",
     "description": "En esta carpeta hay 6 slides de referencia aprobados por el cliente. Cuando dudes de una decisión visual, mirá estos ejemplos."
   },
-
   "meta_ads": {
     "ad_account_id": "act_881977527791996",
     "ad_account_name": "CP Digital View USD",
@@ -274,13 +268,19 @@
     "pixel_id": null,
     "cpl_target_usd": 3,
     "monthly_budget_usd": 180,
-    "monthly_budget_range_usd": [160, 200],
+    "monthly_budget_range_usd": [
+      160,
+      200
+    ],
     "special_ad_categories": [],
     "special_ad_categories_note": "DV anuncia sus servicios de marketing: NO es HOUSING por default. Si se corre campaña del proyecto de housing propio (en armado al 2026-04-17), setear ['HOUSING'] a nivel campaña.",
-    "default_geo": ["CABA", "GBA Zona Norte"],
+    "default_geo": [
+      "CABA",
+      "GBA Zona Norte"
+    ],
     "default_age_min": 30,
     "default_age_max": 60,
     "default_objective": "OUTCOME_LEADS",
-    "notes": "Cuenta en grace period (account_status=9) al 2026-04-17: revisar billing antes de activar campañas nuevas. No hay pixel instalado — optimizar por leads on-platform (instant forms) hasta que se instale."
+    "notes": "Billing OK al 2026-05-04 (cuenta activa, grace period resuelto). No hay pixel instalado: optimizar por leads on-platform (instant forms) hasta que se instale."
   }
 }

@@ -36,7 +36,7 @@ Siguiendo `meta_ads_framework.md`:
 - **Ads por ad set**: 3-5 creativos para testear.
 - **Budget split**: 70% audiencias probadas, 30% testing.
 - **Placements**: Feed + Stories + Reels como default. Audience Network siempre off.
-- **Categoría especial**: HOUSING obligatorio para todos los clientes DV.
+- **Categoría especial**: `special_ad_categories=[]` por default. No declarar HOUSING salvo pedido explicito de Felipe.
 
 ### 4. Definir audiencias
 

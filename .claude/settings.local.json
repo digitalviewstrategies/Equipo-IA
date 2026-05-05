@@ -13,7 +13,14 @@
       "Skill(update-config)",
       "mcp__claude_ai_Google_Drive__read_file_content",
       "mcp__claude_ai_Google_Drive__download_file_content",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Skill(gsd-explore)",
+      "Bash(python -c 'import json; d=json.load\\(open\\('\\\\''__TRACKED_VAR__'\\\\'', encoding='\\\\''utf-8'\\\\''\\)\\); t=d.get\\('\\\\''tone_of_voice'\\\\'',{}\\); print\\('\\\\''principles:'\\\\'', len\\(t.get\\('\\\\''principles'\\\\'',[]\\)\\), '\\\\''| dont/avoid:'\\\\'', len\\(t.get\\('\\\\''dont'\\\\'',[]\\)\\) + len\\(t.get\\('\\\\''avoid'\\\\'',[]\\)\\) + len\\(t.get\\('\\\\''donts'\\\\'',[]\\)\\), '\\\\''| keys:'\\\\'', list\\(t.keys\\(\\)\\)\\)')",
+      "Bash(python *)",
+      "Bash(mkdir -p C:/Users/proba/Documents/Felipe/Claude/Equipo-IA/.claude/scripts)",
+      "Bash(mkdir -p C:/Users/proba/Documents/Felipe/Claude/Equipo-IA/.claude/state)",
+      "Bash(awk '{print $2}')",
+      "Bash(python3 *)"
     ]
   }
 }

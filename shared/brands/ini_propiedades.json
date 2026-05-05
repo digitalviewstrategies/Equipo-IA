@@ -232,5 +232,9 @@
     "main_file": "assets/ini_propiedades/logo.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+
+  "meta_ads": {
+    "ad_account_id": "act_860078113083312"
   }
 }

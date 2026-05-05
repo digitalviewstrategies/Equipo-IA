@@ -54,7 +54,17 @@ def _process_message(msg: dict) -> None:
     if from_number == config.FELIPE_WA_NUMBER:
         action = approval_channel.handle_felipe_reply(text)
         if action:
-            _execute_approval(action, text)
+            result = approval_channel.resolve(action)
+            if result.get("ok") and result.get("sent_to"):
+                conversation_log.log(
+                    result.get("cliente"), "out", result["sent_to"],
+                    result["text"], intent="aprobado_felipe", auto=False,
+                )
+                wa_client.send_text(config.FELIPE_WA_NUMBER, f"Mandado a {result['sent_to']}.")
+            elif action["action"] == "discard" and result.get("ok"):
+                wa_client.send_text(config.FELIPE_WA_NUMBER, "Descartado.")
+            elif not result.get("ok"):
+                wa_client.send_text(config.FELIPE_WA_NUMBER, f"No pude resolverlo: {result.get('reason')}")
         return
 
     resolved = client_resolver.resolve(from_number)
@@ -100,7 +110,3 @@ def _dispatch(intent: str, text: str, entities: dict, brand: dict | None, contac
     return {"text": "Lo chequeo y te confirmo.", "ok": False}
 
 
-def _execute_approval(action: dict, original: str) -> None:
-    """Etapa 1: stub. La logica real necesita parsear el ID y recuperar el destino del pending file."""
-    # TODO etapa 2: leer _pending_approvals.jsonl, marcar como resuelto, enviar al cliente original.
-    pass

@@ -65,7 +65,7 @@
 - Mensaje de agradecimiento: [texto]
 
 ## Checklist pre-lanzamiento
-- [ ] Categoria HOUSING declarada
+- [ ] special_ad_categories definido (default: [])
 - [ ] Naming correcto en todos los niveles
 - [ ] Creativos aprobados
 - [ ] Pixel/evento configurado (si aplica)

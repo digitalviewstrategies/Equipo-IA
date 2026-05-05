@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Canva__perform-editing-operations",
+      "mcp__claude_ai_Canva__upload-asset-from-url",
+      "mcp__claude_ai_Canva__start-editing-transaction",
+      "mcp__claude_ai_Canva__generate-design-structured",
+      "mcp__claude_ai_Canva__merge-designs",
+      "mcp__claude_ai_Canva__export-design"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/scripts/session_start_load_brand.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python agentes/03_delivery_reporting/scripts/auto_deliver.py",
+            "async": true,
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python .claude/scripts/post_validators_dispatcher.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

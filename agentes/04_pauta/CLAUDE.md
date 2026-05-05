@@ -81,7 +81,7 @@ from scripts.output_manager import load_brand
 brand = load_brand(cliente)
 api = MetaAdsAPI(ad_account_id=brand["meta_ads"]["ad_account_id"])
 
-campaign = api.create_campaign(name, objective, special_ad_categories=["HOUSING"])
+campaign = api.create_campaign(name, objective, special_ad_categories=[])
 ad_set = api.create_ad_set(campaign_id, name, targeting, daily_budget, placements)
 image = api.upload_image(image_path)
 ad = api.create_ad(ad_set_id, name, creative_spec)

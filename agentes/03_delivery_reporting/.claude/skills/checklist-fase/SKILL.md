@@ -32,45 +32,27 @@ Necesitás:
 # Lee context/fases_operativas.md para el detalle de entregables de la fase pedida
 ```
 
-### 2. Verificar lo que se puede verificar automáticamente
+### 2. Evaluar entregables con el helper compartido
 
-Según la fase, revisá los archivos del repo:
-
-**Para Fase 2 (Onboarding):**
 ```python
-from scripts.output_manager import load_brand
-brand = load_brand(cliente)
-# Verificar campos: meta_ads.ad_account_id, meta_ads.page_id, colors, fonts, buyer_persona
+from scripts.output_manager import get_phase_gaps
+info = get_phase_gaps(cliente, fase=numero)
 ```
 
-**Para Fase 3 (Preproducción):**
-```python
-from scripts.output_manager import get_phase_outputs
-outputs = get_phase_outputs(cliente)
-# Verificar: hay guiones en creative_director outputs? hay copy en copywriter outputs?
-```
+`info` trae:
+- `items`: lista completa de entregables con `status` ('ok' | 'falta' | 'manual'), `responsable`, `criticidad`.
+- `gaps`: solo los faltantes o no verificables.
+- `gaps_criticos`: los críticos que bloquean el avance.
+- `puede_avanzar`: bool.
 
-**Para Fase 5 (Pauta):**
-```python
-from scripts.output_manager import get_phase_outputs
-outputs = get_phase_outputs(cliente)
-# Verificar: hay plan_campana en pauta outputs? hay piezas en design outputs?
-```
-
-**Para Fase 6 (Seguimiento):**
-```python
-from scripts.output_manager import get_phase_outputs
-outputs = get_phase_outputs(cliente)
-# Verificar: hay reporte_semanal en pauta outputs?
-```
+Esta es la misma fuente de verdad que consume `/reporte-semanal` para la sección "Atención para la próxima semana", así no hay divergencia entre ambas skills.
 
 ### 3. Generar el checklist
 
-Para cada entregable de la fase (según `context/fases_operativas.md`):
-
-- Marcalo como **[x]** si podés confirmarlo automáticamente (archivo existe, campo completo).
-- Marcalo como **[ ]** si no hay evidencia en el repo.
-- Marcalo como **[?]** si es algo que no podés verificar automáticamente (ej. contratos firmados, Drive, accesos a Meta) — indicá quién tiene que confirmar.
+Mapeo de `status` a marca:
+- `ok` → **[x]** (verificado en repo).
+- `falta` → **[ ]** (no hay evidencia, indicá responsable y acción).
+- `manual` → **[?]** (no verificable automáticamente, indicá quién confirma).
 
 Formato del checklist:
 

@@ -169,7 +169,7 @@ def _build_plan_md(
 
 ## Notas
 - Estado inicial: PAUSED. Activar manualmente tras revision.
-- special_ad_categories: HOUSING
+- special_ad_categories: [] (sin categoria especial)
 """
 
 
@@ -233,7 +233,7 @@ def process_row(row: dict, credentials_path: str) -> dict:
         name=campaign_name,
         objective="OUTCOME_LEADS",
         status="PAUSED",
-        special_ad_categories=["HOUSING"],
+        special_ad_categories=[],
     )
     campaign_id = campaign_result["id"]
 

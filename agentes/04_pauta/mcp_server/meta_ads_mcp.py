@@ -110,7 +110,7 @@ TOOLS = [
     ),
     types.Tool(
         name="create_campaign",
-        description="Crea una campaña nueva con estructura básica. Siempre incluye HOUSING en special_ad_categories.",
+        description="Crea una campaña nueva con estructura básica. special_ad_categories vacio por default.",
         inputSchema={
             "type": "object",
             "properties": {
@@ -185,7 +185,7 @@ async def call_tool(name: str, arguments: dict) -> list[types.TextContent]:
             result = api.create_campaign(
                 name=arguments["name"],
                 objective=arguments["objective"],
-                special_ad_categories=["HOUSING"]
+                special_ad_categories=[]
             )
             return [types.TextContent(type="text", text=str(result))]
 

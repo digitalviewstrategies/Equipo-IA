@@ -4,6 +4,7 @@
 **/.claude/shell-snapshots/
 **/.claude/statsig/
 **/.claude/todos/
+**/.claude/state/
 
 .env
 __pycache__/

@@ -138,12 +138,13 @@ class MetaAdsAPI:
             name: nombre siguiendo naming convention DV.
             objective: OUTCOME_LEADS, OUTCOME_TRAFFIC, OUTCOME_SALES.
             status: PAUSED (default, para revisar antes de activar) o ACTIVE.
-            special_ad_categories: ["HOUSING"] obligatorio para real estate.
+            special_ad_categories: lista vacia por default. No se declara HOUSING
+                salvo que Felipe lo pida explicitamente.
             is_adset_budget_sharing_enabled: True = ABO (presupuesto por ad set).
             bid_strategy: LOWEST_COST_WITHOUT_CAP por default.
         """
         if special_ad_categories is None:
-            special_ad_categories = ["HOUSING"]
+            special_ad_categories = []
 
         params = {
             "name": name,

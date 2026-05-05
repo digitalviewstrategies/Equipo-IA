@@ -41,16 +41,16 @@ Campaign (1 por objetivo por cliente)
 
 ---
 
-## Categoria especial: HOUSING
+## Categoria especial
 
-**Obligatorio para real estate.** Todas las campanas de DV deben usar `special_ad_categories: ["HOUSING"]`.
+**Default DV: `special_ad_categories: []` (sin categoria especial).**
 
-Restricciones que impone HOUSING:
+No declarar HOUSING salvo que Felipe lo pida explicitamente para una campana puntual. Declarar HOUSING activa restricciones de targeting (edad, genero, radio minimo 17km, codigo postal limitado) y achica reach. Para el grueso de campanas DV en Argentina no es necesario.
 
-- No se puede segmentar por edad, genero ni codigo postal en algunos mercados.
-- En Argentina, las restricciones son mas flexibles que en USA/EU, pero siempre declarar HOUSING.
-- El alcance estimado puede ser menor. Es normal.
-- Advantage+ audience tiene limitaciones adicionales con HOUSING.
+Si en algun caso se declara HOUSING, tener en cuenta:
+- Radio minimo 17km en geo targeting.
+- Sin segmentacion por edad/genero en algunos mercados.
+- Advantage+ audience con limitaciones adicionales.
 
 ---
 
@@ -157,7 +157,7 @@ Configurar como "Higher intent" (agrega paso de confirmacion, mejora calidad del
 
 Antes de activar cualquier campana, verificar:
 
-- [ ] Categoria HOUSING declarada
+- [ ] special_ad_categories definido (default: [])
 - [ ] Naming correcto en todos los niveles
 - [ ] Creativos aprobados por el cliente (via Elias)
 - [ ] Pixel/evento configurado (si aplica)
