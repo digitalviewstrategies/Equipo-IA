@@ -20,7 +20,9 @@
       "Bash(mkdir -p C:/Users/proba/Documents/Felipe/Claude/Equipo-IA/.claude/scripts)",
       "Bash(mkdir -p C:/Users/proba/Documents/Felipe/Claude/Equipo-IA/.claude/state)",
       "Bash(awk '{print $2}')",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "PowerShell($proj = \"C:\\\\Users\\\\proba\\\\Documents\\\\Felipe\\\\Claude\\\\Equipo-IA\"; $script = \"$proj\\\\agentes\\\\00_coordinador\\\\scripts\\\\cron_runner.py\"; schtasks /Create /SC HOURLY /MO 6 /TN \"DV-Recompute-State\" /TR \"python `\"$script`\" recompute-state\" /F; schtasks /Create /SC DAILY /ST 08:30 /TN \"DV-Daily-Monitor\" /TR \"python `\"$script`\" daily-monitor\" /F; schtasks /Create /SC WEEKLY /D MON /ST 09:00 /TN \"DV-Weekly-Report\" /TR \"python `\"$script`\" weekly-report\" /F)"
     ]
   }
 }

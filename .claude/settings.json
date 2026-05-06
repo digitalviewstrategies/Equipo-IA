@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python .claude/scripts/session_start_load_brand.py",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/scripts/session_start_load_brand.py\"",
             "timeout": 5
           }
         ]
@@ -29,13 +29,13 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python agentes/03_delivery_reporting/scripts/auto_deliver.py",
+            "command": "python \"$CLAUDE_PROJECT_DIR/agentes/03_delivery_reporting/scripts/auto_deliver.py\"",
             "async": true,
             "timeout": 10
           },
           {
             "type": "command",
-            "command": "python .claude/scripts/post_validators_dispatcher.py",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/scripts/post_validators_dispatcher.py\"",
             "timeout": 5
           }
         ]

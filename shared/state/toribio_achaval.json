@@ -1,0 +1,31 @@
+{
+  "cliente": "toribio_achaval",
+  "fase_actual": "6_lanzamiento",
+  "actualizado": "2026-05-06T15:32:42+00:00",
+  "gates": {
+    "1_comercial": "closed",
+    "2_onboarding": "closed",
+    "3_preproduccion": "closed",
+    "4_produccion": "closed",
+    "5_pauta": "closed",
+    "6_lanzamiento": "closed"
+  },
+  "evidencia": {
+    "brand_json": true,
+    "guiones": 0,
+    "briefs_carrusel": 0,
+    "estrategias": 0,
+    "copy_meta_ads": 0,
+    "captions": 0,
+    "disenos_png": 62,
+    "plan_campana": 0,
+    "brief_creativo_pauta": 0,
+    "campanas_meta_creadas": true,
+    "reporte_reciente": false
+  },
+  "siguiente_accion": {
+    "owner": "Elias",
+    "tarea": "Cliente con todas las fases cerradas. Monitoreo y reportes.",
+    "trigger": "media_buyer: /analizar"
+  }
+}

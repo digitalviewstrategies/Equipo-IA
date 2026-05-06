@@ -1,0 +1,32 @@
+{
+  "cliente": "digital_view",
+  "fase_actual": "5_pauta",
+  "actualizado": "2026-05-06T15:32:42+00:00",
+  "gates": {
+    "1_comercial": "closed",
+    "2_onboarding": "closed",
+    "3_preproduccion": "closed",
+    "4_produccion": "closed",
+    "5_pauta": "closed",
+    "6_lanzamiento": "open"
+  },
+  "evidencia": {
+    "brand_json": true,
+    "guiones": 0,
+    "briefs_carrusel": 0,
+    "estrategias": 0,
+    "copy_meta_ads": 1,
+    "captions": 0,
+    "disenos_png": 0,
+    "plan_campana": 1,
+    "brief_creativo_pauta": 1,
+    "campanas_meta_creadas": false,
+    "reporte_reciente": false
+  },
+  "siguiente_accion": {
+    "fase_pendiente": "6_lanzamiento",
+    "owner": "Felipe (Media Buyer)",
+    "tarea": "Crear campana en Meta",
+    "trigger": "/crear-campana"
+  }
+}

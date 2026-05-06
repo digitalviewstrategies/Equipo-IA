@@ -1,0 +1,3 @@
+{"ts": "2026-05-06T15:32:42+00:00", "task": "recompute-state", "status": "ok", "detail": {"clientes": 12}}
+{"ts": "2026-05-06T15:32:51+00:00", "task": "daily-monitor", "status": "ok", "detail": {"clientes": 2, "resumen": [{"cliente": "digital_view", "status": "ok", "ads": 4}, {"cliente": "ini_propiedades", "status": "alerta", "kills": 4, "fatiga": 0}]}}
+{"ts": "2026-05-06T17:03:43+00:00", "task": "daily-monitor", "status": "ok", "detail": {"clientes": 2, "resumen": [{"cliente": "digital_view", "status": "ok", "ads": 4}, {"cliente": "ini_propiedades", "status": "alerta", "kills": 4, "fatiga": 0}]}}
