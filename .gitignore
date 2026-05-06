@@ -12,3 +12,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 credentials/
+
+# Outputs generados (PNGs, HTMLs renderizados, JSONs de copy de piezas)
+agentes/01_contenido/design/output/
+agentes/01_contenido/video_ai/output/

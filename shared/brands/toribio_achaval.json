@@ -2,11 +2,9 @@
   "brand_id": "toribio_achaval",
   "brand_name": "Toribio Achaval",
   "brand_tagline": null,
-  "version": "1.0",
-  "last_updated": "2026-04-13",
-
+  "version": "1.1",
+  "last_updated": "2026-05-05",
   "positioning": "Inmobiliaria premium con 70 anos de trayectoria en CABA y Zona Norte. Referente del mercado de propiedades de alto valor. Se posiciona desde la confianza institucional, la seriedad profesional y el conocimiento profundo del mercado, combinando tradicion con innovacion digital.",
-
   "colors": {
     "primary": {
       "hex": "#D42027",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros (negro, grafito, rojo). Tambien para fondos limpios cuando se necesita maxima limpieza."
     }
   },
-
   "color_distribution_rules": {
     "description": "Distribucion de colores de fondo en un carrusel de 6 slides para Toribio Achaval. El rojo aparece con autoridad pero sin saturar. Los fondos oscuros dominan la narrativa. El gris claro da respiro.",
     "carousel_6_slides": {
@@ -54,7 +51,6 @@
     "red_appearances_max": 2,
     "graphite_vs_black": "Alternar entre negro y grafito para evitar monotonia en slides consecutivos oscuros"
   },
-
   "typography": {
     "primary": {
       "family": "Plus Jakarta Sans",
@@ -75,9 +71,18 @@
         "number": 700
       },
       "usage": "Solo para numeros grandes destacados (USD 350.000, 70 anos, 15.000 m2). Aporta contraste tipografico editorial sin romper la sobriedad."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap",
+      "weights": {
+        "label": 500,
+        "metadata": 400,
+        "emphasis": 700
+      },
+      "usage": "Tipografia secundaria para metadata editorial: tags estructurales (MERCADO MAYO 2026), kickers (RETORNO DEL FINANCIAMIENTO), numeracion de pagina (04 / 07), labels de columnas (TASA PROMEDIO), pies de pagina. Aporta el aire de informe financiero/editorial premium tipo Monocle / FT Weekend. Nunca para headlines o body principal."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -91,7 +96,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Permitido y recomendado para hooks y CTAs. Usar con moderacion en slides intermedios."
   },
-
   "visual_style": {
     "keywords": [
       "corporate premium",
@@ -111,7 +115,11 @@
       "Composiciones centradas o con alineacion fuerte a la izquierda",
       "Lineas separadoras finas y limpias cuando se necesite estructura",
       "Fotografias de propiedades de alta calidad, sin filtros excesivos",
-      "Logo solo en el ultimo slide, limpio y con espacio alrededor"
+      "Logo solo en el ultimo slide, limpio y con espacio alrededor",
+      "Mezclar weights tipograficos en un mismo headline (300 thin + 800 extrabold) para jerarquia editorial brutal",
+      "Foto de propiedad real como background en slides hook, narrativos y CTA — siempre con overlay degradado oscuro + grain svg",
+      "Stamps editoriales pequeños rotados -1.5deg (tipo 'N° 01 / SERIE MAYO') para romper simetria sin caer en informal",
+      "JetBrains Mono para metadata: tags, kickers, page numbers, labels de columna, pies de pagina"
     ],
     "dont": [
       "Gradientes de colores multiples",
@@ -120,22 +128,85 @@
       "Drop shadows exagerados o efectos 3D",
       "Mas de 2 tipografias en una sola pieza",
       "Paletas pasteles, dorado cliche, tierra",
-      "Rotaciones agresivas o layouts desordenados (eso es para marcas disruptivas, no para Achaval)",
+      "Rotaciones agresivas (>3deg) o layouts caoticos. Permitido: rotacion sutil de stamps editoriales hasta -1.5deg.",
       "Scribbles, anotaciones a mano alzada o elementos que parezcan informales",
       "Fotos con filtros saturados o HDR exagerado",
       "Textos largos que llenen el slide",
       "Frases como 'sona con tu hogar', 'te acompanamos', 'hacemos realidad tus suenos'",
       "Usar el rojo en mas de 2 slides por carrusel",
-      "Marcos o bordes decorativos"
-    ]
+      "Marcos o bordes decorativos",
+      "Mencionar antiguedad explicita en piezas top-funnel ('70 años', 'desde 1956', 'decadas de'). La autoridad se demuestra con lectura de mercado, no con cifra de años."
+    ],
+    "aesthetic": {
+      "name": "editorial_cinematografico",
+      "description": "Direccion estetica establecida para Toribio: editorial premium con vibe cinematografico, inspirada en Monocle, Cereal Magazine, FT Weekend, The Gentleman's Journal. Mucho aire negativo, jerarquia tipografica brutal mezclando weights 300 (thin) con 800 (extrabold). Rojo Achaval como acento quirurgico (jamas como fondo masivo en slides de datos). Fotos de propiedades reales como hero en slides puntuales con overlay degradado oscuro + grain svg. Lineas finas estructurales (1px graphite) que delimitan zonas. Sin rotaciones agresivas — solo stamps editoriales rotados sutilmente (-1.5deg). NO es PowerPoint corporativo, NO es FT puro frio, NO es minimalista plano: es la mezcla.",
+      "inspiration": [
+        "Monocle",
+        "Cereal Magazine",
+        "FT Weekend",
+        "The Gentleman's Journal"
+      ],
+      "trend_alignment": "Combina Blueprint Design (anotaciones tecnicas, mini-grids, mono labels) con Grainy Blur (foto cinematografica con grain svg) — ambos del Kittl 2026 Design Trends Report.",
+      "anti_patterns": [
+        "PowerPoint corporativo (texto centrado, simetrico, sin jerarquia)",
+        "Tipografia un solo peso (todo 700 o todo 400)",
+        "Fotos sin overlay sobre las que se pone texto (ilegible)",
+        "Rojo como fondo masivo de slides con datos (compite con los numeros)",
+        "Stock photos genericas (familia feliz frente a casa)"
+      ]
+    },
+    "photo_overlays": {
+      "description": "Valores rgba exactos del overlay degradado (linear-gradient 180deg) por tipo de slide. Probados y validados en pieza #1 mayo 2026.",
+      "hook_lifestyle": {
+        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.15) 0%, rgba(13,13,13,0.30) 35%, rgba(13,13,13,0.85) 100%)",
+        "use_when": "Slide 1 (hook) con foto premium (pileta, jardin, exterior) que vale la pena mostrar. Foto se ve clarito arriba, headline legible abajo donde se intensifica el degrade."
+      },
+      "narrative_atmospheric": {
+        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.45) 0%, rgba(13,13,13,0.65) 50%, rgba(13,13,13,0.88) 100%)",
+        "use_when": "Slide intermedio narrativo con foto atmosferica (fachada otonal, paisaje urbano). Foto como mood, no como hero. Texto domina."
+      },
+      "cta_cinematic": {
+        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.20) 0%, rgba(13,13,13,0.65) 60%, rgba(13,13,13,0.92) 100%)",
+        "use_when": "Slide final (CTA) con foto de propiedad. Foto visible arriba para anclaje emocional, copy + logo Toribio dominante abajo."
+      },
+      "grain_overlay": {
+        "svg": "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>\")",
+        "css": "opacity: 0.18; mix-blend-mode: overlay;",
+        "use_when": "Sumar a TODOS los slides con foto. Aporta textura analogica que rompe el digital sterile."
+      }
+    }
   },
-
   "layouts": {
     "carousel_square": {
       "width_px": 1080,
       "height_px": 1080,
       "safe_margin_px": 80,
-      "description": "Carrusel para feed de Instagram."
+      "description": "Carrusel para feed de Instagram.",
+      "photo_distribution": {
+        "description": "Distribucion validada de slides con foto vs sin foto en carrusel de 7 slides. Alternancia para que las fotos no saturen y los datos respiren.",
+        "slides_with_photo": [
+          1,
+          3,
+          7
+        ],
+        "slides_without_photo": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "rationale": {
+          "slide_1": "Hook con foto lifestyle (pileta, exterior aspiracional) — punch visual de apertura",
+          "slide_3": "Slide narrativo con foto atmosferica (fachada otonal) — sostiene el mood",
+          "slide_7": "CTA con foto de propiedad + overlay cinematografico — cierre emocional + logo",
+          "slides_sin_foto": "Datos (variables, KPIs, comparativas) sobre fondos planos paper/light/dark para que los numeros respiren"
+        },
+        "photo_overlay_per_slide": {
+          "1": "hook_lifestyle",
+          "3": "narrative_atmospheric",
+          "7": "cta_cinematic"
+        }
+      }
     },
     "carousel_vertical": {
       "width_px": 1080,
@@ -177,14 +248,13 @@
       "description": "Flyer A4 a 300dpi para imprimir o mandar por WhatsApp."
     }
   },
-
   "tone_of_voice": {
     "principles": [
       "Formal pero cercano, nunca distante ni frio",
       "Voseo argentino siempre, pero con registro profesional (no juvenil)",
       "Sin emojis jamas",
       "Frases concisas y con peso, cada palabra cuenta",
-      "Hablar desde la autoridad de 70 anos de mercado, no desde la necesidad de probar nada",
+      "Hablar desde la autoridad de años de mercado, no desde la necesidad de probar nada",
       "High ticket framing: las propiedades que manejan son premium y el tono lo refleja",
       "Datos concretos mejor que adjetivos vacios (en vez de 'excelente ubicacion', decir 'a 2 cuadras de Av. Libertador')",
       "Usar terminos del rubro con naturalidad (captacion, operacion, tasacion, comision, exclusiva)",
@@ -201,7 +271,16 @@
       "calidez",
       "sabor familiar",
       "unico e irrepetible",
-      "oportunidad unica"
+      "oportunidad unica",
+      "70 años",
+      "70 anos",
+      "desde 1956",
+      "decadas de",
+      "decadas en el mercado",
+      "X años de trayectoria",
+      "X anos de experiencia",
+      "tradicion de generaciones",
+      "mas de medio siglo"
     ],
     "preferred_words": [
       "trayectoria",
@@ -220,8 +299,8 @@
     ],
     "hook_frameworks": {
       "authority": {
-        "description": "Hablar desde la posicion de quien lleva 70 anos en el mercado.",
-        "example": "En 70 anos vimos caer a inmobiliarias que no se adaptaron. Estas son las 3 razones."
+        "description": "Hablar desde la posicion de autoridad y conocimiento profundo del mercado argentino. Sin citar antiguedad explicita ni trayectoria temporal — la autoridad se demuestra con la lectura del mercado, no con cuantos años se lleva en el.",
+        "example": "El mercado vio caer a muchas inmobiliarias que no se adaptaron al ciclo. Estas son las 3 senales que las definen."
       },
       "data_driven": {
         "description": "Abrir con un dato duro que genere interes.",
@@ -234,11 +313,15 @@
     },
     "narrative_structure": {
       "name": "Estructura Achaval",
-      "steps": ["DATO/AUTORIDAD", "PROBLEMA DE MERCADO", "VISION EXPERTA", "PRUEBA/CTA"],
+      "steps": [
+        "DATO/AUTORIDAD",
+        "PROBLEMA DE MERCADO",
+        "VISION EXPERTA",
+        "PRUEBA/CTA"
+      ],
       "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
     }
   },
-
   "logo": {
     "main_file": "assets/toribio_achaval/logo.png",
     "variants": {
@@ -247,9 +330,15 @@
     },
     "min_size_px": 140,
     "clearspace_rule": "Igual a la altura de la 'A' de Achaval en todos los lados",
-    "placement_in_carousel": "Solo en el ultimo slide (CTA), nunca en slides intermedios"
+    "placement_in_carousel": "Solo en el ultimo slide (CTA), nunca en slides intermedios",
+    "usage_rules": {
+      "embedding_format": "base64 data URI inline en HTML (no referencia a path externo) — evita problemas de carga en file:// con Playwright",
+      "dark_background_filter": "filter: brightness(0) invert(1); — convierte el logo PNG (rojo + negro) a blanco puro para usarlo sobre fondos oscuros (slide CTA con foto + overlay)",
+      "light_background_use": "Logo PNG original sin filter sobre fondos paper/light",
+      "size_in_carousel_cta": "height: 48px en slide CTA cuadrado 1080x1080",
+      "placement_in_carousel": "Solo en el ultimo slide (CTA), abajo izquierda. Nunca en slides intermedios."
+    }
   },
-
   "references": {
     "web": "https://toribioachaval.com/",
     "description": "La web del cliente es la referencia visual principal. Estilo limpio, corporate, uso del rojo como color insignia sobre fondos blancos y negros."

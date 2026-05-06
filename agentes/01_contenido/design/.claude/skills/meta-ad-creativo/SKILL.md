@@ -19,7 +19,7 @@ Pedi si falta:
 
 ## Pasos
 
-1. Carga brand: `shared/brands/<cliente>.json`.
+1. **Cargar brand** segun protocolo `context/brand_loader.md`. Extraer paleta, tipografias, hook_frameworks (si vas a improvisar copy).
 2. Si hay foto base y necesita mejora, invoca skill `mejorar-foto`.
 3. Layout cuadrado: hook arriba grande, recurso visual al medio, CTA abajo o sobre el recurso. Maximo 2 bloques de texto. Margenes seguros porque Meta corta bordes en algunas placements.
 4. Layout vertical: hook arriba (zona segura: primer cuarto), recurso visual al medio, CTA en zona segura inferior (no en los ultimos 250px porque tapan el boton de Meta).

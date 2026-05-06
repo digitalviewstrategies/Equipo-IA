@@ -20,7 +20,7 @@ No completes ningun dato. Si falta uno critico, parar.
 
 ## Pasos
 
-1. Carga brand: `shared/brands/<cliente>.json`.
+1. **Cargar brand** segun protocolo `context/brand_loader.md`. Extraer paleta, tipografias, logo y reglas de placement.
 2. Si fotos son de celular/calidad baja, invoca skill `mejorar-foto`.
 3. Layout A4 vertical:
    - Tercio superior: foto hero + titulo + ubicacion.
