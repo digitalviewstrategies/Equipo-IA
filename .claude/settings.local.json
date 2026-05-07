@@ -32,7 +32,8 @@
       "Bash(echo \"exit $?\")",
       "Bash(git reset *)",
       "Bash(echo \"exit=$?\")",
-      "Bash(git commit -m 'fix\\(meta_api\\): leadgen_forms requiere Page Access Token derivado del System User *)"
+      "Bash(git commit -m 'fix\\(meta_api\\): leadgen_forms requiere Page Access Token derivado del System User *)",
+      "Bash(git commit -m 'feat: asset-search cross-agent \\(SQLite FTS5\\) *)"
     ]
   }
 }

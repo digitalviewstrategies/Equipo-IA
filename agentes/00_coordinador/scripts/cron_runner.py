@@ -86,7 +86,18 @@ def recompute_state() -> int:
             n += 1
         except Exception as e:
             _log("recompute-state", "error", f"{c}: {e}")
-    _log("recompute-state", "ok", {"clientes": n})
+
+    # reindex de assets (FTS5)
+    try:
+        import importlib.util
+        ai = ROOT / "shared" / "scripts" / "asset_index.py"
+        spec = importlib.util.spec_from_file_location("asset_index", ai)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.index_all()
+        _log("recompute-state", "ok", {"clientes": n, "assets_indexados": r["total"]})
+    except Exception as e:
+        _log("recompute-state", "warn", f"asset_index: {e}")
     return 0
 
 
