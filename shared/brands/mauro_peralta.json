@@ -4,9 +4,7 @@
   "brand_tagline": null,
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Asesor inmobiliario independiente en CABA y Zona Norte. Perfil closer clasico adaptado a redes: mezcla venta directa con educacion y autoridad. Profesional y confiable, cero humo. Foco en performance y resultados concretos.",
-
   "colors": {
     "primary": {
       "hex": "#1A1A2E",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta oscura y profesional. Los fondos dark navy dominan, el azul electrico aparece como acento estrategico en datos y CTAs.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "primary (navy dark) con CTA en accent blue"
     }
   },
-
   "typography": {
     "primary": {
       "family": "DM Sans",
@@ -69,11 +65,12 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes destacados (precios, porcentajes, datos duros)."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -83,7 +80,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Recomendado en hooks y CTAs. Opcional en slides intermedios."
   },
-
   "visual_style": {
     "keywords": [
       "profesional",
@@ -115,16 +111,39 @@
       "Aspecto de marca generica de Canva"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Profesional y confiable, sin ser frio ni distante",
@@ -176,38 +195,54 @@
     "disruption_scale": 3,
     "narrative_structure": {
       "name": "Metodo Peralta",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Funnel narrativo DV en version profesional: arranca con un dolor real del propietario o comprador, muestra que pasa si no actua, presenta la solucion con datos concretos de la experiencia de Mauro, y cierra con prueba verificable (operacion cerrada, testimonio, numero)."
     }
   },
-
   "content_pillars": [
     {
       "name": "Captacion de propiedades",
       "percentage": 35,
       "description": "Contenido dirigido a propietarios que quieren vender: por que elegir a Mauro, como funciona el proceso, que resultados esperar.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Venta de cartera",
       "percentage": 30,
       "description": "Showcase de propiedades actuales con datos duros, fotos profesionales y argumentos de venta claros.",
-      "formats": ["video corto", "placa de propiedad", "carrusel"]
+      "formats": [
+        "video corto",
+        "placa de propiedad",
+        "carrusel"
+      ]
     },
     {
       "name": "Educacion inmobiliaria",
       "percentage": 20,
       "description": "Tips y datos del mercado que posicionan a Mauro como experto: tendencias de precios, errores comunes, guias de proceso.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Autoridad y casos de exito",
       "percentage": 15,
       "description": "Operaciones cerradas, testimonios de clientes, resultados concretos que demuestran track record.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Propietarios en CABA y Zona Norte que quieren vender su propiedad con un agente serio y efectivo. Tickets hasta USD 300k.",
     "secondary": "Compradores que buscan propiedades con asesoramiento profesional real, no con un vendedor que les muestra 50 propiedades sin criterio.",
@@ -225,12 +260,15 @@
       "Cerrar la operacion con seguridad juridica y sin sorpresas"
     ]
   },
-
   "logo": {
     "main_file": null,
     "wordmark": true,
     "wordmark_style": "Mauro Peralta en tipografia primaria, bold/black, uppercase",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el último slide como wordmark tipografico"
+  },
+  "meta_ads": {
+    "page_id": "188146361043034",
+    "page_name": "Mauro Peralta Broker Inmobiliario"
   }
 }

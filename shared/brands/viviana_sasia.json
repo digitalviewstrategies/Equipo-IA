@@ -4,9 +4,7 @@
   "brand_tagline": null,
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Agente inmobiliaria consolidada en Zona Norte con equipo propio. Construye marca desde confianza, trayectoria y cultura de equipo. Profesional, calida e institucional cercana. No es show personal, es autoridad de equipo.",
-
   "colors": {
     "primary": {
       "hex": "#3D3580",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta sofisticada y calida. El purpura aporta distincion sin ser agresivo, los tonos arena dan calidez profesional. Equilibrio entre autoridad y cercanía.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "dark (negro) con CTA en accent sand"
     }
   },
-
   "typography": {
     "primary": {
       "family": "Outfit",
@@ -69,11 +65,12 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes destacados (precios, m2, estadisticas)."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -83,7 +80,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Solo en hooks y CTAs. Slides intermedios en sentence case para mantener cercanía."
   },
-
   "visual_style": {
     "keywords": [
       "sofisticada",
@@ -115,16 +111,39 @@
       "Fotos de baja calidad o genericas de stock"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Profesional y calida, transmite confianza sin frialdad",
@@ -176,38 +195,54 @@
     "disruption_scale": 2,
     "narrative_structure": {
       "name": "Estructura Sasia",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Variante calida del metodo DV. El dolor se presenta con empatia (no confrontacion), la consecuencia es el costo de oportunidad, la solucion destaca el equipo y la trayectoria, la prueba son operaciones cerradas y testimonios de clientes satisfechos."
     }
   },
-
   "content_pillars": [
     {
       "name": "Captacion de propiedades",
       "percentage": 35,
       "description": "Contenido para atraer propietarios de Zona Norte que quieren vender con un equipo serio y confiable. Trayectoria y resultados como argumento central.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Showcase de propiedades",
       "percentage": 30,
       "description": "Presentacion de propiedades de cartera con estetica premium, fotos profesionales, datos claros. Zona Norte como protagonista.",
-      "formats": ["placa de propiedad", "video corto", "carrusel"]
+      "formats": [
+        "placa de propiedad",
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Mercado Zona Norte",
       "percentage": 20,
       "description": "Informacion y analisis del mercado inmobiliario de Zona Norte: tendencias, precios, barrios, oportunidades. Posiciona como experta de zona.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Equipo y cultura",
       "percentage": 15,
       "description": "Contenido que muestra al equipo de Viviana trabajando, eventos, dinamica grupal. Construye marca desde la estructura, no solo desde lo personal.",
-      "formats": ["video corto", "stories"]
+      "formats": [
+        "video corto",
+        "stories"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Propietarios de Zona Norte con propiedades de USD 200k-700k que buscan un equipo profesional y confiable para vender.",
     "secondary": "Compradores de Zona Norte que buscan asesoramiento serio en un segmento premium.",
@@ -225,10 +260,13 @@
       "Cerrar la operacion en un plazo razonable sin regalar la propiedad"
     ]
   },
-
   "logo": {
     "main_file": "assets/viviana_sasia/logo.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+  "meta_ads": {
+    "page_id": "629736497060985",
+    "page_name": "Vivi Sasía"
   }
 }

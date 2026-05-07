@@ -4,9 +4,7 @@
   "brand_tagline": "Bienes Raices",
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Inmobiliaria con servicio de home staging en Puertos del Lago, Nordelta y Zona Norte. Branding fuerte, estetica cuidada, vende lifestyle y diseno. Se diferencia por el home staging como herramienta de venta real, no como decoracion.",
-
   "colors": {
     "primary": {
       "hex": "#4A5A3C",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros. Tipografia del logo es blanca/crema sobre verde."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta organica y aspiracional. El verde oliva es la firma de marca, los tonos arena y crema dan calidez de interiorismo. La estetica tiene que sentirse como un showroom, no como un aviso clasificado.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "dark (forest dark) con CTA en sand"
     }
   },
-
   "typography": {
     "primary": {
       "family": "DM Sans",
@@ -69,11 +65,12 @@
     "display": {
       "family": "Playfair Display",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Serif elegante para titulares hero y numeros destacados. Refleja el estilo editorial del logo serif de Abitat. Usar con moderacion: solo en slides de alto impacto."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -83,7 +80,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Solo en CTAs. Los headlines van en sentence case o title case para mantener la elegancia."
   },
-
   "visual_style": {
     "keywords": [
       "aspiracional",
@@ -116,16 +112,39 @@
       "Drop shadows, gradientes, efectos 3D"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Aspiracional pero tangible: no vende fantasia, vende diseno con proposito",
@@ -176,38 +195,54 @@
     "disruption_scale": 3,
     "narrative_structure": {
       "name": "Metodo Abitat",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Variante visual del metodo DV. El dolor es la propiedad que no convierte pese a estar bien ubicada. La consecuencia es perder tiempo y bajar precio. La solucion es el home staging profesional. La prueba es el antes/despues con datos de conversion."
     }
   },
-
   "content_pillars": [
     {
       "name": "Home staging como diferencial",
       "percentage": 35,
       "description": "Antes y despues, proceso de staging, impacto en la venta. El pilar central de la marca.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Propiedades en cartera",
       "percentage": 30,
       "description": "Showcase de propiedades con staging en Puertos, Nordelta y Zona Norte. Estetica premium, datos claros.",
-      "formats": ["placa de propiedad", "video corto", "carrusel"]
+      "formats": [
+        "placa de propiedad",
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Educacion sobre venta y presentacion",
       "percentage": 20,
       "description": "Tips para propietarios: como preparar tu propiedad, errores de presentacion, que buscan los compradores premium.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Lifestyle Zona Norte premium",
       "percentage": 15,
       "description": "Contenido de estilo de vida en Puertos, Nordelta: la zona, las amenities, la vida cotidiana. Vende el barrio, no solo la casa.",
-      "formats": ["video corto", "stories"]
+      "formats": [
+        "video corto",
+        "stories"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Propietarios de Puertos del Lago, Nordelta y Zona Norte con propiedades de USD 300k promedio que quieren vender rapido y al mejor precio.",
     "secondary": "Compradores de segmento premium que buscan propiedades con presentacion impecable en countries y barrios cerrados de Zona Norte.",
@@ -225,10 +260,13 @@
       "Un equipo que entienda la estetica y el mercado de Puertos/Nordelta"
     ]
   },
-
   "logo": {
     "main_file": "assets/abitat/logo.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+  "meta_ads": {
+    "page_id": "868340786360620",
+    "page_name": "Abitat"
   }
 }

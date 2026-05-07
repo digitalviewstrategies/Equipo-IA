@@ -4,9 +4,7 @@
   "brand_tagline": null,
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Inmobiliaria de Don Torcuato con 60 anos de trayectoria. Especialista en propiedades industriales en Zona Norte (nicho con pocos competidores de volumen), con apertura reciente al mercado residencial. La autoridad industrial es el diferencial.",
-
   "colors": {
     "primary": {
       "hex": "#CC2D2D",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros y rojos."
     }
   },
-
   "color_distribution_rules": {
     "description": "Rojo institucional como firma, dorado como acento de autoridad y trayectoria. La paleta comunica solidez y anos de mercado.",
     "carousel_6_slides": {
@@ -53,7 +50,6 @@
     },
     "red_max_appearances": 2
   },
-
   "typography": {
     "primary": {
       "family": "Plus Jakarta Sans",
@@ -70,11 +66,12 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes: anos de trayectoria, m2 de galpones, precios, superficies industriales."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -84,7 +81,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Recomendado en hooks y CTAs. Transmite peso industrial."
   },
-
   "visual_style": {
     "keywords": [
       "industrial",
@@ -115,16 +111,39 @@
       "Fotos de baja calidad de galpones (industriales tienen que verse bien tambien)"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Institucional y solido, habla desde 60 anos de mercado",
@@ -177,38 +196,55 @@
     "disruption_scale": 2,
     "narrative_structure": {
       "name": "Estructura Rubica",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Variante industrial/institucional del metodo DV. El dolor puede ser del empresario que busca espacio o del propietario industrial que quiere vender. La consecuencia es concreta (costos, tiempos). La solucion es la experiencia de 60 anos en la zona. La prueba son operaciones cerradas y conocimiento de mercado."
     }
   },
-
   "content_pillars": [
     {
       "name": "Propiedades industriales",
       "percentage": 40,
       "description": "Showcase y captacion de propiedades industriales: galpones, naves, depositos, terrenos. El pilar diferencial de Rubica.",
-      "formats": ["placa de propiedad", "carrusel", "video corto"]
+      "formats": [
+        "placa de propiedad",
+        "carrusel",
+        "video corto"
+      ]
     },
     {
       "name": "Propiedades residenciales",
       "percentage": 25,
       "description": "Venta y captacion residencial en Don Torcuato y alrededores. Linea secundaria que se apoya en la marca institucional.",
-      "formats": ["placa de propiedad", "carrusel", "video corto"]
+      "formats": [
+        "placa de propiedad",
+        "carrusel",
+        "video corto"
+      ]
     },
     {
       "name": "Mercado industrial Zona Norte",
       "percentage": 20,
       "description": "Informacion y tendencias del mercado industrial: valores, zonas, regulaciones, oportunidades. Posiciona como referente del nicho.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Trayectoria y autoridad",
       "percentage": 15,
       "description": "60 anos de historia, equipo, operaciones emblematicas, hitos. Construye confianza institucional.",
-      "formats": ["carrusel", "video corto"]
+      "formats": [
+        "carrusel",
+        "video corto"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Empresarios y pymes de Zona Norte que buscan propiedades industriales (galpones, depositos, naves) o quieren vender las suyas. Tickets USD 200k-400k.",
     "secondary": "Propietarios y compradores residenciales de Don Torcuato y alrededores.",
@@ -226,10 +262,13 @@
       "Seguridad y respaldo institucional en la operacion"
     ]
   },
-
   "logo": {
     "main_file": "assets/rubica_inmobiliaria/logo.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+  "meta_ads": {
+    "page_id": "688974280964544",
+    "page_name": "Rubica Inmobiliaria"
   }
 }

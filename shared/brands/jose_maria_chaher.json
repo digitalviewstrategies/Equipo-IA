@@ -4,9 +4,7 @@
   "brand_tagline": "Team Noia — Coaching y Real Estate",
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Agente inmobiliario y coach en CABA y Zona Norte. Doble perfil: pata real estate (vender y captar) como eje principal, con consultoria/coaching como linea secundaria que refuerza autoridad. Se diferencia por humanizar la profesion con un tono cercano y relajado.",
-
   "colors": {
     "primary": {
       "hex": "#1A8A7A",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta Team Noia: teal como base que transmite crecimiento y equilibrio, dorado como acento de autoridad y calidez. Fondo oscuro para impacto.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "dark (negro) con CTA en accent gold"
     }
   },
-
   "typography": {
     "primary": {
       "family": "Nunito Sans",
@@ -69,11 +65,12 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes destacados."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -83,7 +80,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Solo en hooks. Slides intermedios en sentence case para mantener tono cercano."
   },
-
   "visual_style": {
     "keywords": [
       "humano",
@@ -115,16 +111,39 @@
       "Layouts abigarrados o con demasiados elementos"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Cercano y humano, como hablar con un amigo que sabe mucho del tema",
@@ -175,38 +194,53 @@
     "disruption_scale": 4,
     "narrative_structure": {
       "name": "Metodo Chaher",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Funnel narrativo DV en version humana: el dolor arranca desde la emocion (no solo el bolsillo), la consecuencia es lo que se pierde por no actuar con consciencia, la solucion humaniza el proceso inmobiliario, la prueba es un caso real con nombre y contexto."
     }
   },
-
   "content_pillars": [
     {
       "name": "Captacion y venta de propiedades",
       "percentage": 40,
       "description": "Contenido dirigido a propietarios: por que vender con Jose Maria, como funciona el proceso humanizado, resultados reales.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Educacion inmobiliaria humana",
       "percentage": 25,
       "description": "Tips y guias sobre compraventa inmobiliaria con enfoque en las personas: que esperar, como prepararse, errores comunes.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Autoridad de coaching (secundario)",
       "percentage": 20,
       "description": "Contenido que muestra la vision de Jose Maria como coach sin hacer del coaching el eje: reflexiones breves sobre la profesion, el mercado, el crecimiento.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Casos de exito y testimonios",
       "percentage": 15,
       "description": "Historias de clientes reales, operaciones cerradas con contexto humano, no solo numeros.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Propietarios en CABA y Zona Norte que buscan un agente que los escuche, no que les venda. Tickets hasta USD 300k.",
     "secondary": "Agentes inmobiliarios que sienten que su carrera esta estancada y buscan una perspectiva mas humana de la profesion.",
@@ -224,10 +258,13 @@
       "Agentes: reconectar con el proposito de su profesion y mejorar resultados"
     ]
   },
-
   "logo": {
     "main_file": "assets/jose_maria_chaher/logo_team_noia.png",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+  "meta_ads": {
+    "page_id": "1065505296894589",
+    "page_name": "Team Noia"
   }
 }
