@@ -26,7 +26,13 @@
       "Bash(git commit -m 'feat\\(coordinador\\): state machine + cron + loop Meta->Creative *)",
       "Bash(git commit -m 'feat\\(delivery\\): cierra loop cron->reporte cliente->WhatsApp *)",
       "PowerShell($proj = \"C:\\\\Users\\\\proba\\\\Documents\\\\Felipe\\\\Claude\\\\Equipo-IA\"; $script = \"$proj\\\\agentes\\\\00_coordinador\\\\scripts\\\\cron_runner.py\"; schtasks /Create /SC HOURLY /MO 4 /TN \"DV-Pull-Leads\" /TR \"python `\"$script`\" pull-leads\" /F)",
-      "Bash(git commit -m 'feat\\(comercial\\): auto-ingesta de leads Meta + importer CSV lista fria *)"
+      "Bash(git commit -m 'feat\\(comercial\\): auto-ingesta de leads Meta + importer CSV lista fria *)",
+      "Bash(chmod +x C:/Users/proba/Documents/Felipe/Claude/Equipo-IA/.git/hooks/pre-commit)",
+      "Bash(git config *)",
+      "Bash(echo \"exit $?\")",
+      "Bash(git reset *)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(git commit -m 'fix\\(meta_api\\): leadgen_forms requiere Page Access Token derivado del System User *)"
     ]
   }
 }

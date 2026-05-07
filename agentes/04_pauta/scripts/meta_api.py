@@ -465,19 +465,40 @@ class MetaAdsAPI:
 
     # --- Leads ---
 
-    def get_leadgen_forms(self, page_id: str) -> list[dict]:
-        """Lista los formularios de Lead Ads de una page."""
-        return self._request(
-            "GET", f"{page_id}/leadgen_forms",
-            params={"fields": "id,name,status,leads_count", "limit": 100},
-        ).get("data", [])
+    def get_page_access_token(self, page_id: str) -> str:
+        """
+        Deriva un Page Access Token desde el System User token actual.
+        Requiere que la Page este asignada al System User en Business Manager.
+        """
+        r = self._request("GET", page_id, params={"fields": "access_token"})
+        token = r.get("access_token")
+        if not token:
+            raise MetaAPIError(
+                f"No se pudo obtener Page Access Token para {page_id}. "
+                f"Verifica que la Page este asignada al System User con Acceso Total."
+            )
+        return token
 
-    def get_form_leads(self, form_id: str, since_unix: int | None = None) -> list[dict]:
-        """
-        Trae leads de un form. Si since_unix se pasa, solo trae leads con
-        created_time > since_unix.
-        """
+    def get_leadgen_forms(self, page_id: str, page_token: str | None = None) -> list[dict]:
+        """Lista los formularios de Lead Ads de una page (requiere Page Access Token)."""
+        token = page_token or self.get_page_access_token(page_id)
+        # llamada directa con el page token (no el self.access_token)
+        url = f"{BASE_URL}/{page_id}/leadgen_forms"
+        params = {"access_token": token, "fields": "id,name,status,leads_count", "limit": 100}
+        resp = requests.get(url, params=params, timeout=30).json()
+        if "error" in resp:
+            raise MetaAPIError(f"Error get_leadgen_forms ({resp['error'].get('code')}): {resp['error'].get('message')}", resp)
+        return resp.get("data", [])
+
+    def get_form_leads(
+        self,
+        form_id: str,
+        page_token: str,
+        since_unix: int | None = None,
+    ) -> list[dict]:
+        """Trae leads de un form (requiere Page Access Token de la page duena del form)."""
         params: dict = {
+            "access_token": page_token,
             "fields": "id,created_time,field_data,ad_id,adset_id,campaign_id",
             "limit": 200,
         }
@@ -487,4 +508,8 @@ class MetaAdsAPI:
                 "operator": "GREATER_THAN",
                 "value": since_unix,
             }])
-        return self._request("GET", f"{form_id}/leads", params=params).get("data", [])
+        url = f"{BASE_URL}/{form_id}/leads"
+        resp = requests.get(url, params=params, timeout=30).json()
+        if "error" in resp:
+            raise MetaAPIError(f"Error get_form_leads ({resp['error'].get('code')}): {resp['error'].get('message')}", resp)
+        return resp.get("data", [])

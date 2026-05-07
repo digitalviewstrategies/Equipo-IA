@@ -101,7 +101,8 @@ def pull_recent_leads(hours: int = 24) -> dict:
         cliente = brand_path.stem
         try:
             api = MetaAdsAPI()
-            forms = api.get_leadgen_forms(page_id)
+            page_token = api.get_page_access_token(page_id)
+            forms = api.get_leadgen_forms(page_id, page_token=page_token)
         except MetaAPIError as e:
             resumen["por_cliente"][cliente] = {"status": "error", "msg": str(e)[:200]}
             continue
@@ -111,7 +112,7 @@ def pull_recent_leads(hours: int = 24) -> dict:
             if form.get("status") != "ACTIVE":
                 continue
             try:
-                leads = api.get_form_leads(form["id"], since_unix=since_unix)
+                leads = api.get_form_leads(form["id"], page_token=page_token, since_unix=since_unix)
             except MetaAPIError as e:
                 resumen["por_cliente"].setdefault(cliente, {})[form["id"]] = f"err: {str(e)[:120]}"
                 continue
