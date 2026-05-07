@@ -50,43 +50,28 @@ def save_dedup(data: dict) -> None:
     DEDUP_FILE.write_text(json.dumps(data), encoding="utf-8")
 
 
-def main() -> int:
-    raw = sys.stdin.read()
-    try:
-        payload = json.loads(raw)
-    except Exception:
-        return 0  # nunca bloquear
-
-    tool = payload.get("tool_name", "")
-    if tool not in ("Write", "Edit"):
-        return 0
-
-    file_path = (
-        payload.get("tool_response", {}).get("filePath")
-        or payload.get("tool_input", {}).get("file_path", "")
-    )
+def trigger_for_path(file_path: str) -> bool:
+    """Dispara auto_deliver para un path. Reusable por hook y por cron."""
     if not file_path:
-        return 0
+        return False
 
     norm = str(file_path).replace("\\", "/")
     m = PATH_RE.search(norm.replace("/", "\\"))
     if not m:
-        # intento con separador unix
         m = PATH_RE.search(norm)
         if not m:
-            return 0
+            return False
 
     cliente = m.group("cliente")
     fname = m.group("file")
     tipo = "mensual" if fname.startswith("reporte_mensual") else "semanal"
 
-    # Dedup
     now = time.time()
     dedup = {k: v for k, v in load_dedup().items() if now - v < DEDUP_WINDOW_SECONDS}
     if file_path in dedup:
         log(f"DEDUP skip {file_path}")
         save_dedup(dedup)
-        return 0
+        return False
     dedup[file_path] = now
     save_dedup(dedup)
 
@@ -101,8 +86,6 @@ def main() -> int:
     log(f"FIRE cliente={cliente} tipo={tipo} file={file_path}")
 
     try:
-        # Spawn no bloqueante: el hook async:true ya corre en background,
-        # pero ademas spawneamos detached para no atar el proceso del hook a la sesion claude.
         subprocess.Popen(
             cmd,
             cwd=str(DELIVERY_ROOT),
@@ -112,8 +95,27 @@ def main() -> int:
             creationflags=getattr(subprocess, "DETACHED_PROCESS", 0)
             | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0),
         )
+        return True
     except Exception as e:
         log(f"SPAWN_ERROR {e}")
+        return False
+
+
+def main() -> int:
+    raw = sys.stdin.read()
+    try:
+        payload = json.loads(raw)
+    except Exception:
+        return 0
+
+    if payload.get("tool_name", "") not in ("Write", "Edit"):
+        return 0
+
+    file_path = (
+        payload.get("tool_response", {}).get("filePath")
+        or payload.get("tool_input", {}).get("file_path", "")
+    )
+    trigger_for_path(file_path)
     return 0
 
 

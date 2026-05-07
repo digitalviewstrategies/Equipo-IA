@@ -33,6 +33,19 @@ sys.path.insert(0, str(ROOT / "agentes" / "04_pauta"))
 sys.path.insert(0, str(Path(__file__).parent))
 
 
+def _trigger_auto_deliver(path: Path) -> None:
+    """Dispara auto_deliver del agente delivery (genera reporte cliente + WA)."""
+    try:
+        import importlib.util
+        ad_path = ROOT / "agentes" / "03_delivery_reporting" / "scripts" / "auto_deliver.py"
+        spec = importlib.util.spec_from_file_location("auto_deliver_mod", ad_path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        mod.trigger_for_path(str(path))
+    except Exception as e:
+        _log("auto-deliver", "warn", f"{path.name}: {e}")
+
+
 def _log(task: str, status: str, detail: dict | str = "") -> None:
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     entry = {
@@ -271,6 +284,7 @@ def weekly_report() -> int:
         out_dir.mkdir(parents=True, exist_ok=True)
         path = out_dir / f"reporte_semanal_{since.isoformat()}_{until.isoformat()}.md"
         path.write_text(report, encoding="utf-8")
+        _trigger_auto_deliver(path)
         resumen.append({"cliente": cliente, "status": "ok", "leads": total_leads, "spend": round(total_spend, 2)})
 
     _log("weekly-report", "ok", {"clientes": len(resumen), "resumen": resumen})
