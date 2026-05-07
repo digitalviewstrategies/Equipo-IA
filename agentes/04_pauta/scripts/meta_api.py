@@ -462,3 +462,29 @@ class MetaAdsAPI:
             "GET", self._require_account(),
             params={"fields": "id,name,account_status,currency,timezone_name,business"},
         )
+
+    # --- Leads ---
+
+    def get_leadgen_forms(self, page_id: str) -> list[dict]:
+        """Lista los formularios de Lead Ads de una page."""
+        return self._request(
+            "GET", f"{page_id}/leadgen_forms",
+            params={"fields": "id,name,status,leads_count", "limit": 100},
+        ).get("data", [])
+
+    def get_form_leads(self, form_id: str, since_unix: int | None = None) -> list[dict]:
+        """
+        Trae leads de un form. Si since_unix se pasa, solo trae leads con
+        created_time > since_unix.
+        """
+        params: dict = {
+            "fields": "id,created_time,field_data,ad_id,adset_id,campaign_id",
+            "limit": 200,
+        }
+        if since_unix:
+            params["filtering"] = json.dumps([{
+                "field": "time_created",
+                "operator": "GREATER_THAN",
+                "value": since_unix,
+            }])
+        return self._request("GET", f"{form_id}/leads", params=params).get("data", [])

@@ -291,10 +291,27 @@ def weekly_report() -> int:
     return 0
 
 
+def pull_leads(hours: int = 24) -> int:
+    """Trae leads de Meta de las ultimas N horas y los inserta en el pipeline comercial."""
+    try:
+        import importlib.util
+        p = ROOT / "agentes" / "02_comercial" / "scripts" / "meta_leads_puller.py"
+        spec = importlib.util.spec_from_file_location("meta_leads_puller", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.pull_recent_leads(hours=hours)
+        _log("pull-leads", "ok", r)
+        return 0
+    except Exception as e:
+        _log("pull-leads", "error", str(e)[:300])
+        return 1
+
+
 TASKS = {
     "recompute-state": recompute_state,
     "daily-monitor": daily_monitor,
     "weekly-report": weekly_report,
+    "pull-leads": pull_leads,
 }
 
 

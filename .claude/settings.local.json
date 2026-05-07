@@ -24,7 +24,9 @@
       "mcp__plugin_context-mode_context-mode__ctx_execute",
       "PowerShell($proj = \"C:\\\\Users\\\\proba\\\\Documents\\\\Felipe\\\\Claude\\\\Equipo-IA\"; $script = \"$proj\\\\agentes\\\\00_coordinador\\\\scripts\\\\cron_runner.py\"; schtasks /Create /SC HOURLY /MO 6 /TN \"DV-Recompute-State\" /TR \"python `\"$script`\" recompute-state\" /F; schtasks /Create /SC DAILY /ST 08:30 /TN \"DV-Daily-Monitor\" /TR \"python `\"$script`\" daily-monitor\" /F; schtasks /Create /SC WEEKLY /D MON /ST 09:00 /TN \"DV-Weekly-Report\" /TR \"python `\"$script`\" weekly-report\" /F)",
       "Bash(git commit -m 'feat\\(coordinador\\): state machine + cron + loop Meta->Creative *)",
-      "Bash(git commit -m 'feat\\(delivery\\): cierra loop cron->reporte cliente->WhatsApp *)"
+      "Bash(git commit -m 'feat\\(delivery\\): cierra loop cron->reporte cliente->WhatsApp *)",
+      "PowerShell($proj = \"C:\\\\Users\\\\proba\\\\Documents\\\\Felipe\\\\Claude\\\\Equipo-IA\"; $script = \"$proj\\\\agentes\\\\00_coordinador\\\\scripts\\\\cron_runner.py\"; schtasks /Create /SC HOURLY /MO 4 /TN \"DV-Pull-Leads\" /TR \"python `\"$script`\" pull-leads\" /F)",
+      "Bash(git commit -m 'feat\\(comercial\\): auto-ingesta de leads Meta + importer CSV lista fria *)"
     ]
   }
 }

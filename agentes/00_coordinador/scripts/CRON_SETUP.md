@@ -7,6 +7,7 @@
 | `recompute-state` | Cada 6 hs | Recalcula `shared/state/<cliente>.json` por filesystem |
 | `daily-monitor`   | Diario 08:30 | Trae insights del dia anterior y escribe alerta si hay KILL/fatiga |
 | `weekly-report`   | Lunes 09:00 | Reporte semanal markdown por cliente con campanas |
+| `pull-leads`      | Cada 4 hs   | Trae leads de Meta Lead Ads y los inserta en pipeline comercial |
 
 Output:
 - Reportes/alertas: `agentes/04_pauta/outputs/<cliente>/<fecha>/`
