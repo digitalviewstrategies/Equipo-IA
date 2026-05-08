@@ -101,6 +101,23 @@ def recompute_state() -> int:
     return 0
 
 
+def _load_brand_creative_hints(cliente: str) -> dict:
+    """Lee hook_frameworks + narrative_structure del brand JSON para enriquecer el brief."""
+    p = BRANDS / f"{cliente}.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    tov = data.get("tone_of_voice") or {}
+    return {
+        "hook_frameworks": tov.get("hook_frameworks") or {},
+        "narrative_structure": tov.get("narrative_structure") or {},
+        "preferred_words": tov.get("preferred_words") or [],
+    }
+
+
 def _write_brief_creativo(cliente: str, since, until, analyses: list) -> Path:
     """Genera brief_creativo_*.md auto-derivado del analisis para feedback loop."""
     from scripts.campaign_analyzer import generate_recommendations
@@ -166,6 +183,38 @@ def _write_brief_creativo(cliente: str, since, until, analyses: list) -> Path:
         "",
         "## Recomendaciones del analyzer",
         *[f"- {r}" for r in generate_recommendations(analyses)],
+    ]
+
+    hints = _load_brand_creative_hints(cliente)
+    fw = hints.get("hook_frameworks") or {}
+    if fw:
+        lines += ["", "## Hook frameworks de la brand (elegir 2-3 para los nuevos)"]
+        for name, body in fw.items():
+            if isinstance(body, dict):
+                desc = body.get("description", "")
+                ex = body.get("example", "")
+                lines.append(f"- **{name}** — {desc}")
+                if ex:
+                    lines.append(f"  - Ejemplo: _{ex}_")
+            else:
+                lines.append(f"- **{name}** — {body}")
+    ns = hints.get("narrative_structure") or {}
+    if ns:
+        steps = ns.get("steps") or []
+        if steps:
+            lines += [
+                "",
+                f"## Estructura narrativa: {ns.get('name', 'estructura')}",
+                " -> ".join(steps),
+            ]
+    pw = hints.get("preferred_words") or []
+    if pw:
+        lines += [
+            "",
+            "## Vocabulario preferido (usar)",
+            ", ".join(pw[:25]),
+        ]
+    lines += [
         "",
         "Va para Nico (Creative Director). Proximo paso: ideacion de nuevos guiones/conceptos para reemplazar los KILL.",
     ]
@@ -318,11 +367,110 @@ def pull_leads(hours: int = 24) -> int:
         return 1
 
 
+def process_creative_briefs() -> int:
+    """Notifica a Nico por WA los briefs auto pendientes (no genera guiones)."""
+    try:
+        import importlib.util
+        p = Path(__file__).parent / "process_creative_briefs.py"
+        spec = importlib.util.spec_from_file_location("process_creative_briefs", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.process()
+        status = "ok" if not r.get("errores") else "warn"
+        _log("process-creative-briefs", status, r)
+        return 0
+    except Exception as e:
+        _log("process-creative-briefs", "error", str(e)[:300])
+        return 1
+
+
+def prescore_leads() -> int:
+    """Auto-prescore de leads en pre_filtro: priority + knockouts + red_flags."""
+    try:
+        import importlib.util
+        p = ROOT / "agentes" / "02_comercial" / "scripts" / "lead_prescore.py"
+        spec = importlib.util.spec_from_file_location("lead_prescore", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.run(dry_run=False)
+        status = "warn" if r.get("knockouts_detected") or r.get("by_priority", {}).get("stale") else "ok"
+        _log("prescore-leads", status, r)
+        return 0
+    except Exception as e:
+        _log("prescore-leads", "error", str(e)[:300])
+        return 1
+
+
+def lead_followups() -> int:
+    """Genera drafts WA primer contacto para leads priority 1/2 sin trabajar."""
+    try:
+        import importlib.util
+        p = ROOT / "agentes" / "02_comercial" / "scripts" / "followup_drafts.py"
+        spec = importlib.util.spec_from_file_location("followup_drafts", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.run(dry_run=False)
+        _log("lead-followups", "ok", r)
+        return 0
+    except Exception as e:
+        _log("lead-followups", "error", str(e)[:300])
+        return 1
+
+
+def auto_approve() -> int:
+    """Corre validators sobre outputs recientes y escribe sidecar .status.json."""
+    try:
+        import importlib.util
+        p = ROOT / ".claude" / "scripts" / "auto_approve.py"
+        spec = importlib.util.spec_from_file_location("auto_approve", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        today = date.today()
+        yest = today - timedelta(days=1)
+        agg = {"candidates": 0, "processed": 0, "ready_for_handoff": 0, "needs_human": 0, "flagged": []}
+        for d in (today.isoformat(), yest.isoformat()):
+            r = mod.run(None, d, False)
+            for k in ("candidates", "processed", "ready_for_handoff", "needs_human"):
+                agg[k] += r[k]
+            agg["flagged"].extend(r["flagged"])
+        status = "warn" if agg["needs_human"] else "ok"
+        # corta flagged en log para no inflar jsonl
+        log_payload = dict(agg)
+        log_payload["flagged"] = log_payload["flagged"][:5]
+        _log("auto-approve", status, log_payload)
+        return 0
+    except Exception as e:
+        _log("auto-approve", "error", str(e)[:300])
+        return 1
+
+
+def health() -> int:
+    """Chequea que las tareas cron hayan corrido OK dentro del SLA."""
+    try:
+        import importlib.util
+        p = Path(__file__).parent / "health_check.py"
+        spec = importlib.util.spec_from_file_location("health_check", p)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        r = mod.check()
+        status = "warn" if r.get("stale") else "ok"
+        _log("health", status, r)
+        return 0
+    except Exception as e:
+        _log("health", "error", str(e)[:300])
+        return 1
+
+
 TASKS = {
     "recompute-state": recompute_state,
     "daily-monitor": daily_monitor,
     "weekly-report": weekly_report,
     "pull-leads": pull_leads,
+    "process-creative-briefs": process_creative_briefs,
+    "prescore-leads": prescore_leads,
+    "lead-followups": lead_followups,
+    "auto-approve": auto_approve,
+    "health": health,
 }
 
 

@@ -24,6 +24,62 @@ DELIVERY_ROOT = Path(__file__).resolve().parents[1]
 LOG_FILE = DELIVERY_ROOT / "outputs" / "_auto_deliver.log"
 DEDUP_FILE = DELIVERY_ROOT / "outputs" / "_auto_deliver_dedup.json"
 DEDUP_WINDOW_SECONDS = 60
+AUTO_APPROVE = REPO_ROOT / ".claude" / "scripts" / "auto_approve.py"
+
+
+def _check_sidecar_gate(path: Path) -> tuple[bool, dict | None]:
+    """Devuelve (puede_disparar, sidecar_dict).
+
+    Corre auto_approve si el sidecar no existe. Bloquea si status != ready_for_handoff.
+    Si no hay brand resoluble o el sidecar no se puede generar, deja pasar (fail-open
+    para no romper el pipeline existente; queda visible en log).
+    """
+    sidecar = path.with_suffix(path.suffix + ".status.json")
+    if not sidecar.exists():
+        try:
+            import importlib.util
+            spec = importlib.util.spec_from_file_location("auto_approve", AUTO_APPROVE)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            cliente = path.parts[-3] if len(path.parts) >= 3 else None
+            fecha = path.parts[-2] if len(path.parts) >= 2 else None
+            if cliente and fecha:
+                mod.run(cliente, fecha, False)
+        except Exception as e:
+            log(f"SIDECAR_GEN_ERROR {path.name}: {e}")
+            return True, None
+    if not sidecar.exists():
+        return True, None
+    try:
+        sc = json.loads(sidecar.read_text(encoding="utf-8"))
+    except Exception:
+        return True, None
+    return sc.get("status") == "ready_for_handoff", sc
+
+
+def _alert_felipe_blocked(path: Path, sidecar: dict) -> None:
+    """Alerta a Felipe que un reporte fue bloqueado por validators."""
+    try:
+        import os
+        from dotenv import load_dotenv
+        load_dotenv(DELIVERY_ROOT / ".env")
+        felipe = os.getenv("FELIPE_WA_NUMBER")
+        if not felipe:
+            log(f"BLOCKED_NO_FELIPE_NUMBER {path.name}")
+            return
+        sys.path.insert(0, str(DELIVERY_ROOT / "scripts"))
+        import wa_reportes  # type: ignore
+        viols = (sidecar.get("validators", {}).get("tono", {}) or {}).get("violations", [])
+        msg = (
+            "[DV] Auto-deliver BLOQUEADO\n\n"
+            f"Reporte: {path.relative_to(REPO_ROOT)}\n"
+            f"Violaciones tono: {', '.join(viols[:5]) or 'ver sidecar'}\n\n"
+            "No se disparo a Elias. Revisar reporte o forbidden_words."
+        )
+        wa_reportes.send_text(felipe, msg)
+        log(f"BLOCKED_ALERTED_FELIPE {path.name}")
+    except Exception as e:
+        log(f"ALERT_FELIPE_ERROR {e}")
 
 PATH_RE = re.compile(
     r"agentes[\\/]04_pauta[\\/]outputs[\\/](?P<cliente>[^\\/]+)[\\/](?P<fecha>[^\\/]+)[\\/](?P<file>(reporte_semanal|reporte_mensual|analisis)_[^\\/]+\.md)$"
@@ -74,6 +130,14 @@ def trigger_for_path(file_path: str) -> bool:
         return False
     dedup[file_path] = now
     save_dedup(dedup)
+
+    # Gate: validators del sidecar
+    can_fire, sc = _check_sidecar_gate(Path(file_path))
+    if not can_fire:
+        log(f"BLOCKED_BY_SIDECAR cliente={cliente} tipo={tipo} file={file_path}")
+        if sc:
+            _alert_felipe_blocked(Path(file_path), sc)
+        return False
 
     prompt = (
         f"Ejecuta /reporte-{tipo} {cliente}. "
