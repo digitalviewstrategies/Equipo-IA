@@ -1,88 +1,60 @@
 ---
 name: kickoff
-description: Use this skill when a new client needs to be onboarded — to validate that everything required for other agents to work exists. Triggers "kickoff [cliente]", "onboarding de [cliente]", "arrancamos con cliente nuevo [nombre]", "que falta para empezar con [cliente]", "validar onboarding de [cliente]", "chequea si [cliente] esta onboardeado".
+description: Use this skill when a new client needs to be onboarded — to scaffold the brand JSON, leads/state files, create Drive folder structure via MCP, and notify the team. Triggers "kickoff [cliente]", "onboarding de [cliente]", "arrancamos con cliente nuevo [nombre]", "que falta para empezar con [cliente]", "validar onboarding de [cliente]", "chequea si [cliente] esta onboardeado", "init kickoff [cliente]".
 ---
 
-# Skill: Kickoff de cliente nuevo
+# Skill: Kickoff de cliente nuevo (full auto)
 
-Valida que un cliente tiene todo lo necesario para que los agentes especializados puedan trabajar. Genera el checklist de onboarding y marca qué falta.
+Tiene dos modos:
+
+- **Modo VALIDAR** (default): chequea que el cliente ya tiene todo listo y devuelve checklist con lo que falta. No toca nada.
+- **Modo INIT** (`--init` o pedido explícito "arrancá kickoff de X" cuando el cliente no existe): scaffold automático end-to-end. Crea brand JSON desde template, leads_clientes JSON, state JSON, estructura Drive vía MCP, y notifica a Elias/Nico por WA.
 
 ## Antes de ejecutar
 
-Necesitás el **nombre del cliente** (tal como debería aparecer en `shared/brands/`, ej. `lopez_propiedades`, `mauro_peralta`). Si no lo recibiste, preguntalo. Si el nombre tiene espacios, usá guiones bajos.
+Necesitás:
+- **`cliente_id`**: snake_case sin espacios (ej. `lopez_propiedades`, `viviana_sasia`).
+- **`brand_name`** (display): cómo aparece en el mundo real (ej. "López Propiedades").
 
-## Pasos
+Si el usuario no los dio, preguntalos.
 
-### 1. Verificar brand JSON
+## Flujo
+
+### Paso 1 — Resolver modo
 
 ```python
-from scripts.output_manager import brand_exists, load_brand, list_brands
-
-existe = brand_exists(cliente)
-brand = load_brand(cliente) if existe else None
+from pathlib import Path
+brand_path = Path("shared/brands") / f"{cliente_id}.json"
+existe = brand_path.exists()
 ```
 
-Si no existe, el primer paso bloqueante es crear el JSON. Mostrá el template vacío que hay que completar:
+- Si NO existe Y el usuario pidió "init"/"arrancar"/"crear" → modo INIT.
+- Si NO existe Y el usuario pidió validar → reportá que falta scaffold y ofrecé correr INIT.
+- Si SÍ existe → modo VALIDAR.
 
-```json
-{
-  "name": "Nombre visible del cliente",
-  "logo_url": "",
-  "colors": {
-    "primary": "#000000",
-    "secondary": "#FFFFFF",
-    "accent": "#000000",
-    "text": "#000000"
-  },
-  "fonts": {
-    "headline": "Poppins",
-    "body": "Inter"
-  },
-  "meta_ads": {
-    "ad_account_id": "act_XXXXXXXXXX",
-    "page_id": "XXXXXXXXXX"
-  },
-  "buyer_persona": {
-    "age_min": 30,
-    "age_max": 60,
-    "pain_points": [],
-    "aspirations": []
-  },
-  "messaging": {
-    "tone": "",
-    "pain_angles": [],
-    "ctas": []
-  }
-}
+### Paso 2A — Modo INIT (scaffold + Drive + notify)
+
+**2A.1 — Scaffold local** (Bash):
+
+```bash
+python agentes/00_coordinador/scripts/kickoff_init.py <cliente_id> --name "<Brand Display>" --notify
 ```
 
-Indicá que el archivo va en `shared/brands/<cliente>.json`.
+El script crea:
+- `shared/brands/<cliente_id>.json` (clonado de `toribio_achaval.json`, campos cliente-específicos marcados como `<TODO_KICKOFF>`)
+- `agentes/02_comercial/data/leads_clientes/<cliente_id>.json`
+- `shared/state/<cliente_id>.json`
+- Manda WA a Elias y Nico con el resumen + lista de TODOs.
 
-### 2. Validar campos del brand (si existe)
+Capturá el JSON output. Tiene `pendings[]` (campos a completar) y `next_step`.
 
-Si el brand existe, revisá campo por campo:
+**2A.2 — Estructura Drive vía MCP**:
 
-| Campo | Requerido por | OK? |
-|---|---|---|
-| `meta_ads.ad_account_id` | Media Buyer | Tiene `act_` prefix? |
-| `meta_ads.page_id` | Media Buyer | Está completado? |
-| `colors.primary` | Design | Es un HEX válido? |
-| `fonts.headline` | Design | Tiene nombre de fuente? |
-| `buyer_persona.pain_points` | Creative Director / Copywriter | Tiene al menos 2 items? |
-| `buyer_persona.aspirations` | Creative Director / Copywriter | Tiene al menos 1 item? |
-| `messaging.tone` | Copywriter | Está descrito? |
-| `messaging.pain_angles` | Creative Director | Tiene al menos 2 items? |
-
-### 3. Verificar estructura de carpetas de Drive
-
-Indicá que hay que crear (o verificar que existe) la estructura estándar en Drive:
+Usá las tools `mcp__claude_ai_Google_Drive__*`. Estructura estándar DV:
 
 ```
-CLIENTE/
+<Brand Display>/
 ├── 00 Ficha del Cliente/
-│   ├── Formulario CORE completado
-│   ├── Identidad visual (logos, colores, referencias)
-│   └── Accesos y contactos
 ├── 01 Estrategia/
 ├── 02 Producciones/
 ├── 03 Estaticos/
@@ -90,61 +62,73 @@ CLIENTE/
 └── 05 Reportes/
 ```
 
-No podés verificar Drive automáticamente — marcalo como "a confirmar por Elias/Bauti".
+Pseudo-flujo:
+1. `search_files` para chequear si la carpeta raíz `<Brand Display>` ya existe.
+2. Si no, `create_file` con MIME folder (o el equivalente del MCP server) en raíz Drive DV.
+3. Para cada subcarpeta 00-05, `create_file` dentro de la raíz creada.
+4. Capturá los `folder_id` para reportar.
 
-### 4. Generar checklist de onboarding
+**Si el MCP de Drive no está disponible** (tool no listado / error de auth): no falles. Reportá "Drive: no se creó automáticamente, hacelo a mano en `<carpeta DV>`" como TODO para Elias.
 
-Armá un documento Markdown con el estado de cada item:
+**2A.3 — Reportá el resultado**:
 
-```markdown
-# Kickoff — [Cliente] — [Fecha]
+```
+# Kickoff INIT — <Brand Display> — <fecha>
 
-## Brand System
-- [x] JSON existe en shared/brands/<cliente>.json
-- [ ] Ad account ID configurado (act_XXXXX)
-- [ ] Page ID configurado
-- [x] Colores primarios definidos
-- [ ] Buyer persona completo (pain points + aspirations)
-- [ ] Ángulos de dolor definidos (mínimo 2)
+## Scaffold local
+- shared/brands/<cliente_id>.json (creado, con TODOs)
+- agentes/02_comercial/data/leads_clientes/<cliente_id>.json
+- shared/state/<cliente_id>.json
 
 ## Drive
-- [ ] Carpeta del cliente creada
-- [ ] Ficha del Cliente / Formulario CORE completado
-- [ ] Identidad visual subida (logos, colores)
-- [ ] Accesos y contactos cargados
+- Carpeta raíz: <link o "manual">
+- Subcarpetas 00-05: <ok | manual>
 
-## Meta
-- [ ] Ad account accesible desde el Business Portfolio DV
-- [ ] Página de Facebook conectada
-- [ ] Pixel configurado (si aplica)
+## WA enviado a
+- Elias: <numero>
+- Nico: <numero>
 
-## Listo para arrancar con:
-- [ ] Creative Director (necesita: buyer persona + ángulos)
-- [ ] Copywriter (necesita: brand system completo)
-- [ ] Design (necesita: colores + fuentes + logos)
-- [ ] Media Buyer (necesita: ad_account_id + creativos)
+## Pendientes (orden de prioridad)
+1. Elias: completar formulario CORE + identidad visual + accesos Meta
+2. Felipe: confirmar ad_account_id (act_XXX) y page_id en el brand JSON
+3. Nico: revisar tone_of_voice heredado del template y ajustar al cliente real
+4. Bauti: subir referencias visuales del cliente a 00 Ficha del Cliente
 
-## Bloqueantes
-[Lista de lo que falta antes de poder arrancar]
+## Próximo paso
+Cuando Elias confirme CORE completado, correr `/kickoff <cliente_id>` (modo validar)
+para chequear que todo está listo antes de pasar a producción.
 ```
 
-### 5. Guardar
+### Paso 2B — Modo VALIDAR
 
-```python
-from scripts.output_manager import save_output
-save_output(cliente, "kickoff", "onboarding", contenido_checklist)
-```
+Mismo checklist que la versión vieja del skill. Cargá el brand JSON, chequeá:
 
-## Entrega
+| Campo | Requerido por | OK si |
+|---|---|---|
+| `brand_id` | todos | == cliente_id |
+| `brand_name` | todos | no es `<TODO_KICKOFF>` |
+| `positioning` | Creative/Copy | no es `<TODO_KICKOFF>` |
+| `meta_ads.ad_account_id` | Media Buyer | tiene prefix `act_` |
+| `meta_ads.page_id` | Media Buyer | no es `<TODO_KICKOFF>` |
+| `colors.primary` | Design | HEX válido |
+| `tone_of_voice.forbidden_words` | Validators | lista no vacía |
+| `tone_of_voice.preferred_words` | Validators | lista no vacía |
+| `tone_of_voice.hook_frameworks` | Creative | dict no vacío |
+| `references` | Design | dict con al menos 1 entrada |
 
-Mostrá el checklist completo con el estado de cada item. Indicá claramente:
-- Qué está listo
-- Qué está bloqueando el arranque
-- Quién tiene que resolver cada cosa pendiente
+Verificación adicional:
+- Drive (a confirmar por Elias): no se puede automatizar el chequeo de existencia de subcarpetas sin MCP.
+- Pipeline: chequeá que `agentes/02_comercial/data/leads_clientes/<cliente_id>.json` exista.
 
-Cerrá con:
-```
-Para arrancar con producción necesitamos: [lista de bloqueantes]. Va para [Elias / Bauti según el item].
-```
+Devolvé el checklist con bloqueantes y siguiente acción.
 
-Si todo está completo: "Cliente listo. Podés correr `/nueva-campana <cliente>` para arrancar el flujo de producción."
+## Tono
+
+Directo. Sin frases de relleno. Cada salida cierra con: "Va para [persona]. Próximo paso: [acción concreta]."
+
+## Lo que NUNCA hacés en este skill
+
+- No tocás `tone_of_voice.forbidden_words` heredado del template salvo que el usuario lo pida explícito (es base segura).
+- No mandás WA si `--notify` falló: reportá el error y dejá que Elias avise a mano.
+- No avanzás a fase 3 (Preproducción) si quedan TODOs en el brand JSON.
+- No creás campañas en Meta. Eso lo hace Felipe cuando recibe el handoff.
