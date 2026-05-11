@@ -64,7 +64,7 @@ def send_reporte_semanal_template(to: str, nombre: str, url_pdf: str) -> dict:
     return _client().send_template(
         to,
         template_name="reportes_semanales_digital",
-        language="es_AR",
+        language="es",
         components=components,
     )
 
