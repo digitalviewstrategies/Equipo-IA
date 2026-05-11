@@ -170,6 +170,25 @@ Ejemplo: `LopezProps_RecorridoVO_V1.mp4`
 6. Si no sabes a que cliente se refiere algo, pedi el nombre antes de actuar.
 7. Si una decision parece comercial (afecta fee, scope o contrato), escalaselo a Valentin.
 
+## Antes de cualquier `git commit`
+
+REGLA DURA: antes de ejecutar `git commit`, invoca el agente `dv-project-optimizer`
+(definido en `.claude/agents/dv-project-optimizer.md`) usando el tool `Agent` con
+`subagent_type: "dv-project-optimizer"`. El agente revisa:
+
+- Estructura de carpetas y nombres de archivos (que esten bajo el agente que los usa, no en raiz).
+- Naming conventions (snake_case, `<CLIENTE>_<Tipo>_V<n>.<ext>`, etc.).
+- CLAUDE.md por agente actualizado si corresponde.
+- Que los agentes consuman info de donde debe (no duplicacion).
+- Que outputs/working files vivan donde corresponde (no en raiz).
+- Eficiencia: que no haya scripts duplicados o configuracion redundante.
+
+Si el agente reporta findings criticos (BLOCK), los resolves ANTES de commitear.
+Si reporta findings menores (FLAG), los anotas y commiteas con nota en el mensaje.
+Si reporta PASS, commiteas normal.
+
+Esta regla aplica para TODOS los commits, incluso los aparentemente triviales.
+
 ## Documento fuente de verdad
 
 El manual operativo completo esta en `DV_Manual_Operativo.docx` en la raiz del proyecto. Este CLAUDE.md es un resumen operativo. Ante dudas, consultar el manual.

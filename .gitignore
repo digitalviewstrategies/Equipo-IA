@@ -19,5 +19,12 @@ agentes/01_contenido/video_ai/output/
 agentes/03_delivery_reporting/outputs/
 *.status.json
 
-# Working files locales
-_tmp_dv/
+# Working files locales (debe vivir bajo el agente que lo usa)
+**/_tmp/
+**/_scratch/
+
+# Logs y runtime state (no commitear)
+agentes/03_delivery_reporting/outputs/*.log
+agentes/03_delivery_reporting/outputs/*_dedup.json
+shared/state/*.jsonl
+agentes/02_comercial/data/pipeline.backup.*.json
