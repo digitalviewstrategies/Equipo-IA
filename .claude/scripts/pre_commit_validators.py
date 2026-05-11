@@ -32,8 +32,12 @@ def _strip(s: str) -> str:
 ROOT = Path(__file__).resolve().parents[2]
 BRANDS = ROOT / "shared" / "brands"
 
-# regex naming Drive: <CLIENTE>_<TipoContenido>_V<n>.<ext>  (case insensitive cliente)
-NAMING_DRIVE_RE = re.compile(r"^[A-Za-z0-9]+_[A-Za-z0-9]+_V\d+\.(mp4|png|jpg|jpeg|pdf)$", re.IGNORECASE)
+# regex naming Drive: <CLIENTE>_<TipoContenido>_V<n>[_<variant>].<ext>
+# variant opcional: 9x16, 1x1, 16x9, thumb, etc. (post_production multi-format).
+NAMING_DRIVE_RE = re.compile(
+    r"^[A-Za-z0-9]+_[A-Za-z0-9]+_V\d+(?:_[A-Za-z0-9]+)?\.(mp4|png|jpg|jpeg|pdf|srt)$",
+    re.IGNORECASE,
+)
 
 # matches anywhere: .../outputs/<cliente>/<fecha>/...  o .../output/<cliente>/<fecha>/...
 OUTPUT_PATH_RE = re.compile(r"/outputs?/([^/]+)/[^/]+/(.+)$")

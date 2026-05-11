@@ -59,7 +59,7 @@ OUTPUT_GLOBS = [
 ]
 
 NAMING_BIN_RE = re.compile(
-    r"^[A-Za-z0-9]+_[A-Za-z0-9]+_V\d+\.(mp4|png|jpg|jpeg|pdf)$",
+    r"^[A-Za-z0-9]+_[A-Za-z0-9]+_V\d+(?:_[A-Za-z0-9]+)?\.(mp4|png|jpg|jpeg|pdf|srt)$",
     re.IGNORECASE,
 )
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")

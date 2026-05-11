@@ -7,3 +7,4 @@
 - [Settings local con permisos historicos](project_settings_cleanup_pending.md) — 100 lineas con rutas viejas /home/valentin/, limpiar a estado actual
 - [Modelos por agente](reference_modelos_recomendados.md) — Recomendaciones actuales de Sonnet/Opus por tarea, posibles ajustes a Haiku
 - [Pre-commit gate role](feedback_pre_commit_role.md) — Este agente se invoca SIEMPRE antes de git commit. Audita staged files con foco en estructura, naming, _tmp en raiz, duplicacion. Devuelve PASS/FLAG/BLOCK.
+- [Outputs dirs en .gitignore](feedback_outputs_gitignore.md) — Todo modulo nuevo con carpeta outputs/ debe agregarse a .gitignore antes del primer commit.
