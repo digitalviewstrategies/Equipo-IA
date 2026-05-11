@@ -1,10 +1,10 @@
 {
   "brand_id": "brain_soluciones",
   "brand_name": "Brain Soluciones",
-  "brand_tagline": "<TODO_KICKOFF>",
-  "version": "0.1",
+  "brand_tagline": "Consultoria operativa para PyMEs que quieren dejar de apagar incendios todos los dias.",
+  "version": "0.2",
   "last_updated": "2026-05-11",
-  "positioning": "<TODO_KICKOFF>",
+  "positioning": "Consultoria de organizacion, eficientizacion operativa y liderazgo para PyMEs y duenos de empresa. Foco en planta operativa, procesos repetitivos, definicion de roles, y formacion del lider que la empresa necesita. No es coaching motivacional ni libros de Tony Robbins: es trabajo de campo sobre la operacion real del negocio. El cliente sale con sistemas que funcionan sin el dueno encima 14 horas por dia.",
   "colors": {
     "primary": {
       "hex": "#D42027",
@@ -250,78 +250,97 @@
   },
   "tone_of_voice": {
     "principles": [
-      "Formal pero cercano, nunca distante ni frio",
-      "Voseo argentino siempre, pero con registro profesional (no juvenil)",
-      "Sin emojis jamas",
-      "Frases concisas y con peso, cada palabra cuenta",
-      "Hablar desde la autoridad de años de mercado, no desde la necesidad de probar nada",
-      "High ticket framing: las propiedades que manejan son premium y el tono lo refleja",
-      "Datos concretos mejor que adjetivos vacios (en vez de 'excelente ubicacion', decir 'a 2 cuadras de Av. Libertador')",
-      "Usar terminos del rubro con naturalidad (captacion, operacion, tasacion, comision, exclusiva)",
-      "Confianza silenciosa: no gritar que sos el mejor, demostrarlo con datos y trayectoria",
-      "Cuando se habla al inversor, usar lenguaje de rendimiento y oportunidad (rentabilidad, m2, ticket, plusvalia)"
+      "Directo y operativo. Voseo argentino profesional.",
+      "Lenguaje empresarial sin corporate speak. Hablar como duenos de PyME entre si, no como gerentes de multinacional.",
+      "ROI primero: cada concepto se ancla en consecuencia concreta para la operacion (tiempo, plata, dolor de cabeza).",
+      "Sin emojis jamas.",
+      "Sin frases motivacionales vacias. Cero 'transforma tu vida', 'rompe tus limites', 'cambia tu mindset'.",
+      "Datos y casos antes que adjetivos: 'planta de 12 personas que paso de 60 a 35 horas semanales del dueno' es mas fuerte que 'aumentamos la eficiencia'.",
+      "Vocabulario PyME: planta, procesos, roles, organigrama, indicadores, margen, rotacion, capacidad ociosa, cuello de botella.",
+      "Honestidad operativa: si el problema del cliente es que delega mal, se lo decimos. No vendemos humo.",
+      "Cuando se habla al dueno, framing de tiempo y libertad (cuantas horas le devuelve la consultoria, cuanto deja de hacer el).",
+      "Cuando se habla al gerente, framing de control (que pasa cuando el dueno no esta, indicadores que se monitorean)."
     ],
     "forbidden_words": [
-      "sona con",
-      "hogar de tus suenos",
-      "hacemos realidad",
-      "te acompanamos en cada paso",
+      "transforma tu vida",
+      "transforma tu negocio",
+      "transformacion total",
+      "cambia tu mindset",
+      "mindset ganador",
+      "rompe tus limites",
+      "salir de la zona de confort",
+      "creer es crear",
+      "tu mejor version",
+      "manifesta tu exito",
+      "abundancia",
+      "alinea tus chakras",
+      "elevar tu vibracion",
+      "secretos que nadie te conto",
+      "el unico metodo que",
+      "guru",
+      "mentor de vida",
       "veni a conocernos",
       "calidad humana",
-      "calidez",
-      "sabor familiar",
+      "calidez familiar",
       "unico e irrepetible",
       "oportunidad unica",
-      "70 años",
-      "70 anos",
-      "desde 1956",
-      "decadas de",
-      "decadas en el mercado",
-      "X años de trayectoria",
-      "X anos de experiencia",
-      "tradicion de generaciones",
-      "mas de medio siglo"
+      "ultima oportunidad",
+      "solo por hoy",
+      "ultimas vacantes",
+      "promo limitada",
+      "descuento especial"
     ],
     "preferred_words": [
-      "trayectoria",
-      "mercado",
-      "operacion",
-      "tasacion",
+      "planta operativa",
+      "procesos",
+      "roles",
+      "organigrama",
+      "indicadores",
+      "KPIs",
+      "margen",
       "rentabilidad",
-      "m2 cubiertos",
-      "ticket",
-      "exclusiva",
-      "captacion",
-      "valuacion",
-      "zona premium",
-      "inversor",
-      "plusvalia"
+      "rotacion",
+      "capacidad ociosa",
+      "cuello de botella",
+      "delegacion",
+      "liderazgo operativo",
+      "toma de decisiones",
+      "rentabilidad operativa",
+      "horas trabajadas",
+      "costo hora",
+      "consultoria",
+      "diagnostico",
+      "implementacion",
+      "PyME",
+      "empresa familiar",
+      "dueno de empresa",
+      "gerencia",
+      "mando medio"
     ],
     "hook_frameworks": {
-      "authority": {
-        "description": "Hablar desde la posicion de autoridad y conocimiento profundo del mercado argentino. Sin citar antiguedad explicita ni trayectoria temporal — la autoridad se demuestra con la lectura del mercado, no con cuantos años se lleva en el.",
-        "example": "El mercado vio caer a muchas inmobiliarias que no se adaptaron al ciclo. Estas son las 3 senales que las definen."
+      "dolor_operativo": {
+        "description": "Nombrar la situacion concreta del dueno de PyME: trabaja 14 horas, no puede irse de vacaciones, todo depende de el. El cliente se ve reflejado.",
+        "example": "Llevas 8 años con la empresa y todavia no podes faltar 3 dias seguidos sin que algo se prenda fuego. No sos vos. Es la planta."
       },
-      "data_driven": {
-        "description": "Abrir con un dato duro que genere interes.",
-        "example": "El m2 en Belgrano subio 12% en 6 meses. Y la mayoria de los propietarios no se entero."
+      "autoridad_caso": {
+        "description": "Abrir con un caso real anonimizado: empresa de N personas, problema X, resultado Y. Demuestra conocimiento operativo.",
+        "example": "Planta metalurgica de 18 personas. El dueno trabajaba 70 horas semanales. Lo bajamos a 35 en 4 meses sin perder facturacion."
       },
-      "market_truth": {
-        "description": "Decir algo que el mercado sabe pero nadie dice en voz alta.",
-        "example": "Publicar tu propiedad en 5 portales no es una estrategia. Es tirar plata."
+      "verdad_dura": {
+        "description": "Decir lo que el rubro coaching no dice: la mayoria de los problemas operativos no se resuelven con motivacion, se resuelven con sistemas.",
+        "example": "La mayoria de los duenos de PyME no necesitan un coach motivacional. Necesitan dejar de hacer 5 trabajos al mismo tiempo."
       }
     },
     "narrative_structure": {
-      "name": "Estructura Achaval",
+      "name": "Estructura Brain - Consultoria PyME",
       "steps": [
-        "DATO/AUTORIDAD",
-        "PROBLEMA DE MERCADO",
-        "VISION EXPERTA",
-        "PRUEBA/CTA"
+        "DOLOR OPERATIVO",
+        "CONSECUENCIA EN EL DUENO",
+        "DIAGNOSTICO",
+        "RESULTADO MEDIBLE"
       ],
-      "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
-    },
-    "_kickoff_note": "Heredado de toribio_achaval template. Revisar forbidden_words/preferred_words y ajustar al cliente real antes de validar tono."
+      "description": "Variante del metodo DV adaptada a consultoria B2B. Arranca desde un dolor operativo concreto del dueno de PyME, expone como ese dolor le come tiempo y plata, propone un diagnostico (no una solucion magica) y cierra con un resultado medible (horas devueltas, margen mejorado, capacidad de ausentarse)."
+    }
   },
   "logo": {
     "main_file": "assets/toribio_achaval/logo.png",
@@ -339,8 +358,8 @@
       "size_in_carousel_cta": "height: 48px en slide CTA cuadrado 1080x1080",
       "placement_in_carousel": "Solo en el ultimo slide (CTA), abajo izquierda. Nunca en slides intermedios."
     },
-    "path": "<TODO_KICKOFF>",
-    "url": "<TODO_KICKOFF>"
+    "path": "Drive: link en logo.url - pendiente descarga local",
+    "url": "https://drive.google.com/file/d/1N_utrddEkILJUYou3OudNoOy_3PkF-eD/view"
   },
   "references": {},
   "meta_ads": {
@@ -378,5 +397,21 @@
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
       "_note_template": "Template compartido con digital_view."
     }
-  }
+  },
+  "_brand_notes": {
+    "rubro": "FUERA DE INMOBILIARIO. Es consultoria B2B PyMEs.",
+    "servicios": "Organizacion de planta, eficientizacion del trabajo, liderazgo, coaching empresarial operativo.",
+    "target": "Duenos de PyME, gerentes operativos. Cliente B2B.",
+    "differential": "Trabajo de campo sobre la operacion real (no coaching motivacional, no libros).",
+    "pending_visual_identity": "Verificar paleta y tipografias con cliente. Colors heredo de toribio_achaval - revisar.",
+    "industry_warning": "NO ofrecer workflows inmobiliarios. Coordinador y agentes creativos deben respetar excluded_workflows antes de invocar skills."
+  },
+  "industry": "consulting_b2b",
+  "excluded_workflows": [
+    "real_estate_carousel",
+    "property_video",
+    "brief_pauta_inmobiliaria",
+    "meta_ad_zona_caba_gba",
+    "kickoff_inmobiliaria_template"
+  ]
 }

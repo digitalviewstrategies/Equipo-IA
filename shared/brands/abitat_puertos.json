@@ -1,351 +1,274 @@
 {
   "brand_id": "abitat_puertos",
   "brand_name": "Abitat Puertos",
-  "brand_tagline": "<TODO_KICKOFF>",
-  "version": "0.1",
+  "brand_tagline": "Bienes Raices",
+  "version": "0.2",
   "last_updated": "2026-05-11",
-  "positioning": "<TODO_KICKOFF>",
+  "positioning": "Inmobiliaria con servicio de home staging en Puertos del Lago, Nordelta y Zona Norte. Branding fuerte, estetica cuidada, vende lifestyle y diseno. Se diferencia por el home staging como herramienta de venta real, no como decoracion.",
   "colors": {
     "primary": {
-      "hex": "#D42027",
-      "name": "Achaval Red",
-      "usage": "Color insignia de la marca. Extraido del logo. Se usa en slides de apertura (hook), CTAs principales, highlights de datos clave y elementos que necesiten impacto visual. Es el unico color de personalidad de la marca."
+      "hex": "#4A5A3C",
+      "name": "Olive Green",
+      "usage": "Color principal extraido del logo (fondo verde oliva del logo Abitat). Fondos de slides principales, hooks y CTA."
     },
     "dark": {
-      "hex": "#0D0D0D",
-      "name": "Near Black",
-      "usage": "Fondos de slides de narrativa pesada: dolor, consecuencia, CTA final. Transmite peso institucional y seriedad. Tambien para texto principal sobre fondos claros."
+      "hex": "#1A2418",
+      "name": "Forest Dark",
+      "usage": "Fondos de slides de narrativa oscura. Verde muy oscuro casi negro, derivado del fondo del perfil de Instagram."
     },
     "accent_primary": {
-      "hex": "#2C2C2C",
-      "name": "Graphite",
-      "usage": "Color de acento estructural. Fondos alternativos a negro puro para dar profundidad sin monotonia. Subtitulos, separadores, elementos secundarios sobre fondos claros. No es un color de 'destaque' sino de jerarquia intermedia."
+      "hex": "#D4C5A9",
+      "name": "Sand",
+      "usage": "Arena/beige calido que complementa el verde oliva. Derivado de los tonos calidos del feed. Para datos destacados, lineas y acentos."
     },
     "accent_secondary": null,
     "light": {
-      "hex": "#F5F5F5",
-      "name": "Light Gray",
-      "usage": "Fondos de slides de respiro (solucion, datos informativos). Rompe el ritmo de los fondos oscuros. Texto principal en dark sobre este fondo."
+      "hex": "#F5F3EE",
+      "name": "Warm Cream",
+      "usage": "Fondos claros con tinte crema calido. Refleja la estetica de interiorismo y home staging."
     },
     "gray": {
-      "hex": "#6B7280",
-      "name": "Gray",
-      "usage": "Texto secundario, numeracion de slides (02/06), metadata, subtitulos menores, datos complementarios."
+      "hex": "#8A8A7A",
+      "name": "Warm Gray",
+      "usage": "Texto secundario, metadata, numeracion de slides."
     },
     "white": {
       "hex": "#FFFFFF",
       "name": "White",
-      "usage": "Texto sobre fondos oscuros (negro, grafito, rojo). Tambien para fondos limpios cuando se necesita maxima limpieza."
+      "usage": "Texto sobre fondos oscuros. Tipografia del logo es blanca/crema sobre verde."
     }
   },
   "color_distribution_rules": {
-    "description": "Distribucion de colores de fondo en un carrusel de 6 slides para Toribio Achaval. El rojo aparece con autoridad pero sin saturar. Los fondos oscuros dominan la narrativa. El gris claro da respiro.",
+    "description": "Paleta organica y aspiracional. El verde oliva es la firma de marca, los tonos arena y crema dan calidez de interiorismo. La estetica tiene que sentirse como un showroom, no como un aviso clasificado.",
     "carousel_6_slides": {
-      "slide_1_hook": "primary (rojo Achaval)",
-      "slide_2_dolor": "dark (negro)",
-      "slide_3_consecuencia": "accent_primary (grafito)",
-      "slide_4_solucion": "light (gris claro)",
-      "slide_5_prueba": "dark (negro) con dato destacado en rojo",
-      "slide_6_cta": "primary (rojo Achaval)"
-    },
-    "red_appearances_max": 2,
-    "graphite_vs_black": "Alternar entre negro y grafito para evitar monotonia en slides consecutivos oscuros"
+      "slide_1_hook": "primary (olive green) con texto white",
+      "slide_2_dolor": "dark (forest dark)",
+      "slide_3_consecuencia": "dark (forest dark) con acento sand",
+      "slide_4_solucion": "light (warm cream) con texto dark",
+      "slide_5_prueba": "primary (olive green) con dato en sand o white",
+      "slide_6_cta": "dark (forest dark) con CTA en sand"
+    }
   },
   "typography": {
     "primary": {
-      "family": "Plus Jakarta Sans",
-      "google_font_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+      "family": "DM Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap",
       "weights": {
         "headline": 800,
         "subheadline": 700,
-        "body_bold": 600,
+        "body_bold": 700,
         "body": 500,
         "caption": 400
       },
-      "usage": "Tipografia principal para todo: headlines, cuerpo, subtitulos. ExtraBold (800) para titulares, Medium (500) para cuerpo. Sans-serif geometrica que combina presencia institucional con limpieza contemporanea."
+      "usage": "Tipografia principal para cuerpo y subtitulos. ExtraBold (800) para titulares, Medium (500) para cuerpo."
     },
     "display": {
-      "family": "Space Grotesk",
-      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "family": "Playfair Display",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap",
       "weights": {
         "number": 700
       },
-      "usage": "Solo para numeros grandes destacados (USD 350.000, 70 anos, 15.000 m2). Aporta contraste tipografico editorial sin romper la sobriedad."
-    },
-    "mono": {
-      "family": "JetBrains Mono",
-      "google_font_url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap",
-      "weights": {
-        "label": 500,
-        "metadata": 400,
-        "emphasis": 700
-      },
-      "usage": "Tipografia secundaria para metadata editorial: tags estructurales (MERCADO MAYO 2026), kickers (RETORNO DEL FINANCIAMIENTO), numeracion de pagina (04 / 07), labels de columnas (TASA PROMEDIO), pies de pagina. Aporta el aire de informe financiero/editorial premium tipo Monocle / FT Weekend. Nunca para headlines o body principal."
+      "usage": "Serif elegante para titulares hero y numeros destacados. Refleja el estilo editorial del logo serif de Abitat. Usar con moderacion: solo en slides de alto impacto."
     }
   },
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
-    "headline_occupies": "minimo 50% del slide en altura",
-    "letter_spacing_headlines": "-2px a -4px (tight pero no extremo)",
-    "line_height_headlines": 0.92,
-    "body_min_size_px": 24,
-    "body_max_size_px": 40,
+    "letter_spacing_headlines": "-1px a -3px",
+    "line_height_headlines": 0.94,
     "never_use_italic": true,
-    "never_use_underline": true,
     "never_use_more_than_2_fonts_per_piece": true,
-    "uppercase_headlines": "Permitido y recomendado para hooks y CTAs. Usar con moderacion en slides intermedios."
+    "uppercase_headlines": "Solo en CTAs. Los headlines van en sentence case o title case para mantener la elegancia."
   },
   "visual_style": {
     "keywords": [
-      "corporate premium",
-      "sobrio",
-      "institucional contemporaneo",
-      "contrastes duros",
-      "editorial limpio",
-      "autoridad visual"
+      "aspiracional",
+      "lifestyle",
+      "home staging",
+      "editorial",
+      "organico",
+      "diseno de interiores",
+      "premium calido"
     ],
     "do": [
-      "Tipografia grande y bold que domine el slide, minimo 50% de la altura",
-      "Contraste maximo: fondo solido + 1 color de texto + rojo como unico acento",
-      "Espacio negativo generoso, dejar que la pieza respire",
-      "Un solo mensaje por slide, claro y directo",
-      "Usar uppercase en headlines de hook y CTA para transmitir autoridad",
-      "Numeros gigantes cuando hay datos duros (anos, metros, precio)",
-      "Composiciones centradas o con alineacion fuerte a la izquierda",
-      "Lineas separadoras finas y limpias cuando se necesite estructura",
-      "Fotografias de propiedades de alta calidad, sin filtros excesivos",
-      "Logo solo en el ultimo slide, limpio y con espacio alrededor",
-      "Mezclar weights tipograficos en un mismo headline (300 thin + 800 extrabold) para jerarquia editorial brutal",
-      "Foto de propiedad real como background en slides hook, narrativos y CTA — siempre con overlay degradado oscuro + grain svg",
-      "Stamps editoriales pequeños rotados -1.5deg (tipo 'N° 01 / SERIE MAYO') para romper simetria sin caer en informal",
-      "JetBrains Mono para metadata: tags, kickers, page numbers, labels de columna, pies de pagina"
+      "Fotos de alta calidad de propiedades con home staging (antes y despues son oro)",
+      "Tipografia con mezcla sutil de serif (display) y sans-serif (cuerpo)",
+      "Fondos que respiren, mucho espacio negativo",
+      "Estetica de revista de arquitectura/diseno",
+      "Tonos calidos y organicos en toda la paleta",
+      "Logo en el ultimo slide",
+      "Mostrar el valor del home staging con evidencia visual",
+      "Layouts limpios, asimetria elegante"
     ],
     "dont": [
-      "Gradientes de colores multiples",
-      "Emojis o iconos cute",
-      "Tipografias decorativas, script o handwritten",
-      "Drop shadows exagerados o efectos 3D",
-      "Mas de 2 tipografias en una sola pieza",
-      "Paletas pasteles, dorado cliche, tierra",
-      "Rotaciones agresivas (>3deg) o layouts caoticos. Permitido: rotacion sutil de stamps editoriales hasta -1.5deg.",
-      "Scribbles, anotaciones a mano alzada o elementos que parezcan informales",
-      "Fotos con filtros saturados o HDR exagerado",
-      "Textos largos que llenen el slide",
-      "Frases como 'sona con tu hogar', 'te acompanamos', 'hacemos realidad tus suenos'",
-      "Usar el rojo en mas de 2 slides por carrusel",
-      "Marcos o bordes decorativos",
-      "Mencionar antiguedad explicita en piezas top-funnel ('70 años', 'desde 1956', 'decadas de'). La autoridad se demuestra con lectura de mercado, no con cifra de años."
-    ],
-    "aesthetic": {
-      "name": "editorial_cinematografico",
-      "description": "Direccion estetica establecida para Toribio: editorial premium con vibe cinematografico, inspirada en Monocle, Cereal Magazine, FT Weekend, The Gentleman's Journal. Mucho aire negativo, jerarquia tipografica brutal mezclando weights 300 (thin) con 800 (extrabold). Rojo Achaval como acento quirurgico (jamas como fondo masivo en slides de datos). Fotos de propiedades reales como hero en slides puntuales con overlay degradado oscuro + grain svg. Lineas finas estructurales (1px graphite) que delimitan zonas. Sin rotaciones agresivas — solo stamps editoriales rotados sutilmente (-1.5deg). NO es PowerPoint corporativo, NO es FT puro frio, NO es minimalista plano: es la mezcla.",
-      "inspiration": [
-        "Monocle",
-        "Cereal Magazine",
-        "FT Weekend",
-        "The Gentleman's Journal"
-      ],
-      "trend_alignment": "Combina Blueprint Design (anotaciones tecnicas, mini-grids, mono labels) con Grainy Blur (foto cinematografica con grain svg) — ambos del Kittl 2026 Design Trends Report.",
-      "anti_patterns": [
-        "PowerPoint corporativo (texto centrado, simetrico, sin jerarquia)",
-        "Tipografia un solo peso (todo 700 o todo 400)",
-        "Fotos sin overlay sobre las que se pone texto (ilegible)",
-        "Rojo como fondo masivo de slides con datos (compite con los numeros)",
-        "Stock photos genericas (familia feliz frente a casa)"
-      ]
-    },
-    "photo_overlays": {
-      "description": "Valores rgba exactos del overlay degradado (linear-gradient 180deg) por tipo de slide. Probados y validados en pieza #1 mayo 2026.",
-      "hook_lifestyle": {
-        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.15) 0%, rgba(13,13,13,0.30) 35%, rgba(13,13,13,0.85) 100%)",
-        "use_when": "Slide 1 (hook) con foto premium (pileta, jardin, exterior) que vale la pena mostrar. Foto se ve clarito arriba, headline legible abajo donde se intensifica el degrade."
-      },
-      "narrative_atmospheric": {
-        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.45) 0%, rgba(13,13,13,0.65) 50%, rgba(13,13,13,0.88) 100%)",
-        "use_when": "Slide intermedio narrativo con foto atmosferica (fachada otonal, paisaje urbano). Foto como mood, no como hero. Texto domina."
-      },
-      "cta_cinematic": {
-        "gradient": "linear-gradient(180deg, rgba(13,13,13,0.20) 0%, rgba(13,13,13,0.65) 60%, rgba(13,13,13,0.92) 100%)",
-        "use_when": "Slide final (CTA) con foto de propiedad. Foto visible arriba para anclaje emocional, copy + logo Toribio dominante abajo."
-      },
-      "grain_overlay": {
-        "svg": "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>\")",
-        "css": "opacity: 0.18; mix-blend-mode: overlay;",
-        "use_when": "Sumar a TODOS los slides con foto. Aporta textura analogica que rompe el digital sterile."
-      }
-    }
+      "Estetica agresiva de performance o de urgencia",
+      "Colores frios, neon o tech",
+      "Tipografias blocky o ultra heavy",
+      "Emojis o iconos",
+      "Frases cliche inmobiliarias",
+      "Fotos de propiedades sin staging (va contra la marca)",
+      "Layouts recargados o con demasiados elementos",
+      "Perder la estetica aspiracional en el camino a la conversion",
+      "Drop shadows, gradientes, efectos 3D"
+    ]
   },
   "layouts": {
     "carousel_square": {
       "width_px": 1080,
       "height_px": 1080,
-      "safe_margin_px": 80,
-      "description": "Carrusel para feed de Instagram.",
-      "photo_distribution": {
-        "description": "Distribucion validada de slides con foto vs sin foto en carrusel de 7 slides. Alternancia para que las fotos no saturen y los datos respiren.",
-        "slides_with_photo": [
-          1,
-          3,
-          7
-        ],
-        "slides_without_photo": [
-          2,
-          4,
-          5,
-          6
-        ],
-        "rationale": {
-          "slide_1": "Hook con foto lifestyle (pileta, exterior aspiracional) — punch visual de apertura",
-          "slide_3": "Slide narrativo con foto atmosferica (fachada otonal) — sostiene el mood",
-          "slide_7": "CTA con foto de propiedad + overlay cinematografico — cierre emocional + logo",
-          "slides_sin_foto": "Datos (variables, KPIs, comparativas) sobre fondos planos paper/light/dark para que los numeros respiren"
-        },
-        "photo_overlay_per_slide": {
-          "1": "hook_lifestyle",
-          "3": "narrative_atmospheric",
-          "7": "cta_cinematic"
-        }
-      }
-    },
-    "carousel_vertical": {
-      "width_px": 1080,
-      "height_px": 1350,
-      "safe_margin_px": 80,
-      "description": "Carrusel vertical para feed (ocupa mas pantalla en mobile)."
+      "safe_margin_px": 80
     },
     "meta_ad_square": {
       "width_px": 1080,
       "height_px": 1080,
-      "safe_margin_px": 80,
-      "description": "Creativo para Meta Ads feed."
+      "safe_margin_px": 80
     },
     "meta_ad_vertical": {
       "width_px": 1080,
       "height_px": 1920,
-      "safe_margin_px": 100,
-      "description": "Creativo para Meta Ads stories y reels. Dejar 20% libre en top y bottom.",
-      "safe_top_percent": 20,
-      "safe_bottom_percent": 20
+      "safe_margin_px": 100
     },
     "property_card_square": {
       "width_px": 1080,
       "height_px": 1080,
-      "safe_margin_px": 60,
-      "description": "Placa de propiedad cuadrada."
+      "safe_margin_px": 60
     },
     "property_card_vertical": {
       "width_px": 1080,
       "height_px": 1350,
-      "safe_margin_px": 60,
-      "description": "Placa de propiedad vertical."
+      "safe_margin_px": 60
     },
     "flyer_a4": {
       "width_px": 2480,
       "height_px": 3508,
       "safe_margin_px": 200,
-      "dpi": 300,
-      "description": "Flyer A4 a 300dpi para imprimir o mandar por WhatsApp."
+      "dpi": 300
     }
   },
   "tone_of_voice": {
     "principles": [
-      "Formal pero cercano, nunca distante ni frio",
-      "Voseo argentino siempre, pero con registro profesional (no juvenil)",
-      "Sin emojis jamas",
-      "Frases concisas y con peso, cada palabra cuenta",
-      "Hablar desde la autoridad de años de mercado, no desde la necesidad de probar nada",
-      "High ticket framing: las propiedades que manejan son premium y el tono lo refleja",
-      "Datos concretos mejor que adjetivos vacios (en vez de 'excelente ubicacion', decir 'a 2 cuadras de Av. Libertador')",
-      "Usar terminos del rubro con naturalidad (captacion, operacion, tasacion, comision, exclusiva)",
-      "Confianza silenciosa: no gritar que sos el mejor, demostrarlo con datos y trayectoria",
-      "Cuando se habla al inversor, usar lenguaje de rendimiento y oportunidad (rentabilidad, m2, ticket, plusvalia)"
+      "Aspiracional pero tangible: no vende fantasia, vende diseno con proposito",
+      "Voseo argentino suave, registro sofisticado",
+      "Sin emojis",
+      "El home staging es la estrella, no solo la propiedad",
+      "Habla de estilo de vida sin caer en cliches de lifestyle",
+      "Datos de mercado cuando suman, no por default",
+      "La estetica comunica tanto como las palabras",
+      "Nunca sonar como inmobiliaria generica ni como agente individual"
     ],
     "forbidden_words": [
       "sona con",
       "hogar de tus suenos",
-      "hacemos realidad",
-      "te acompanamos en cada paso",
-      "veni a conocernos",
-      "calidad humana",
-      "calidez",
-      "sabor familiar",
-      "unico e irrepetible",
+      "te acompanamos",
+      "imperdible",
       "oportunidad unica",
-      "70 años",
-      "70 anos",
-      "desde 1956",
-      "decadas de",
-      "decadas en el mercado",
-      "X años de trayectoria",
-      "X anos de experiencia",
-      "tradicion de generaciones",
-      "mas de medio siglo"
+      "calidad humana",
+      "llave en mano"
     ],
     "preferred_words": [
-      "trayectoria",
-      "mercado",
-      "operacion",
-      "tasacion",
-      "rentabilidad",
-      "m2 cubiertos",
-      "ticket",
-      "exclusiva",
-      "captacion",
-      "valuacion",
-      "zona premium",
-      "inversor",
-      "plusvalia"
+      "home staging",
+      "diseno",
+      "presentacion",
+      "lifestyle",
+      "propiedad",
+      "espacios",
+      "valor percibido",
+      "conversion",
+      "primera impresion",
+      "Puertos",
+      "Nordelta"
     ],
     "hook_frameworks": {
-      "authority": {
-        "description": "Hablar desde la posicion de autoridad y conocimiento profundo del mercado argentino. Sin citar antiguedad explicita ni trayectoria temporal — la autoridad se demuestra con la lectura del mercado, no con cuantos años se lleva en el.",
-        "example": "El mercado vio caer a muchas inmobiliarias que no se adaptaron al ciclo. Estas son las 3 senales que las definen."
+      "negacion": {
+        "description": "Romper la creencia de que una propiedad se vende sola.",
+        "example": "Tu propiedad no se vende por las fotos. Se vende por como la presentas."
       },
-      "data_driven": {
-        "description": "Abrir con un dato duro que genere interes.",
-        "example": "El m2 en Belgrano subio 12% en 6 meses. Y la mayoria de los propietarios no se entero."
+      "empatia": {
+        "description": "Conectar con el dueno que no entiende por que su propiedad no genera interes.",
+        "example": "Publicaste tu propiedad hace 4 meses, las fotos estan buenas, pero nadie llama. Te suena?"
       },
-      "market_truth": {
-        "description": "Decir algo que el mercado sabe pero nadie dice en voz alta.",
-        "example": "Publicar tu propiedad en 5 portales no es una estrategia. Es tirar plata."
+      "verdad_incomoda": {
+        "description": "Decir algo sobre la presentacion de propiedades que nadie dice.",
+        "example": "El comprador decide en los primeros 8 segundos. Y tu propiedad esta perdiendo esa carrera."
       }
     },
+    "disruption_scale": 3,
     "narrative_structure": {
-      "name": "Estructura Achaval",
+      "name": "Metodo Abitat",
       "steps": [
-        "DATO/AUTORIDAD",
-        "PROBLEMA DE MERCADO",
-        "VISION EXPERTA",
-        "PRUEBA/CTA"
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
       ],
-      "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
+      "description": "Variante visual del metodo DV. El dolor es la propiedad que no convierte pese a estar bien ubicada. La consecuencia es perder tiempo y bajar precio. La solucion es el home staging profesional. La prueba es el antes/despues con datos de conversion."
+    }
+  },
+  "content_pillars": [
+    {
+      "name": "Home staging como diferencial",
+      "percentage": 35,
+      "description": "Antes y despues, proceso de staging, impacto en la venta. El pilar central de la marca.",
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
-    "_kickoff_note": "Heredado de toribio_achaval template. Revisar forbidden_words/preferred_words y ajustar al cliente real antes de validar tono."
+    {
+      "name": "Propiedades en cartera",
+      "percentage": 30,
+      "description": "Showcase de propiedades con staging en Puertos, Nordelta y Zona Norte. Estetica premium, datos claros.",
+      "formats": [
+        "placa de propiedad",
+        "video corto",
+        "carrusel"
+      ]
+    },
+    {
+      "name": "Educacion sobre venta y presentacion",
+      "percentage": 20,
+      "description": "Tips para propietarios: como preparar tu propiedad, errores de presentacion, que buscan los compradores premium.",
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
+    },
+    {
+      "name": "Lifestyle Zona Norte premium",
+      "percentage": 15,
+      "description": "Contenido de estilo de vida en Puertos, Nordelta: la zona, las amenities, la vida cotidiana. Vende el barrio, no solo la casa.",
+      "formats": [
+        "video corto",
+        "stories"
+      ]
+    }
+  ],
+  "target_audience": {
+    "primary": "Propietarios de Puertos del Lago, Nordelta y Zona Norte con propiedades de USD 300k promedio que quieren vender rapido y al mejor precio.",
+    "secondary": "Compradores de segmento premium que buscan propiedades con presentacion impecable en countries y barrios cerrados de Zona Norte.",
+    "pain_points": [
+      "Tienen una propiedad linda pero las fotos no le hacen justicia",
+      "Llevan meses publicados y las visitas no convierten",
+      "No saben como presentar la propiedad para maximizar el valor percibido",
+      "La competencia en Puertos/Nordelta es feroz y su propiedad se pierde entre las demas",
+      "Les da miedo bajar el precio pero no saben que mas hacer"
+    ],
+    "desires": [
+      "Que su propiedad se destaque entre la competencia de la zona",
+      "Vender al precio que la propiedad merece, no por debajo",
+      "Una presentacion profesional que genere impacto desde la primera foto",
+      "Un equipo que entienda la estetica y el mercado de Puertos/Nordelta"
+    ]
   },
   "logo": {
-    "main_file": "assets/toribio_achaval/logo.png",
-    "variants": {
-      "white_on_dark": "assets/toribio_achaval/logo.png",
-      "dark_on_light": null
-    },
-    "min_size_px": 140,
-    "clearspace_rule": "Igual a la altura de la 'A' de Achaval en todos los lados",
-    "placement_in_carousel": "Solo en el ultimo slide (CTA), nunca en slides intermedios",
-    "usage_rules": {
-      "embedding_format": "base64 data URI inline en HTML (no referencia a path externo) — evita problemas de carga en file:// con Playwright",
-      "dark_background_filter": "filter: brightness(0) invert(1); — convierte el logo PNG (rojo + negro) a blanco puro para usarlo sobre fondos oscuros (slide CTA con foto + overlay)",
-      "light_background_use": "Logo PNG original sin filter sobre fondos paper/light",
-      "size_in_carousel_cta": "height: 48px en slide CTA cuadrado 1080x1080",
-      "placement_in_carousel": "Solo en el ultimo slide (CTA), abajo izquierda. Nunca en slides intermedios."
-    },
-    "path": "<TODO_KICKOFF>",
-    "url": "<TODO_KICKOFF>"
+    "main_file": "assets/abitat/logo.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide",
+    "url": "https://drive.google.com/file/d/1N9AmBoEqzzw_iLzGxXKwxDOiUWzixC9J/view"
   },
-  "references": {},
   "meta_ads": {
-    "page_id": "<TODO_KICKOFF>",
-    "page_name": "<TODO_KICKOFF>",
+    "page_id": "868340786360620",
+    "page_name": "Abitat",
     "ad_account_id": "act_2020269752151879"
   },
   "reporting": {
@@ -378,5 +301,12 @@
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
       "_note_template": "Template compartido con digital_view."
     }
-  }
+  },
+  "_brand_notes": {
+    "relacion": "Mismo cliente que Abitat (Nordelta). Dos ad_accounts: uno para Nordelta y uno para Puertos del Lago.",
+    "zona_especifica": "Puertos del Lago (barrio cerrado en Escobar).",
+    "identidad_compartida": "Toda la identidad de marca (tono, positioning, frameworks) se hereda de abitat.json. Cambios solo aplican si el cliente decide diferenciar.",
+    "alias_note": "Marker alias_of=abitat: comparte 100% de identidad con abitat.json. Solo difiere en ad_account_id. Si se modifica abitat.json, evaluar si replicar aca o refactorear a stub + loader merge."
+  },
+  "alias_of": "abitat"
 }

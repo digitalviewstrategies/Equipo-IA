@@ -1,10 +1,10 @@
 {
   "brand_id": "turco",
   "brand_name": "Turco",
-  "brand_tagline": "<TODO_KICKOFF>",
-  "version": "0.1",
+  "brand_tagline": "Asesor inmobiliario en CABA y Zona Norte. Operaciones que se cierran porque hay alguien atento.",
+  "version": "0.2",
   "last_updated": "2026-05-11",
-  "positioning": "<TODO_KICKOFF>",
+  "positioning": "Top producer individual con foco en propiedades residenciales de ticket estandar (USD 80k a 300k) en CABA y GBA Norte. Diferencial: atencion personal, respuesta rapida y conocimiento puntual de las zonas que opera. El cliente trata directo con Turco, no con un equipo que rota. Trato cordial pero siempre profesional - sin frases hechas, sin promesas que no se pueden cumplir, sin desaparecer despues de la firma.",
   "colors": {
     "primary": {
       "hex": "#D42027",
@@ -250,21 +250,25 @@
   },
   "tone_of_voice": {
     "principles": [
-      "Formal pero cercano, nunca distante ni frio",
-      "Voseo argentino siempre, pero con registro profesional (no juvenil)",
-      "Sin emojis jamas",
-      "Frases concisas y con peso, cada palabra cuenta",
-      "Hablar desde la autoridad de años de mercado, no desde la necesidad de probar nada",
-      "High ticket framing: las propiedades que manejan son premium y el tono lo refleja",
-      "Datos concretos mejor que adjetivos vacios (en vez de 'excelente ubicacion', decir 'a 2 cuadras de Av. Libertador')",
-      "Usar terminos del rubro con naturalidad (captacion, operacion, tasacion, comision, exclusiva)",
-      "Confianza silenciosa: no gritar que sos el mejor, demostrarlo con datos y trayectoria",
-      "Cuando se habla al inversor, usar lenguaje de rendimiento y oportunidad (rentabilidad, m2, ticket, plusvalia)"
+      "Cordial pero profesional. Voseo argentino calido sin volverse coloquial ni meterse en confianza forzada.",
+      "Directo: el cliente quiere respuestas, no rodeos. Frases cortas, datos concretos.",
+      "Sin emojis jamas (regla DV).",
+      "Personalismo: la marca es una persona, no una agencia anonima. Hablamos en primera persona singular cuando es natural.",
+      "Datos concretos sobre adjetivos: 'a 4 cuadras de la estacion de Vicente Lopez' es mas fuerte que 'excelente ubicacion'.",
+      "Honestidad operativa: si una propiedad tiene un contra (piso bajo, falta de luz natural, expensas altas), se menciona. Eso construye confianza.",
+      "Vocabulario del rubro con naturalidad (operacion, captacion, reserva, escritura, comision, exclusiva).",
+      "Cuando se habla al comprador, framing de eficiencia (cuanto tarda, cuanto cuesta, que documentacion hace falta).",
+      "Cuando se habla al vendedor/propietario, framing de transparencia (precio real de mercado, plazo realista, cuanto comision)."
     ],
     "forbidden_words": [
-      "sona con",
+      "soña con",
+      "sonar con",
       "hogar de tus suenos",
+      "hogar de tus sueños",
+      "casa de tus suenos",
+      "casa de tus sueños",
       "hacemos realidad",
+      "te acompañamos en cada paso",
       "te acompanamos en cada paso",
       "veni a conocernos",
       "calidad humana",
@@ -272,56 +276,61 @@
       "sabor familiar",
       "unico e irrepetible",
       "oportunidad unica",
-      "70 años",
-      "70 anos",
-      "desde 1956",
-      "decadas de",
-      "decadas en el mercado",
-      "X años de trayectoria",
-      "X anos de experiencia",
+      "ultima oportunidad",
+      "solo por hoy",
+      "ultimas unidades",
+      "ofertaza",
       "tradicion de generaciones",
-      "mas de medio siglo"
+      "promo limitada",
+      "descuento especial"
     ],
     "preferred_words": [
-      "trayectoria",
-      "mercado",
       "operacion",
-      "tasacion",
-      "rentabilidad",
-      "m2 cubiertos",
-      "ticket",
-      "exclusiva",
       "captacion",
+      "reserva",
+      "escritura",
+      "comision",
+      "exclusiva",
+      "tasacion",
       "valuacion",
-      "zona premium",
-      "inversor",
-      "plusvalia"
+      "ticket",
+      "zona",
+      "barrio",
+      "metro cuadrado",
+      "m2",
+      "expensas",
+      "credito hipotecario",
+      "apto credito",
+      "uso comercial",
+      "uso residencial",
+      "asesoramiento",
+      "consulta",
+      "agendar"
     ],
     "hook_frameworks": {
-      "authority": {
-        "description": "Hablar desde la posicion de autoridad y conocimiento profundo del mercado argentino. Sin citar antiguedad explicita ni trayectoria temporal — la autoridad se demuestra con la lectura del mercado, no con cuantos años se lleva en el.",
-        "example": "El mercado vio caer a muchas inmobiliarias que no se adaptaron al ciclo. Estas son las 3 senales que las definen."
+      "empatia": {
+        "description": "Nombrar el dolor del comprador o propietario antes que el resuelva tener que decirlo. Genera 'me esta entendiendo'.",
+        "example": "Ya entraste a 5 propiedades este mes y ninguna te cerro. Probablemente el problema no son las propiedades."
       },
-      "data_driven": {
-        "description": "Abrir con un dato duro que genere interes.",
-        "example": "El m2 en Belgrano subio 12% en 6 meses. Y la mayoria de los propietarios no se entero."
+      "data_concreto": {
+        "description": "Abrir con un dato puntual del mercado o de la zona que demuestre conocimiento operativo.",
+        "example": "El m2 en Vicente Lopez subio 14% en 12 meses. Lo que parecia caro hace un año hoy es el piso."
       },
-      "market_truth": {
-        "description": "Decir algo que el mercado sabe pero nadie dice en voz alta.",
-        "example": "Publicar tu propiedad en 5 portales no es una estrategia. Es tirar plata."
+      "honestidad_dura": {
+        "description": "Decir en voz alta algo que el rubro no suele decir. Posiciona al asesor como honesto antes que como vendedor.",
+        "example": "Si tu inmobiliaria te dice que tu departamento vale 30% mas que el mercado, te quiere agarrar la exclusiva, no venderlo."
       }
     },
     "narrative_structure": {
-      "name": "Estructura Achaval",
+      "name": "Estructura DV - Top Producer",
       "steps": [
-        "DATO/AUTORIDAD",
-        "PROBLEMA DE MERCADO",
-        "VISION EXPERTA",
-        "PRUEBA/CTA"
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
       ],
-      "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
-    },
-    "_kickoff_note": "Heredado de toribio_achaval template. Revisar forbidden_words/preferred_words y ajustar al cliente real antes de validar tono."
+      "description": "Variante estandar DV para top producer individual. Arranca desde un dolor concreto del comprador o propietario, expone la consecuencia de no resolverlo, presenta la solucion (asesoria personal) y cierra con prueba concreta (testimonios, operaciones cerradas, casos reales). CTA directo: agendar 15 min."
+    }
   },
   "logo": {
     "main_file": "assets/toribio_achaval/logo.png",
@@ -339,8 +348,8 @@
       "size_in_carousel_cta": "height: 48px en slide CTA cuadrado 1080x1080",
       "placement_in_carousel": "Solo en el ultimo slide (CTA), abajo izquierda. Nunca en slides intermedios."
     },
-    "path": "<TODO_KICKOFF>",
-    "url": "<TODO_KICKOFF>"
+    "path": "Drive: link en logo.url - pendiente descarga local",
+    "url": "https://drive.google.com/file/d/1paWQdcOhahOWgqpNp99mxgiuOz84JVys/view"
   },
   "references": {},
   "meta_ads": {
@@ -378,5 +387,12 @@
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
       "_note_template": "Template compartido con digital_view."
     }
+  },
+  "_brand_notes": {
+    "team": "Top producer individual / equipo chico (1-3).",
+    "zona": "CABA + GBA Norte (corredor estandar).",
+    "ticket_rango_usd": "80.000 a 300.000",
+    "differential": "Atencion personal directa, respuesta rapida, conocimiento puntual de barrios donde opera.",
+    "pending_visual_identity": "Verificar paleta de colores y tipografias reales con Turco. Colors heredo de toribio_achaval."
   }
 }
