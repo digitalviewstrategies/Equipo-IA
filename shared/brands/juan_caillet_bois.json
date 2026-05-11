@@ -268,6 +268,38 @@
   },
   "meta_ads": {
     "page_id": "1045795365278139",
-    "page_name": "Juan Caillet-Bois"
+    "page_name": "Juan Caillet-Bois",
+    "ad_account_id": "act_1628948458301436"
+  },
+  "reporting": {
+    "canva": {
+      "design_id": "DAHJST8I9jk",
+      "edit_url": "https://www.canva.com/d/YWg0J0RdqJHBj7k",
+      "view_url": "https://www.canva.com/d/6hwXsAaDg_cNbVa",
+      "brand_kit_id": "kAG5K4yPkig",
+      "page_count": 5,
+      "pages": [
+        "PBzlQzW1Y1RXnfy6",
+        "PBwl3HMm5mTSNNVV",
+        "PBf5mNQFz0sgSsVF",
+        "PBnl9kSZnFR9TxMN",
+        "PBvYsXKtJcngHdKb"
+      ],
+      "elements": {
+        "cliente_subtitle": "PBzlQzW1Y1RXnfy6-LBHnHW0ks3G0zCHp",
+        "GASTO": "PBwl3HMm5mTSNNVV-LBrQ2hvyVJqfW1bP-LBXTpCZ9QV2gHGFh",
+        "LEADS": "PBwl3HMm5mTSNNVV-LB6S3f0y6PmSpDXQ-LB2dmqL7BTbXR01W",
+        "DELTA_LEADS": "PBwl3HMm5mTSNNVV-LBbb26RbXdHKDZ9L-LBX1cfzDwFJWQFLc",
+        "CPL": "PBf5mNQFz0sgSsVF-LBGnyfhCdDxKx5Hw-LB8lY1C7CPjKT62C",
+        "CTR": "PBf5mNQFz0sgSsVF-LBdYPdwKDsc5vgL2-LBnpmTSCLyllpfYy",
+        "ALCANCE": "PBf5mNQFz0sgSsVF-LB5jDsr44hGPknYv-LBxZjczBCdzkpyhJ",
+        "TOP1": "PBnl9kSZnFR9TxMN-LBLHB2rtnh3r33Dh-LBvnmkkHZLLtw6VX",
+        "TOP2": "PBnl9kSZnFR9TxMN-LBJQJfBBWzBkM8YD-LB78HdxPy2LqJQZk",
+        "TOP3": "PBnl9kSZnFR9TxMN-LB4N55sxSLwLY6jc-LB094SkyHmZC90xQ",
+        "ACCIONES": "PBnl9kSZnFR9TxMN-LB36chyT30QMkRF4-LB37w8HdYyMg7BHM"
+      },
+      "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
+      "_note_template": "Template compartido con digital_view. Cada export genera PDF con datos del cliente actual."
+    }
   }
 }

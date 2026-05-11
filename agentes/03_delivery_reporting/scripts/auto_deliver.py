@@ -12,12 +12,49 @@ No bloqueante: spawnea el subproceso y sale inmediatamente (exit 0).
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
 import time
 from datetime import datetime
 from pathlib import Path
+
+
+def _running_as_system() -> bool:
+    """True si el cron corre bajo /RU SYSTEM (sin MCP user-auth disponible)."""
+    user = (os.environ.get("USERNAME") or os.environ.get("USER") or "").upper()
+    return user in ("SYSTEM", "LOCALSYSTEM") or user.endswith("$")
+
+
+def _notify_user_to_run_manual(cliente: str, tipo: str, file_path: str) -> None:
+    """Cuando corremos como SYSTEM, no podemos spawnear claude con MCP.
+    Avisamos a Elias para que corra el skill manualmente desde su sesion."""
+    try:
+        from dotenv import load_dotenv
+        load_dotenv(DELIVERY_ROOT / ".env")
+        # Notificamos al que tiene MCP autenticado: Felipe primero, fallback Elias.
+        destinatario = os.getenv("FELIPE_WA_NUMBER") or os.getenv("ELIAS_WA_NUMBER")
+        if not destinatario:
+            log(f"NOTIFY_SKIP no FELIPE/ELIAS_WA_NUMBER for {file_path}")
+            return
+        sys.path.insert(0, str(DELIVERY_ROOT / "scripts"))
+        import wa_reportes  # type: ignore
+
+        rel = file_path.replace(str(REPO_ROOT) + os.sep, "").replace("\\", "/")
+        skill = "canva-reporte-semanal" if tipo == "semanal" else f"reporte-{tipo}"
+        msg = (
+            f"[DV] Reporte {tipo} listo para entregar\n\n"
+            f"Cliente: {cliente}\n"
+            f"Archivo: {rel}\n\n"
+            f"Para entregarlo, abri Claude en agentes/03_delivery_reporting/ y corre:\n"
+            f"/{skill} {cliente}\n\n"
+            f"(El cron corre como SYSTEM y no tiene MCP de Canva/Drive)"
+        )
+        wa_reportes.send_text(destinatario, msg)
+        log(f"NOTIFIED_MANUAL_RUN cliente={cliente} tipo={tipo} to={destinatario[-4:]}")
+    except Exception as e:
+        log(f"NOTIFY_ERROR {e}")
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
 DELIVERY_ROOT = Path(__file__).resolve().parents[1]
@@ -139,11 +176,40 @@ def trigger_for_path(file_path: str) -> bool:
             _alert_felipe_blocked(Path(file_path), sc)
         return False
 
+    # Para semanal: pipeline Python end-to-end (sin MCP, corre en SYSTEM).
+    # Render PDF + upload Drive + WA template aprobado.
+    if tipo == "semanal":
+        try:
+            sys.path.insert(0, str(DELIVERY_ROOT / "scripts"))
+            from weekly_report_deliver import deliver  # type: ignore
+            from dotenv import load_dotenv
+            load_dotenv(DELIVERY_ROOT / ".env")
+            elias_wa = os.environ.get("ELIAS_WA_NUMBER")
+            r = deliver(
+                cliente=cliente,
+                destinatario_wa=elias_wa,
+                destinatario_nombre="Elias",
+                send_wa=True,
+                upload=True,
+            )
+            log(f"DELIVERED cliente={cliente} status={r.get('status')} drive_id={r.get('pdf_drive_id')}")
+            return r.get("status") == "ok"
+        except Exception as e:
+            log(f"DELIVER_ERROR cliente={cliente} {e}")
+            return False
+
+    # Para mensual / analisis: viejo flujo (claude subprocess).
+    # Si SYSTEM, no podemos invocar claude -> notificar humano.
+    if _running_as_system():
+        log(f"SYSTEM_DETECTED skipping spawn, notifying user cliente={cliente} tipo={tipo}")
+        _notify_user_to_run_manual(cliente, tipo, file_path)
+        return True
+
     prompt = (
         f"Ejecuta /reporte-{tipo} {cliente}. "
-        f"Al terminar, enviá automáticamente el bloque WhatsApp generado a Elias usando "
+        f"Al terminar, envia automaticamente el bloque WhatsApp generado a Elias usando "
         f"`from scripts.wa_reportes import send_to_elias; send_to_elias(mensaje_wa)`. "
-        f"No pidas confirmación."
+        f"No pidas confirmacion."
     )
 
     cmd = ["claude", "-p", prompt]

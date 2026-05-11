@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<title>Reporte Semanal — {{CLIENTE_DISPLAY}}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="page">
+  <div class="bar-top"></div>
+
+  <div class="header">
+    <div class="brand">Digital View · Reporte Semanal</div>
+    <div class="period">{{PERIODO}}</div>
+  </div>
+
+  <div class="title-block">
+    <div class="eyebrow">Cliente</div>
+    <h1 class="title">{{CLIENTE_DISPLAY}}</h1>
+  </div>
+
+  <div class="section-label">Métricas de la semana</div>
+  <div class="kpi-grid">
+
+    <div class="kpi">
+      <div class="label">Gasto</div>
+      <div class="value"><span class="unit">USD</span>{{GASTO}}</div>
+      <div class="delta {{DELTA_GASTO_CLS}}">
+        <span class="arrow">{{DELTA_GASTO_ARROW}}</span>
+        <span>{{DELTA_GASTO}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+    <div class="kpi">
+      <div class="label">Leads</div>
+      <div class="value">{{LEADS}}</div>
+      <div class="delta {{DELTA_LEADS_CLS}}">
+        <span class="arrow">{{DELTA_LEADS_ARROW}}</span>
+        <span>{{DELTA_LEADS}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+    <div class="kpi">
+      <div class="label">CPL</div>
+      <div class="value"><span class="unit">USD</span>{{CPL}}</div>
+      <div class="delta {{DELTA_CPL_CLS}}">
+        <span class="arrow">{{DELTA_CPL_ARROW}}</span>
+        <span>{{DELTA_CPL}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+    <div class="kpi">
+      <div class="label">CTR</div>
+      <div class="value">{{CTR}}<span class="unit" style="margin-left:1mm">%</span></div>
+      <div class="delta {{DELTA_CTR_CLS}}">
+        <span class="arrow">{{DELTA_CTR_ARROW}}</span>
+        <span>{{DELTA_CTR}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+    <div class="kpi">
+      <div class="label">Alcance</div>
+      <div class="value">{{ALCANCE}}</div>
+      <div class="delta {{DELTA_ALCANCE_CLS}}">
+        <span class="arrow">{{DELTA_ALCANCE_ARROW}}</span>
+        <span>{{DELTA_ALCANCE}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+    <div class="kpi">
+      <div class="label">Impresiones</div>
+      <div class="value">{{IMPRESIONES}}</div>
+      <div class="delta {{DELTA_IMP_CLS}}">
+        <span class="arrow">{{DELTA_IMP_ARROW}}</span>
+        <span>{{DELTA_IMP}}</span>
+        <span class="vs">vs sem ant</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="insight">
+    <span class="pre">Insight de la semana</span>
+    {{INSIGHT}}
+  </div>
+
+  <div class="footer">
+    <div>Digital View</div>
+    <div>{{FECHA_GENERACION}}</div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="bar-top"></div>
+  <div class="header">
+    <div class="brand">Digital View · Reporte Semanal</div>
+    <div class="period">{{PERIODO}}</div>
+  </div>
+
+  <div class="section-label">Performance por creativo</div>
+  <table class="creativos">
+    <thead>
+      <tr><th>Creativo</th><th>Leads</th><th>CPL</th><th>CTR</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      {{TABLA_CREATIVOS}}
+    </tbody>
+  </table>
+
+  <div class="section-label" style="margin-top:14mm">Acciones</div>
+  <div class="actions">
+    <div class="action-col">
+      <h3>Esta semana</h3>
+      <div class="action-item"><div class="n">01</div><div class="t">{{ACCION_HECHA_1}}</div></div>
+      <div class="action-item"><div class="n">02</div><div class="t">{{ACCION_HECHA_2}}</div></div>
+      <div class="action-item"><div class="n">03</div><div class="t">{{ACCION_HECHA_3}}</div></div>
+    </div>
+    <div class="action-col">
+      <h3>Próxima semana</h3>
+      <div class="action-item"><div class="n">01</div><div class="t">{{PLAN_1}}</div></div>
+      <div class="action-item"><div class="n">02</div><div class="t">{{PLAN_2}}</div></div>
+      <div class="action-item"><div class="n">03</div><div class="t">{{PLAN_3}}</div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Digital View</div>
+    <div>{{FECHA_GENERACION}}</div>
+  </div>
+</section>
+
+</body>
+</html>

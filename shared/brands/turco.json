@@ -1,10 +1,10 @@
 {
-  "brand_id": "toribio_achaval",
-  "brand_name": "Toribio Achaval",
-  "brand_tagline": null,
-  "version": "1.1",
-  "last_updated": "2026-05-05",
-  "positioning": "Inmobiliaria premium con 70 anos de trayectoria en CABA y Zona Norte. Referente del mercado de propiedades de alto valor. Se posiciona desde la confianza institucional, la seriedad profesional y el conocimiento profundo del mercado, combinando tradicion con innovacion digital.",
+  "brand_id": "turco",
+  "brand_name": "Turco",
+  "brand_tagline": "<TODO_KICKOFF>",
+  "version": "0.1",
+  "last_updated": "2026-05-11",
+  "positioning": "<TODO_KICKOFF>",
   "colors": {
     "primary": {
       "hex": "#D42027",
@@ -320,7 +320,8 @@
         "PRUEBA/CTA"
       ],
       "description": "Variante corporate del metodo DV. En vez de arrancar desde el dolor personal, arranca desde un dato de mercado o una posicion de autoridad. La solucion se presenta como vision experta, no como venta directa."
-    }
+    },
+    "_kickoff_note": "Heredado de toribio_achaval template. Revisar forbidden_words/preferred_words y ajustar al cliente real antes de validar tono."
   },
   "logo": {
     "main_file": "assets/toribio_achaval/logo.png",
@@ -337,16 +338,15 @@
       "light_background_use": "Logo PNG original sin filter sobre fondos paper/light",
       "size_in_carousel_cta": "height: 48px en slide CTA cuadrado 1080x1080",
       "placement_in_carousel": "Solo en el ultimo slide (CTA), abajo izquierda. Nunca en slides intermedios."
-    }
+    },
+    "path": "<TODO_KICKOFF>",
+    "url": "<TODO_KICKOFF>"
   },
-  "references": {
-    "web": "https://toribioachaval.com/",
-    "description": "La web del cliente es la referencia visual principal. Estilo limpio, corporate, uso del rojo como color insignia sobre fondos blancos y negros."
-  },
+  "references": {},
   "meta_ads": {
-    "page_id": "1071510276046046",
-    "page_name": "Toribio Achaval SI",
-    "ad_account_id": "act_2390281541415930"
+    "page_id": "<TODO_KICKOFF>",
+    "page_name": "<TODO_KICKOFF>",
+    "ad_account_id": "act_1548531566381076"
   },
   "reporting": {
     "canva": {
@@ -376,7 +376,7 @@
         "ACCIONES": "PBnl9kSZnFR9TxMN-LB36chyT30QMkRF4-LB37w8HdYyMg7BHM"
       },
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
-      "_note_template": "Template compartido con digital_view. Cada export genera PDF con datos del cliente actual."
+      "_note_template": "Template compartido con digital_view."
     }
   }
 }

@@ -5,7 +5,10 @@ en formato markdown.
 
 from datetime import date
 
-from campaign_analyzer import AdAnalysis, Benchmarks, DEFAULT_BENCHMARKS
+try:
+    from campaign_analyzer import AdAnalysis, Benchmarks, DEFAULT_BENCHMARKS
+except ModuleNotFoundError:
+    from scripts.campaign_analyzer import AdAnalysis, Benchmarks, DEFAULT_BENCHMARKS
 
 
 def _metrics_table(analyses: list[AdAnalysis]) -> str:

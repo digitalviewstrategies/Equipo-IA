@@ -13,7 +13,11 @@ __pycache__/
 Thumbs.db
 credentials/
 
-# Outputs generados (PNGs, HTMLs renderizados, JSONs de copy de piezas)
+# Outputs generados (PNGs, HTMLs renderizados, JSONs de copy de piezas, PDFs de reporte)
 agentes/01_contenido/design/output/
 agentes/01_contenido/video_ai/output/
+agentes/03_delivery_reporting/outputs/
 *.status.json
+
+# Working files locales
+_tmp_dv/
