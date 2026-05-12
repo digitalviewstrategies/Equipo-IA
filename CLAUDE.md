@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Digital View — Contexto para Agentes de IA
 
 ## Identidad
@@ -9,6 +13,109 @@ Digital View (DV) es una consultora de marketing y contenido especializada en el
 - **Clientes**: duenos de agencias inmobiliarias, top producers, desarrolladores inmobiliarios
 - **Web**: digitalviewstrategies.com
 - **Instagram**: @digitalviewagency
+
+## Repositorio: arquitectura para Claude Code
+
+Este repo (`Equipo-IA/`) NO es un producto de software clasico. Es un **sistema de agentes de IA internos de DV**, organizado por las 6 fases operativas. Cada agente vive bajo `agentes/<fase>_<nombre>/` y se opera abriendo Claude Code dentro de ese subdirectorio (cada uno tiene su propio `CLAUDE.md` + `.claude/skills/`).
+
+### Layout mental
+
+```
+agentes/00_coordinador/        # Orquesta + crons (Windows Task Scheduler)
+agentes/01_contenido/          # Creative Director, Copywritter, Design, Video AI, Post Production
+agentes/02_comercial/          # Pipeline B2B/B2C, prescore leads, drafts WA
+agentes/03_delivery_reporting/ # Reporte semanal end-to-end (HTML→PDF→Drive→WA)
+agentes/04_pauta/              # Media Buyer Meta API (analyzer SCALE/KILL/ITERATE/HOLD)
+agentes/05_account_manager/    # Chatbot WA 1-1 (scaffold)
+shared/brands/<cliente>.json   # Brand system = single source of truth de tono, forbidden_words, ad_account_id, hook_frameworks
+shared/state/<cliente>.json    # State machine por cliente (recalculado cada 6h)
+shared/wa/client.py            # Cliente WhatsApp Business compartido
+.claude/agents/                # Subagents (validators + dv-project-optimizer)
+.claude/scripts/               # Hooks pre-commit, auto_approve sidecar, resolve_active_client
+docs/                          # autonomy_map.md, auto_approval_policy.md, hooks_validators_scope.md
+DV_Manual_Operativo.docx       # Manual operativo (fuente de verdad humana)
+README.md                      # Setup, comandos completos, troubleshooting (LEE ESTO PARA DETALLE)
+```
+
+### Conceptos transversales (no obvios leyendo codigo)
+
+- **Brand JSONs (`shared/brands/<cliente>.json`)**: TODOS los agentes leen este archivo dinamicamente. Es donde vive el tono real del cliente (no en el CLAUDE.md). Si vas a producir copy/hooks/guion para un cliente, leelo primero. Los validators (`tono-brand-validator`, `hook-scorer`, `guion-validator`) tambien lo leen para no estar hardcodeados a DV.
+- **Active client (`.claude/state/active_client`)**: pointer a cliente activo (archivo de una linea con `brand_id`). Usado por los validators cuando no se les pasa explicito. Script `resolve_active_client.py` lo resuelve (fallback: inferir desde cwd si contiene `outputs/<brand_id>/`).
+- **Sidecar `.status.json`**: cada output `.md` bajo `agentes/**/outputs/<cliente>/<fecha>/` tiene un sidecar generado por `.claude/scripts/auto_approve.py`. Marca `ready_for_handoff` (pasa entre agentes DV sin OK humano) o `needs_human` (bloquea). Politica completa en `docs/auto_approval_policy.md`.
+- **Pre-commit hook (Windows-prod)**: en la maquina Windows esta instalado `.git/hooks/pre-commit` que llama a `.claude/scripts/pre_commit_validators.py` (valida tono + naming sobre staged files). En Mac-dev no esta instalado por default (`.git/hooks/` no se versiona). Esto es SEPARADO de la regla "invocar `dv-project-optimizer` antes de commit" — el subagent es el gate semantico de arquitectura, el hook es el gate sintactico de tono/naming.
+- **Crons (Windows Task Scheduler)**: `recompute-state`, `pull-leads`, `prescore-leads`, `lead-followups`, `daily-monitor`, `weekly-report`, `auto-approve`, `health`. Entry point unico: `agentes/00_coordinador/scripts/cron_runner.py <task>`. Setup en `agentes/00_coordinador/scripts/CRON_SETUP.md`.
+- **Outputs gitignorados**: todo bajo `agentes/**/outputs/`, `**/_tmp/`, `**/_scratch/`, `**/.env`, `**/credentials/`, `*.status.json`, `agentes/02_comercial/data/leads_clientes/*.json` (PII). No commitees nada ahi.
+
+### Niveles de autonomia
+
+Cada agente declara su nivel L0-L4 en `docs/autonomy_map.md`. Esto define que puede correr sin gate humano. Antes de elevar la autonomia de algo, leer ese doc.
+
+### Donde corre cada cosa (importante para no diagnosticar mal)
+
+El repo se sincroniza por git entre dos maquinas:
+
+- **Windows (produccion)**: corre todos los crons via Task Scheduler. Ahi viven los archivos gitignored: `*.status.json` (sidecars), `shared/state/cron_log.jsonl`, `agentes/**/outputs/`, `**/_tmp/`, `**/credentials/`, `.env`.
+- **Mac (dev remoto de Felipe)**: solo edicion + commits. **No** corre crons. La ausencia de sidecars / cron_log / outputs en Mac es esperable y NO indica bug. Para diagnosticar el estado de produccion, chequear desde la Windows.
+
+## Comandos y donde trabajar
+
+### Patron: abrir Claude en el directorio del agente
+
+Cada agente tiene sus propias slash commands. Para usarlas, abri sesion Claude dentro del subdirectorio:
+
+```bash
+cd agentes/<fase>_<agente> && claude
+```
+
+Slash commands principales (lista completa en `README.md`):
+
+| Agente | Skills |
+|---|---|
+| `00_coordinador` | `/kickoff <cliente>`, `/nueva-campana <cliente>`, `/status <cliente>`, `/buscar <keywords>` |
+| `01_contenido/copywritter` | `/meta-ad`, `/caption`, `/banco-hooks`, `/estrategia-copy` |
+| `01_contenido/creative_director` | (mismo patron, guiones + briefs carrusel) |
+| `01_contenido/design` | (mismo patron, render Canva/HTML) |
+| `02_comercial` | `/calificar`, `/preparar-reunion`, `/pipeline` |
+| `03_delivery_reporting` | `/reporte-semanal`, `/reporte-mensual`, `/checklist-fase` |
+| `04_pauta` | `/planificar`, `/analizar`, `/crear-campana`, `/optimizar` |
+
+### Scripts Python CLI (sin sesion Claude)
+
+```bash
+# Onboarding cliente nuevo
+python agentes/00_coordinador/scripts/kickoff_init.py <cliente_id> --name "<Display>" --notify
+
+# Reporte semanal de un cliente (pipeline end-to-end: insights -> PDF -> Drive -> WA)
+python agentes/03_delivery_reporting/scripts/weekly_report_deliver.py \
+  --cliente <cliente> --destinatario-wa 549XXXXXXXXX --destinatario-nombre Elias
+
+# Validators batch (sidecar .status.json sobre outputs)
+python .claude/scripts/auto_approve.py [<cliente>] [<YYYY-MM-DD>] [--rerun]
+
+# Correr una cron task manualmente (sin schtask)
+python agentes/00_coordinador/scripts/cron_runner.py <task-name>
+
+# Comercial: prescore + drafts WA
+python agentes/02_comercial/scripts/lead_prescore.py
+python agentes/02_comercial/scripts/followup_drafts.py
+
+# Post-produccion video (master -> multi-format + thumb + subs)
+python agentes/01_contenido/post_production/scripts/process_master.py \
+  --input master.mp4 --cliente <cliente> --tipo RecorridoVO --version 1 --thumb-at 3 --transcribe
+```
+
+### Tests / lint
+
+No hay suite de tests formal. Validacion ocurre via:
+1. Pre-commit hook (`.claude/scripts/pre_commit_validators.py`) sobre staged `.md`/copy.
+2. Subagent `dv-project-optimizer` antes del commit (regla mas abajo).
+3. Sidecar `.status.json` por output via `auto_approve.py` (cron cada 6h).
+
+Bypass del pre-commit hook solo si es deliberado: `git commit --no-verify`.
+
+### Setup inicial
+
+Detalle completo en `README.md` (Setup inicial). Resumen: instalar deps Python (`requests`, `google-auth*`, `playwright`), copiar `.env.example` -> `.env` en `04_pauta/` (Meta Ads), `03_delivery_reporting/` (WA Business), `01_contenido/post_production/` (Whisper), service account Google en `04_pauta/credentials/`, OAuth Drive en `03_delivery_reporting/credentials/`.
 
 ## Mision
 
