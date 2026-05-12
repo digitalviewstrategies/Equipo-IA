@@ -8,3 +8,4 @@
 - [Modelos por agente](reference_modelos_recomendados.md) — Recomendaciones actuales de Sonnet/Opus por tarea, posibles ajustes a Haiku
 - [Pre-commit gate role](feedback_pre_commit_role.md) — Este agente se invoca SIEMPRE antes de git commit. Audita staged files con foco en estructura, naming, _tmp en raiz, duplicacion. Devuelve PASS/FLAG/BLOCK.
 - [Outputs dirs en .gitignore](feedback_outputs_gitignore.md) — Todo modulo nuevo con carpeta outputs/ debe agregarse a .gitignore antes del primer commit.
+- [Brand JSON schema drift](project_brand_json_schema_drift.md) — Falta schema formal: industry marker, alias_of para brands clonados, convencion `_` documentada.

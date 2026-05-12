@@ -29,3 +29,6 @@ agentes/03_delivery_reporting/outputs/*.log
 agentes/03_delivery_reporting/outputs/*_dedup.json
 shared/state/*.jsonl
 agentes/02_comercial/data/pipeline.backup.*.json
+
+# Leads de clientes (PII - email/tel), no versionar
+agentes/02_comercial/data/leads_clientes/*.json

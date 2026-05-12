@@ -29,6 +29,11 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from scripts.meta_api import MetaAdsAPI, MetaAPIError  # noqa: E402
 import pipeline as pipe  # noqa: E402
+import leads_clientes as lc  # noqa: E402
+
+# digital_view = pipeline B2B (vender el servicio DV).
+# Resto = pipeline B2C por cliente (consultas inmobiliarias).
+B2B_BRANDS = {"digital_view"}
 
 
 def _normalize_field_data(field_data: list[dict]) -> dict[str, str]:
@@ -42,7 +47,7 @@ def _normalize_field_data(field_data: list[dict]) -> dict[str, str]:
     return out
 
 
-def _already_imported(lead_id: str) -> bool:
+def _already_imported_b2b(lead_id: str) -> bool:
     data = pipe._load()
     for p in data.get("prospectos", []):
         if p.get("meta_lead_id") == lead_id:
@@ -50,17 +55,19 @@ def _already_imported(lead_id: str) -> bool:
     return False
 
 
-def _add_prospecto_from_lead(cliente: str, lead: dict) -> dict | None:
-    if _already_imported(lead["id"]):
-        return None
-
-    fd = _normalize_field_data(lead.get("field_data", []))
-    nombre = fd.get("full_name") or fd.get("nombre") or fd.get("first_name") or "Sin nombre"
+def _extract_nombre(fd: dict) -> str:
     if fd.get("first_name") and fd.get("last_name"):
-        nombre = f"{fd['first_name']} {fd['last_name']}"
+        return f"{fd['first_name']} {fd['last_name']}"
+    return fd.get("full_name") or fd.get("nombre") or fd.get("first_name") or "Sin nombre"
 
+
+def _add_b2b(cliente: str, lead: dict) -> dict | None:
+    """Lead que es prospecto del servicio DV (digital_view)."""
+    if _already_imported_b2b(lead["id"]):
+        return None
+    fd = _normalize_field_data(lead.get("field_data", []))
     prospecto = pipe.add_prospecto(
-        nombre=nombre,
+        nombre=_extract_nombre(fd),
         empresa=fd.get("company_name") or "",
         tipo="otro",
         zona="desconocida",
@@ -69,8 +76,6 @@ def _add_prospecto_from_lead(cliente: str, lead: dict) -> dict | None:
         fuente=f"meta_lead_ads:{cliente}",
         notas=f"Lead Meta - campaign_id={lead.get('campaign_id', '')} ad_id={lead.get('ad_id', '')} created={lead.get('created_time', '')}",
     )
-
-    # marcador de origen para idempotencia
     data = pipe._load()
     for p in data["prospectos"]:
         if p["id"] == prospecto["id"]:
@@ -80,6 +85,31 @@ def _add_prospecto_from_lead(cliente: str, lead: dict) -> dict | None:
             break
     pipe._save(data)
     return prospecto
+
+
+def _add_b2c(cliente: str, lead: dict, form_id: str = "") -> dict | None:
+    """Lead que es consulta inmobiliaria (cliente DV recibiendo lead de su pauta)."""
+    if lc.already_imported(cliente, lead["id"]):
+        return None
+    fd = _normalize_field_data(lead.get("field_data", []))
+    return lc.add_lead(
+        cliente=cliente,
+        nombre=_extract_nombre(fd),
+        telefono=fd.get("phone_number") or fd.get("telefono") or "",
+        email=fd.get("email") or "",
+        meta_lead_id=lead["id"],
+        meta_campaign_id=lead.get("campaign_id", ""),
+        meta_ad_id=lead.get("ad_id", ""),
+        meta_form_id=form_id,
+        notas=f"created={lead.get('created_time', '')}",
+        raw_field_data=fd,
+    )
+
+
+def _add_prospecto_from_lead(cliente: str, lead: dict, form_id: str = "") -> dict | None:
+    if cliente in B2B_BRANDS:
+        return _add_b2b(cliente, lead)
+    return _add_b2c(cliente, lead, form_id=form_id)
 
 
 def pull_recent_leads(hours: int = 24) -> dict:
@@ -119,7 +149,7 @@ def pull_recent_leads(hours: int = 24) -> dict:
             resumen["forms_revisados"] += 1
             resumen["leads_traidos"] += len(leads)
             for l in leads:
-                p = _add_prospecto_from_lead(cliente, l)
+                p = _add_prospecto_from_lead(cliente, l, form_id=form["id"])
                 if p:
                     nuevos += 1
 
