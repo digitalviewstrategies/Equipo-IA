@@ -196,6 +196,67 @@ def test_performance_siempre_borrador():
     assert to == config.FELIPE_WA_NUMBER, "performance siempre va a borrador"
 
 
+def _stub_performance_handler(summary_dict):
+    """Reemplaza performance.handle por uno que usa un summary fake — evita stubear MetaAdsAPI."""
+    from .handlers import performance as perf
+    def fake_handle(text, entities, brand, contact_name):
+        # Replica el shape real del handler usando el _format
+        periodo = (entities.get("periodo") or "").lower()
+        label = "ultimos 7 dias"
+        return {"text": perf._format(summary_dict, label), "ok": False}
+    perf.handle = fake_handle
+
+
+def test_performance_con_numeros_reales():
+    _reset()
+    _stub_performance_handler({
+        "spend_usd": 285.50, "impressions": 41200, "reach": 30100,
+        "clicks": 742, "ctr": 1.80, "cpm_usd": 6.93,
+        "leads": 14, "cpl_usd": 20.39,
+    })
+    webhook._process_message({"type": "text", "from": "5491166667777", "text": {"body": "como van los leads"}})
+    assert len(SENT) == 1
+    to, body = SENT[0]
+    assert to == config.FELIPE_WA_NUMBER
+    # El borrador a Felipe debe contener los numeros reales
+    assert "USD 286" in body or "USD 285" in body, f"falta gasto en borrador: {body[:200]}"
+    assert "14" in body, "falta count de leads"
+    assert "CPL" in body
+    assert "1.80%" in body or "1.8%" in body or "1,80%" in body
+    # Restaurar handler real
+    from .handlers import performance as perf
+    import importlib; importlib.reload(perf)
+
+
+def test_performance_sin_delivery():
+    _reset()
+    _stub_performance_handler({
+        "spend_usd": 0.0, "impressions": 0, "reach": 0, "clicks": 0,
+        "ctr": 0.0, "cpm_usd": 0.0, "leads": 0, "cpl_usd": None,
+    })
+    webhook._process_message({"type": "text", "from": "5491166667777", "text": {"body": "como van las campanas"}})
+    to, body = SENT[0]
+    assert to == config.FELIPE_WA_NUMBER
+    assert "no tuvo delivery" in body.lower() or "lo reviso" in body.lower()
+    from .handlers import performance as perf
+    import importlib; importlib.reload(perf)
+
+
+def test_performance_sin_leads():
+    _reset()
+    _stub_performance_handler({
+        "spend_usd": 50.0, "impressions": 8000, "reach": 6000,
+        "clicks": 80, "ctr": 1.0, "cpm_usd": 6.25,
+        "leads": 0, "cpl_usd": None,
+    })
+    webhook._process_message({"type": "text", "from": "5491166667777", "text": {"body": "como van los leads"}})
+    to, body = SENT[0]
+    assert to == config.FELIPE_WA_NUMBER
+    assert "0 todavia" in body or "revisamos creativos" in body
+    from .handlers import performance as perf
+    import importlib; importlib.reload(perf)
+
+
 def test_non_text_ignorado():
     _reset()
     webhook._process_message({"type": "image", "from": "5491166667777"})
@@ -214,6 +275,9 @@ def main():
     _case("Felipe EDITAR <texto> -> envia custom", test_felipe_editar_envia_custom)
     _case("Felipe DESCARTAR -> no envia, marca discarded", test_felipe_descartar_no_envia)
     _case("performance_campana -> siempre borrador", test_performance_siempre_borrador)
+    _case("performance con numeros reales -> borrador con data", test_performance_con_numeros_reales)
+    _case("performance sin delivery -> mensaje claro", test_performance_sin_delivery)
+    _case("performance sin leads -> mensaje claro", test_performance_sin_leads)
     _case("mensaje no-texto -> ignorado", test_non_text_ignorado)
 
     print()

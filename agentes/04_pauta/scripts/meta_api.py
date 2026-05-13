@@ -395,6 +395,53 @@ class MetaAdsAPI:
         result = self._request("GET", f"{object_id}/insights", params=params)
         return result.get("data", [])
 
+    def summary(self, last_n_days: int = 7, account_id: str | None = None) -> dict:
+        """Resumen de cuenta para los ultimos N dias. Pensado para handoff a WA / reportes rapidos.
+
+        Devuelve dict con metricas planas (USD, count, %):
+          - period: {since, until, days}
+          - spend_usd, impressions, reach, clicks, ctr, cpm_usd
+          - leads (sumadas de actions: lead, onsite_conversion.lead_grouped)
+          - cpl_usd (None si leads == 0)
+
+        Si la cuenta no tuvo delivery en el rango, todos los numericos vuelven 0.
+        """
+        from datetime import date, timedelta
+
+        until = date.today()
+        since = until - timedelta(days=last_n_days)
+        date_range = {"since": since.isoformat(), "until": until.isoformat()}
+
+        acct = account_id or self._require_account()
+        fields = ["spend", "impressions", "reach", "clicks", "ctr", "cpm", "actions"]
+        rows = self.get_insights(acct, date_range=date_range, fields=fields)
+
+        if not rows:
+            return {
+                "period": {"since": since.isoformat(), "until": until.isoformat(), "days": last_n_days},
+                "spend_usd": 0.0, "impressions": 0, "reach": 0, "clicks": 0,
+                "ctr": 0.0, "cpm_usd": 0.0, "leads": 0, "cpl_usd": None,
+            }
+
+        row = rows[0]  # account-level con time_increment=None devuelve 1 fila agregada
+        leads = 0
+        for action in row.get("actions") or []:
+            if action.get("action_type") in ("lead", "onsite_conversion.lead_grouped", "offsite_conversion.fb_pixel_lead"):
+                leads += int(float(action.get("value", 0)))
+
+        spend = float(row.get("spend", 0))
+        return {
+            "period": {"since": since.isoformat(), "until": until.isoformat(), "days": last_n_days},
+            "spend_usd": round(spend, 2),
+            "impressions": int(row.get("impressions", 0)),
+            "reach": int(row.get("reach", 0)),
+            "clicks": int(row.get("clicks", 0)),
+            "ctr": round(float(row.get("ctr", 0)), 2),
+            "cpm_usd": round(float(row.get("cpm", 0)), 2),
+            "leads": leads,
+            "cpl_usd": round(spend / leads, 2) if leads > 0 else None,
+        }
+
     # --- Status ---
 
     def update_status(self, object_id: str, status: str) -> dict:
