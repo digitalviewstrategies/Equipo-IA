@@ -352,7 +352,10 @@ def weekly_report() -> int:
 
 
 def pull_leads(hours: int = 24) -> int:
-    """Trae leads de Meta de las ultimas N horas y los inserta en el pipeline comercial."""
+    """Trae leads de Meta de las ultimas N horas y los inserta en el pipeline comercial.
+
+    Si hay leads nuevos, dispara alerta WA a Elias (lead_alerts.notify).
+    """
     try:
         import importlib.util
         p = ROOT / "agentes" / "02_comercial" / "scripts" / "meta_leads_puller.py"
@@ -361,10 +364,26 @@ def pull_leads(hours: int = 24) -> int:
         spec.loader.exec_module(mod)
         r = mod.pull_recent_leads(hours=hours)
         _log("pull-leads", "ok", r)
-        return 0
     except Exception as e:
         _log("pull-leads", "error", str(e)[:300])
         return 1
+
+    # Alerta WA si hay leads nuevos (fail-open: si falla, no rompe el cron)
+    try:
+        import importlib.util
+        la_path = Path(__file__).parent / "lead_alerts.py"
+        spec = importlib.util.spec_from_file_location("lead_alerts", la_path)
+        la = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(la)
+        alert_r = la.notify(r)
+        if alert_r.get("status") not in ("skip", "ok"):
+            _log("pull-leads-alert", "warn", alert_r)
+        elif alert_r.get("status") == "ok":
+            _log("pull-leads-alert", "ok", {"to": alert_r["to"], "total": alert_r["total"]})
+    except Exception as e:
+        _log("pull-leads-alert", "warn", str(e)[:300])
+
+    return 0
 
 
 def process_creative_briefs() -> int:
