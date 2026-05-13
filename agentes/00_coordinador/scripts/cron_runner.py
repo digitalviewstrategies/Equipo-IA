@@ -289,6 +289,22 @@ def daily_monitor(days: int = 1) -> int:
             resumen.append({"cliente": cliente, "status": "ok", "ads": len(analyses)})
 
     _log("daily-monitor", "ok", {"clientes": len(resumen), "resumen": resumen})
+
+    # Alerta WA a Felipe si hay clientes con KILL/fatiga (fail-open).
+    try:
+        import importlib.util
+        pa_path = Path(__file__).parent / "pauta_alerts.py"
+        spec = importlib.util.spec_from_file_location("pauta_alerts", pa_path)
+        pa = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(pa)
+        alert_r = pa.notify(resumen)
+        if alert_r.get("status") == "ok":
+            _log("daily-monitor-alert", "ok", {"to": alert_r["to"], "alertas": alert_r["alertas"]})
+        elif alert_r.get("status") not in ("skip",):
+            _log("daily-monitor-alert", "warn", alert_r)
+    except Exception as e:
+        _log("daily-monitor-alert", "warn", str(e)[:300])
+
     return 0
 
 

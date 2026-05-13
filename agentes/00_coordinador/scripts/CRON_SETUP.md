@@ -5,7 +5,7 @@
 | Tarea | Frecuencia recomendada | Que hace |
 |---|---|---|
 | `recompute-state`         | Cada 6 hs     | Recalcula `shared/state/<cliente>.json` + reindex assets |
-| `daily-monitor`           | Diario 08:30  | Insights del dia anterior. Alerta si hay KILL/fatiga + brief auto a Creative Director |
+| `daily-monitor`           | Diario 08:30  | Insights del dia anterior. Alerta si hay KILL/fatiga + brief auto a Creative Director. Si hay creativos a revisar, alerta WA a Felipe (`pauta_alerts.notify`) |
 | `weekly-report`           | Lunes 09:00   | Reporte semanal markdown por cliente con campanas |
 | `pull-leads`              | Cada 4 hs     | Trae leads de Meta Lead Ads a `02_comercial`. Si hay nuevos, alerta WA a Elias (`lead_alerts.notify`) |
 | `process-creative-briefs` | Diario 09:00  | Notifica a Nico por WA los briefs auto pendientes |
