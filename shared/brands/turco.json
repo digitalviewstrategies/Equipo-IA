@@ -394,5 +394,10 @@
     "ticket_rango_usd": "80.000 a 300.000",
     "differential": "Atencion personal directa, respuesta rapida, conocimiento puntual de barrios donde opera.",
     "pending_visual_identity": "Verificar paleta de colores y tipografias reales con Turco. Colors heredo de toribio_achaval."
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

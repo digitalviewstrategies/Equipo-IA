@@ -130,5 +130,11 @@
     "default_geo": ["Buenos Aires, Argentina"],
     "default_age_min": 25,
     "default_age_max": 55
+  },
+
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

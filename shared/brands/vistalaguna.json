@@ -407,5 +407,10 @@
     "zona": "GBA Norte exclusivo - Nordelta + barrios cerrados del corredor.",
     "ticket_minimo_usd": 1000000,
     "pending_visual_identity": "Verificar paleta de colores y tipografias reales con cliente. El bloque colors/typography heredo de toribio_achaval, ajustar."
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

@@ -4,9 +4,7 @@
   "brand_tagline": null,
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Agente inmobiliario independiente y flipping specialist en CABA y Zona Norte. Marca personal fuerte como influencer inmobiliario con contenido disruptivo y directo. Se posiciona como el tipo que te dice lo que otros agentes no se animan.",
-
   "colors": {
     "primary": {
       "hex": "#2D3A2E",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta oscura y terrosa que refleja el estilo callejero y urbano de Mati. Los fondos oscuros dominan, el dorado aparece como acento de impacto.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "dark (negro) con CTA en gold"
     }
   },
-
   "typography": {
     "primary": {
       "family": "Inter",
@@ -69,21 +65,21 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes destacados (USD, m2, porcentajes)."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 80,
     "headline_max_size_px": 130,
     "letter_spacing_headlines": "-3px a -5px (bien tight, agresivo)",
-    "line_height_headlines": 0.90,
+    "line_height_headlines": 0.9,
     "never_use_italic": true,
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Siempre en hooks y CTAs. Opcional en slides intermedios."
   },
-
   "visual_style": {
     "keywords": [
       "urbano",
@@ -115,16 +111,39 @@
       "Fondos blancos puros como color dominante"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Habla como en la calle, no como en una oficina",
@@ -178,38 +197,53 @@
     "disruption_scale": 5,
     "narrative_structure": {
       "name": "Metodo Di Meola",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Funnel narrativo DV en version Mati: arranca con un dolor crudo del dueno que necesita vender rapido, muestra la consecuencia de no actuar (propiedad parada, gastos acumulandose), presenta la solucion con la experiencia de Mati en flipping, y cierra con prueba concreta (operacion real, numeros)."
     }
   },
-
   "content_pillars": [
     {
       "name": "Captacion off-market",
       "percentage": 40,
       "description": "Contenido dirigido a duenos con urgencia de venta: sucesiones, divorcios, propiedades paradas. El objetivo es que contacten a Mati directamente.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Flipping real",
       "percentage": 25,
       "description": "Mostrar operaciones de flipping reales: antes y despues, numeros, proceso. Construye autoridad y genera interes de inversores.",
-      "formats": ["video corto", "carrusel educativo"]
+      "formats": [
+        "video corto",
+        "carrusel educativo"
+      ]
     },
     {
       "name": "Verdades del mercado",
       "percentage": 20,
       "description": "Contenido de opinion fuerte sobre el mercado inmobiliario argentino. Posiciona a Mati como voz disruptiva del rubro.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     },
     {
       "name": "Marca personal",
       "percentage": 15,
       "description": "Dia a dia de Mati, recorridos por propiedades, lifestyle del agente inmobiliario. Humaniza la marca.",
-      "formats": ["video corto", "stories"]
+      "formats": [
+        "video corto",
+        "stories"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Duenos de propiedades con urgencia de venta en CABA y Zona Norte: sucesiones, divorcios, propiedades heredadas sin uso, duenos cansados de lidiar con inmobiliarias.",
     "secondary": "Inversores chicos que quieren entrar al flipping inmobiliario con operaciones de USD 100k-300k.",
@@ -227,12 +261,16 @@
       "Resolver la venta sin burocracia innecesaria"
     ]
   },
-
   "logo": {
     "main_file": null,
     "note": "Matias no tiene logo formal. Se usa su nombre como wordmark: MATIAS DI MEOLA en tipografia Inter Black, uppercase. En el ultimo slide del carrusel, se coloca el nombre como firma tipografica.",
     "wordmark_style": "Inter 900, uppercase, letter-spacing -2px, color white o gold segun fondo",
     "min_size_px": 120,
     "placement_in_carousel": "Solo en el ultimo slide como wordmark tipografico"
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

@@ -173,7 +173,7 @@ Ejemplo: `LopezProps_RecorridoVO_V1.mp4`
 ## Antes de cualquier `git commit`
 
 REGLA DURA: antes de ejecutar `git commit`, invoca el agente `dv-project-optimizer`
-(definido en `.claude/agents/dv-project-optimizer.md`) usando el tool `Agent` con
+(definido en `.claude/agents/_shared/dv-project-optimizer.md`) usando el tool `Agent` con
 `subagent_type: "dv-project-optimizer"`. El agente revisa:
 
 - Estructura de carpetas y nombres de archivos (que esten bajo el agente que los usa, no en raiz).

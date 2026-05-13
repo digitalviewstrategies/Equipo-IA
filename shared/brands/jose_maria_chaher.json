@@ -266,5 +266,10 @@
   "meta_ads": {
     "page_id": "1065505296894589",
     "page_name": "Team Noia"
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

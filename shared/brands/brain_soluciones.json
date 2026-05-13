@@ -413,5 +413,10 @@
     "brief_pauta_inmobiliaria",
     "meta_ad_zona_caba_gba",
     "kickoff_inmobiliaria_template"
-  ]
+  ],
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
+  }
 }

@@ -24,7 +24,7 @@ Crear agente que gestione clientes DV via WhatsApp.
 ## Pendientes
 - Setup humano en Meta: comprar numero, alta WhatsApp Business Account, System User token, webhook URL, aprobar templates iniciales.
 - Etapa 1.5:
-  - Integrar Trello API en `handlers/status_produccion.py`.
+  - Integrar ClickUp API en `handlers/status_produccion.py` (en evaluacion).
   - Definir metodo `summary()` en `agentes/04_pauta/scripts/meta_api.py` para `handlers/performance.py`.
   - Integrar Sheets API (agenda) en `handlers/filmacion.py`.
   - Logica real de `_execute_approval` en `scripts/webhook.py` (parsear ID del pending, recuperar destino, enviar).

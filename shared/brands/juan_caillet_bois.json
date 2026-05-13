@@ -301,5 +301,10 @@
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh",
       "_note_template": "Template compartido con digital_view. Cada export genera PDF con datos del cliente actual."
     }
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

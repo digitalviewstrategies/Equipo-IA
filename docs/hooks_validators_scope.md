@@ -71,7 +71,7 @@ Los validators automaticos cubren intensivamente **01_contenido + 04_pauta** (do
 
 ## Archivos creados/modificados en esta vuelta
 
-- `.claude/agents/tono-brand-validator.md` (nuevo)
+- `.claude/agents/_shared/tono-brand-validator.md` (nuevo)
 - `.claude/agents/tono-dv-validator.md` (eliminado)
 - `.claude/scripts/resolve_active_client.py` (nuevo)
 - `.claude/scripts/session_start_load_brand.py` (nuevo)

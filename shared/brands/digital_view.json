@@ -312,5 +312,10 @@
       },
       "drive_folder_id": "1bzxqV2KNfvVS62H-p1tE9lsYABms1mCh"
     }
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

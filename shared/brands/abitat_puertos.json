@@ -308,5 +308,10 @@
     "identidad_compartida": "Toda la identidad de marca (tono, positioning, frameworks) se hereda de abitat.json. Cambios solo aplican si el cliente decide diferenciar.",
     "alias_note": "Marker alias_of=abitat: comparte 100% de identidad con abitat.json. Solo difiere en ad_account_id. Si se modifica abitat.json, evaluar si replicar aca o refactorear a stub + loader merge."
   },
-  "alias_of": "abitat"
+  "alias_of": "abitat",
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
+  }
 }

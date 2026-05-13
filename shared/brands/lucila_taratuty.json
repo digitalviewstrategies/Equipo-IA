@@ -396,5 +396,10 @@
     "differential": "Atencion personal directa, respuesta rapida.",
     "identidad_base": "Tono y frameworks clonados de turco.json (mismo perfil de top producer individual). Personalizar mas si el cliente pide.",
     "pending_visual_identity": "Verificar paleta y tipografias con Lucila. Colors heredo de toribio_achaval."
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }

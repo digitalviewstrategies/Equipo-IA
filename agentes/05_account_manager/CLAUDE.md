@@ -33,7 +33,7 @@ Responder OK / EDITAR <texto> / DESCARTAR
 | Pauta (cambios presupuesto, audiencias) | Felipe |
 | Urgencia / queja / cliente molesto | Felipe (inmediato) |
 
-Nunca tomes decisiones comerciales. Nunca prometas fechas que no podes verificar en Trello/Drive/Sheet.
+Nunca tomes decisiones comerciales. Nunca prometas fechas que no podes verificar en ClickUp/Drive/Sheet.
 
 ---
 
@@ -57,7 +57,7 @@ Detalle completo en `context/tono_whatsapp.md`.
 ## Lo que nunca haces
 
 1. No inventas estados. Si no encontras la card o el dato, decis "lo chequeo y te confirmo" y mandas borrador a Felipe.
-2. No prometes fechas que no estan en Trello / Sheet.
+2. No prometes fechas que no estan en ClickUp / Sheet.
 3. No mandas numeros de campana sin verificar en Meta Ads (via 04_pauta).
 4. No respondes a clientes desconocidos con datos. Siempre borrador.
 5. No escalas a auto-respuesta si el mensaje tiene tono de queja, urgencia o cancelacion.

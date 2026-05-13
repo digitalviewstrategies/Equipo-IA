@@ -4,9 +4,7 @@
   "brand_tagline": "Real Estate 360",
   "version": "1.0",
   "last_updated": "2026-04-14",
-
   "positioning": "Grupo inmobiliario 360 en Zona Norte que engloba Soldati Vista y desarrollos propios. Modelo B2B e inversor: vende oportunidad de inversion en desarrollos propios, no propiedades sueltas a consumidor final. Institucional pero actualizado.",
-
   "colors": {
     "primary": {
       "hex": "#2B2D42",
@@ -40,7 +38,6 @@
       "usage": "Texto sobre fondos oscuros."
     }
   },
-
   "color_distribution_rules": {
     "description": "Paleta corporativa y seria. El navy domina, el indigo aporta modernidad sin perder institucionalidad. Nada de colores que se sientan de marca personal.",
     "carousel_6_slides": {
@@ -52,7 +49,6 @@
       "slide_6_cta": "primary (corporate navy) con CTA en white"
     }
   },
-
   "typography": {
     "primary": {
       "family": "Plus Jakarta Sans",
@@ -69,11 +65,12 @@
     "display": {
       "family": "Space Grotesk",
       "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
-      "weights": { "number": 700 },
+      "weights": {
+        "number": 700
+      },
       "usage": "Solo para numeros grandes: ROI, superficies de desarrollos, montos de inversion, rendimientos."
     }
   },
-
   "typography_rules": {
     "headline_min_size_px": 72,
     "headline_max_size_px": 120,
@@ -83,7 +80,6 @@
     "never_use_more_than_2_fonts_per_piece": true,
     "uppercase_headlines": "Recomendado en hooks y CTAs. Refuerza el tono corporativo."
   },
-
   "visual_style": {
     "keywords": [
       "corporativo",
@@ -116,16 +112,39 @@
       "Layouts desordenados"
     ]
   },
-
   "layouts": {
-    "carousel_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
-    "meta_ad_vertical": { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
-    "property_card_square": { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
-    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
-    "flyer_a4": { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
   },
-
   "tone_of_voice": {
     "principles": [
       "Corporativo pero no aburrido: institucional actualizado",
@@ -179,38 +198,53 @@
     "disruption_scale": 3,
     "narrative_structure": {
       "name": "Estructura Fidez",
-      "steps": ["DOLOR", "CONSECUENCIA", "SOLUCION", "PRUEBA"],
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
       "description": "Variante B2B/inversor del metodo DV. El dolor es el capital sin rendir o la falta de oportunidades solidas. La consecuencia es la perdida de poder adquisitivo o market share. La solucion es el ecosistema 360 de Fidez. La prueba son numeros de desarrollos, avance de obra y rentabilidad real."
     }
   },
-
   "content_pillars": [
     {
       "name": "Desarrollos e inversiones",
       "percentage": 40,
       "description": "Presentacion de proyectos en desarrollo, oportunidades de inversion, avance de obra, rentabilidad proyectada. El core del contenido.",
-      "formats": ["carrusel", "video corto"]
+      "formats": [
+        "carrusel",
+        "video corto"
+      ]
     },
     {
       "name": "Vision de mercado y real estate 360",
       "percentage": 25,
       "description": "Analisis del mercado inmobiliario desde la perspectiva de un grupo con vision integral: tendencias, oportunidades, movimientos del sector.",
-      "formats": ["carrusel educativo", "video corto"]
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
     },
     {
       "name": "Ecosistema Fidez",
       "percentage": 20,
       "description": "Mostrar las empresas del grupo, como se complementan, la vision 360. Construye marca corporativa y confianza de grupo.",
-      "formats": ["carrusel", "video corto"]
+      "formats": [
+        "carrusel",
+        "video corto"
+      ]
     },
     {
       "name": "Autoridad corporativa",
       "percentage": 15,
       "description": "Hitos del grupo, eventos, alianzas, presencia en expo. Prueba social corporativa.",
-      "formats": ["video corto", "carrusel"]
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
     }
   ],
-
   "target_audience": {
     "primary": "Inversores inmobiliarios de Zona Norte y CABA que buscan oportunidades de desarrollo con respaldo de grupo. Ticket medio-alto.",
     "secondary": "Decision-makers de empresas relacionadas al real estate que buscan alianzas o participacion en desarrollos.",
@@ -228,10 +262,14 @@
       "Un ecosistema 360 que cubra todo el ciclo inmobiliario"
     ]
   },
-
   "logo": {
     "main_file": "assets/fidez_group/logo.png",
     "min_size_px": 140,
     "placement_in_carousel": "Solo en el ultimo slide"
+  },
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
   }
 }
