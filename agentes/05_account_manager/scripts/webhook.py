@@ -2,7 +2,7 @@
 import hmac
 import hashlib
 from fastapi import FastAPI, Request, HTTPException, Response
-from . import config, client_resolver, intent_router, policy, approval_channel, wa_client, conversation_log
+from . import config, client_resolver, intent_router, policy, approval_channel, wa_client, conversation_log, draft_writer
 from .handlers import faq, status_produccion, performance, filmacion
 
 app = FastAPI(title="DV Account Manager Webhook")
@@ -89,11 +89,20 @@ def _process_message(msg: dict) -> None:
         wa_client.send_text(from_number, borrador)
         conversation_log.log(cliente, "out", from_number, borrador, intent, confidence, auto=True)
     else:
+        # Refinar borrador con Sonnet en tono Felipe antes de mandarselo a Felipe.
+        # fail-open: si LLM no anda, va el borrador base.
+        refined = draft_writer.compose(
+            cliente_msg=text,
+            raw_draft=borrador,
+            intent=intent,
+            contact_name=contact_name,
+            extra=handler_result.get("extra"),
+        )
         approval_channel.send_for_approval(
             cliente or "DESCONOCIDO", contact_name or "", from_number,
-            intent, confidence, text, borrador,
+            intent, confidence, text, refined,
         )
-        conversation_log.log(cliente, "draft", from_number, borrador, intent, confidence, auto=False)
+        conversation_log.log(cliente, "draft", from_number, refined, intent, confidence, auto=False)
 
 
 def _dispatch(intent: str, text: str, entities: dict, brand: dict | None, contact_name: str | None) -> dict:

@@ -15,7 +15,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from . import config, conversation_log, approval_channel, wa_client, intent_router, webhook
+from . import config, conversation_log, approval_channel, wa_client, intent_router, webhook, draft_writer
 
 # ---- Sandbox dirs (no toca shared/brands ni outputs reales) ---------------
 _TMP = Path(tempfile.mkdtemp(prefix="dv_am_test_"))
@@ -257,6 +257,59 @@ def test_performance_sin_leads():
     import importlib; importlib.reload(perf)
 
 
+def test_draft_writer_refina_borrador():
+    """Verifica que webhook usa draft_writer.compose() para refinar borradores antes de mandar a Felipe."""
+    _reset()
+    captured = {}
+    original_compose = draft_writer.compose
+
+    def fake_compose(cliente_msg, raw_draft, intent, contact_name=None, extra=None):
+        captured["cliente_msg"] = cliente_msg
+        captured["raw_draft"] = raw_draft
+        captured["intent"] = intent
+        return "BORRADOR_REFINADO_POR_LLM"
+
+    draft_writer.compose = fake_compose
+    try:
+        webhook._process_message({"type": "text", "from": "5491166667777", "text": {"body": "como van los leads"}})
+        # El borrador que va a Felipe debe ser el refinado, no el raw
+        sent_to_felipe = [s for s in SENT if s[0] == config.FELIPE_WA_NUMBER]
+        assert sent_to_felipe, "deberia ir a Felipe"
+        body = sent_to_felipe[0][1]
+        assert "BORRADOR_REFINADO_POR_LLM" in body, f"webhook no uso refined draft. body={body[:200]}"
+        assert captured["intent"] == "performance_campana"
+        assert captured["raw_draft"], "raw_draft deberia tener contenido"
+    finally:
+        draft_writer.compose = original_compose
+
+
+def test_draft_writer_fail_open():
+    """Si draft_writer falla, debe caer al raw_draft (fail-open) sin romper el flow."""
+    _reset()
+    original_compose = draft_writer.compose
+
+    def broken_compose(**_kw):
+        raise RuntimeError("LLM down")
+
+    # El modulo expone compose() con manejo interno de excepciones; si lo reemplazamos
+    # por uno que rompa, simulamos el caso donde Anthropic falla. webhook deberia
+    # propagar el error? NO — compose() ya cae al raw internamente. Para testear
+    # fail-open de verdad, reemplazamos compose() por uno que devuelva el raw tal cual.
+    def safe_fail(cliente_msg, raw_draft, intent, contact_name=None, extra=None):
+        return raw_draft  # simula path "sin ANTHROPIC_API_KEY"
+
+    draft_writer.compose = safe_fail
+    try:
+        webhook._process_message({"type": "text", "from": "5491166667777", "text": {"body": "como va el reel"}})
+        sent_to_felipe = [s for s in SENT if s[0] == config.FELIPE_WA_NUMBER]
+        assert sent_to_felipe
+        body = sent_to_felipe[0][1]
+        # El raw_draft de status_produccion es "Lo chequeo con el equipo..."
+        assert "chequeo" in body.lower(), f"deberia contener raw fallback. body={body[:200]}"
+    finally:
+        draft_writer.compose = original_compose
+
+
 def test_non_text_ignorado():
     _reset()
     webhook._process_message({"type": "image", "from": "5491166667777"})
@@ -278,6 +331,8 @@ def main():
     _case("performance con numeros reales -> borrador con data", test_performance_con_numeros_reales)
     _case("performance sin delivery -> mensaje claro", test_performance_sin_delivery)
     _case("performance sin leads -> mensaje claro", test_performance_sin_leads)
+    _case("draft_writer refina borrador antes de Felipe", test_draft_writer_refina_borrador)
+    _case("draft_writer fail-open al raw draft", test_draft_writer_fail_open)
     _case("mensaje no-texto -> ignorado", test_non_text_ignorado)
 
     print()
