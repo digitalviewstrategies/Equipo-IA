@@ -271,5 +271,12 @@
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1ymxYOWwVAaEdJaxAKsDK6ZJQKY5qURW8",
+    "folder_name": "Fidez Group | Soldati Vista",
+    "folder_url": "https://drive.google.com/drive/folders/1ymxYOWwVAaEdJaxAKsDK6ZJQKY5qURW8",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

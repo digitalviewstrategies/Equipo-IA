@@ -317,5 +317,12 @@
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1-_CKQifvB0eWturNuVLwIwJKz6ShUBOc",
+    "folder_name": "Digital View",
+    "folder_url": "https://drive.google.com/drive/folders/1-_CKQifvB0eWturNuVLwIwJKz6ShUBOc",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

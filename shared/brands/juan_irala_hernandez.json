@@ -1,0 +1,244 @@
+{
+  "brand_id": "juan_irala_hernandez",
+  "brand_name": "Juan Irala y Hernández",
+  "brand_tagline": "<TODO_KICKOFF>",
+  "version": "0.3",
+  "last_updated": "2026-05-14",
+  "onboarding_status": "buyer_persona_done",
+  "onboarding_pending": [
+    "identidad visual (logo, colores, tipografia)",
+    "_done_drive folder_id (cargado 2026-05-14)",
+    "whatsapp contacts",
+    "cpl_target_usd (definir con Felipe + Juan en base a benchmark Punta)",
+    "validar tono con Juan (principles y forbidden_words son draft DV)",
+    "revisar rate UYU/USD asumido cada ~30 dias para recalcular monthly_budget_usd"
+  ],
+
+  "positioning": "Asesoramiento inmobiliario en Punta del Este (Uruguay), foco en el segmento alta gama. Atiende mayoritariamente a compradores argentinos (70% del high-end) y secundariamente a brasileños, europeos y uruguayos. Posiciona a Punta como destino propio del comprador argentino (no como inversion exotica) y como destino aspiracional de networking y posicionamiento social para todos los perfiles. El comprador es un inversor, no un comprador de primera vivienda emocional.",
+
+  "market_context": {
+    "geography": "Punta del Este, Uruguay (mercado uruguayo de alta gama, atiende compradores internacionales)",
+    "segment": "alta gama / luxury / inversion premium",
+    "buyer_nationality_total": {
+      "argentinos": 0.75,
+      "uruguayos": 0.15,
+      "brasileños": 0.08,
+      "europeos_y_rest_of_world": 0.02
+    },
+    "buyer_nationality_high_end": {
+      "argentinos": 0.70,
+      "brasileños": 0.10,
+      "europeos": 0.10,
+      "uruguayos": 0.05,
+      "rest_of_world": 0.05
+    },
+    "priority_nationality_2026": "argentinos",
+    "destination_competition": "Baja. El comprador ya tiene a Punta decidida como destino, no esta comparando con otras opciones. La decision esta tomada antes del contacto."
+  },
+
+  "target_audience": {
+    "primary": "Inversor argentino de alta gama (HNWI o equivalente) que ya decidio comprar en Punta del Este. Para el, Punta es destino propio — como comprar en San Isidro — no inversion extranjera. Compra patrimonio + lifestyle + posicionamiento social. Algunos ya tienen propiedades en Uruguay, otros es primera operacion.",
+    "secondary": "Inversor brasileño de alta gama, evaluando inversion fuera de Brasil. Tiene mas friccion: piensa en reales, convierte mentalmente a dolares, no esta acostumbrado a invertir fuera de su pais. Necesita educacion sobre el proceso de compra para extranjero en Uruguay.",
+    "tertiary": "Europeos y uruguayos del segmento. Volumen menor pero ticket alto. Europeos suelen ser segunda residencia / inversion patrimonial; uruguayos son base local.",
+
+    "decision_maker_profile": {
+      "type": "Inversor racional con capa aspiracional",
+      "decision_style": "Analitico-patrimonial. No hay factor emocional tipo 'casa de los sueños'. Si hay factor aspiracional, pero alrededor del networking y el posicionamiento social — no alrededor de la casa en si.",
+      "social_dimension": "Punta es destino de networking. Las relaciones son el objetivo de fondo. 'Donde vivias habla por vos' — la propiedad funciona como senial de pertenencia a un circulo.",
+      "what_they_want": "Acceso al circulo social correcto + preservacion patrimonial + lifestyle reconocible."
+    },
+
+    "buyer_journey_stages": {
+      "decided_buyer": "Sabe que quiere invertir en Punta. Viene a evaluar oferta concreta. Ciclo corto.",
+      "market_researcher": "Esta estudiando el mercado de Punta. Ciclo medio. Necesita data + criterio.",
+      "future_intent": "Esta pensando comprar a futuro (proximos 12-24 meses). Ciclo largo. Necesita relacion + autoridad de mercado para llegar al momento de decision."
+    },
+
+    "objections_by_nationality": {
+      "argentinos": "Casi ninguna. Para el argentino comprar en Punta es como comprar en San Isidro — es un destino familiar, conocido, propio. No hay barrera psicologica de 'extranjero'.",
+      "brasileños": "Conversion mental real → dolar. No acostumbrados a invertir fuera de Brasil. Requieren mas explicacion sobre proceso legal, mecanica de pago, marco fiscal uruguayo. Ciclo mas largo y educativo.",
+      "europeos_y_otros": "Distancia geografica + desconocimiento de marco fiscal uruguayo. Pero suelen venir con asesoria propia."
+    },
+
+    "what_does_not_apply": [
+      "Hooks emocionales tipo 'casa de tus suenios' o 'tu hogar te espera' — el comprador no es emocional, es inversor.",
+      "Narrativa de primera vivienda familiar — no es ese segmento.",
+      "Urgencia tipo 'oferta limitada' o 'ultimas unidades' — choca con el codigo del segmento luxury.",
+      "Comparativas con otros destinos (Miami, Madrid, Bariloche) — el cliente ya esta convencido de Punta, no esta comparando."
+    ]
+  },
+
+  "colors": {
+    "primary":          { "hex": "<TODO_KICKOFF>", "name": "<TODO_KICKOFF>", "usage": "Color principal de marca." },
+    "dark":             { "hex": "#0A0A0A", "name": "Dark",  "usage": "Fondos oscuros." },
+    "accent_primary":   { "hex": "<TODO_KICKOFF>", "name": "<TODO_KICKOFF>", "usage": "Acento principal." },
+    "accent_secondary": null,
+    "light":            { "hex": "#F5F5F5", "name": "Light", "usage": "Fondos claros." },
+    "gray":             { "hex": "#9CA3AF", "name": "Gray",  "usage": "Texto secundario." },
+    "white":            { "hex": "#FFFFFF", "name": "White", "usage": "Texto sobre fondos oscuros." }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap",
+      "weights": { "headline": 900, "subheadline": 800, "body_bold": 700, "body": 500, "caption": 400 },
+      "usage": "Tipografia principal (default DV — reemplazar en kickoff)."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Numeros grandes."
+    }
+  },
+
+  "visual_style": {
+    "keywords": ["luxury", "boutique", "punta del este", "patrimonial"],
+    "do": [
+      "Estetica de lujo silencioso. Fotografia premium de propiedades.",
+      "Datos concretos: USD, m2 cubiertos, lote, amenities especificos."
+    ],
+    "dont": [
+      "Estetica familiar emocional o de primera vivienda.",
+      "Urgencia artificial (oferta limitada, ultimas unidades, etc)."
+    ]
+  },
+
+  "layouts": {
+    "carousel_square":        { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square":         { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical":       { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square":   { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4":               { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [
+      "Voseo argentino profesional. Formal pero cercano. Sin volverse coloquial.",
+      "El comprador es inversor, no es emocional. Hablar desde el codigo patrimonial y de mercado.",
+      "Aspiracional sin ser cliche: framing de networking, posicionamiento social y pertenencia, NO de 'casa de los sueños'.",
+      "Lujo silencioso. La calidad y exclusividad se sugieren, nunca se gritan. Cero hype.",
+      "Para el comprador argentino: Punta como destino propio (no exotico). Familiar, conocido, parte del mapa mental natural del segmento.",
+      "Para el comprador brasileño: tono didactico cuando se habla de proceso legal o fiscal. Educar sin condescender.",
+      "Datos concretos premium: USD, m2 cubiertos, lote, amenities, ROI, plusvalia historica. Nunca adjetivos vacios.",
+      "Lenguaje del segmento: punta, parada, brava, mansa, peninsula, jose ignacio, manantiales, country, barrio cerrado, lote, amenities, lifestyle, patrimonio, inversion premium.",
+      "Sin emojis. Sin signos de admiracion. Sin urgencia artificial.",
+      "Frases concisas. Cada palabra tiene que sumar — el segmento odia el ruido."
+    ],
+    "forbidden_words": [
+      "soña con",
+      "soñar con",
+      "hogar de tus sueños",
+      "hogar de tus suenios",
+      "casa de los suenios",
+      "casa de tus sueños",
+      "hacemos realidad",
+      "te acompañamos en cada paso",
+      "te acompanamos en cada paso",
+      "veni a conocernos",
+      "calidad humana",
+      "calidez",
+      "sabor familiar",
+      "oferton",
+      "rebaja",
+      "imperdible",
+      "ganga",
+      "barato",
+      "unico e irrepetible",
+      "oportunidad unica",
+      "ultima oportunidad",
+      "solo por hoy",
+      "ultimas unidades",
+      "ofertaza",
+      "promo",
+      "descuento especial",
+      "oferta limitada",
+      "decadas en el mercado",
+      "tradicion de generaciones",
+      "tu familia se merece",
+      "tu nuevo hogar te espera"
+    ],
+    "preferred_words": [
+      "punta del este",
+      "punta",
+      "jose ignacio",
+      "manantiales",
+      "la barra",
+      "peninsula",
+      "playa brava",
+      "playa mansa",
+      "inversion",
+      "inversor",
+      "patrimonio",
+      "plusvalia",
+      "preservacion de valor",
+      "amenities",
+      "lote",
+      "m2 cubiertos",
+      "ticket",
+      "alto ticket",
+      "premium",
+      "exclusiva",
+      "exclusivo",
+      "boutique",
+      "asesoramiento",
+      "operacion",
+      "valuacion",
+      "captacion",
+      "lifestyle",
+      "networking",
+      "destino propio",
+      "discrecion"
+    ]
+  },
+
+  "logo": {
+    "main_file": "<TODO_KICKOFF>",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  },
+
+  "meta_ads": {
+    "ad_account_id": "act_2361441967303759",
+    "ad_account_name": "CP Juan Irala y Hernandez",
+    "page_id": "100611251760842",
+    "page_name": "Juan Irala y Hernández",
+    "currency": "UYU",
+    "timezone": "America/Montevideo",
+    "pixel_id": null,
+    "daily_budget_local": 600,
+    "monthly_budget_local": 18000,
+    "monthly_budget_usd": 450,
+    "exchange_rate_assumed_uyu_per_usd": 40,
+    "budget_last_confirmed": "2026-05-14",
+    "cpl_target_usd": "<TODO_KICKOFF>",
+    "special_ad_categories": ["HOUSING"],
+    "default_geo": ["Argentina", "Uruguay", "Brasil"],
+    "default_geo_priority_2026": ["Argentina"],
+    "default_age_min": 35,
+    "default_age_max": 65,
+    "default_objective": "OUTCOME_LEADS",
+    "active_campaigns_at_onboarding": [
+      "Valen / Clientes Potenciales / El chorro",
+      "Valen / Clientes Potenciales / Apartamento en Le Park",
+      "Valen / Clientes Potenciales / Casa en Punta Ballena en venta"
+    ],
+    "notes": "Account currency es UYU (peso uruguayo), no USD. monthly_budget_local es la fuente de verdad. monthly_budget_usd es estimacion al rate UYU/USD asumido — recalcular si el rate se mueve >10%. Cliente con 3 campañas activas de captacion al onboarding (2026-05-14). Hay otras campañas viejas en el account (mensajes Trump tower, posts IG promocionados) que NO son foco de DV."
+  },
+
+  "drive": {
+    "folder_id": "1WP45WiQ95OxVvjjXe94MPUmZrJkZZs42",
+    "folder_name": "Irala y hernandez Real Estate",
+    "folder_url": "https://drive.google.com/drive/folders/1WP45WiQ95OxVvjjXe94MPUmZrJkZZs42",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
+  },
+
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
+  }
+}

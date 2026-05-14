@@ -323,7 +323,7 @@ Niveles de autonomía L0–L4 definidos en `docs/autonomy_map.md`.
 
 ## Clientes operativos
 
-16 brand JSONs en `shared/brands/` — **12 con `ad_account_id` configurado** (reciben crons automáticos):
+18 brand JSONs en `shared/brands/` — **15 con `ad_account_id` configurado** (reciben crons automáticos):
 
 | Cliente | Tipo | Ticket | Tono |
 |---|---|---|---|
@@ -331,16 +331,19 @@ Niveles de autonomía L0–L4 definidos en `docs/autonomy_map.md`.
 | ini_propiedades | Inmobiliaria | medio | Cercano profesional |
 | toribio_achaval | Inmobiliaria premium | alto | Premium institucional |
 | abitat | Inmobiliaria home staging | medio | Aspiracional tangible |
-| abitat_puertos | (alias_of abitat) | medio | Aspiracional tangible |
-| vistalaguna | Boutique ultra premium | USD 1M+ | Lujo silencioso |
-| turco | Top producer individual | medio | Cordial pro |
+| abitat_puertos | (comparte folder con abitat) | medio | Aspiracional tangible |
+| vistalaguna | Boutique ultra premium (Vanina Mallorca) | USD 1M+ | Lujo silencioso |
+| team_noia | Top producer + coaching (Turco Chaher) | medio | Cordial cercano |
 | lucila_taratuty | Top producer individual | medio | Cordial pro |
 | viviana_sasia | Inmobiliaria | medio | (heredado) |
 | juan_caillet_bois | Top producer | medio | (heredado) |
+| juan_irala_hernandez | Punta del Este alta gama (UYU) | USD 500k+ | Premium inversor |
+| pablo_zakkour | Asesor individual (scaffold) | - | (pendiente kickoff) |
+| fran_hardoy | Asesor individual (scaffold) | - | (pendiente kickoff) |
 | rubica_inmobiliaria | Inmobiliaria | medio | (heredado) |
 | brain_soluciones | **Consultoría B2B PyMEs** (fuera de rubro) | n/a | Operativo PyME |
 
-**4 brand JSONs sin `ad_account_id`** (en onboarding o pausados): `fidez_group`, `jose_maria_chaher`, `matias_di_meola`, `zipcode`. No los procesa el cron hasta que se complete el bloque `meta_ads` en su JSON.
+**3 brand JSONs sin `ad_account_id`** (clientes activos pero sin pauta DV todavía): `fidez_group`, `matias_di_meola`, `zipcode`. No los procesa el cron hasta que se complete el bloque `meta_ads` en su JSON.
 
 ---
 

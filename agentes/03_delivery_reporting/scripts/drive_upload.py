@@ -36,7 +36,7 @@ CRED_DIR = DELIVERY_ROOT / "credentials"
 OAUTH_CLIENT = CRED_DIR / "oauth_client.json"
 TOKEN_FILE = CRED_DIR / "drive_token.json"
 
-SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+SCOPES = ["https://www.googleapis.com/auth/drive"]
 
 
 def _load_credentials() -> Credentials:
@@ -69,7 +69,11 @@ def _resolve_folder_for_cliente(svc, cliente: str) -> str | None:
         return None
     try:
         d = json.loads(bp.read_text(encoding="utf-8"))
-        folder = (d.get("reporting") or {}).get("canva", {}).get("drive_folder_id")
+        # Lee primero el path canonico drive.folder_id (post merge 2026-05-14).
+        # Fallback a reporting.canva.drive_folder_id por compat con brands viejos.
+        folder = (d.get("drive") or {}).get("folder_id")
+        if not folder or folder == "<TODO_KICKOFF>":
+            folder = (d.get("reporting") or {}).get("canva", {}).get("drive_folder_id")
         if folder and folder != "<TODO_KICKOFF>":
             # Verificar acceso
             try:

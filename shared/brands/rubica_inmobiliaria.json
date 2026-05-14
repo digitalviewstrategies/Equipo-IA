@@ -307,5 +307,12 @@
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1YVyuXLhlKFh42Qocp1KiHT_LlpjsKd9A",
+    "folder_name": "Rubica",
+    "folder_url": "https://drive.google.com/drive/folders/1YVyuXLhlKFh42Qocp1KiHT_LlpjsKd9A",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

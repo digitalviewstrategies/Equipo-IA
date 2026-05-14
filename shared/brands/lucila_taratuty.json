@@ -353,8 +353,8 @@
   },
   "references": {},
   "meta_ads": {
-    "page_id": "<TODO_KICKOFF>",
-    "page_name": "<TODO_KICKOFF>",
+    "page_id": "100102405529428",
+    "page_name": "Lucila Taratuty Agente Remax",
     "ad_account_id": "act_1105948185006406"
   },
   "reporting": {
@@ -394,12 +394,19 @@
     "ticket_rango_usd": "80.000 a 300.000",
     "perfil_asesor": "Lucila Taratuty - mujer, primera persona singular cuando aplica.",
     "differential": "Atencion personal directa, respuesta rapida.",
-    "identidad_base": "Tono y frameworks clonados de turco.json (mismo perfil de top producer individual). Personalizar mas si el cliente pide.",
+    "identidad_base": "Tono y frameworks clonados de team_noia.json (mismo perfil de top producer individual; antes era turco.json, mergeado en 2026-05-14). Personalizar mas si el cliente pide.",
     "pending_visual_identity": "Verificar paleta y tipografias con Lucila. Colors heredo de toribio_achaval."
   },
   "whatsapp": {
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1zt17w3Fjg4RF_OrdP5_A5bR62Bh-nxiW",
+    "folder_name": "Lucila Taratuty",
+    "folder_url": "https://drive.google.com/drive/folders/1zt17w3Fjg4RF_OrdP5_A5bR62Bh-nxiW",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

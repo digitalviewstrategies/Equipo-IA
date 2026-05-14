@@ -1,0 +1,82 @@
+{
+  "brand_id": "fran_hardoy",
+  "brand_name": "Francisco Nicolás Hardoy",
+  "brand_tagline": "<TODO_KICKOFF>",
+  "version": "0.1",
+  "last_updated": "2026-05-14",
+  "onboarding_status": "scaffold",
+  "positioning": "<TODO_KICKOFF — completar en kickoff: como se posiciona, para quien, que diferencia tiene>",
+
+  "colors": {
+    "primary":          { "hex": "<TODO_KICKOFF>", "name": "<TODO_KICKOFF>", "usage": "Color principal de marca." },
+    "dark":             { "hex": "#0A0A0A", "name": "Dark",  "usage": "Fondos oscuros." },
+    "accent_primary":   { "hex": "<TODO_KICKOFF>", "name": "<TODO_KICKOFF>", "usage": "Acento principal." },
+    "accent_secondary": null,
+    "light":            { "hex": "#F5F5F5", "name": "Light", "usage": "Fondos claros." },
+    "gray":             { "hex": "#9CA3AF", "name": "Gray",  "usage": "Texto secundario." },
+    "white":            { "hex": "#FFFFFF", "name": "White", "usage": "Texto sobre fondos oscuros." }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Inter",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&display=swap",
+      "weights": { "headline": 900, "subheadline": 800, "body_bold": 700, "body": 500, "caption": 400 },
+      "usage": "Tipografia principal (default DV — reemplazar en kickoff)."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": { "number": 700 },
+      "usage": "Numeros grandes."
+    }
+  },
+
+  "visual_style": {
+    "keywords": [],
+    "do": [],
+    "dont": []
+  },
+
+  "layouts": {
+    "carousel_square":        { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_square":         { "width_px": 1080, "height_px": 1080, "safe_margin_px": 80 },
+    "meta_ad_vertical":       { "width_px": 1080, "height_px": 1920, "safe_margin_px": 100 },
+    "property_card_square":   { "width_px": 1080, "height_px": 1080, "safe_margin_px": 60 },
+    "property_card_vertical": { "width_px": 1080, "height_px": 1350, "safe_margin_px": 60 },
+    "flyer_a4":               { "width_px": 2480, "height_px": 3508, "safe_margin_px": 200, "dpi": 300 }
+  },
+
+  "tone_of_voice": {
+    "principles": [],
+    "forbidden_words": [],
+    "preferred_words": []
+  },
+
+  "logo": {
+    "main_file": "<TODO_KICKOFF>",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el ultimo slide"
+  },
+
+  "meta_ads": {
+    "ad_account_id": "act_807044467786401",
+    "ad_account_name": "Francisco Nicolas Hardoy",
+    "page_id": "100386108460992",
+    "page_name": "Fran Hardoy Agente Inmobiliario"
+  },
+
+  "drive": {
+    "folder_id": "1y5jeOVdrcLfPUjbbj8lVtW-OIABJ6Nbm",
+    "folder_name": "Fran Hardoy",
+    "folder_url": "https://drive.google.com/drive/folders/1y5jeOVdrcLfPUjbbj8lVtW-OIABJ6Nbm",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
+  },
+
+  "whatsapp": {
+    "contacts": [],
+    "primary_contact_name": null,
+    "clickup_list_id": null
+  }
+}

@@ -363,8 +363,8 @@
   },
   "references": {},
   "meta_ads": {
-    "page_id": "<TODO_KICKOFF>",
-    "page_name": "<TODO_KICKOFF>",
+    "page_id": "910506335475105",
+    "page_name": "Brain Soluciones",
     "ad_account_id": "act_1951618062383891"
   },
   "reporting": {
@@ -418,5 +418,12 @@
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "12Sjd3d7BnEKQSWwoGFgiwhJzLemlX-OC",
+    "folder_name": "Brain",
+    "folder_url": "https://drive.google.com/drive/folders/12Sjd3d7BnEKQSWwoGFgiwhJzLemlX-OC",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

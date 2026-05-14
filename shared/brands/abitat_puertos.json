@@ -310,8 +310,29 @@
   },
   "alias_of": "abitat",
   "whatsapp": {
-    "contacts": [],
-    "primary_contact_name": null,
+    "contacts": [
+      "+5491167826341",
+      "+5491167826630"
+    ],
+    "primary_contact_name": "Felipe",
+    "contact_directory": [
+      {
+        "name": "Felipe",
+        "phone": "+5491167826341"
+      },
+      {
+        "name": "Tomas",
+        "phone": "+5491167826630"
+      }
+    ],
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1J2DEmH3ok06z2kHwpqoHNVIeGGKHPe7C",
+    "folder_name": "Abitat",
+    "folder_url": "https://drive.google.com/drive/folders/1J2DEmH3ok06z2kHwpqoHNVIeGGKHPe7C",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV",
+    "_note": "Comparte folder con abitat. CRM esta presente pero contenido especifico de Abitat Puertos no esta separado todavia (confirmado por Felipe 2026-05-14)."
   }
 }

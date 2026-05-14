@@ -366,8 +366,8 @@
   },
   "references": {},
   "meta_ads": {
-    "page_id": "<TODO_KICKOFF>",
-    "page_name": "<TODO_KICKOFF>",
+    "page_id": "124316160762446",
+    "page_name": "Vanina Mallorca Broker",
     "ad_account_id": "act_10151168359578960"
   },
   "reporting": {
@@ -409,8 +409,33 @@
     "pending_visual_identity": "Verificar paleta de colores y tipografias reales con cliente. El bloque colors/typography heredo de toribio_achaval, ajustar."
   },
   "whatsapp": {
-    "contacts": [],
-    "primary_contact_name": null,
+    "contacts": [
+      "+5491132467713",
+      "+5491130184141",
+      "+5491124587363"
+    ],
+    "primary_contact_name": "Agustina Dipede",
+    "contact_directory": [
+      {
+        "name": "Agustina Dipede",
+        "phone": "+5491132467713"
+      },
+      {
+        "name": "Mariela",
+        "phone": "+5491130184141"
+      },
+      {
+        "name": "Vanina",
+        "phone": "+5491124587363"
+      }
+    ],
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "105tKJFRYaj2ldXW_YeFU-z65HxPvvG6j",
+    "folder_name": "Vistalaguna",
+    "folder_url": "https://drive.google.com/drive/folders/105tKJFRYaj2ldXW_YeFU-z65HxPvvG6j",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

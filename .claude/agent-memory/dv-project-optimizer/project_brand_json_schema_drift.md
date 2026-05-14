@@ -4,7 +4,7 @@ description: Sprint 5 personalizo 5 brands; abitat_puertos tiene disruption_scal
 type: project
 ---
 
-Sprint 5 (2026-05-11) personalizo 5 brand JSONs (vistalaguna, turco, brain_soluciones, abitat_puertos, lucila_taratuty). Drift detectado:
+Sprint 5 (2026-05-11) personalizo 5 brand JSONs (vistalaguna, turco, brain_soluciones, abitat_puertos, lucila_taratuty). NOTA 2026-05-14: turco fue mergeado en team_noia.json junto con jose_maria_chaher (unifica todo a un solo brand). Drift detectado:
 
 - `abitat_puertos.tone_of_voice` incluye `disruption_scale` que los otros 4 no tienen (heredado de abitat.json).
 - `brain_soluciones` es consultoria B2B PyMEs, NO inmobiliario. Hoy el marker esta solo en `_brand_notes.rubro` como string libre; ningun validator/skill lo lee. Falta campo top-level `industry` y lista `excluded_workflows`.

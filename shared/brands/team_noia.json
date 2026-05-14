@@ -1,0 +1,362 @@
+{
+  "brand_id": "team_noia",
+  "brand_name": "Team Noia",
+  "brand_tagline": "Coaching y Real Estate — Team de José María 'Turco' Chaher",
+  "version": "1.0",
+  "last_updated": "2026-05-14",
+  "_legacy_brand_ids": [
+    "turco",
+    "jose_maria_chaher",
+    "turco_chaher"
+  ],
+  "_merge_note": "Unificado el 2026-05-14: turco + jose_maria_chaher + scaffold team_noia. Aliases preservados arriba para trazabilidad de outputs viejos.",
+  "positioning": "Top producer individual liderado por José María 'Turco' Chaher, operando bajo la marca Team Noia. Doble perfil: pata real estate (vender y captar en CABA + GBA Norte, ticket USD 80k-300k) como eje principal, con consultoría/coaching inmobiliario como linea secundaria que refuerza autoridad. Se diferencia por humanizar la profesión con un tono cercano y relajado: el cliente trata directo con el Turco, no con un equipo que rota. Trato cordial pero siempre profesional — sin frases hechas, sin promesas que no se pueden cumplir, sin desaparecer después de la firma.",
+  "colors": {
+    "primary": {
+      "hex": "#1A8A7A",
+      "name": "Team Noia Teal",
+      "usage": "Color principal de Team Noia (teal/turquesa predominante en el branding de Instagram). Fondos de slides hook y prueba. Highlights, iconos."
+    },
+    "dark": {
+      "hex": "#0D1117",
+      "name": "Near Black",
+      "usage": "Fondos de slides de dolor y consecuencia. Negro profundo."
+    },
+    "accent_primary": {
+      "hex": "#D4A843",
+      "name": "Team Noia Gold",
+      "usage": "Dorado derivado de los iconos del branding Team Noia. Acento para datos clave, highlights y CTAs."
+    },
+    "accent_secondary": null,
+    "light": {
+      "hex": "#F0F7F6",
+      "name": "Teal Light",
+      "usage": "Fondos claros con tinte teal sutil para slides de respiro."
+    },
+    "gray": {
+      "hex": "#9CA3AF",
+      "name": "Gray",
+      "usage": "Texto secundario, metadata, numeración de slides."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "name": "White",
+      "usage": "Texto sobre fondos oscuros."
+    }
+  },
+  "color_distribution_rules": {
+    "description": "Paleta Team Noia: teal como base que transmite crecimiento y equilibrio, dorado como acento de autoridad y calidez. Fondo oscuro para impacto.",
+    "carousel_6_slides": {
+      "slide_1_hook": "primary (teal)",
+      "slide_2_dolor": "dark (negro)",
+      "slide_3_consecuencia": "dark (negro) con dato en accent gold",
+      "slide_4_solucion": "light (teal light) con texto dark",
+      "slide_5_prueba": "primary (teal) con numero grande en white",
+      "slide_6_cta": "dark (negro) con CTA en accent gold"
+    }
+  },
+  "typography": {
+    "primary": {
+      "family": "Nunito Sans",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800;900&display=swap",
+      "weights": {
+        "headline": 900,
+        "subheadline": 800,
+        "body_bold": 700,
+        "body": 500,
+        "caption": 400
+      },
+      "usage": "Tipografía principal. Black (900) para titulares, Medium (500) para cuerpo. Sans-serif redondeada que transmite cercanía y calidez humana sin perder profesionalismo."
+    },
+    "display": {
+      "family": "Space Grotesk",
+      "google_font_url": "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap",
+      "weights": {
+        "number": 700
+      },
+      "usage": "Solo para números grandes destacados (precios, m2, años de operaciones)."
+    }
+  },
+  "typography_rules": {
+    "headline_min_size_px": 72,
+    "headline_max_size_px": 120,
+    "letter_spacing_headlines": "-2px a -3px",
+    "line_height_headlines": 0.94,
+    "never_use_italic": true,
+    "never_use_more_than_2_fonts_per_piece": true,
+    "uppercase_headlines": "Solo en hooks. Slides intermedios en sentence case para mantener tono cercano."
+  },
+  "visual_style": {
+    "keywords": [
+      "humano",
+      "cercano",
+      "coaching",
+      "Team Noia",
+      "desarrollo personal",
+      "crecimiento",
+      "profesional calido",
+      "teal y dorado"
+    ],
+    "do": [
+      "Tipografía grande y bold pero con redondeado suave (Nunito Sans 900)",
+      "Fondos que combinen oscuridad con toques teal y dorado (identidad Team Noia)",
+      "Fotos reales del Turco en contexto real (charlas, con clientes, en propiedades)",
+      "Un solo mensaje claro por slide",
+      "Espacio negativo generoso, la pieza tiene que respirar",
+      "Mezclar contenido inmobiliario con pinceladas de coaching (sin que el coaching domine)",
+      "Logo Team Noia en el último slide",
+      "Datos concretos: barrios, precios, m2, comisiones reales"
+    ],
+    "dont": [
+      "Estética agresiva o confrontativa",
+      "Colores neón o paletas frías de tech",
+      "Tipografías rígidas o corporate pesadas",
+      "Emojis o iconos cute",
+      "Frases de coaching genérico (mentalidad ganadora, el éxito es una decisión)",
+      "Frases inmobiliarias cliché (soñá con tu hogar, te acompañamos)",
+      "Que el coaching le gane al real estate en volumen de contenido",
+      "Layouts abigarrados o con demasiados elementos"
+    ]
+  },
+  "layouts": {
+    "carousel_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "carousel_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 80
+    },
+    "meta_ad_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 80
+    },
+    "meta_ad_vertical": {
+      "width_px": 1080,
+      "height_px": 1920,
+      "safe_margin_px": 100,
+      "safe_top_percent": 20,
+      "safe_bottom_percent": 20
+    },
+    "property_card_square": {
+      "width_px": 1080,
+      "height_px": 1080,
+      "safe_margin_px": 60
+    },
+    "property_card_vertical": {
+      "width_px": 1080,
+      "height_px": 1350,
+      "safe_margin_px": 60
+    },
+    "flyer_a4": {
+      "width_px": 2480,
+      "height_px": 3508,
+      "safe_margin_px": 200,
+      "dpi": 300
+    }
+  },
+  "tone_of_voice": {
+    "principles": [
+      "Cercano y humano, como hablar con un amigo que sabe mucho del tema. Voseo argentino natural, relajado.",
+      "Cordial pero profesional. No se mete en confianza forzada — sigue siendo asesor, no broro.",
+      "Directo: el cliente quiere respuestas, no rodeos. Frases cortas, datos concretos.",
+      "Sin emojis jamás (regla DV).",
+      "Personalismo: la marca es una persona (el Turco), no una agencia anónima. Primera persona singular cuando es natural.",
+      "Humaniza la profesión inmobiliaria: detrás de cada operación hay personas.",
+      "Datos concretos sobre adjetivos: 'a 4 cuadras de la estación de Vicente López' > 'excelente ubicación'.",
+      "Honestidad operativa: si una propiedad tiene un contra (piso bajo, falta de luz natural, expensas altas), se menciona. Eso construye confianza.",
+      "Mezcla experiencia inmobiliaria con reflexión, pero sin ser filosófico ni cringe. El real estate es el eje, el coaching es la profundidad.",
+      "Vocabulario del rubro con naturalidad (operación, captación, reserva, escritura, comisión, exclusiva, tasación).",
+      "Nunca sonar a vendedor clásico ni a coach de Instagram."
+    ],
+    "forbidden_words": [
+      "soña con",
+      "sonar con",
+      "soñar con",
+      "hogar de tus sueños",
+      "hogar de tus suenos",
+      "casa de tus sueños",
+      "casa de tus suenos",
+      "hacemos realidad",
+      "te acompañamos en cada paso",
+      "te acompanamos en cada paso",
+      "te acompanamos",
+      "veni a conocernos",
+      "calidad humana",
+      "calidez",
+      "sabor familiar",
+      "unico e irrepetible",
+      "oportunidad unica",
+      "ultima oportunidad",
+      "solo por hoy",
+      "ultimas unidades",
+      "ofertaza",
+      "tradicion de generaciones",
+      "promo limitada",
+      "descuento especial",
+      "mentalidad ganadora",
+      "exito asegurado",
+      "sos tu mejor version",
+      "fuera de tu zona de confort",
+      "abundancia"
+    ],
+    "preferred_words": [
+      "operacion",
+      "captacion",
+      "reserva",
+      "escritura",
+      "comision",
+      "exclusiva",
+      "tasacion",
+      "valuacion",
+      "ticket",
+      "zona",
+      "barrio",
+      "metro cuadrado",
+      "m2",
+      "expensas",
+      "credito hipotecario",
+      "apto credito",
+      "uso comercial",
+      "uso residencial",
+      "asesoramiento",
+      "consulta",
+      "agendar",
+      "proceso",
+      "confianza",
+      "personas",
+      "crecimiento",
+      "carrera",
+      "acompanamiento",
+      "mercado"
+    ],
+    "hook_frameworks": {
+      "negacion": {
+        "description": "Romper una creencia sobre la compraventa inmobiliaria desde lo humano.",
+        "example": "No perdés plata por vender barato. Perdés plata por no vender nunca."
+      },
+      "empatia": {
+        "description": "Nombrar el dolor del comprador o propietario antes que él tenga que decirlo. Genera 'me está entendiendo'.",
+        "example": "Ya entraste a 5 propiedades este mes y ninguna te cerró. Probablemente el problema no son las propiedades."
+      },
+      "verdad_incomoda": {
+        "description": "Decir en voz alta algo que el rubro no suele decir. Posiciona al Turco como honesto antes que como vendedor.",
+        "example": "Si tu inmobiliaria te dice que tu departamento vale 30% más que el mercado, te quiere agarrar la exclusiva, no venderlo."
+      },
+      "data_concreto": {
+        "description": "Abrir con un dato puntual del mercado o de la zona que demuestre conocimiento operativo.",
+        "example": "El m2 en Vicente López subió 14% en 12 meses. Lo que parecía caro hace un año hoy es el piso."
+      }
+    },
+    "disruption_scale": 4,
+    "narrative_structure": {
+      "name": "Metodo Chaher",
+      "steps": [
+        "DOLOR",
+        "CONSECUENCIA",
+        "SOLUCION",
+        "PRUEBA"
+      ],
+      "description": "Funnel narrativo DV en versión humana: el dolor arranca desde la emoción (no solo el bolsillo), la consecuencia es lo que se pierde por no actuar con consciencia, la solución humaniza el proceso inmobiliario, la prueba es un caso real con nombre y contexto. CTA directo: agendar 15 min con el Turco."
+    }
+  },
+  "content_pillars": [
+    {
+      "name": "Captacion y venta de propiedades",
+      "percentage": 40,
+      "description": "Contenido dirigido a propietarios: por qué vender con el Turco, cómo funciona el proceso humanizado, resultados reales.",
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
+    },
+    {
+      "name": "Educacion inmobiliaria humana",
+      "percentage": 25,
+      "description": "Tips y guías sobre compraventa con enfoque en las personas: qué esperar, cómo prepararse, errores comunes.",
+      "formats": [
+        "carrusel educativo",
+        "video corto"
+      ]
+    },
+    {
+      "name": "Autoridad de coaching (secundario)",
+      "percentage": 20,
+      "description": "Contenido que muestra la visión del Turco como coach sin hacer del coaching el eje: reflexiones breves sobre la profesión, el mercado, el crecimiento.",
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
+    },
+    {
+      "name": "Casos de exito y testimonios",
+      "percentage": 15,
+      "description": "Historias de clientes reales, operaciones cerradas con contexto humano, no solo números.",
+      "formats": [
+        "video corto",
+        "carrusel"
+      ]
+    }
+  ],
+  "target_audience": {
+    "primary": "Propietarios en CABA y Zona Norte que buscan un agente que los escuche, no que les venda. Tickets USD 80k-300k.",
+    "secondary": "Agentes inmobiliarios que sienten que su carrera está estancada y buscan una perspectiva más humana de la profesión (audiencia de coaching).",
+    "pain_points": [
+      "Sienten que los agentes inmobiliarios solo les hablan de plata y no los escuchan",
+      "Tuvieron malas experiencias vendiendo: promesas incumplidas, falta de comunicación",
+      "Les cuesta tomar la decisión de vender porque hay carga emocional",
+      "No confían en las tasaciones porque cada agente les dice un número distinto",
+      "Agentes: sienten burnout y desconexión con lo que hacen"
+    ],
+    "desires": [
+      "Un profesional que entienda que vender una propiedad es un proceso emocional además de financiero",
+      "Claridad y honestidad sobre el valor real y los plazos",
+      "Sentir que el agente trabaja para ellos, no solo por la comisión",
+      "Agentes: reconectar con el propósito de su profesión y mejorar resultados"
+    ]
+  },
+  "logo": {
+    "main_file": "assets/team_noia/logo_team_noia.png",
+    "min_size_px": 120,
+    "placement_in_carousel": "Solo en el último slide",
+    "_note": "Path heredado de jose_maria_chaher.json. Migrar archivo físico si vive en assets/jose_maria_chaher/."
+  },
+  "meta_ads": {
+    "ad_account_id": "act_1548531566381076",
+    "ad_account_name": "CP TeamNoia",
+    "page_id": "1065505296894589",
+    "page_name": "Team Noia",
+    "currency": "<TODO_KICKOFF>",
+    "timezone": "<TODO_KICKOFF>",
+    "_note": "Ad account es OWNED de DV (co-management con Team Noia). Confirmado por Felipe."
+  },
+  "drive": {
+    "folder_id": "1ctVuhCo9_Bhx1PGyEwL9RQheV3cO1DKs",
+    "folder_name": "Turco Chaher",
+    "folder_url": "https://drive.google.com/drive/folders/1ctVuhCo9_Bhx1PGyEwL9RQheV3cO1DKs",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
+  },
+  "whatsapp": {
+    "contacts": [
+      "+5491140443896"
+    ],
+    "primary_contact_name": "Jose Maria Chaher",
+    "contact_directory": [
+      {
+        "name": "Jose Maria Chaher",
+        "phone": "+5491140443896"
+      }
+    ],
+    "clickup_list_id": null
+  },
+  "_brand_notes": {
+    "team": "Top producer individual / equipo chico (Team Noia, liderado por el Turco).",
+    "zona": "CABA + GBA Norte (corredor estándar).",
+    "ticket_rango_usd": "80.000 a 300.000",
+    "differential": "Atención personal directa del Turco + pata coaching que refuerza autoridad sin tomar el centro."
+  }
+}

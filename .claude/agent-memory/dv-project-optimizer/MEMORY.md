@@ -1,6 +1,6 @@
 - [Estructura monorepo DV](project_structure.md) — Layout actual de agentes, shared, docs, .claude
 - [Patrón output_manager duplicado](feedback_dont_duplicate_output_manager.md) — 6 copias de output_manager.py con drift, debe centralizarse en shared/lib/
-- [Brands sin meta_ads block](project_brands_meta_ads_pending.md) — 11 de 13 brands no tienen page_id/pixel_id/ad_account_id
+- [Brands sin meta_ads block](project_brands_meta_ads_pending.md) — 3 de 18 brands sin ad_account_id (fidez_group, matias_di_meola, zipcode); falta validar page_id/pixel_id en los demas
 - [Duplicación shared/brands en pauta](feedback_dont_duplicate_brands_dir.md) — agentes/04_pauta/shared/brands/ duplica un brand desactualizado, eliminar
 - [Skills vs commands en copywriter](feedback_skills_replace_commands.md) — Los 4 .claude/commands/ duplican los 4 .claude/skills/, eliminar commands
 - [Contexto inmobiliario duplicado en 4 lugares](feedback_unify_inmobiliario_context.md) — Mover todo a shared/contexto_inmobiliario.md y eliminar copias en agentes

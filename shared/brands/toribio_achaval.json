@@ -380,8 +380,23 @@
     }
   },
   "whatsapp": {
-    "contacts": [],
-    "primary_contact_name": null,
+    "contacts": [
+      "+5491171539024"
+    ],
+    "primary_contact_name": "Quinto",
+    "contact_directory": [
+      {
+        "name": "Quinto",
+        "phone": "+5491171539024"
+      }
+    ],
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1BOLj7aq0mXJtWtlenxtoBhmnTp5JCS_D",
+    "folder_name": "Toribio Achaval",
+    "folder_url": "https://drive.google.com/drive/folders/1BOLj7aq0mXJtWtlenxtoBhmnTp5JCS_D",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }

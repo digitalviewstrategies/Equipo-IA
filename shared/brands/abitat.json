@@ -305,5 +305,12 @@
     "contacts": [],
     "primary_contact_name": null,
     "clickup_list_id": null
+  },
+  "drive": {
+    "folder_id": "1J2DEmH3ok06z2kHwpqoHNVIeGGKHPe7C",
+    "folder_name": "Abitat",
+    "folder_url": "https://drive.google.com/drive/folders/1J2DEmH3ok06z2kHwpqoHNVIeGGKHPe7C",
+    "parent_id": "1hGuWmmjgIxOfMRDsniBv_Mc_cmVGNSEq",
+    "parent_name": "Campañas Meta DV"
   }
 }
