@@ -47,9 +47,28 @@ def get_latest_pauta_output(cliente: str, tipo: str) -> Path | None:
         if not fecha_dir.is_dir():
             continue
         for archivo in sorted(fecha_dir.iterdir(), reverse=True):
-            if archivo.is_file() and archivo.name.startswith(tipo):
+            if archivo.is_file() and archivo.name.startswith(tipo) and archivo.suffix == ".md":
                 return archivo
     return None
+
+
+def ensure_fresh_analysis(cliente: str, max_age_hours: int = 24) -> Path | None:
+    """
+    Devuelve el analisis_*.md del Media Buyer si es mas reciente que max_age_hours.
+    Devuelve None si no hay analisis o esta stale (hay que pedir refresh corriendo /analizar).
+
+    Usado por reporte-semanal y reporte-mensual para garantizar que el reporte se arma
+    sobre data fresca de Meta, no sobre un analisis viejo.
+    """
+    from datetime import datetime, timedelta
+
+    archivo = get_latest_pauta_output(cliente, "analisis")
+    if archivo is None:
+        return None
+    edad = datetime.now() - datetime.fromtimestamp(archivo.stat().st_mtime)
+    if edad > timedelta(hours=max_age_hours):
+        return None
+    return archivo
 
 
 def list_pauta_outputs(cliente: str, limit: int = 10) -> list[Path]:

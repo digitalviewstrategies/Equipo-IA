@@ -15,19 +15,27 @@ Necesitás:
 
 ## Pasos
 
-### 1. Recopilar todos los reportes del mes
+### 1. Garantizar análisis fresco del mes contra Meta (OBLIGATORIO)
+
+Igual que en `reporte-semanal`: el reporte mensual siempre se cierra con un análisis fresco contra Meta para el rango del mes. No te apoyes solo en reportes semanales viejos.
 
 ```python
-from scripts.output_manager import list_pauta_outputs, load_brand
+from scripts.output_manager import ensure_fresh_analysis, list_pauta_outputs, load_brand
+analisis = ensure_fresh_analysis(cliente, max_age_hours=24)
+```
+
+- **Si `analisis` es None**: invocá el skill `analizar` del agente de pauta (`/analizar <cliente>`) con date_range del mes en cuestión. Eso refresca Meta y deja un `analisis_*.md` nuevo. Volvé a llamar `ensure_fresh_analysis`.
+- **Si `analisis` es un Path válido**: leelo como métrica de cierre.
+
+Como complemento, recopilá los reportes semanales del mes (narrativa, no métricas):
+
+```python
 outputs = list_pauta_outputs(cliente, limit=20)
 ```
 
-Buscá:
-- `reporte_semanal_*.md` del mes en cuestión (debería haber 4).
-- `reporte_mensual_*.md` del Media Buyer si ya existe.
-- `analisis_*.md` del mes.
+Buscá `reporte_semanal_*.md` del mes (deberían ser 4) para reconstruir la historia semana a semana. El `reporte_mensual_*.md` del Media Buyer, si existe del día, puede usarse como referencia.
 
-Si hay un `reporte_mensual_*.md` del Media Buyer, ese es el insumo principal. Si no hay, consolidá los reportes semanales.
+Regla dura: si no podés correr `/analizar`, parás y avisás. NO consolides el mes con data desactualizada.
 
 ### 2. Consolidar métricas del mes
 

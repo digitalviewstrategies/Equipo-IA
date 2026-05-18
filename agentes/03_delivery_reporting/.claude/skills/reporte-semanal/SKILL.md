@@ -15,19 +15,26 @@ Necesitás:
 
 ## Pasos
 
-### 1. Buscar el reporte interno del Media Buyer
+### 1. Garantizar análisis fresco contra Meta (OBLIGATORIO)
+
+El reporte SIEMPRE se arma sobre data fresca de Meta. No reutilices análisis viejos.
+
+```python
+from scripts.output_manager import ensure_fresh_analysis
+analisis = ensure_fresh_analysis(cliente, max_age_hours=24)
+```
+
+- **Si `analisis` es None** (no existe o tiene más de 24hs): invocá el skill `analizar` del agente de pauta (`/analizar <cliente>`) ANTES de seguir. Eso pegará a Meta API y dejará un `analisis_*.md` nuevo en `04_pauta/outputs/<cliente>/<fecha>/`. Volvé a llamar `ensure_fresh_analysis` para tomarlo.
+- **Si `analisis` es un Path válido**: leelo. Ese es el insumo.
+
+Regla dura: si por algún motivo no podés correr `/analizar` (token caído, cuenta sin permisos), parás y avisás. NO armes el reporte con data vieja ni inventes números.
+
+Como complemento opcional, si existe un `reporte_semanal_*.md` reciente del Media Buyer (del día), podés usarlo como referencia narrativa, pero las métricas siempre salen del `analisis_*.md` fresco.
 
 ```python
 from scripts.output_manager import get_latest_pauta_output
-reporte_interno = get_latest_pauta_output(cliente, "reporte_semanal")
-analisis = get_latest_pauta_output(cliente, "analisis")
+reporte_interno = get_latest_pauta_output(cliente, "reporte_semanal")  # opcional, solo lectura
 ```
-
-Si existe un `reporte_semanal_*.md` reciente, ese es el insumo principal. Leelo completo.
-
-Si no existe:
-- Buscá un `analisis_*.md` reciente.
-- Si tampoco hay nada, le avisás a Elias que el Media Buyer tiene que generar el análisis primero (Felipe tiene que correr el Workflow C del agente de pauta).
 
 ### 2. Cargar el brand del cliente
 
