@@ -62,8 +62,40 @@ def _load_credentials() -> Credentials:
     return creds
 
 
+def _ensure_subfolder(svc, parent_id: str, name: str) -> str:
+    """Busca una subcarpeta 'name' dentro de parent_id; la crea si no existe.
+    Devuelve el id de la subcarpeta (o parent_id si algo falla)."""
+    safe = name.replace("'", "\\'")
+    q = (
+        f"name = '{safe}' and '{parent_id}' in parents "
+        f"and mimeType = 'application/vnd.google-apps.folder' and trashed = false"
+    )
+    try:
+        res = svc.files().list(
+            q=q, fields="files(id,name)", spaces="drive",
+            supportsAllDrives=True, includeItemsFromAllDrives=True,
+        ).execute()
+        hits = res.get("files", [])
+        if hits:
+            return hits[0]["id"]
+        created = svc.files().create(
+            body={
+                "name": name,
+                "mimeType": "application/vnd.google-apps.folder",
+                "parents": [parent_id],
+            },
+            fields="id",
+            supportsAllDrives=True,
+        ).execute()
+        return created["id"]
+    except Exception:
+        return parent_id
+
+
 def _resolve_folder_for_cliente(svc, cliente: str) -> str | None:
-    """Lee shared/brands/<cliente>.json y devuelve drive_folder_id si esta definido."""
+    """Lee shared/brands/<cliente>.json, toma el drive_folder_id base (compartido)
+    y devuelve una SUBCARPETA por cliente dentro de el, para no mezclar reportes
+    de distintos clientes en el mismo cajon."""
     bp = ROOT / "shared" / "brands" / f"{cliente}.json"
     if not bp.exists():
         return None
@@ -75,12 +107,12 @@ def _resolve_folder_for_cliente(svc, cliente: str) -> str | None:
         if not folder or folder == "<TODO_KICKOFF>":
             folder = (d.get("reporting") or {}).get("canva", {}).get("drive_folder_id")
         if folder and folder != "<TODO_KICKOFF>":
-            # Verificar acceso
             try:
                 svc.files().get(fileId=folder, fields="id,name", supportsAllDrives=True).execute()
-                return folder
             except Exception:
                 return None
+            sub_name = d.get("brand_name") or cliente.replace("_", " ").title()
+            return _ensure_subfolder(svc, folder, sub_name)
     except Exception:
         pass
     return None

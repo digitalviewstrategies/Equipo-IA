@@ -18,6 +18,7 @@ agentes/01_contenido/design/output/
 agentes/01_contenido/video_ai/output/
 agentes/01_contenido/post_production/outputs/
 agentes/03_delivery_reporting/outputs/
+agentes/04_pauta/outputs/
 *.status.json
 
 # Working files locales (debe vivir bajo el agente que lo usa)
@@ -25,6 +26,7 @@ agentes/03_delivery_reporting/outputs/
 **/_scratch/
 
 # Logs y runtime state (no commitear)
+.claude/scheduled_tasks.lock
 agentes/03_delivery_reporting/outputs/*.log
 agentes/03_delivery_reporting/outputs/*_dedup.json
 shared/state/*.jsonl

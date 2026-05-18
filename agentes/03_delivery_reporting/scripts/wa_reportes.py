@@ -46,9 +46,16 @@ def send_reporte_semanal_template(to: str, nombre: str, url_pdf: str) -> dict:
     """
     Envia el template aprobado 'reportes_semanales_digital' (es_AR).
     Body var {{1}} = nombre destinatario.
-    Button URL var = link al PDF del reporte.
-    Funciona fuera de la ventana de 24hs.
+    Button URL var = SUFIJO del link, no la URL completa.
+
+    El boton del template esta registrado como URL dinamica con base
+    'https://drive.google.com/' + {{1}}. Por lo tanto {{1}} tiene que ser
+    SOLO lo que va despues del dominio (ej: 'file/d/<id>/view?usp=drivesdk').
+    Si se manda la URL completa, Meta concatena base+URL y el link queda
+    roto -> el destinatario ve 403.
     """
+    BASE = "https://drive.google.com/"
+    button_var = url_pdf[len(BASE):] if url_pdf.startswith(BASE) else url_pdf
     components = [
         {
             "type": "body",
@@ -58,7 +65,7 @@ def send_reporte_semanal_template(to: str, nombre: str, url_pdf: str) -> dict:
             "type": "button",
             "sub_type": "url",
             "index": "0",
-            "parameters": [{"type": "text", "text": url_pdf}],
+            "parameters": [{"type": "text", "text": button_var}],
         },
     ]
     return _client().send_template(
